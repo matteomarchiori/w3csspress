@@ -10,7 +10,7 @@
 <body <?php body_class(); ?>>
     <?php wp_body_open(); ?>
     <div id="wrapper" class="hfeed">
-        <header id="header" role="banner">
+        <header id="header" role="banner" class="w3-container">
             <div id="branding">
                 <div id="site-title">
                     <?php
@@ -26,8 +26,15 @@
                 <div id="site-description"><?php bloginfo('description'); ?></div>
             </div>
             <nav id="menu" role="navigation">
-                <?php wp_nav_menu(array('theme_location' => 'main-menu')); ?>
+                <?php wp_nav_menu(
+					array(
+						'theme_location' => 'main-menu',
+						'menu_class' => 'menu w3-bar w3-light-grey',
+						'add_li_class'  => 'w3-bar-item',
+						'walker' => new My_Walker_Nav_Menu()
+					)
+				); ?>
                 <div id="search"><?php get_search_form(); ?></div>
             </nav>
         </header>
-        <div id="container">
+        <div id="container" class="w3-container">

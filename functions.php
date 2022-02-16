@@ -1,4 +1,15 @@
 <?php
+class My_Walker_Nav_Menu extends Walker_Nav_Menu
+{
+
+    function start_lvl(&$output, $depth = 0, $args = NULL)
+    {
+        $output .= "<ul class=\"w3-dropdown-content w3-bar-block sub-menu\">";
+    }
+}
+
+
+
 add_action('after_setup_theme', 'w3csspress_setup');
 function w3csspress_setup()
 {
@@ -17,7 +28,11 @@ function w3csspress_setup()
     if (!isset($content_width)) {
         $content_width = 1920;
     }
-    register_nav_menus(array('main-menu' => esc_html__('Main Menu', 'w3csspress')));
+    register_nav_menus(
+        array(
+            'main-menu' => esc_html__('Main Menu', 'w3csspress')
+        )
+    );
     add_editor_style('editor-style.css');
 }
 
@@ -33,7 +48,7 @@ add_action('wp_enqueue_scripts', 'w3csspress_enqueue_script');
 function w3csspress_enqueue_script()
 {
     wp_enqueue_style('w3csspress-style', get_stylesheet_uri());
-    wp_enqueue_style('w3', get_template_directory_uri() . '/css/w3.css',false,'4.15','all');
+    wp_enqueue_style('w3', get_template_directory_uri() . '/css/w3.css', false, '4.15', 'all');
     wp_enqueue_script('jquery');
 }
 
@@ -155,4 +170,16 @@ function w3csspress_comment_count($count)
     } else {
         return $count;
     }
+}
+
+add_filter('nav_menu_css_class', 'add_additional_class_on_li', 1, 3);
+function add_additional_class_on_li($classes, $item, $args)
+{
+    if (isset($args->add_li_class)) {
+        $classes[] = $args->add_li_class;
+    }
+    if (in_array('menu-item-has-children', $classes)) {
+        $classes[] = 'w3-dropdown-hover';
+    }
+    return $classes;
 }
