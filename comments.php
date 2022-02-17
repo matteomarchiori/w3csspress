@@ -1,4 +1,4 @@
-<div id="comments">
+<div id="comments" >
     <?php
     if (have_comments()) :
         global $comments_by_type;
@@ -40,7 +40,10 @@
         endif;
     endif;
     if (comments_open()) {
-        comment_form();
+        comment_form(array('comment_field' => '<p class="comment-form-comment">' .
+        '<label for="comment">' . __( 'Comment:' ) . '</label>' .
+        '<textarea id="comment" name="comment" class="w3-input w3-border" aria-required="true"></textarea>' .
+        '</p>'));
     }
     ?>
 </div>

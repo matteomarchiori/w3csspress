@@ -10,7 +10,7 @@
 <body <?php body_class(); ?>>
     <?php wp_body_open(); ?>
     <div id="wrapper" class="hfeed">
-        <header id="header" role="banner" class="w3-container">
+        <header id="header" role="banner" >
             <div id="branding">
                 <div id="site-title">
                     <?php
@@ -37,4 +37,4 @@
                 <div id="search"><?php get_search_form(); ?></div>
             </nav>
         </header>
-        <div id="container" class="w3-container">
+        <div id="container" >

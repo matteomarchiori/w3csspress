@@ -8,8 +8,6 @@ class My_Walker_Nav_Menu extends Walker_Nav_Menu
     }
 }
 
-
-
 add_action('after_setup_theme', 'w3csspress_setup');
 function w3csspress_setup()
 {
@@ -47,8 +45,8 @@ function w3csspress_notice_dismissed()
 add_action('wp_enqueue_scripts', 'w3csspress_enqueue_script');
 function w3csspress_enqueue_script()
 {
-    wp_enqueue_style('w3csspress-style', get_stylesheet_uri());
     wp_enqueue_style('w3', get_template_directory_uri() . '/css/w3.css', false, '4.15', 'all');
+	wp_enqueue_style('w3csspress-style', get_stylesheet_uri());
     wp_enqueue_script('jquery');
 }
 
