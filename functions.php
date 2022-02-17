@@ -181,3 +181,12 @@ function add_additional_class_on_li($classes, $item, $args)
     }
     return $classes;
 }
+
+remove_filter( 'the_content', 'wpautop' );
+remove_filter( 'the_excerpt', 'wpautop' );
+
+add_action( 'wp_enqueue_scripts', 'dashicons_front_end' );
+
+function dashicons_front_end() {
+   wp_enqueue_style( 'dashicons' );
+}

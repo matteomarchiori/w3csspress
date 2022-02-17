@@ -119,34 +119,3 @@ body{
 label{
 	vertical-align:top;
 }
-
-ul:not(.menu) {
-    list-style-type: none;
-    padding: 0;
-    margin: 0
-}
-
-ul:not(.menu) li {
-    padding: 8px 16px;
-    border-bottom: 1px solid #ddd
-}
-
-ul:not(.menu) li:last-child {
-    border-bottom: none
-}
-
-header,
-footer,
-article,
-div[class*="entry"],
-q,
-#comments,
-#respond,
-section{
-    padding: 0.01em 16px
-}
-
-q{
-    margin-top: 16px;
-    margin-bottom: 16px
-}
