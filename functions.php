@@ -1,7 +1,60 @@
 <?php
+
+add_action('customize_register', 'my_customize_register');
+function my_customize_register($wp_customize)
+{
+    $wp_customize->add_section('w3csspress_section', array(
+        'title' => __('Custom W3.CSS options'),
+        'description' => __('Customize W3.CSS options here.'),
+        'panel' => '',
+        'priority' => 1,
+        'capability' => 'edit_theme_options',
+        'theme_supports' => ''
+    ));
+
+
+    $wp_customize->add_setting('w3css_color_theme', array(
+        'default' => 'w3schools',
+		'type' => 'option'
+	));
+
+    $wp_customize->add_control('w3csspress_color_name', array(
+        'label'      => __('Select color theme'),
+        'description' => __('Using this option you can change the theme colors.'),
+        'settings'   => 'w3css_color_theme',
+        'priority'   => 1,
+        'section'    => 'w3csspress_section',
+        'type'    => 'select',
+        'choices' => array(
+            'w3schools' => 'W3Schools',
+			'amber' => 'Amber',
+			'black' => 'Black',
+			'blue' => 'Blue',
+			'blue-grey' => 'Blue Grey',
+			'brown' => 'Brown',
+			'cyan' => 'Cyan',
+			'dark-grey' => 'Dark Grey',
+			'deep-orange' => 'Deep Orange',
+			'deep-purple' => 'Deep Purple',
+			'green' => 'Green',
+			'grey' => 'Grey',
+			'indigo' => 'Indigo',
+			'khaki' => 'Khaki',
+			'light-blue' => 'Light Blue',
+			'light-green' => 'Light Green',
+			'lime' => 'Lime',
+			'orange' => 'Orange',
+			'pink' => 'Pink',
+			'purple' => 'Purple',
+			'red' => 'Red',
+			'teal' => 'Teal',
+			'yellow' => 'Yellow',
+        )
+    ));
+}
+
 class My_Walker_Nav_Menu extends Walker_Nav_Menu
 {
-
     function start_lvl(&$output, $depth = 0, $args = NULL)
     {
         $output .= "<ul class=\"w3-dropdown-content w3-bar-block sub-menu\">";
@@ -45,8 +98,10 @@ function w3csspress_notice_dismissed()
 add_action('wp_enqueue_scripts', 'w3csspress_enqueue_script');
 function w3csspress_enqueue_script()
 {
-    wp_enqueue_style('w3', get_template_directory_uri() . '/css/w3.css', false, '4.15', 'all');
-	wp_enqueue_style('w3csspress-style', get_stylesheet_uri());
+	$color_theme = get_option('w3css_color_theme');
+    wp_enqueue_style('w3', get_template_directory_uri() . '/assets/css/w3.css', false, '4.15', 'all');
+    wp_enqueue_style("w3-theme-$color_theme", get_template_directory_uri() . "/assets/css/lib/w3-theme-$color_theme.css", false, '1.0', 'all');
+    wp_enqueue_style('w3csspress-style', get_stylesheet_uri());
     wp_enqueue_script('jquery');
 }
 
@@ -182,11 +237,12 @@ function add_additional_class_on_li($classes, $item, $args)
     return $classes;
 }
 
-remove_filter( 'the_content', 'wpautop' );
-remove_filter( 'the_excerpt', 'wpautop' );
+remove_filter('the_content', 'wpautop');
+remove_filter('the_excerpt', 'wpautop');
 
-add_action( 'wp_enqueue_scripts', 'dashicons_front_end' );
+add_action('wp_enqueue_scripts', 'dashicons_front_end');
 
-function dashicons_front_end() {
-   wp_enqueue_style( 'dashicons' );
+function dashicons_front_end()
+{
+    wp_enqueue_style('dashicons');
 }
