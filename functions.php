@@ -201,6 +201,12 @@ function w3csspress_footer()
 					echo "$(\"h$i\").addClass(\"".get_option("w3csspress_font_size_h$i")." ".get_option('w3csspress_font_family')."\");";
 				}
 			?>
+			$("input:not([type='button'])").addClass("w3-input");
+			$("button").addClass("w3-btn");
+			$("input[type='button']").addClass("w3-btn");
+			$("input[type='submit']").addClass("w3-btn");
+			$("table").parent().addClass("w3-responsive");
+			$("table").addClass("w3-table-all w3-hoverable");
         });
     </script>
 <?php
