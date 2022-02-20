@@ -40,6 +40,14 @@ function w3csspress_customize_register($wp_customize)
         'w3-xxxlarge' => 'XXXL',
         'w3-jumbo' => 'Jumbo',
     );
+	
+	$font_families = array(
+		'' => 'Default',
+		'w3-serif' => 'Serif',
+		'w3-sans-serif' => 'Sans serif',
+		'w3-monospace' => 'Monospace',
+		'w3-cursive' => 'Cursive',
+	);
 
     $priority = 1;
     $wp_customize->add_section('w3csspress_section', array(
@@ -56,7 +64,12 @@ function w3csspress_customize_register($wp_customize)
         'type' => 'option'
     ));
 
-    $wp_customize->add_setting('w3csspress_font_size_paragraph', array(
+    $wp_customize->add_setting('w3csspress_font_family', array(
+        'default' => '',
+        'type' => 'option'
+    ));
+	
+	$wp_customize->add_setting('w3csspress_font_size_paragraph', array(
         'default' => '',
         'type' => 'option'
     ));
@@ -69,6 +82,16 @@ function w3csspress_customize_register($wp_customize)
         'section'    => 'w3csspress_section',
         'type'    => 'select',
         'choices' => $color_themes,
+    ));
+
+	$wp_customize->add_control('w3csspress_font_family', array(
+        'label'      => __('Select font family'),
+        'description' => __('Change font family of website.'),
+        'settings'   => 'w3csspress_font_family',
+        'priority'   => $priority++,
+        'section'    => 'w3csspress_section',
+        'type'    => 'select',
+        'choices' => $font_families,
     ));
 
     $wp_customize->add_control('w3csspress_font_size_paragraph', array(
@@ -175,7 +198,7 @@ function w3csspress_footer()
 			$("p").addClass("<?= get_option('w3csspress_font_size_paragraph'); ?>");
 			<?php
 				for($i=1;$i<7;$i++){
-					echo "$(\"h$i\").addClass(\"".get_option("w3csspress_font_size_h$i")."\");";
+					echo "$(\"h$i\").addClass(\"".get_option("w3csspress_font_size_h$i")." ".get_option('w3csspress_font_family')."\");";
 				}
 			?>
         });
@@ -303,5 +326,6 @@ add_filter('body_class', 'w3csspress_body_class');
 function w3csspress_body_class($classes)
 {
     $classes[] = 'w3-theme';
+    $classes[] = get_option('w3csspress_font_family');
     return $classes;
 }
