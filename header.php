@@ -31,7 +31,7 @@
 						'theme_location' => 'main-menu',
 						'menu_class' => 'menu w3-bar w3-light-grey',
 						'add_li_class'  => 'w3-bar-item',
-						'walker' => new My_Walker_Nav_Menu()
+						'walker' => new W3csspress_Walker_Nav_Menu()
 					)
 				); ?>
                 <div id="search"><?php get_search_form(); ?></div>

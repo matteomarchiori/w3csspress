@@ -1,63 +1,109 @@
 <?php
-
-add_action('customize_register', 'my_customize_register');
-function my_customize_register($wp_customize)
+add_action('customize_register', 'w3csspress_customize_register');
+function w3csspress_customize_register($wp_customize)
 {
+    $color_themes = array(
+        '' => 'Default',
+        'w3schools' => 'W3Schools',
+        'amber' => 'Amber',
+        'black' => 'Black',
+        'blue' => 'Blue',
+        'blue-grey' => 'Blue Grey',
+        'brown' => 'Brown',
+        'cyan' => 'Cyan',
+        'dark-grey' => 'Dark Grey',
+        'deep-orange' => 'Deep Orange',
+        'deep-purple' => 'Deep Purple',
+        'green' => 'Green',
+        'grey' => 'Grey',
+        'indigo' => 'Indigo',
+        'khaki' => 'Khaki',
+        'light-blue' => 'Light Blue',
+        'light-green' => 'Light Green',
+        'lime' => 'Lime',
+        'orange' => 'Orange',
+        'pink' => 'Pink',
+        'purple' => 'Purple',
+        'red' => 'Red',
+        'teal' => 'Teal',
+        'yellow' => 'Yellow',
+    );
+
+    $font_sizes = array(
+        '' => 'Default',
+        'w3-tiny' => 'Tiny',
+        'w3-small' => 'Small',
+        'w3-medium' => 'Medium',
+        'w3-large' => 'Large',
+        'w3-xlarge' => 'XL',
+        'w3-xxlarge' => 'XXL',
+        'w3-xxxlarge' => 'XXXL',
+        'w3-jumbo' => 'Jumbo',
+    );
+
+    $priority = 1;
     $wp_customize->add_section('w3csspress_section', array(
         'title' => __('Custom W3.CSS options'),
         'description' => __('Customize W3.CSS options here.'),
         'panel' => '',
-        'priority' => 1,
+        'priority' => $priority++,
         'capability' => 'edit_theme_options',
         'theme_supports' => ''
     ));
 
-
     $wp_customize->add_setting('w3css_color_theme', array(
-        'default' => 'w3schools',
-		'type' => 'option'
-	));
+        'default' => '',
+        'type' => 'option'
+    ));
 
-    $wp_customize->add_control('w3csspress_color_name', array(
+    $wp_customize->add_setting('w3csspress_font_size_paragraph', array(
+        'default' => '',
+        'type' => 'option'
+    ));
+
+    $wp_customize->add_control('w3css_color_theme', array(
         'label'      => __('Select color theme'),
         'description' => __('Using this option you can change the theme colors.'),
         'settings'   => 'w3css_color_theme',
-        'priority'   => 1,
+        'priority'   => $priority++,
         'section'    => 'w3csspress_section',
         'type'    => 'select',
-        'choices' => array(
-            'w3schools' => 'W3Schools',
-			'amber' => 'Amber',
-			'black' => 'Black',
-			'blue' => 'Blue',
-			'blue-grey' => 'Blue Grey',
-			'brown' => 'Brown',
-			'cyan' => 'Cyan',
-			'dark-grey' => 'Dark Grey',
-			'deep-orange' => 'Deep Orange',
-			'deep-purple' => 'Deep Purple',
-			'green' => 'Green',
-			'grey' => 'Grey',
-			'indigo' => 'Indigo',
-			'khaki' => 'Khaki',
-			'light-blue' => 'Light Blue',
-			'light-green' => 'Light Green',
-			'lime' => 'Lime',
-			'orange' => 'Orange',
-			'pink' => 'Pink',
-			'purple' => 'Purple',
-			'red' => 'Red',
-			'teal' => 'Teal',
-			'yellow' => 'Yellow',
-        )
+        'choices' => $color_themes,
     ));
+
+    $wp_customize->add_control('w3csspress_font_size_paragraph', array(
+        'label'      => __('Select paragraphs font size'),
+        'description' => __('Change font size of paragraphs.'),
+        'settings'   => 'w3csspress_font_size_paragraph',
+        'priority'   => $priority++,
+        'section'    => 'w3csspress_section',
+        'type'    => 'select',
+        'choices' => $font_sizes,
+    ));
+
+    for ($i = 1; $i < 7; $i++) {
+		$wp_customize->add_setting("w3csspress_font_size_h$i", array(
+			'default' => '',
+			'type' => 'option'
+		));
+		
+        $wp_customize->add_control("w3csspress_font_size_h$i", array(
+            'label'      => __("Select h$i font size"),
+            'description' => __("Change font size of h$i."),
+            'settings'   => "w3csspress_font_size_h$i",
+            'priority'   => $priority++,
+            'section'    => 'w3csspress_section',
+            'type'    => 'select',
+            'choices' => $font_sizes,
+        ));
+    }
 }
 
-class My_Walker_Nav_Menu extends Walker_Nav_Menu
+class W3csspress_Walker_Nav_Menu extends Walker_Nav_Menu
 {
     function start_lvl(&$output, $depth = 0, $args = NULL)
     {
-        $output .= "<ul class=\"w3-dropdown-content w3-bar-block sub-menu\">";
+        $output .= "<ul class=\"w3-dropdown-content w3-animate-opacity w3-bar-block sub-menu\">";
     }
 }
 
@@ -98,9 +144,9 @@ function w3csspress_notice_dismissed()
 add_action('wp_enqueue_scripts', 'w3csspress_enqueue_script');
 function w3csspress_enqueue_script()
 {
-	$color_theme = get_option('w3css_color_theme');
+    $color_theme = get_option('w3css_color_theme');
     wp_enqueue_style('w3', get_template_directory_uri() . '/assets/css/w3.css', false, '4.15', 'all');
-    wp_enqueue_style("w3-theme-$color_theme", get_template_directory_uri() . "/assets/css/lib/w3-theme-$color_theme.css", false, '1.0', 'all');
+    if ($color_theme != '') wp_enqueue_style("w3-theme-$color_theme", get_template_directory_uri() . "/assets/css/lib/w3-theme-$color_theme.css", false, '1.0', 'all');
     wp_enqueue_style('w3csspress-style', get_stylesheet_uri());
     wp_enqueue_script('jquery');
 }
@@ -126,6 +172,12 @@ function w3csspress_footer()
             } else if (navigator.userAgent.search("Opera") >= 0) {
                 $("html").addClass("opera");
             }
+			$("p").addClass("<?= get_option('w3csspress_font_size_paragraph'); ?>");
+			<?php
+				for($i=1;$i<7;$i++){
+					echo "$(\"h$i\").addClass(\"".get_option("w3csspress_font_size_h$i")."\");";
+				}
+			?>
         });
     </script>
 <?php
@@ -245,4 +297,11 @@ add_action('wp_enqueue_scripts', 'dashicons_front_end');
 function dashicons_front_end()
 {
     wp_enqueue_style('dashicons');
+}
+
+add_filter('body_class', 'w3csspress_body_class');
+function w3csspress_body_class($classes)
+{
+    $classes[] = 'w3-theme';
+    return $classes;
 }
