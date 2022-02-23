@@ -48,6 +48,12 @@ function w3csspress_customize_register($wp_customize)
 		'w3-monospace' => 'Monospace',
 		'w3-cursive' => 'Cursive',
 	);
+	
+	$theme_kinds = array(
+		'' => 'Default',
+		'light' => 'Light',
+		'dark'=> 'Dark',
+	);
 
     $priority = 1;
     $wp_customize->add_section('w3csspress_section', array(
@@ -60,6 +66,11 @@ function w3csspress_customize_register($wp_customize)
     ));
 
     $wp_customize->add_setting('w3css_color_theme', array(
+        'default' => '',
+        'type' => 'option'
+    ));
+	
+	$wp_customize->add_setting('w3css_theme_kind', array(
         'default' => '',
         'type' => 'option'
     ));
@@ -82,6 +93,16 @@ function w3csspress_customize_register($wp_customize)
         'section'    => 'w3csspress_section',
         'type'    => 'select',
         'choices' => $color_themes,
+    ));
+	
+	$wp_customize->add_control('w3css_theme_kind', array(
+        'label'      => __('Select theme kind'),
+        'description' => __('Using this option you can change the theme between default, light and dark.'),
+        'settings'   => 'w3css_theme_kind',
+        'priority'   => $priority++,
+        'section'    => 'w3csspress_section',
+        'type'    => 'select',
+        'choices' => $theme_kinds,
     ));
 
 	$wp_customize->add_control('w3csspress_font_family', array(
@@ -126,7 +147,7 @@ class W3csspress_Walker_Nav_Menu extends Walker_Nav_Menu
 {
     function start_lvl(&$output, $depth = 0, $args = NULL)
     {
-        $output .= "<ul class=\"w3-dropdown-content w3-animate-opacity w3-bar-block sub-menu\">";
+        $output .= "<ul class=\"w3-dropdown-content w3-animate-opacity w3-bar-block w3-theme-action sub-menu\">";
     }
 }
 
@@ -201,10 +222,14 @@ function w3csspress_footer()
 					echo "$(\"h$i\").addClass(\"".get_option("w3csspress_font_size_h$i")." ".get_option('w3csspress_font_family')."\");";
 				}
 			?>
-			$("input:not([type='button'])").addClass("w3-input");
-			$("button").addClass("w3-btn");
+			$("input:not(':button, :reset,[type=\"button\"],[type=\"submit\"],[type=\"reset\"]')").addClass("w3-input");
+			$("button").addClass("w3-btn w3-theme-action");
+			$("reset").addClass("w3-btn w3-theme-action");
 			$("input[type='button']").addClass("w3-btn");
 			$("input[type='submit']").addClass("w3-btn");
+			$("input[type='reset']").addClass("w3-btn");
+			$("input").addClass("w3-theme-action");
+			$("textarea").addClass("w3-theme-action");
 			$("table").parent().addClass("w3-responsive");
 			$("table").addClass("w3-table-all w3-hoverable");
         });
@@ -331,7 +356,11 @@ function dashicons_front_end()
 add_filter('body_class', 'w3csspress_body_class');
 function w3csspress_body_class($classes)
 {
-    $classes[] = 'w3-theme';
+	$theme_kind = get_option('w3css_theme_kind');
+	if($theme_kind!='') $classes[] = "w3-theme-$theme_kind";
+	else $classes[] = 'w3-theme';
     $classes[] = get_option('w3csspress_font_family');
     return $classes;
 }
+
+add_filter( 'use_block_editor_for_post', '__return_false' );

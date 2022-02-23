@@ -29,7 +29,7 @@
                 <?php wp_nav_menu(
 					array(
 						'theme_location' => 'main-menu',
-						'menu_class' => 'menu w3-bar w3-light-grey',
+						'menu_class' => 'menu w3-bar',
 						'add_li_class'  => 'w3-bar-item',
 						'walker' => new W3csspress_Walker_Nav_Menu()
 					)

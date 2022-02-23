@@ -114,3 +114,9 @@ img{
 label{
 	vertical-align:top;
 }
+
+.w3-dropdown-hover:first-child,
+.w3-dropdown-click:hover{
+	background-color: inherit;
+	color: inherit;
+}
