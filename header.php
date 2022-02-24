@@ -30,7 +30,6 @@
 					array(
 						'theme_location' => 'main-menu',
 						'menu_class' => 'menu w3-bar',
-						'add_li_class'  => 'w3-bar-item',
 						'walker' => new W3csspress_Walker_Nav_Menu()
 					)
 				); ?>

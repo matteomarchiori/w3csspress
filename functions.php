@@ -88,8 +88,8 @@ function w3csspress_customize_register($wp_customize)
         'default' => '',
         'type' => 'option'
     ));
-
-    $wp_customize->add_control('w3css_color_theme', array(
+	
+	$wp_customize->add_control('w3css_color_theme', array(
         'label'      => __('Select color theme'),
         'description' => __('Using this option you can change the theme colors.'),
         'settings'   => 'w3css_color_theme',
@@ -338,10 +338,8 @@ function w3csspress_comment_count($count)
 add_filter('nav_menu_css_class', 'add_additional_class_on_li', 1, 3);
 function add_additional_class_on_li($classes, $item, $args)
 {
-    if (isset($args->add_li_class)) {
-        $classes[] = $args->add_li_class;
-    }
-    if (in_array('menu-item-has-children', $classes)) {
+    $classes[] = "w3-bar-item";
+	if (in_array('menu-item-has-children', $classes)) {
         $classes[] = 'w3-dropdown-hover';
     }
     return $classes;

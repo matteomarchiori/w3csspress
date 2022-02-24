@@ -59,6 +59,7 @@
 }
 
 ::placeholder,
+::selection,
 .w3-theme-action {
     color: #fff !important;
     background-color: #9e8e00 !important
