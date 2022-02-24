@@ -48,12 +48,16 @@ function w3csspress_customize_register($wp_customize)
 		'w3-monospace' => 'Monospace',
 		'w3-cursive' => 'Cursive',
 	);
+	$theme_kinds = array();
+	for($i=1;$i<6;$i++){
+		$theme_kinds["d$i"] = "Dark $i";
+	}
 	
-	$theme_kinds = array(
-		'' => 'Default',
-		'light' => 'Light',
-		'dark'=> 'Dark',
-	);
+	$theme_kinds[''] = 'Default';
+
+	for($i=1;$i<6;$i++){
+		$theme_kinds["l$i"] = "Light $i";
+	}
 
     $priority = 1;
     $wp_customize->add_section('w3csspress_section', array(
