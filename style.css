@@ -120,3 +120,7 @@ label{
 	background-color: inherit;
 	color: inherit;
 }
+
+.menu a{
+	text-decoration:none;
+}

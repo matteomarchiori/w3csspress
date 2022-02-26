@@ -60,6 +60,7 @@
 
 ::placeholder,
 ::selection,
+.menu-item:hover,
 .w3-theme-action {
     color: #fff !important;
     background-color: #790c30 !important
