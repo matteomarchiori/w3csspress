@@ -475,7 +475,7 @@ function w3csspress_footer()
 			<?php
 			if($google_font!=''){
 			?>
-			$("<style type='text/css'> .w3-google{font-family:<?php echo $google_font; ?>} </style>").appendTo("head");
+			$("<style type='text/css'> .w3-google{font-family:<?php echo str_replace('+',' ',$google_font); ?>} </style>").appendTo("head");
 			<?php } ?>
         });
     </script>
