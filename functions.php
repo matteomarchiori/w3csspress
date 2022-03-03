@@ -50,7 +50,7 @@ function w3csspress_customize_register($wp_customize)
 	);
 	
 	$theme_kinds = array();
-	for($i=1;$i<6;$i++){
+	for($i=5;$i>0;$i--){
 		$theme_kinds["d$i"] = "Dark $i";
 	}
 	$theme_kinds[''] = 'Default';
