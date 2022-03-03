@@ -124,3 +124,31 @@ label{
 .menu a{
 	text-decoration:none;
 }
+
+.w3-weight-100{
+	font-weight:100;
+}
+.w3-weight-200{
+	font-weight:200;
+}
+.w3-weight-300{
+	font-weight:300;
+}
+.w3-weight-400{
+	font-weight:400;
+}
+.w3-weight-500{
+	font-weight:500;
+}
+.w3-weight-600{
+	font-weight:600;
+}
+.w3-weight-700{
+	font-weight:700;
+}
+.w3-weight-800{
+	font-weight:800;
+}
+.w3-weight-900{
+	font-weight:900;
+}

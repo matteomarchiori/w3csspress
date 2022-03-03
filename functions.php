@@ -41,6 +41,13 @@ function w3csspress_customize_register($wp_customize)
         'w3-jumbo' => 'Jumbo',
     );
 	
+	$font_weights = array(
+        '' => 'Default',
+    );
+	for($i=1;$i<10;$i++){
+		$font_weights["w3-weight-$i".'00'] = "Weight $i".'00';
+	}
+	
 	$font_families = array(
 		'' => 'Default',
 		'w3-serif' => 'Serif',
@@ -105,6 +112,26 @@ function w3csspress_customize_register($wp_customize)
     ));
 	
 	$wp_customize->add_setting('w3csspress_font_size_table', array(
+        'default' => '',
+        'type' => 'option'
+    ));
+	
+	$wp_customize->add_setting('w3csspress_font_weight_paragraph', array(
+        'default' => '',
+        'type' => 'option'
+    ));
+	
+	$wp_customize->add_setting('w3csspress_font_weight_div', array(
+        'default' => '',
+        'type' => 'option'
+    ));
+	
+	$wp_customize->add_setting('w3csspress_font_weight_input', array(
+        'default' => '',
+        'type' => 'option'
+    ));
+	
+	$wp_customize->add_setting('w3csspress_font_weight_table', array(
         'default' => '',
         'type' => 'option'
     ));
@@ -187,9 +214,54 @@ function w3csspress_customize_register($wp_customize)
         'type'    => 'select',
         'choices' => $font_sizes,
     ));
+	
+	$wp_customize->add_control('w3csspress_font_weight_paragraph', array(
+        'label'      => __('Select paragraphs font weight'),
+        'description' => __('Change font weight of paragraphs.'),
+        'settings'   => 'w3csspress_font_weight_paragraph',
+        'priority'   => $priority++,
+        'section'    => 'w3csspress_section',
+        'type'    => 'select',
+        'choices' => $font_weights,
+    ));
+	
+	$wp_customize->add_control('w3csspress_font_weight_div', array(
+        'label'      => __('Select div font weight'),
+        'description' => __('Change font weight of div.'),
+        'settings'   => 'w3csspress_font_weight_div',
+        'priority'   => $priority++,
+        'section'    => 'w3csspress_section',
+        'type'    => 'select',
+        'choices' => $font_weights,
+    ));
+	
+	$wp_customize->add_control('w3csspress_font_weight_input', array(
+        'label'      => __('Select input font weight'),
+        'description' => __('Change font weight of inputs.'),
+        'settings'   => 'w3csspress_font_weight_input',
+        'priority'   => $priority++,
+        'section'    => 'w3csspress_section',
+        'type'    => 'select',
+        'choices' => $font_weights,
+    ));
+	
+	$wp_customize->add_control('w3csspress_font_weight_table', array(
+        'label'      => __('Select table font weight'),
+        'description' => __('Change font weight of tables.'),
+        'settings'   => 'w3csspress_font_weight_table',
+        'priority'   => $priority++,
+        'section'    => 'w3csspress_section',
+        'type'    => 'select',
+        'choices' => $font_weights,
+    ));
 
     for ($i = 1; $i < 7; $i++) {
 		$wp_customize->add_setting("w3csspress_font_size_h$i", array(
+			'default' => '',
+			'type' => 'option'
+		));
+		
+		$wp_customize->add_setting("w3csspress_font_weight_h$i", array(
 			'default' => '',
 			'type' => 'option'
 		));
@@ -202,6 +274,16 @@ function w3csspress_customize_register($wp_customize)
             'section'    => 'w3csspress_section',
             'type'    => 'select',
             'choices' => $font_sizes,
+        ));
+		
+		$wp_customize->add_control("w3csspress_font_weight_h$i", array(
+            'label'      => __("Select h$i font weight"),
+            'description' => __("Change font weight of h$i."),
+            'settings'   => "w3csspress_font_weight_h$i",
+            'priority'   => $priority++,
+            'section'    => 'w3csspress_section',
+            'type'    => 'select',
+            'choices' => $font_weights,
         ));
     }
 }
@@ -283,13 +365,13 @@ function w3csspress_footer()
             } else if (navigator.userAgent.search("Opera") >= 0) {
                 $("html").addClass("opera");
             }
-			$("p").addClass("<?= get_option('w3csspress_font_size_paragraph'); ?>");
-			$("div").addClass("<?= get_option('w3csspress_font_size_div'); ?>");
-			$("input").addClass("<?= get_option('w3csspress_font_size_input'); ?>");
-			$("button").addClass("<?= get_option('w3csspress_font_size_input'); ?>");
-			$("reset").addClass("<?= get_option('w3csspress_font_size_input'); ?>");
-			$("textarea").addClass("<?= get_option('w3csspress_font_size_input'); ?>");
-			$("table").addClass("<?= get_option('w3csspress_font_size_table'); ?>");
+			$("p").addClass("<?php echo get_option('w3csspress_font_size_paragraph').' '.get_option('w3csspress_font_weight_paragraph'); ?>");
+			$("div").addClass("<?php echo get_option('w3csspress_font_size_div').' '.get_option('w3csspress_font_weight_div'); ?>");			
+			$("input").addClass("<?php echo get_option('w3csspress_font_size_input').' '.get_option('w3csspress_font_weight_input'); ?>");
+			$("button").addClass("<?php echo get_option('w3csspress_font_size_input').' '.get_option('w3csspress_font_weight_input'); ?>");
+			$("reset").addClass("<?php echo get_option('w3csspress_font_size_input').' '.get_option('w3csspress_font_weight_input'); ?>");
+			$("textarea").addClass("<?php echo get_option('w3csspress_font_size_input').' '.get_option('w3csspress_font_weight_input'); ?>");
+			$("table").addClass("<?php echo get_option('w3csspress_font_size_table').' '.get_option('w3csspress_font_weight_table'); ?>");
 			<?php
 				$google_font = get_option('w3csspress_google_font');
 				if($google_font!='')$font = "w3-google";
