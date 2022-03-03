@@ -703,7 +703,6 @@ remove_filter('the_content', 'wpautop');
 remove_filter('the_excerpt', 'wpautop');
 
 add_action('wp_enqueue_scripts', 'dashicons_front_end');
-
 function dashicons_front_end()
 {
     wp_enqueue_style('dashicons');
@@ -722,3 +721,15 @@ function w3csspress_body_class($classes)
 }
 
 add_filter( 'use_block_editor_for_post', '__return_false' );
+
+function custom_search_form( $form ) {
+  $form = '<form role="search" method="get" id="searchform" class="searchform w3-bar" action="' . home_url( '/' ) . '" >
+    <div class="custom-search-form"><label class="screen-reader-text" for="s">' . __( 'Search:' ) . '</label>
+    <input type="text" placeholder="'. esc_attr__( 'Search' ) .'" value="' . get_search_query() . '" name="s" id="s" class="w3-bar-item" />
+    <input type="submit" id="searchsubmit" value="'. esc_attr__( 'Search' ) .'" class="w3-bar-item" />
+  </div>
+  </form>';
+
+  return $form;
+}
+add_filter( 'get_search_form', 'custom_search_form', 100 );
