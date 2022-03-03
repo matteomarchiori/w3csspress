@@ -101,6 +101,11 @@ function w3csspress_customize_register($wp_customize)
         'type' => 'option'
     ));
 	
+	$wp_customize->add_setting('w3csspress_underline_a', array(
+        'default' => 1,
+        'type' => 'option'
+    ));
+	
 	$wp_customize->add_setting('w3csspress_font_size_div', array(
         'default' => '',
         'type' => 'option'
@@ -193,6 +198,15 @@ function w3csspress_customize_register($wp_customize)
         'priority'   => $priority++,
         'section'    => 'w3csspress_section',
         'type'    => 'text',
+    ));
+
+	$wp_customize->add_control('w3csspress_underline_a', array(
+        'label'      => __('Underline links'),
+        'description' => __('Underline links on the page (menu excluded).'),
+        'settings'   => 'w3csspress_underline_a',
+        'priority'   => $priority++,
+        'section'    => 'w3csspress_section',
+        'type'    => 'checkbox',
     ));
 
     $wp_customize->add_control('w3csspress_font_size_paragraph', array(
@@ -425,6 +439,9 @@ function w3csspress_footer()
             } else if (navigator.userAgent.search("Opera") >= 0) {
                 $("html").addClass("opera");
             }
+			<?php if(get_option('w3csspress_underline_a')!=1) { ?>
+			$("a").addClass("w3-no-decoration");
+			<?php } ?>
 			$("p").addClass("<?php echo get_option('w3csspress_font_size_paragraph').' '.get_option('w3csspress_font_weight_paragraph'); ?>");
 			$("div").addClass("<?php echo get_option('w3csspress_font_size_div').' '.get_option('w3csspress_font_weight_div'); ?>");			
 			$("input").addClass("<?php echo get_option('w3csspress_font_size_input').' '.get_option('w3csspress_font_weight_input'); ?>");
