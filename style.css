@@ -150,3 +150,12 @@ label{
 .w3-no-decoration{
 	text-decoration:none;
 }
+.custom-logo{
+	max-width:15vmax;
+}
+#site-title,#site-description{
+	display:inline-block;
+}
+#site-description{
+	padding:1em;
+}

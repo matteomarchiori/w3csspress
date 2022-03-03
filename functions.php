@@ -458,7 +458,7 @@ class W3csspress_Walker_Nav_Menu extends Walker_Nav_Menu
 {
     function start_lvl(&$output, $depth = 0, $args = NULL)
     {
-        $output .= "<ul class=\"w3-dropdown-content w3-animate-opacity w3-bar-block w3-theme-action sub-menu\">";
+        $output .= "<ul class=\"w3-dropdown-content w3-animate-opacity w3-bar-block w3-mobile w3-theme-action sub-menu\">";
     }
 }
 
@@ -531,6 +531,14 @@ function w3csspress_footer()
             } else if (navigator.userAgent.search("Opera") >= 0) {
                 $("html").addClass("opera");
             }
+			if ($(window).width() < 600) {
+				$("#menu").hide();
+				$("#menu").addClass("w3-animate-bottom");
+				$("#site-description").after('<button id="burger">☰</button>');
+				$("#burger").click(function() {
+				  $("#menu").toggle();
+				});
+			}
 			<?php if(get_option('w3csspress_underline_a')!=1) { ?>
 			$("a").addClass("w3-no-decoration");
 			<?php } ?>
@@ -693,6 +701,7 @@ add_filter('nav_menu_css_class', 'add_additional_class_on_li', 1, 3);
 function add_additional_class_on_li($classes, $item, $args)
 {
     $classes[] = "w3-bar-item";
+	$classes[] = "w3-mobile";
 	if (in_array('menu-item-has-children', $classes)) {
         $classes[] = 'w3-dropdown-hover';
     }
