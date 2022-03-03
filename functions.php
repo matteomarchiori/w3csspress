@@ -116,6 +116,16 @@ function w3csspress_customize_register($wp_customize)
         'type' => 'option'
     ));
 	
+	$wp_customize->add_setting('w3csspress_font_size_ul', array(
+        'default' => '',
+        'type' => 'option'
+    ));
+	
+	$wp_customize->add_setting('w3csspress_font_size_ol', array(
+        'default' => '',
+        'type' => 'option'
+    ));
+	
 	$wp_customize->add_setting('w3csspress_font_weight_paragraph', array(
         'default' => '',
         'type' => 'option'
@@ -132,6 +142,16 @@ function w3csspress_customize_register($wp_customize)
     ));
 	
 	$wp_customize->add_setting('w3csspress_font_weight_table', array(
+        'default' => '',
+        'type' => 'option'
+    ));
+	
+	$wp_customize->add_setting('w3csspress_font_weight_ul', array(
+        'default' => '',
+        'type' => 'option'
+    ));
+	
+	$wp_customize->add_setting('w3csspress_font_weight_ol', array(
         'default' => '',
         'type' => 'option'
     ));
@@ -215,6 +235,26 @@ function w3csspress_customize_register($wp_customize)
         'choices' => $font_sizes,
     ));
 	
+	$wp_customize->add_control('w3csspress_font_size_ul', array(
+        'label'      => __('Select unordered list font size'),
+        'description' => __('Change font size of unordered list.'),
+        'settings'   => 'w3csspress_font_size_ul',
+        'priority'   => $priority++,
+        'section'    => 'w3csspress_section',
+        'type'    => 'select',
+        'choices' => $font_sizes,
+    ));
+	
+	$wp_customize->add_control('w3csspress_font_size_ol', array(
+        'label'      => __('Select ordered list font size'),
+        'description' => __('Change font size of ordered list.'),
+        'settings'   => 'w3csspress_font_size_ol',
+        'priority'   => $priority++,
+        'section'    => 'w3csspress_section',
+        'type'    => 'select',
+        'choices' => $font_sizes,
+    ));
+	
 	$wp_customize->add_control('w3csspress_font_weight_paragraph', array(
         'label'      => __('Select paragraphs font weight'),
         'description' => __('Change font weight of paragraphs.'),
@@ -249,6 +289,26 @@ function w3csspress_customize_register($wp_customize)
         'label'      => __('Select table font weight'),
         'description' => __('Change font weight of tables.'),
         'settings'   => 'w3csspress_font_weight_table',
+        'priority'   => $priority++,
+        'section'    => 'w3csspress_section',
+        'type'    => 'select',
+        'choices' => $font_weights,
+    ));
+	
+	$wp_customize->add_control('w3csspress_font_weight_ul', array(
+        'label'      => __('Select unordered list font weight'),
+        'description' => __('Change font weight of unordered list.'),
+        'settings'   => 'w3csspress_font_weight_ul',
+        'priority'   => $priority++,
+        'section'    => 'w3csspress_section',
+        'type'    => 'select',
+        'choices' => $font_weights,
+    ));
+	
+	$wp_customize->add_control('w3csspress_font_weight_ol', array(
+        'label'      => __('Select ordered list font weight'),
+        'description' => __('Change font weight of ordered list.'),
+        'settings'   => 'w3csspress_font_weight_ol',
         'priority'   => $priority++,
         'section'    => 'w3csspress_section',
         'type'    => 'select',
@@ -372,6 +432,8 @@ function w3csspress_footer()
 			$("reset").addClass("<?php echo get_option('w3csspress_font_size_input').' '.get_option('w3csspress_font_weight_input'); ?>");
 			$("textarea").addClass("<?php echo get_option('w3csspress_font_size_input').' '.get_option('w3csspress_font_weight_input'); ?>");
 			$("table").addClass("<?php echo get_option('w3csspress_font_size_table').' '.get_option('w3csspress_font_weight_table'); ?>");
+			$("ul").addClass("<?php echo get_option('w3csspress_font_size_ul').' '.get_option('w3csspress_font_weight_ul'); ?>");
+			$("ol").addClass("<?php echo get_option('w3csspress_font_size_ol').' '.get_option('w3csspress_font_weight_ol'); ?>");
 			<?php
 				$google_font = get_option('w3csspress_google_font');
 				if($google_font!='')$font = "w3-google";
@@ -392,6 +454,7 @@ function w3csspress_footer()
 			$("table").addClass("w3-table-all w3-hoverable");
 			$("img").addClass("w3-image");
 			$("code").addClass("w3-code");
+			$("ul").addClass("w3-ul");
 			<?php
 			if($google_font!=''){
 			?>

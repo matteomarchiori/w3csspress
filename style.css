@@ -106,11 +106,6 @@ w3csspress is distributed under the terms of the GNU GPL
     white-space: nowrap
 }
 
-img{
-	max-width:100%;
-	height:auto;
-}
-
 label{
 	vertical-align:top;
 }
