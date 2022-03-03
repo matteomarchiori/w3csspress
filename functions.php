@@ -94,6 +94,21 @@ function w3csspress_customize_register($wp_customize)
         'type' => 'option'
     ));
 	
+	$wp_customize->add_setting('w3csspress_font_size_div', array(
+        'default' => '',
+        'type' => 'option'
+    ));
+	
+	$wp_customize->add_setting('w3csspress_font_size_input', array(
+        'default' => '',
+        'type' => 'option'
+    ));
+	
+	$wp_customize->add_setting('w3csspress_font_size_table', array(
+        'default' => '',
+        'type' => 'option'
+    ));
+	
 	$wp_customize->add_control('w3css_color_theme', array(
         'label'      => __('Select color theme'),
         'description' => __('Using this option you can change the theme colors.'),
@@ -137,6 +152,36 @@ function w3csspress_customize_register($wp_customize)
         'label'      => __('Select paragraphs font size'),
         'description' => __('Change font size of paragraphs.'),
         'settings'   => 'w3csspress_font_size_paragraph',
+        'priority'   => $priority++,
+        'section'    => 'w3csspress_section',
+        'type'    => 'select',
+        'choices' => $font_sizes,
+    ));
+	
+	$wp_customize->add_control('w3csspress_font_size_div', array(
+        'label'      => __('Select div font size'),
+        'description' => __('Change font size of div.'),
+        'settings'   => 'w3csspress_font_size_div',
+        'priority'   => $priority++,
+        'section'    => 'w3csspress_section',
+        'type'    => 'select',
+        'choices' => $font_sizes,
+    ));
+	
+	$wp_customize->add_control('w3csspress_font_size_input', array(
+        'label'      => __('Select input font size'),
+        'description' => __('Change font size of inputs.'),
+        'settings'   => 'w3csspress_font_size_input',
+        'priority'   => $priority++,
+        'section'    => 'w3csspress_section',
+        'type'    => 'select',
+        'choices' => $font_sizes,
+    ));
+	
+	$wp_customize->add_control('w3csspress_font_size_table', array(
+        'label'      => __('Select table font size'),
+        'description' => __('Change font size of tables.'),
+        'settings'   => 'w3csspress_font_size_table',
         'priority'   => $priority++,
         'section'    => 'w3csspress_section',
         'type'    => 'select',
@@ -239,6 +284,12 @@ function w3csspress_footer()
                 $("html").addClass("opera");
             }
 			$("p").addClass("<?= get_option('w3csspress_font_size_paragraph'); ?>");
+			$("div").addClass("<?= get_option('w3csspress_font_size_div'); ?>");
+			$("input").addClass("<?= get_option('w3csspress_font_size_input'); ?>");
+			$("button").addClass("<?= get_option('w3csspress_font_size_input'); ?>");
+			$("reset").addClass("<?= get_option('w3csspress_font_size_input'); ?>");
+			$("textarea").addClass("<?= get_option('w3csspress_font_size_input'); ?>");
+			$("table").addClass("<?= get_option('w3csspress_font_size_table'); ?>");
 			<?php
 				$google_font = get_option('w3csspress_google_font');
 				if($google_font!='')$font = "w3-google";
