@@ -161,6 +161,35 @@ function w3csspress_customize_register($wp_customize)
         'type' => 'option'
     ));
 	
+	$wp_customize->add_setting('w3csspress_rounded_img', array(
+        'default' => '',
+        'type' => 'option'
+    ));
+	$wp_customize->add_setting('w3csspress_circle_img', array(
+        'default' => '',
+        'type' => 'option'
+    ));
+	$wp_customize->add_setting('w3csspress_bordered_img', array(
+        'default' => '',
+        'type' => 'option'
+    ));
+	$wp_customize->add_setting('w3csspress_cards_img', array(
+        'default' => '',
+        'type' => 'option'
+    ));
+	$wp_customize->add_setting('w3csspress_opacity_img', array(
+        'default' => '',
+        'type' => 'option'
+    ));
+	$wp_customize->add_setting('w3csspress_grayscale_img', array(
+        'default' => '',
+        'type' => 'option'
+    ));
+	$wp_customize->add_setting('w3csspress_sepia_img', array(
+        'default' => '',
+        'type' => 'option'
+    ));
+	
 	$wp_customize->add_control('w3css_color_theme', array(
         'label'      => __('Select color theme'),
         'description' => __('Using this option you can change the theme colors.'),
@@ -360,6 +389,69 @@ function w3csspress_customize_register($wp_customize)
             'choices' => $font_weights,
         ));
     }
+	
+	$wp_customize->add_control('w3csspress_rounded_img', array(
+        'label'      => __('Rounded img'),
+        'description' => __('Round images on the page.'),
+        'settings'   => 'w3csspress_rounded_img',
+        'priority'   => $priority++,
+        'section'    => 'w3csspress_section',
+        'type'    => 'checkbox',
+    ));
+	
+	$wp_customize->add_control('w3csspress_circle_img', array(
+        'label'      => __('Circle img'),
+        'description' => __('Circle images on the page.'),
+        'settings'   => 'w3csspress_circle_img',
+        'priority'   => $priority++,
+        'section'    => 'w3csspress_section',
+        'type'    => 'checkbox',
+    ));
+	
+	$wp_customize->add_control('w3csspress_bordered_img', array(
+        'label'      => __('Bordered img'),
+        'description' => __('Border images on the page.'),
+        'settings'   => 'w3csspress_bordered_img',
+        'priority'   => $priority++,
+        'section'    => 'w3csspress_section',
+        'type'    => 'checkbox',
+    ));
+	
+	$wp_customize->add_control('w3csspress_cards_img', array(
+        'label'      => __('Card img'),
+        'description' => __('Image with card effect.'),
+        'settings'   => 'w3csspress_cards_img',
+        'priority'   => $priority++,
+        'section'    => 'w3csspress_section',
+        'type'    => 'checkbox',
+    ));
+	
+	$wp_customize->add_control('w3csspress_opacity_img', array(
+        'label'      => __('Opacity img'),
+        'description' => __('Image with opacity effect.'),
+        'settings'   => 'w3csspress_opacity_img',
+        'priority'   => $priority++,
+        'section'    => 'w3csspress_section',
+        'type'    => 'checkbox',
+    ));
+	
+	$wp_customize->add_control('w3csspress_grayscale_img', array(
+        'label'      => __('Grayscale img'),
+        'description' => __('Image with grayscale effect.'),
+        'settings'   => 'w3csspress_grayscale_img',
+        'priority'   => $priority++,
+        'section'    => 'w3csspress_section',
+        'type'    => 'checkbox',
+    ));
+	
+	$wp_customize->add_control('w3csspress_sepia_img', array(
+        'label'      => __('Sepia img'),
+        'description' => __('Image with sepia effect.'),
+        'settings'   => 'w3csspress_sepia_img',
+        'priority'   => $priority++,
+        'section'    => 'w3csspress_section',
+        'type'    => 'checkbox',
+    ));
 }
 
 class W3csspress_Walker_Nav_Menu extends Walker_Nav_Menu
@@ -441,6 +533,27 @@ function w3csspress_footer()
             }
 			<?php if(get_option('w3csspress_underline_a')!=1) { ?>
 			$("a").addClass("w3-no-decoration");
+			<?php } ?>
+			<?php if(get_option('w3csspress_rounded_img')!='') { ?>
+			$("img").addClass("w3-round");
+			<?php } ?>
+			<?php if(get_option('w3csspress_circle_img')!='') { ?>
+			$("img").addClass("w3-circle");
+			<?php } ?>
+			<?php if(get_option('w3csspress_bordered_img')!='') { ?>
+			$("img").addClass("w3-border w3-padding");
+			<?php } ?>
+			<?php if(get_option('w3csspress_cards_img')!='') { ?>
+			$("img").addClass("w3-card");
+			<?php } ?>
+			<?php if(get_option('w3csspress_opacity_img')!='') { ?>
+			$("img").addClass("w3-opacity");
+			<?php } ?>
+			<?php if(get_option('w3csspress_grayscale_img')!='') { ?>
+			$("img").addClass("w3-grayscale");
+			<?php } ?>
+			<?php if(get_option('w3csspress_sepia_img')!='') { ?>
+			$("img").addClass("w3-sepia");
 			<?php } ?>
 			$("p").addClass("<?php echo get_option('w3csspress_font_size_paragraph').' '.get_option('w3csspress_font_weight_paragraph'); ?>");
 			$("div").addClass("<?php echo get_option('w3csspress_font_size_div').' '.get_option('w3csspress_font_weight_div'); ?>");			
