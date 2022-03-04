@@ -156,6 +156,7 @@ label{
 #site-title,#site-description{
 	display:inline-block;
 }
-#site-description{
-	padding:1em;
+div{
+	padding:.5em;
+	margin:.5em;
 }
