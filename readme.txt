@@ -13,7 +13,7 @@ License URI: https://www.gnu.org/licenses/gpl.html
 
 Simple minimal theme made to integrate the W3.CSS framework inside Wordpress, with global custom options and all of the W3.CSS framework functionalities. The theme has been developed starting from resources on the w3schools website applied to the blankslate Wordpress theme, slightly modified.
 
-=== License ===
+=== Copyright ===
 
 In its unchanged and original state:
 
@@ -21,3 +21,12 @@ w3csspress WordPress Theme © 2022 Matteo Marchiori
 w3csspress is distributed under the terms of the GNU GPL
 
 The w3csspress theme package and all files contained within are distributed under the terms of the GNU GPL v3 or Later (https://www.gnu.org/licenses/gpl.html).
+
+== Changelog ==
+
+= 1.0 =
+* Released: ***
+
+url ***
+
+

@@ -73,8 +73,8 @@ function w3csspress_customize_register($wp_customize)
     $priority = 1;
 
     $wp_customize->add_section('w3csspress_section', array(
-        'title' => __('Custom W3.CSS options'),
-        'description' => __('Customize W3.CSS options here.'),
+        'title' => esc_html('Custom W3.CSS options','w3csspress'),
+        'description' => esc_html('Customize W3.CSS options here.','w3csspress'),
         'panel' => '',
         'priority' => $priority++,
         'capability' => 'edit_theme_options',
@@ -206,8 +206,8 @@ function w3csspress_customize_register($wp_customize)
     ));
 	
 	$wp_customize->add_control('w3csspress_footer', array(
-        'label'      => __('Footer content'),
-        'description' => __('Set footer content.'),
+        'label'      => esc_html('Footer content','w3csspress'),
+        'description' => esc_html('Set footer content.','w3csspress'),
         'settings'   => 'w3csspress_footer',
         'priority'   => $priority++,
         'section'    => 'w3csspress_section',
@@ -215,8 +215,8 @@ function w3csspress_customize_register($wp_customize)
     ));
 	
 	$wp_customize->add_control('w3csspress_max_width', array(
-        'label'      => __('Max width'),
-        'description' => __('Set page max width in vw.'),
+        'label'      => esc_html('Max width','w3csspress'),
+        'description' => esc_html('Set page max width in vw.','w3csspress'),
         'settings'   => 'w3csspress_max_width',
         'priority'   => $priority++,
         'section'    => 'w3csspress_section',
@@ -224,8 +224,8 @@ function w3csspress_customize_register($wp_customize)
     ));
 	
     $wp_customize->add_control('w3csspress_color_theme', array(
-        'label'      => __('Select color theme'),
-        'description' => __('Using this option you can change the theme colors.'),
+        'label'      => esc_html('Select color theme','w3csspress'),
+        'description' => esc_html('Using this option you can change the theme colors.','w3csspress'),
         'settings'   => 'w3csspress_color_theme',
         'priority'   => $priority++,
         'section'    => 'w3csspress_section',
@@ -234,8 +234,8 @@ function w3csspress_customize_register($wp_customize)
     ));
 
     $wp_customize->add_control('w3csspress_theme_kind', array(
-        'label'      => __('Select theme kind'),
-        'description' => __('Using this option you can change the theme between default, light and dark.'),
+        'label'      => esc_html('Select theme kind','w3csspress'),
+        'description' => esc_html('Using this option you can change the theme between default, light and dark.','w3csspress'),
         'settings'   => 'w3csspress_theme_kind',
         'priority'   => $priority++,
         'section'    => 'w3csspress_section',
@@ -244,8 +244,8 @@ function w3csspress_customize_register($wp_customize)
     ));
 
     $wp_customize->add_control('w3csspress_font_family', array(
-        'label'      => __('Select font family'),
-        'description' => __('Change font family of website.'),
+        'label'      => esc_html('Select font family','w3csspress'),
+        'description' => esc_html('Change font family of website.','w3csspress'),
         'settings'   => 'w3csspress_font_family',
         'priority'   => $priority++,
         'section'    => 'w3csspress_section',
@@ -254,8 +254,8 @@ function w3csspress_customize_register($wp_customize)
     ));
 
     $wp_customize->add_control('w3csspress_google_font', array(
-        'label'      => __('Use Google font'),
-        'description' => __('Change font family of website.'),
+        'label'      => esc_html('Use Google font','w3csspress'),
+        'description' => esc_html('Change font family of website.','w3csspress'),
         'settings'   => 'w3csspress_google_font',
         'priority'   => $priority++,
         'section'    => 'w3csspress_section',
@@ -263,8 +263,8 @@ function w3csspress_customize_register($wp_customize)
     ));
 
     $wp_customize->add_control('w3csspress_underline_a', array(
-        'label'      => __('Underline links'),
-        'description' => __('Underline links on the page (menu excluded).'),
+        'label'      => esc_html('Underline links','w3csspress'),
+        'description' => esc_html('Underline links on the page (menu excluded).','w3csspress'),
         'settings'   => 'w3csspress_underline_a',
         'priority'   => $priority++,
         'section'    => 'w3csspress_section',
@@ -272,8 +272,8 @@ function w3csspress_customize_register($wp_customize)
     ));
 
     $wp_customize->add_control('w3csspress_font_size_paragraph', array(
-        'label'      => __('Select paragraphs font size'),
-        'description' => __('Change font size of paragraphs.'),
+        'label'      => esc_html('Select paragraphs font size','w3csspress'),
+        'description' => esc_html('Change font size of paragraphs.','w3csspress'),
         'settings'   => 'w3csspress_font_size_paragraph',
         'priority'   => $priority++,
         'section'    => 'w3csspress_section',
@@ -282,8 +282,8 @@ function w3csspress_customize_register($wp_customize)
     ));
 
     $wp_customize->add_control('w3csspress_font_size_div', array(
-        'label'      => __('Select div font size'),
-        'description' => __('Change font size of div.'),
+        'label'      => esc_html('Select div font size','w3csspress'),
+        'description' => esc_html('Change font size of div.','w3csspress'),
         'settings'   => 'w3csspress_font_size_div',
         'priority'   => $priority++,
         'section'    => 'w3csspress_section',
@@ -292,8 +292,8 @@ function w3csspress_customize_register($wp_customize)
     ));
 
     $wp_customize->add_control('w3csspress_font_size_input', array(
-        'label'      => __('Select input font size'),
-        'description' => __('Change font size of inputs.'),
+        'label'      => esc_html('Select input font size','w3csspress'),
+        'description' => esc_html('Change font size of inputs.','w3csspress'),
         'settings'   => 'w3csspress_font_size_input',
         'priority'   => $priority++,
         'section'    => 'w3csspress_section',
@@ -302,8 +302,8 @@ function w3csspress_customize_register($wp_customize)
     ));
 
     $wp_customize->add_control('w3csspress_font_size_table', array(
-        'label'      => __('Select table font size'),
-        'description' => __('Change font size of tables.'),
+        'label'      => esc_html('Select table font size','w3csspress'),
+        'description' => esc_html('Change font size of tables.','w3csspress'),
         'settings'   => 'w3csspress_font_size_table',
         'priority'   => $priority++,
         'section'    => 'w3csspress_section',
@@ -312,8 +312,8 @@ function w3csspress_customize_register($wp_customize)
     ));
 
     $wp_customize->add_control('w3csspress_font_size_ul', array(
-        'label'      => __('Select unordered list font size'),
-        'description' => __('Change font size of unordered list.'),
+        'label'      => esc_html('Select unordered list font size','w3csspress'),
+        'description' => esc_html('Change font size of unordered list.','w3csspress'),
         'settings'   => 'w3csspress_font_size_ul',
         'priority'   => $priority++,
         'section'    => 'w3csspress_section',
@@ -322,8 +322,8 @@ function w3csspress_customize_register($wp_customize)
     ));
 
     $wp_customize->add_control('w3csspress_font_size_ol', array(
-        'label'      => __('Select ordered list font size'),
-        'description' => __('Change font size of ordered list.'),
+        'label'      => esc_html('Select ordered list font size','w3csspress'),
+        'description' => esc_html('Change font size of ordered list.','w3csspress'),
         'settings'   => 'w3csspress_font_size_ol',
         'priority'   => $priority++,
         'section'    => 'w3csspress_section',
@@ -332,8 +332,8 @@ function w3csspress_customize_register($wp_customize)
     ));
 
     $wp_customize->add_control('w3csspress_font_weight_paragraph', array(
-        'label'      => __('Select paragraphs font weight'),
-        'description' => __('Change font weight of paragraphs.'),
+        'label'      => esc_html('Select paragraphs font weight','w3csspress'),
+        'description' => esc_html('Change font weight of paragraphs.','w3csspress'),
         'settings'   => 'w3csspress_font_weight_paragraph',
         'priority'   => $priority++,
         'section'    => 'w3csspress_section',
@@ -342,8 +342,8 @@ function w3csspress_customize_register($wp_customize)
     ));
 
     $wp_customize->add_control('w3csspress_font_weight_div', array(
-        'label'      => __('Select div font weight'),
-        'description' => __('Change font weight of div.'),
+        'label'      => esc_html('Select div font weight','w3csspress'),
+        'description' => esc_html('Change font weight of div.','w3csspress'),
         'settings'   => 'w3csspress_font_weight_div',
         'priority'   => $priority++,
         'section'    => 'w3csspress_section',
@@ -352,8 +352,8 @@ function w3csspress_customize_register($wp_customize)
     ));
 
     $wp_customize->add_control('w3csspress_font_weight_input', array(
-        'label'      => __('Select input font weight'),
-        'description' => __('Change font weight of inputs.'),
+        'label'      => esc_html('Select input font weight','w3csspress'),
+        'description' => esc_html('Change font weight of inputs.','w3csspress'),
         'settings'   => 'w3csspress_font_weight_input',
         'priority'   => $priority++,
         'section'    => 'w3csspress_section',
@@ -362,8 +362,8 @@ function w3csspress_customize_register($wp_customize)
     ));
 
     $wp_customize->add_control('w3csspress_font_weight_table', array(
-        'label'      => __('Select table font weight'),
-        'description' => __('Change font weight of tables.'),
+        'label'      => esc_html('Select table font weight','w3csspress'),
+        'description' => esc_html('Change font weight of tables.','w3csspress'),
         'settings'   => 'w3csspress_font_weight_table',
         'priority'   => $priority++,
         'section'    => 'w3csspress_section',
@@ -372,8 +372,8 @@ function w3csspress_customize_register($wp_customize)
     ));
 
     $wp_customize->add_control('w3csspress_font_weight_ul', array(
-        'label'      => __('Select unordered list font weight'),
-        'description' => __('Change font weight of unordered list.'),
+        'label'      => esc_html('Select unordered list font weight','w3csspress'),
+        'description' => esc_html('Change font weight of unordered list.','w3csspress'),
         'settings'   => 'w3csspress_font_weight_ul',
         'priority'   => $priority++,
         'section'    => 'w3csspress_section',
@@ -382,8 +382,8 @@ function w3csspress_customize_register($wp_customize)
     ));
 
     $wp_customize->add_control('w3csspress_font_weight_ol', array(
-        'label'      => __('Select ordered list font weight'),
-        'description' => __('Change font weight of ordered list.'),
+        'label'      => esc_html('Select ordered list font weight','w3csspress'),
+        'description' => esc_html('Change font weight of ordered list.','w3csspress'),
         'settings'   => 'w3csspress_font_weight_ol',
         'priority'   => $priority++,
         'section'    => 'w3csspress_section',
@@ -403,8 +403,8 @@ function w3csspress_customize_register($wp_customize)
         ));
 
         $wp_customize->add_control("w3csspress_font_size_h$i", array(
-            'label'      => __("Select h$i font size"),
-            'description' => __("Change font size of h$i."),
+            'label'      => esc_html("Select h$i font size",'w3csspress'),
+            'description' => esc_html("Change font size of h$i.",'w3csspress'),
             'settings'   => "w3csspress_font_size_h$i",
             'priority'   => $priority++,
             'section'    => 'w3csspress_section',
@@ -413,8 +413,8 @@ function w3csspress_customize_register($wp_customize)
         ));
 
         $wp_customize->add_control("w3csspress_font_weight_h$i", array(
-            'label'      => __("Select h$i font weight"),
-            'description' => __("Change font weight of h$i."),
+            'label'      => esc_html("Select h$i font weight",'w3csspress'),
+            'description' => esc_html("Change font weight of h$i.",'w3csspress'),
             'settings'   => "w3csspress_font_weight_h$i",
             'priority'   => $priority++,
             'section'    => 'w3csspress_section',
@@ -424,8 +424,8 @@ function w3csspress_customize_register($wp_customize)
     }
 
     $wp_customize->add_control('w3csspress_rounded_img', array(
-        'label'      => __('Rounded img'),
-        'description' => __('Round images on the page.'),
+        'label'      => esc_html('Rounded img','w3csspress'),
+        'description' => esc_html('Round images on the page.','w3csspress'),
         'settings'   => 'w3csspress_rounded_img',
         'priority'   => $priority++,
         'section'    => 'w3csspress_section',
@@ -433,8 +433,8 @@ function w3csspress_customize_register($wp_customize)
     ));
 
     $wp_customize->add_control('w3csspress_circle_img', array(
-        'label'      => __('Circle img'),
-        'description' => __('Circle images on the page.'),
+        'label'      => esc_html('Circle img','w3csspress'),
+        'description' => esc_html('Circle images on the page.','w3csspress'),
         'settings'   => 'w3csspress_circle_img',
         'priority'   => $priority++,
         'section'    => 'w3csspress_section',
@@ -442,8 +442,8 @@ function w3csspress_customize_register($wp_customize)
     ));
 
     $wp_customize->add_control('w3csspress_bordered_img', array(
-        'label'      => __('Bordered img'),
-        'description' => __('Border images on the page.'),
+        'label'      => esc_html('Bordered img','w3csspress'),
+        'description' => esc_html('Border images on the page.','w3csspress'),
         'settings'   => 'w3csspress_bordered_img',
         'priority'   => $priority++,
         'section'    => 'w3csspress_section',
@@ -451,8 +451,8 @@ function w3csspress_customize_register($wp_customize)
     ));
 
     $wp_customize->add_control('w3csspress_cards_img', array(
-        'label'      => __('Card img'),
-        'description' => __('Image with card effect.'),
+        'label'      => esc_html('Card img','w3csspress'),
+        'description' => esc_html('Image with card effect.','w3csspress'),
         'settings'   => 'w3csspress_cards_img',
         'priority'   => $priority++,
         'section'    => 'w3csspress_section',
@@ -460,8 +460,8 @@ function w3csspress_customize_register($wp_customize)
     ));
 
     $wp_customize->add_control('w3csspress_opacity_img', array(
-        'label'      => __('Opacity img'),
-        'description' => __('Image with opacity effect.'),
+        'label'      => esc_html('Opacity img','w3csspress'),
+        'description' => esc_html('Image with opacity effect.','w3csspress'),
         'settings'   => 'w3csspress_opacity_img',
         'priority'   => $priority++,
         'section'    => 'w3csspress_section',
@@ -469,8 +469,8 @@ function w3csspress_customize_register($wp_customize)
     ));
 
     $wp_customize->add_control('w3csspress_grayscale_img', array(
-        'label'      => __('Grayscale img'),
-        'description' => __('Image with grayscale effect.'),
+        'label'      => esc_html('Grayscale img','w3csspress'),
+        'description' => esc_html('Image with grayscale effect.','w3csspress'),
         'settings'   => 'w3csspress_grayscale_img',
         'priority'   => $priority++,
         'section'    => 'w3csspress_section',
@@ -478,8 +478,8 @@ function w3csspress_customize_register($wp_customize)
     ));
 
     $wp_customize->add_control('w3csspress_sepia_img', array(
-        'label'      => __('Sepia img'),
-        'description' => __('Image with sepia effect.'),
+        'label'      => esc_html('Sepia img','w3csspress'),
+        'description' => esc_html('Image with sepia effect.','w3csspress'),
         'settings'   => 'w3csspress_sepia_img',
         'priority'   => $priority++,
         'section'    => 'w3csspress_section',
@@ -512,7 +512,7 @@ function w3csspress_setup()
     }
     register_nav_menus(
         array(
-            'main-menu' => esc_html__('Main Menu', 'w3csspress')
+            'main-menu' => esc_html('Main Menu', 'w3csspress')
         )
     );
     add_editor_style('editor-style.css');
@@ -666,14 +666,14 @@ if (!function_exists('w3csspress_wp_body_open')) {
 add_action('wp_body_open', 'w3csspress_skip_link', 5);
 function w3csspress_skip_link()
 {
-    echo '<a href="#content" class="skip-link screen-reader-text">' . esc_html__('Skip to the content', 'w3csspress') . '</a>';
+    echo '<a href="#content" class="skip-link screen-reader-text">' . esc_html('Skip to the content', 'w3csspress') . '</a>';
 }
 
 add_filter('the_content_more_link', 'w3csspress_read_more_link');
 function w3csspress_read_more_link()
 {
     if (!is_admin()) {
-        return ' <a href="' . esc_url(get_permalink()) . '" class="more-link">' . sprintf(__('...%s', 'w3csspress'), '<span class="screen-reader-text">  ' . esc_html(get_the_title()) . '</span>') . '</a>';
+        return ' <a href="' . esc_url(get_permalink()) . '" class="more-link">' . sprintf(esc_html('...%s', 'w3csspress'), '<span class="screen-reader-text">  ' . esc_html(get_the_title()) . '</span>') . '</a>';
     }
 }
 
@@ -682,7 +682,7 @@ function w3csspress_excerpt_read_more_link($more)
 {
     if (!is_admin()) {
         global $post;
-        return ' <a href="' . esc_url(get_permalink($post->ID)) . '" class="more-link">' . sprintf(__('...%s', 'w3csspress'), '<span class="screen-reader-text">  ' . esc_html(get_the_title()) . '</span>') . '</a>';
+        return ' <a href="' . esc_url(get_permalink($post->ID)) . '" class="more-link">' . sprintf(esc_html('...%s', 'w3csspress'), '<span class="screen-reader-text">  ' . esc_html(get_the_title()) . '</span>') . '</a>';
     }
 }
 
@@ -766,16 +766,3 @@ function w3csspress_body_class($classes)
 }
 
 add_filter('use_block_editor_for_post', '__return_false');
-
-function custom_search_form($form)
-{
-    $form = '<form role="search" method="get" id="searchform" class="searchform w3-bar" action="' . home_url('/') . '" >
-    <div class="custom-search-form"><label class="screen-reader-text" for="s">' . __('Search:') . '</label>
-    <input type="text" placeholder="' . esc_attr__('Search') . '" value="' . get_search_query() . '" name="s" id="s" class="w3-bar-item" />
-    <input type="submit" id="searchsubmit" value="' . esc_attr__('Search') . '" class="w3-bar-item" />
-  </div>
-  </form>';
-
-    return $form;
-}
-add_filter('get_search_form', 'custom_search_form', 100);
