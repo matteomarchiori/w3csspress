@@ -19,7 +19,7 @@ w3csspress is distributed under the terms of the GNU GPL
 
 * {
     box-sizing: border-box;
-    -webkit-tap-highlight-color: transparent
+    -webkit-tap-highlight-color: transparent;
 }
 
 .sticky {}
@@ -156,7 +156,6 @@ label{
 #site-title,#site-description{
 	display:inline-block;
 }
-div{
-	padding:.5em;
-	margin:.5em;
+#site-description,#footer{
+	padding:1em;
 }
