@@ -171,6 +171,7 @@ label {
 }
 
 #site-description,
-#footer {
-    padding: 1em;
+#footer,
+#site-title {
+    padding: 1em 0 1em 1em;
 }

@@ -12,21 +12,22 @@
     <div id="wrapper" class="hfeed">
         <header id="header" role="banner">
             <div id="branding">
-                <div id="site-title">
+                <?php
+				if (has_custom_logo()) {
+					if (function_exists('the_custom_logo')) {
+						the_custom_logo();
+					}
+				}
+				?>
+				<div id="site-title">
                     <?php
-                    if (has_custom_logo()) {
-                        if (function_exists('the_custom_logo')) {
-                            the_custom_logo();
-                        }
-                    } else {
-                        if (is_front_page() || is_home() || is_front_page() && is_home()) {
-                            echo '<h1>';
-                        }
-                        echo '<a href="' . esc_url(home_url('/')) . '" title="' . esc_attr(get_bloginfo('name')) . '" rel="home">' . esc_html(get_bloginfo('name')) . '</a>';
-                        if (is_front_page() || is_home() || is_front_page() && is_home()) {
-                            echo '</h1>';
-                        }
-                    }
+					if (is_front_page() || is_home() || is_front_page() && is_home()) {
+						echo '<h1>';
+					}
+					echo '<a href="' . esc_url(home_url('/')) . '" title="' . esc_attr(get_bloginfo('name')) . '" rel="home">' . esc_html(get_bloginfo('name')) . '</a>';
+					if (is_front_page() || is_home() || is_front_page() && is_home()) {
+						echo '</h1>';
+					}
                     ?>
                 </div>
                 <div id="site-description"><?php bloginfo('description'); ?></div>
