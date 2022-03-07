@@ -596,7 +596,7 @@ function w3csspress_footer()
             if ($(window).width() < 600) {
                 $("#menu").hide();
                 $("#menu").addClass("w3-animate-bottom");
-                $("#site-description").after('<button id="burger">☰</button>');
+                $("#site-description").after('<button type="button" class="menu-toggle" id="burger"><span class="dashicons dashicons-menu"></span>Menu</button>');
                 $("#burger").click(function() {
                     $("#menu").toggle();
                 });
@@ -656,6 +656,7 @@ function w3csspress_footer()
             $("img").addClass("w3-image");
             $("code").addClass("w3-code");
             $("ul").addClass("w3-ul");
+			$(".custom-logo").addClass("w3-theme-action");
             <?php
             if ($google_font != '') {
             ?>
