@@ -123,11 +123,6 @@ function w3csspress_customize_register($wp_customize)
         'sanitize_callback' => 'sanitize_select'
     ));
 
-    $wp_customize->add_setting('w3csspress_underline_a', array(
-        'type' => 'option',
-        'sanitize_callback' => 'sanitize_checkbox'
-    ));
-
     $wp_customize->add_setting('w3csspress_font_size_div', array(
         'default' => '',
         'type' => 'option',
@@ -290,15 +285,6 @@ function w3csspress_customize_register($wp_customize)
         'priority'   => $priority++,
         'section'    => 'w3csspress_section',
         'type'    => 'text',
-    ));
-
-    $wp_customize->add_control('w3csspress_underline_a', array(
-        'label'      => esc_html('Underline links', 'w3csspress'),
-        'description' => esc_html('Underline links on the page (menu excluded).', 'w3csspress'),
-        'settings'   => 'w3csspress_underline_a',
-        'priority'   => $priority++,
-        'section'    => 'w3csspress_section',
-        'type'    => 'checkbox',
     ));
 
     $wp_customize->add_control('w3csspress_font_size_paragraph', array(
@@ -601,9 +587,6 @@ function w3csspress_footer()
                     $("#menu").toggle();
                 });
             }
-            <?php if (!get_option('w3csspress_underline_a')) { ?>
-                $("a").addClass("w3-no-decoration");
-            <?php } ?>
             <?php if (get_option('w3csspress_rounded_img')) { ?>
                 $("img").addClass("w3-round");
             <?php } ?>
