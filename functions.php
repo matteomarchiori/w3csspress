@@ -666,6 +666,25 @@ function w3csspress_footer()
             ?>
                 $("<style type='text/css'> body{margin:auto; max-width:<?php echo $max_width; ?>vw;} </style>").appendTo("head");
             <?php } ?>
+            $.each($(".menu-item"), function(index) {
+                $(this).children("a").focusin(function(event) {
+                    $(event.target).parents('.w3-dropdown-focus').addClass("w3-show");
+                    $(event.target).next('.w3-dropdown-content').addClass("w3-show");
+                });
+            });
+            $.each($(".w3-dropdown-content .menu-item:last-of-type"), function(index) {
+                $(this).children("a").focusout(function(event) {
+                    $(event.target).parents('.w3-dropdown-focus').removeClass("w3-show");
+                    $(event.target).parents('.w3-dropdown-content').removeClass("w3-show");
+                });
+            });
+            $.each($(".w3-dropdown-focus"), function(index) {
+                $(this).children("a").keydown(function(event) {
+                    if (event.which == 9 && event.shiftKey) {
+                        $(event.target).next('.w3-dropdown-content').removeClass("w3-show");
+                    }
+                });
+            });
         });
     </script>
 <?php
@@ -771,7 +790,7 @@ function add_additional_class_on_li($classes, $item, $args)
     $classes[] = "w3-bar-item";
     $classes[] = "w3-mobile";
     if (in_array('menu-item-has-children', $classes)) {
-        $classes[] = 'w3-dropdown-hover';
+        $classes[] = 'w3-dropdown-hover w3-dropdown-focus';
     }
     return $classes;
 }

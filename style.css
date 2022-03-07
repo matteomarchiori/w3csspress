@@ -107,56 +107,70 @@ w3csspress is distributed under the terms of the GNU GPL
     white-space: nowrap
 }
 
-label{
-	vertical-align:top;
+label {
+    vertical-align: top;
 }
 
-.w3-dropdown-hover:first-child,
-.w3-dropdown-click:hover{
-	background-color: inherit;
-	color: inherit;
+.w3-dropdown-focus:first-child,
+.w3-dropdown-click:hover {
+    background-color: inherit;
+    color: inherit;
 }
 
-.menu a{
-	text-decoration:none;
+.menu a {
+    text-decoration: none;
 }
 
-.w3-weight-100{
-	font-weight:100;
+.w3-weight-100 {
+    font-weight: 100;
 }
-.w3-weight-200{
-	font-weight:200;
+
+.w3-weight-200 {
+    font-weight: 200;
 }
-.w3-weight-300{
-	font-weight:300;
+
+.w3-weight-300 {
+    font-weight: 300;
 }
-.w3-weight-400{
-	font-weight:400;
+
+.w3-weight-400 {
+    font-weight: 400;
 }
-.w3-weight-500{
-	font-weight:500;
+
+.w3-weight-500 {
+    font-weight: 500;
 }
-.w3-weight-600{
-	font-weight:600;
+
+.w3-weight-600 {
+    font-weight: 600;
 }
-.w3-weight-700{
-	font-weight:700;
+
+.w3-weight-700 {
+    font-weight: 700;
 }
-.w3-weight-800{
-	font-weight:800;
+
+.w3-weight-800 {
+    font-weight: 800;
 }
-.w3-weight-900{
-	font-weight:900;
+
+.w3-weight-900 {
+    font-weight: 900;
 }
-.w3-no-decoration{
-	text-decoration:none;
+
+.w3-no-decoration {
+    text-decoration: none;
 }
-.custom-logo{
-	max-width:15vmax;
+
+.custom-logo {
+    max-width: 15vmax;
 }
-#site-title,#site-description{
-	display:inline-block;
+
+#site-title,
+#site-description {
+    display: inline-block;
 }
-#site-description,#footer{
-	padding:1em;
+
+#site-description,
+#footer {
+    padding: 1em;
 }
