@@ -640,6 +640,9 @@ function w3csspress_footer()
             $("code").addClass("w3-code");
             $("ul").addClass("w3-ul");
             $(".custom-logo").addClass("w3-theme-action");
+			$(".nav-links").addClass("w3-cell-row");
+			$(".nav-previous").addClass("w3-cell");
+			$(".nav-next").addClass("w3-cell w3-right-align");
             <?php
             if ($google_font != '') {
             ?>

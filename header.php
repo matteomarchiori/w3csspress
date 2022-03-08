@@ -10,7 +10,7 @@
 <body <?php body_class(); ?>>
     <?php wp_body_open(); ?>
     <div id="wrapper" class="hfeed">
-        <header id="header" role="banner">
+        <header id="header" role="banner" class="w3-container">
             <div id="branding">
                 <?php
 				if (has_custom_logo()) {
@@ -36,7 +36,7 @@
                 <?php wp_nav_menu(
                     array(
                         'theme_location' => 'main-menu',
-                        'menu_class' => 'menu w3-bar',
+                        'menu_class' => 'menu w3-bar w3-section',
                         'walker' => new W3csspress_Walker_Nav_Menu()
                     )
                 ); ?>
