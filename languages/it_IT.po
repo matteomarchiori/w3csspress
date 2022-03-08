@@ -1,0 +1,482 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: w3csspress\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-03-08 16:49+0000\n"
+"PO-Revision-Date: 2022-03-08 17:50+0000\n"
+"Last-Translator: \n"
+"Language-Team: Italiano\n"
+"Language: it_IT\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.0; wp-5.9.1\n"
+"X-Domain: w3csspress"
+
+#: nav-below.php:2
+#, php-format
+msgid "%s older"
+msgstr "%s più vecchio"
+
+#: attachment.php:10
+#, php-format
+msgid "%s Return to "
+msgstr "%s Ritorna a"
+
+#: functions.php:711 functions.php:720
+#, php-format
+msgid "...%s"
+msgstr "...%s"
+
+#: functions.php:25
+msgid "Amber"
+msgstr "Ambra"
+
+#: functions.php:26
+msgid "Black"
+msgstr "Nero"
+
+#: functions.php:27
+msgid "Blue"
+msgstr "Blu"
+
+#: functions.php:28
+msgid "Blue Grey"
+msgstr "Grigio Blu"
+
+#: functions.php:464
+msgid "Border images on the page."
+msgstr "Aggiungi un bordo alle immagini sulla pagina."
+
+#: functions.php:463
+msgid "Bordered img"
+msgstr "Bordi delle immagini"
+
+#: functions.php:29
+msgid "Brown"
+msgstr "Marrone"
+
+#: functions.php:472
+msgid "Card img"
+msgstr "Immagini card"
+
+#: entry-footer.php:2
+msgid "Categories: "
+msgstr "Categorie:"
+
+#: functions.php:273 functions.php:283
+msgid "Change font family of website."
+msgstr "Cambia il font del sito."
+
+#: functions.php:302
+msgid "Change font size of div."
+msgstr "Cambia la taglia del font dei div."
+
+#: functions.php:312
+msgid "Change font size of inputs."
+msgstr "Cambia la taglia del font degli input."
+
+#: functions.php:342
+msgid "Change font size of ordered list."
+msgstr "Cambia la taglia delle liste ordinate."
+
+#: functions.php:292
+msgid "Change font size of paragraphs."
+msgstr "Cambia la taglia del font dei paragrafi."
+
+#: functions.php:322
+msgid "Change font size of tables."
+msgstr "Cambia la taglia del font delle tabelle."
+
+#: functions.php:332
+msgid "Change font size of unordered list."
+msgstr "Cambia la taglia del font delle liste non ordinate."
+
+#: functions.php:362
+msgid "Change font weight of div."
+msgstr "Cambia il grassetto del font dei div."
+
+#: functions.php:372
+msgid "Change font weight of inputs."
+msgstr "Cambia il grassetto del font degli input."
+
+#: functions.php:402
+msgid "Change font weight of ordered list."
+msgstr "Cambia il grassetto del font delle liste ordinate."
+
+#: functions.php:352
+msgid "Change font weight of paragraphs."
+msgstr "Cambia il grassetto del font dei paragrafi."
+
+#: functions.php:382
+msgid "Change font weight of tables."
+msgstr "Cambia il grassetto del font delle tabelle."
+
+#: functions.php:392
+msgid "Change font weight of unordered list."
+msgstr "Cambia il grassetto del font delle liste non ordinate."
+
+#: functions.php:455
+msgid "Circle images on the page."
+msgstr "Trasforma le immagini in cerchi sulla pagina."
+
+#: functions.php:454
+msgid "Circle img"
+msgstr "Immagini a cerchio"
+
+#: entry-footer.php:5
+msgid "Comments"
+msgstr "Commenti"
+
+#: comments.php:34
+msgctxt "comments count"
+msgid "Trackback or Pingback"
+msgid_plural "Trackbacks and Pingbacks"
+msgstr[0] "Trackback o Pingback singolo"
+msgstr[1] "Trackback e Pingback"
+
+#: functions.php:73
+msgid "Cursive"
+msgstr "Corsivo"
+
+#: functions.php:88
+msgid "Custom W3.CSS options"
+msgstr "Opzioni personalizzate di W3.CSS"
+
+#: functions.php:89
+msgid "Customize W3.CSS options here."
+msgstr "Personalizza le opzioni di W3.CSS qui."
+
+#: functions.php:30
+msgid "Cyan"
+msgstr "Ciano"
+
+#: functions.php:78
+msgid "Dark"
+msgstr "Scuro"
+
+#: functions.php:31
+msgid "Dark Grey"
+msgstr "Grigio Scuro"
+
+#: functions.php:32
+msgid "Deep Orange"
+msgstr "Arancione Intenso"
+
+#: functions.php:33
+msgid "Deep Purple"
+msgstr "Viola Intenso"
+
+#: functions.php:50 functions.php:62 functions.php:69
+msgid "Default"
+msgstr "Default"
+
+#: functions.php:234
+msgid "Footer content"
+msgstr "Contenuto del footer"
+
+#: functions.php:490
+msgid "Grayscale img"
+msgstr "Immagini in scala di grigi"
+
+#: functions.php:34
+msgid "Green"
+msgstr "Verde"
+
+#: functions.php:35
+msgid "Grey"
+msgstr "Grigio"
+
+#. Author URI of the theme
+msgid "https://github.com/matteomarchiori"
+msgstr "https://github.com/matteomarchiori"
+
+#. URI of the theme
+msgid "https://github.com/matteomarchiori/w3csspress"
+msgstr "https://github.com/matteomarchiori/w3csspress"
+
+#: functions.php:473
+msgid "Image with card effect."
+msgstr "Immagini con effetto card."
+
+#: functions.php:491
+msgid "Image with grayscale effect."
+msgstr "Immagini con effetto scala di grigi."
+
+#: functions.php:482
+msgid "Image with opacity effect."
+msgstr "Immagini con effetto opaco."
+
+#: functions.php:500
+msgid "Image with sepia effect."
+msgstr "Immagini con effetto seppia."
+
+#: functions.php:36
+msgid "Indigo"
+msgstr "Indaco"
+
+#: functions.php:58
+msgid "Jumbo"
+msgstr "Jumbo"
+
+#: functions.php:37
+msgid "Khaki"
+msgstr "Cachi"
+
+#: functions.php:54
+msgid "Large"
+msgstr "Largo"
+
+#: functions.php:82
+msgid "Light"
+msgstr "Chiaro"
+
+#: functions.php:38
+msgid "Light Blue"
+msgstr "Blu Chiaro"
+
+#: functions.php:39
+msgid "Light Green"
+msgstr "Verde Chiaro"
+
+#: functions.php:40
+msgid "Lime"
+msgstr "Limone"
+
+#: functions.php:533
+msgid "Main Menu"
+msgstr "Menu Principale"
+
+#. Author of the theme
+msgid "Matteo Marchiori"
+msgstr "Matteo Marchiori"
+
+#: functions.php:243
+msgid "Max width"
+msgstr "Larghezza massima"
+
+#: functions.php:53
+msgid "Medium"
+msgstr "Medio"
+
+#: functions.php:72
+msgid "Monospace"
+msgstr "Monospaziato"
+
+#: nav-below.php:3
+#, php-format
+msgid "newer %s"
+msgstr "più nuovo %s"
+
+#: 404.php:5
+msgid "Not Found"
+msgstr "Non Trovato"
+
+#: search.php:15
+msgid "Nothing Found"
+msgstr "Non è stato trovato nulla"
+
+#: 404.php:8
+msgid "Nothing found for the requested page. Try a search instead?"
+msgstr ""
+"Non è stato trovato nulla per la pagina richiesta. Provato con una ricerca?"
+
+#: functions.php:481
+msgid "Opacity img"
+msgstr "Immagini opache"
+
+#: functions.php:41
+msgid "Orange"
+msgstr "Arancione"
+
+#: functions.php:42
+msgid "Pink"
+msgstr "Rosa"
+
+#: functions.php:43
+msgid "Purple"
+msgstr "Viola"
+
+#: functions.php:44
+msgid "Red"
+msgstr "Rosso"
+
+#: attachment.php:10
+#, php-format
+msgid "Return to %s"
+msgstr "Ritorna a %s"
+
+#: functions.php:446
+msgid "Round images on the page."
+msgstr "Arrotonda gli angoli delle immagini sulla pagina."
+
+#: functions.php:445
+msgid "Rounded img"
+msgstr "Immagini con angoli smussati"
+
+#: functions.php:71
+msgid "Sans serif"
+msgstr "Senza grazie"
+
+#: search.php:6
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Risultati della ricerca per: %s"
+
+#: functions.php:252
+msgid "Select color theme"
+msgstr "Seleziona il colore del tema"
+
+#: functions.php:301
+msgid "Select div font size"
+msgstr "Seleziona la taglia del font per i div"
+
+#: functions.php:361
+msgid "Select div font weight"
+msgstr "Seleziona il grassetto del font per i div"
+
+#: functions.php:272
+msgid "Select font family"
+msgstr "Seleziona il font"
+
+#: functions.php:311
+msgid "Select input font size"
+msgstr "Seleziona la taglia del font per gli input"
+
+#: functions.php:371
+msgid "Select input font weight"
+msgstr "Seleziona il grassetto del font per gli input"
+
+#: functions.php:341
+msgid "Select ordered list font size"
+msgstr "Seleziona la taglia del font per le liste ordinate"
+
+#: functions.php:401
+msgid "Select ordered list font weight"
+msgstr "Seleziona il grassetto del font per le liste ordinate"
+
+#: functions.php:291
+msgid "Select paragraphs font size"
+msgstr "Seleziona la taglia del font per i paragrafi"
+
+#: functions.php:351
+msgid "Select paragraphs font weight"
+msgstr "Seleziona il grassetto del font per i paragrafi"
+
+#: functions.php:321
+msgid "Select table font size"
+msgstr "Seleziona la taglia del font per le tabelle"
+
+#: functions.php:381
+msgid "Select table font weight"
+msgstr "Seleziona il grassetto del font per le tabelle"
+
+#: functions.php:262
+msgid "Select theme kind"
+msgstr "Seleziona il genere del tema"
+
+#: functions.php:331
+msgid "Select unordered list font size"
+msgstr "Seleziona la taglia del font per le liste non ordinate"
+
+#: functions.php:391
+msgid "Select unordered list font weight"
+msgstr "Seleziona il grassetto del font per le liste non ordinate"
+
+#: functions.php:499
+msgid "Sepia img"
+msgstr "Immagini seppia"
+
+#: functions.php:70
+msgid "Serif"
+msgstr "Con grazie"
+
+#: functions.php:235
+msgid "Set footer content."
+msgstr "Imposta il contenuto del footer."
+
+#: functions.php:244
+msgid "Set page max width in vw."
+msgstr "Imposta la larghezza massima della pagina in vw."
+
+#. Description of the theme
+msgid ""
+"Simple minimal theme made to integrate the W3.CSS framework inside Wordpress,"
+" with global custom options and all of the W3.CSS framework functionalities. "
+"The theme has been developed starting from resources on the w3schools "
+"website applied to the blankslate Wordpress theme, slightly modified."
+msgstr ""
+"Tema semplice e minimale realizzato per integrare il framework W3.CSS "
+"all'interno di Wordpress, con opzioni personalizzate globali e tutte le "
+"funzionalità del framework W3.CSS. Il tema è stato sviluppato partendo da "
+"risorse del sito w3schools applicate al tema blankslate Wordpress, "
+"leggermente modificato."
+
+#: functions.php:704
+msgid "Skip to the content"
+msgstr "Salta al contenuto"
+
+#: functions.php:52
+msgid "Small"
+msgstr "Piccolo"
+
+#: search.php:18
+msgid "Sorry, nothing matched your search. Please try again."
+msgstr ""
+"Purtroppo non c'è nessun risultato per la tua ricerca. Per favore riprova."
+
+#: functions.php:45
+msgid "Teal"
+msgstr "Verde acqua"
+
+#: functions.php:51
+msgid "Tiny"
+msgstr "Più piccolo"
+
+#: functions.php:282
+msgid "Use Google font"
+msgstr "Usa un Google font"
+
+#: functions.php:263
+msgid ""
+"Using this option you can change the theme between default, light and dark."
+msgstr ""
+"Usando questa opzione puoi cambiare il tema tra default, chiaro e scuro."
+
+#: functions.php:253
+msgid "Using this option you can change the theme colors."
+msgstr "Usando questa opzione puoi cambiare i colori del tema."
+
+#. Name of the theme
+msgid "w3csspress"
+msgstr "w3csspress"
+
+#: functions.php:24
+msgid "W3Schools"
+msgstr "W3Schools"
+
+#: functions.php:65
+msgid "Weight"
+msgstr "Peso"
+
+#: functions.php:55
+msgid "XL"
+msgstr "XL"
+
+#: functions.php:56
+msgid "XXL"
+msgstr "XXL"
+
+#: functions.php:57
+msgid "XXXL"
+msgstr "XXXL"
+
+#: footer.php:4
+msgid "Y"
+msgstr "Y"
+
+#: functions.php:46
+msgid "Yellow"
+msgstr "Giallo"
