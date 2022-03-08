@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: w3csspress\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-03-08 16:49+0000\n"
-"PO-Revision-Date: 2022-03-08 17:50+0000\n"
+"PO-Revision-Date: 2022-03-08 22:55+0000\n"
 "Last-Translator: \n"
 "Language-Team: Italiano\n"
 "Language: it_IT\n"
@@ -25,7 +25,7 @@ msgstr "%s più vecchio"
 msgid "%s Return to "
 msgstr "%s Ritorna a"
 
-#: functions.php:711 functions.php:720
+#: functions.php:717 functions.php:726
 #, php-format
 msgid "...%s"
 msgstr "...%s"
@@ -125,6 +125,10 @@ msgstr "Trasforma le immagini in cerchi sulla pagina."
 #: functions.php:454
 msgid "Circle img"
 msgstr "Immagini a cerchio"
+
+#: comments.php:44
+msgid "Comment:"
+msgstr "Commento:"
 
 #: entry-footer.php:5
 msgid "Comments"
@@ -414,7 +418,7 @@ msgstr ""
 "risorse del sito w3schools applicate al tema blankslate Wordpress, "
 "leggermente modificato."
 
-#: functions.php:704
+#: functions.php:710
 msgid "Skip to the content"
 msgstr "Salta al contenuto"
 

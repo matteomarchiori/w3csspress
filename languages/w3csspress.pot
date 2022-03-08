@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: w3csspress\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-08 17:50+0000\n"
+"POT-Creation-Date: 2022-03-08 22:55+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -26,7 +26,7 @@ msgstr ""
 msgid "%s Return to "
 msgstr ""
 
-#: functions.php:711 functions.php:720
+#: functions.php:717 functions.php:726
 #, php-format
 msgid "...%s"
 msgstr ""
@@ -125,6 +125,10 @@ msgstr ""
 
 #: functions.php:454
 msgid "Circle img"
+msgstr ""
+
+#: comments.php:44
+msgid "Comment:"
 msgstr ""
 
 #: entry-footer.php:5
@@ -409,7 +413,7 @@ msgid ""
 "website applied to the blankslate Wordpress theme, slightly modified."
 msgstr ""
 
-#: functions.php:704
+#: functions.php:710
 msgid "Skip to the content"
 msgstr ""
 

@@ -41,7 +41,7 @@
     endif;
     if (comments_open()) {
         comment_form(array('comment_field' => '<p class="comment-form-comment">' .
-        '<label for="comment">' . esc_html( 'Comment:' ) . '</label>' .
+        '<label for="comment">' . esc_html__( 'Comment:' ,'w3csspress') . '</label>' .
         '<textarea id="comment" name="comment" class="w3-input w3-border" aria-required="true"></textarea>' .
         '</p>'));
     }
