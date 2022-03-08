@@ -652,14 +652,17 @@ function w3csspress_footer()
             <?php } ?>
             $.each($(".menu-item"), function(index) {
                 $(this).children("a").focusin(function(event) {
-                    $(event.target).parents('.w3-dropdown-focus').addClass("w3-show");
+                    $(event.target).parent().closest('.w3-dropdown-focus').addClass("w3-show");
                     $(event.target).next('.w3-dropdown-content').addClass("w3-show");
+					$(event.target).parent().prev('.w3-dropdown-focus').find('.w3-dropdown-content').removeClass("w3-show");
                 });
             });
             $.each($(".w3-dropdown-content .menu-item:last-of-type"), function(index) {
-                $(this).children("a").focusout(function(event) {
-                    $(event.target).parents('.w3-dropdown-focus').removeClass("w3-show");
-                    $(event.target).parents('.w3-dropdown-content').removeClass("w3-show");
+                $(this).children("a").keydown(function(event) {
+                    if (event.which == 9 && !event.shiftKey && $(event.target).next('.w3-dropdown-content').length==0) {
+                    	$(event.target).parents('.w3-dropdown-focus').removeClass("w3-show");
+						$(event.target).parent().closest('.w3-dropdown-content').removeClass("w3-show");
+					}
                 });
             });
             $.each($(".w3-dropdown-focus"), function(index) {
