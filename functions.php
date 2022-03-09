@@ -45,6 +45,7 @@ function w3csspress_customize_register($wp_customize)
         'teal' => __('Teal', 'w3csspress'),
         'yellow' => __('Yellow', 'w3csspress'),
     );
+	asort($color_themes);
 
     $font_sizes = array(
         '' => __('Default', 'w3csspress'),
@@ -627,13 +628,9 @@ function w3csspress_footer()
             }
             ?>
             $("input:not(':button, :reset,[type=\"button\"],[type=\"submit\"],[type=\"reset\"]')").addClass("w3-input");
-            $("button").addClass("w3-btn w3-theme-action");
-            $("reset").addClass("w3-btn w3-theme-action");
-            $("input[type='button']").addClass("w3-btn");
-            $("input[type='submit']").addClass("w3-btn");
-            $("input[type='reset']").addClass("w3-btn");
-            $("input").addClass("w3-theme-action");
-            $("textarea").addClass("w3-theme-action");
+            $("button,reset").addClass("w3-btn w3-theme-action");
+            $("input[type='button'],input[type='submit'],input[type='reset']").addClass("w3-btn");
+            $("input,textarea").addClass("w3-theme-action");
             $("table").parent().addClass("w3-responsive");
             $("table").addClass("w3-table-all w3-hoverable");
             $("img").addClass("w3-image");

@@ -10,7 +10,7 @@
 <body <?php body_class(); ?>>
     <?php wp_body_open(); ?>
     <div id="wrapper" class="hfeed">
-        <header id="header" role="banner" class="w3-container">
+        <header id="header" role="banner">
             <div id="branding">
                 <?php
 				if (has_custom_logo()) {
