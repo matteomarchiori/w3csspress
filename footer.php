@@ -7,7 +7,7 @@
 	$footer = get_option('w3csspress_footer');
     if ($footer != ''){ ?>
 	<span>
-		<?php echo $footer;?>
+		<?php echo esc_html($footer);?>
 	</span>
 	<?php } ?>
 </footer>

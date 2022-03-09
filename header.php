@@ -1,3 +1,8 @@
+<?php
+
+use w3csspress\W3csspress_Walker_Nav_Menu;
+
+?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 
