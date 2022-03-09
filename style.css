@@ -171,7 +171,13 @@ label {
 }
 
 #site-description,
-#footer,
 #site-title {
     padding: 1em 0 1em 1em;
+}
+
+.w3-padding-top{
+	padding-top: 8px;
+}
+.w3-padding-bottom{
+	padding-bottom: 8px;
 }

@@ -45,7 +45,7 @@ function w3csspress_customize_register($wp_customize)
         'teal' => __('Teal', 'w3csspress'),
         'yellow' => __('Yellow', 'w3csspress'),
     );
-	asort($color_themes);
+    asort($color_themes);
 
     $font_sizes = array(
         '' => __('Default', 'w3csspress'),
@@ -63,7 +63,7 @@ function w3csspress_customize_register($wp_customize)
         '' => __('Default', 'w3csspress'),
     );
     for ($i = 1; $i < 10; $i++) {
-        $font_weights["w3-weight-$i" . '00'] = __("Weight",'w3csspress')." $i" . '00';
+        $font_weights["w3-weight-$i" . '00'] = __("Weight", 'w3csspress') . " $i" . '00';
     }
 
     $font_families = array(
@@ -76,11 +76,11 @@ function w3csspress_customize_register($wp_customize)
 
     $theme_kinds = array();
     for ($i = 5; $i > 0; $i--) {
-        $theme_kinds["d$i"] = __("Dark",'w3csspress')." $i";
+        $theme_kinds["d$i"] = __("Dark", 'w3csspress') . " $i";
     }
     $theme_kinds[''] = 'Default';
     for ($i = 1; $i < 6; $i++) {
-        $theme_kinds["l$i"] = __("Light",'w3csspress')." $i";
+        $theme_kinds["l$i"] = __("Light", 'w3csspress') . " $i";
     }
 
     $priority = 1;
@@ -548,46 +548,26 @@ function w3csspress_notice_dismissed()
 add_action('wp_enqueue_scripts', 'w3csspress_enqueue_script');
 function w3csspress_enqueue_script()
 {
+	$theme_version = wp_get_theme()->get( 'Version' );
     wp_enqueue_style('w3', get_template_directory_uri() . '/assets/css/w3.css', false, '4.15', 'all');
     $color_theme = get_option('w3csspress_color_theme');
-    if ($color_theme != '') wp_enqueue_style("w3-theme-$color_theme", get_template_directory_uri() . "/assets/css/lib/w3-theme-$color_theme.css", false, '1.0', 'all');
+    if ($color_theme != '') wp_enqueue_style("w3-theme-$color_theme", get_template_directory_uri() . "/assets/css/lib/w3-theme-$color_theme.css", false, $theme_version, 'all');
     $google_font = get_option('w3csspress_google_font');
     if ($google_font != '') {
         wp_enqueue_style("google-font", "https://fonts.googleapis.com/css?family=$google_font");
     }
     wp_enqueue_style('w3csspress-style', get_stylesheet_uri());
     wp_enqueue_script('jquery');
+	wp_enqueue_script('scripts', get_template_directory_uri() . "/assets/js/scripts.js", ['jquery'], $theme_version);
 }
 
 add_action('wp_footer', 'w3csspress_footer');
 function w3csspress_footer()
 {
 ?>
-    <script>
+    <script type="text/javascript">
         jQuery(document).ready(function($) {
-            var deviceAgent = navigator.userAgent.toLowerCase();
-            if (deviceAgent.match(/(iphone|ipod|ipad)/)) {
-                $("html").addClass("ios");
-            }
-            if (navigator.userAgent.search("MSIE") >= 0) {
-                $("html").addClass("ie");
-            } else if (navigator.userAgent.search("Chrome") >= 0) {
-                $("html").addClass("chrome");
-            } else if (navigator.userAgent.search("Firefox") >= 0) {
-                $("html").addClass("firefox");
-            } else if (navigator.userAgent.search("Safari") >= 0 && navigator.userAgent.search("Chrome") < 0) {
-                $("html").addClass("safari");
-            } else if (navigator.userAgent.search("Opera") >= 0) {
-                $("html").addClass("opera");
-            }
-            if ($(window).width() < 600) {
-                $("#menu").hide();
-                $("#menu").addClass("w3-animate-bottom");
-                $("#site-description").after('<button type="button" class="menu-toggle" id="burger"><span class="dashicons dashicons-menu"></span>Menu</button>');
-                $("#burger").click(function() {
-                    $("#menu").toggle();
-                });
-            }
+			var excluded = "#wpadminbar, #wpadminbar *";
             <?php if (get_option('w3csspress_rounded_img')) { ?>
                 $("img").addClass("w3-round");
             <?php } ?>
@@ -609,15 +589,15 @@ function w3csspress_footer()
             <?php if (get_option('w3csspress_sepia_img')) { ?>
                 $("img").addClass("w3-sepia");
             <?php } ?>
-            $("p").addClass("<?php echo get_option('w3csspress_font_size_paragraph') . ' ' . get_option('w3csspress_font_weight_paragraph'); ?>");
-            $("div").addClass("<?php echo get_option('w3csspress_font_size_div') . ' ' . get_option('w3csspress_font_weight_div'); ?>");
-            $("input").addClass("<?php echo get_option('w3csspress_font_size_input') . ' ' . get_option('w3csspress_font_weight_input'); ?>");
-            $("button").addClass("<?php echo get_option('w3csspress_font_size_input') . ' ' . get_option('w3csspress_font_weight_input'); ?>");
-            $("reset").addClass("<?php echo get_option('w3csspress_font_size_input') . ' ' . get_option('w3csspress_font_weight_input'); ?>");
+            $("p").not(excluded).addClass("<?php echo get_option('w3csspress_font_size_paragraph') . ' ' . get_option('w3csspress_font_weight_paragraph'); ?>");
+            $("div").not(excluded).addClass("<?php echo get_option('w3csspress_font_size_div') . ' ' . get_option('w3csspress_font_weight_div'); ?>");
+            $("input").not(excluded).addClass("<?php echo get_option('w3csspress_font_size_input') . ' ' . get_option('w3csspress_font_weight_input'); ?>");
+            $("button").not(excluded).addClass("<?php echo get_option('w3csspress_font_size_input') . ' ' . get_option('w3csspress_font_weight_input'); ?>");
+            $("reset").not(excluded).addClass("<?php echo get_option('w3csspress_font_size_input') . ' ' . get_option('w3csspress_font_weight_input'); ?>");
             $("textarea").addClass("<?php echo get_option('w3csspress_font_size_input') . ' ' . get_option('w3csspress_font_weight_input'); ?>");
             $("table").addClass("<?php echo get_option('w3csspress_font_size_table') . ' ' . get_option('w3csspress_font_weight_table'); ?>");
-            $("ul").addClass("<?php echo get_option('w3csspress_font_size_ul') . ' ' . get_option('w3csspress_font_weight_ul'); ?>");
-            $("ol").addClass("<?php echo get_option('w3csspress_font_size_ol') . ' ' . get_option('w3csspress_font_weight_ol'); ?>");
+            $("ul").not(excluded).addClass("<?php echo get_option('w3csspress_font_size_ul') . ' ' . get_option('w3csspress_font_weight_ul'); ?>");
+            $("ol").not(excluded).addClass("<?php echo get_option('w3csspress_font_size_ol') . ' ' . get_option('w3csspress_font_weight_ol'); ?>");
             <?php
             $google_font = get_option('w3csspress_google_font');
             $max_width = get_option('w3csspress_max_width');
@@ -626,21 +606,6 @@ function w3csspress_footer()
             for ($i = 1; $i < 7; $i++) {
                 echo "$(\"h$i\").addClass(\"" . get_option("w3csspress_font_size_h$i") . " " . $font . "\");";
             }
-            ?>
-            $("input:not(':button, :reset,[type=\"button\"],[type=\"submit\"],[type=\"reset\"]')").addClass("w3-input");
-            $("button,reset").addClass("w3-btn w3-theme-action");
-            $("input[type='button'],input[type='submit'],input[type='reset']").addClass("w3-btn");
-            $("input,textarea").addClass("w3-theme-action");
-            $("table").parent().addClass("w3-responsive");
-            $("table").addClass("w3-table-all w3-hoverable");
-            $("img").addClass("w3-image");
-            $("code").addClass("w3-code");
-            $("ul").addClass("w3-ul");
-            $(".custom-logo").addClass("w3-theme-action");
-			$(".nav-links").addClass("w3-cell-row");
-			$(".nav-previous").addClass("w3-cell");
-			$(".nav-next").addClass("w3-cell w3-right-align");
-            <?php
             if ($google_font != '') {
             ?>
                 $("<style type='text/css'> .w3-google{font-family:<?php echo str_replace('+', ' ', $google_font); ?>} </style>").appendTo("head");
@@ -650,28 +615,6 @@ function w3csspress_footer()
             ?>
                 $("<style type='text/css'> body{margin:auto; max-width:<?php echo $max_width; ?>vw;} </style>").appendTo("head");
             <?php } ?>
-            $.each($(".menu-item"), function(index) {
-                $(this).children("a").focusin(function(event) {
-                    $(event.target).parent().closest('.w3-dropdown-focus').addClass("w3-show");
-                    $(event.target).next('.w3-dropdown-content').addClass("w3-show");
-					$(event.target).parent().prev('.w3-dropdown-focus').find('.w3-dropdown-content').removeClass("w3-show");
-                });
-            });
-            $.each($(".w3-dropdown-content .menu-item:last-of-type"), function(index) {
-                $(this).children("a").keydown(function(event) {
-                    if (event.which == 9 && !event.shiftKey && $(event.target).next('.w3-dropdown-content').length==0) {
-                    	$(event.target).parents('.w3-dropdown-focus').removeClass("w3-show");
-						$(event.target).parent().closest('.w3-dropdown-content').removeClass("w3-show");
-					}
-                });
-            });
-            $.each($(".w3-dropdown-focus"), function(index) {
-                $(this).children("a").keydown(function(event) {
-                    if (event.which == 9 && event.shiftKey) {
-                        $(event.target).next('.w3-dropdown-content').removeClass("w3-show");
-                    }
-                });
-            });
         });
     </script>
 <?php

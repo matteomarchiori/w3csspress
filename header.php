@@ -40,7 +40,7 @@
                         'walker' => new W3csspress_Walker_Nav_Menu()
                     )
                 ); ?>
-                <div id="search"><?php get_search_form(); ?></div>
             </nav>
+			<div id="search"><?php get_search_form(); ?></div>
         </header>
         <div id="container">
