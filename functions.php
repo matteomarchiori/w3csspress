@@ -708,16 +708,16 @@ function w3csspress_footer()
             if ($google_font != '') $font = "w3-google";
             else $font = esc_html(get_option('w3csspress_font_family'));
             for ($i = 1; $i < 7; $i++) {
-                echo "$(\"h$i\").addClass(\"" . esc_html(get_option("w3csspress_font_size_h$i")) . " " . $font . "\");";
+                echo "$('h".intval($i)."').addClass(\"" . esc_html(get_option("w3csspress_font_size_h$i")) . " " . esc_html($font) . "\");";
             }
             if ($google_font != '') {
             ?>
-                $("<style type='text/css'> .w3-google{font-family:<?php echo str_replace('+', ' ', $google_font); ?>} </style>").appendTo("head");
+                $("<style type='text/css'> .w3-google{font-family:<?php echo esc_html(str_replace('+', ' ', $google_font)); ?>} </style>").appendTo("head");
             <?php } ?>
             <?php
             if ($max_width != '') {
             ?>
-                $("<style type='text/css'> body{margin:auto; max-width:<?php echo $max_width; ?>vw;} </style>").appendTo("head");
+                $("<style type='text/css'> body{margin:auto; max-width:<?php echo intval($max_width); ?>vw;} </style>").appendTo("head");
             <?php } ?>
         });
     </script>
@@ -758,7 +758,9 @@ add_filter('the_content_more_link', __NAMESPACE__ . '\\w3csspress_read_more_link
 function w3csspress_read_more_link()
 {
     if (!is_admin()) {
-        return ' <a href="' . esc_url(get_permalink()) . '" class="more-link">' . sprintf(esc_html__('...%s', 'w3csspress'), '<span class="screen-reader-text">  ' . esc_html__(get_the_title()) . '</span>') . '</a>';
+        return ' <a href="' . esc_url(get_permalink()) . '" class="more-link">' . sprintf(
+            /* translators: read more link */
+            esc_html__('...%s', 'w3csspress'), '<span class="screen-reader-text">  ' . esc_html(get_the_title()) . '</span>') . '</a>';
     }
 }
 
@@ -767,7 +769,9 @@ function w3csspress_excerpt_read_more_link($more)
 {
     if (!is_admin()) {
         global $post;
-        return ' <a href="' . esc_url(get_permalink($post->ID)) . '" class="more-link">' . sprintf(esc_html__('...%s', 'w3csspress'), '<span class="screen-reader-text">  ' . esc_html__(get_the_title()) . '</span>') . '</a>';
+        return ' <a href="' . esc_url(get_permalink($post->ID)) . '" class="more-link">' . sprintf(
+            /* translators: read more link */
+            esc_html__('...%s', 'w3csspress'), '<span class="screen-reader-text">  ' . esc_html(get_the_title()) . '</span>') . '</a>';
     }
 }
 

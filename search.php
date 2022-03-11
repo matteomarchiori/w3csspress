@@ -3,7 +3,9 @@
     <?php
     if (have_posts()) : ?>
         <header class="header">
-            <h1 class="entry-title"><?php printf(esc_html__('Search Results for: %s', 'w3csspress'), get_search_query()); ?></h1>
+            <h1 class="entry-title"><?php printf(
+                /* translators: search text completed with query text */
+                esc_html__('Search Results for: %s', 'w3csspress'), get_search_query()); ?></h1>
         </header>
         <?php while (have_posts()) : the_post(); ?>
             <?php get_template_part('entry'); ?>

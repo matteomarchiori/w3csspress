@@ -1,12 +1,12 @@
 === w3csspress ===
 
-Contributors: Matteo Marchiori
+Contributors: matteomarchiori97
 Theme link: https://github.com/matteomarchiori/w3csspress
 Tags: blog, accessibility-ready, one-column, custom-menu, featured-images, sticky-post, threaded-comments, translation-ready
-Requires at least: 5.0
-Tested up to: 5.8
+Requires at least: 5.8
+Tested up to: 5.9
 Stable tag: trunk
-License: GNU General Public License v3 or Later
+License: GPL-3.0-or-later
 License URI: https://www.gnu.org/licenses/gpl.html
 
 == Description ==

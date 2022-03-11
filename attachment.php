@@ -27,8 +27,18 @@
                 </div>
                 <footer class="footer">
                     <nav id="nav-below" class="navigation w3-cell-row">
-                        <div class="nav-previous w3-cell"><?php previous_image_link(false, sprintf(esc_html__('%s older', 'w3csspress'), '<span class="meta-nav">&larr;</span>')); ?></div>
-                        <div class="nav-next w3-cell"><?php next_image_link(false, sprintf(esc_html__('newer %s', 'w3csspress'), '<span class="meta-nav">&rarr;</span>')); ?></div>
+                        <div class="nav-previous w3-cell">
+                            <?php previous_image_link(false, sprintf(
+                                /* translators: left arrow */
+                                esc_html__('%s older', 'w3csspress'),
+                                '<span class="meta-nav">&larr;</span>'
+                            )); ?></div>
+                        <div class="nav-next w3-cell">
+                            <?php next_image_link(false, sprintf(
+                                /* translators: right arrow */
+                                esc_html__('newer %s', 'w3csspress'),
+                                '<span class="meta-nav">&rarr;</span>'
+                            )); ?></div>
                     </nav>
                 </footer>
             </article>
