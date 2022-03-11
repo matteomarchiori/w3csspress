@@ -1,4 +1,18 @@
-<?php get_header(); ?>
+<?php
+/**
+ * Template for author page
+ *
+ * This file is used to show a post author in WordPress.
+ *
+ * @link https://codex.wordpress.org/Author_Templates
+ *
+ * @package w3csspress
+ * @since 2022.0
+ */
+
+namespace w3csspress;
+
+get_header(); ?>
 <main id="content" role="main">
 	<header class="header">
 		<?php the_post(); ?>
