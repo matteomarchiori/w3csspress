@@ -4,7 +4,7 @@ namespace w3csspress;
 
 use \Walker_Nav_Menu;
 
-require_once 'class-w3csspress-walker-nav-menu.php';
+get_template_part( 'class-w3csspress-walker-nav-menu' );
 
 function wpse_intval( $value ) {
 	return (int) $value;
@@ -825,14 +825,6 @@ function w3csspress_setup() {
 	add_editor_style( 'editor-style.css' );
 }
 
-add_action( 'admin_init', __NAMESPACE__ . '\\w3csspress_notice_dismissed' );
-function w3csspress_notice_dismissed() {
-	$user_id = get_current_user_id();
-	if ( isset( $_GET['notice-dismiss'] ) ) {
-		add_user_meta( $user_id, 'w3csspress_notice_dismissed_4', 'true', true );
-	}
-}
-
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\w3csspress_enqueue_script' );
 function w3csspress_enqueue_script() {
 	$theme_version = wp_get_theme()->get( 'Version' );
@@ -843,11 +835,11 @@ function w3csspress_enqueue_script() {
 	}
 	$google_font = esc_html( get_option( 'w3csspress_google_font' ) );
 	if ( '' !== $google_font ) {
-		wp_enqueue_style( 'google-font', "https://fonts.googleapis.com/css?family=$google_font" );
+		wp_enqueue_style( 'google-font', "https://fonts.googleapis.com/css?family=$google_font", false, $theme_version, 'all' );
 	}
-	wp_enqueue_style( 'w3csspress-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'w3csspress-style', get_stylesheet_uri(), false, $theme_version, 'all' );
 	wp_enqueue_script( 'jquery' );
-	wp_enqueue_script( 'scripts', get_template_directory_uri() . '/assets/js/scripts.js', array( 'jquery' ), $theme_version );
+	wp_enqueue_script( 'scripts', get_template_directory_uri() . '/assets/js/scripts.js', array( 'jquery' ), $theme_version, true );
 }
 
 add_action( 'wp_footer', __NAMESPACE__ . '\\w3csspress_footer' );

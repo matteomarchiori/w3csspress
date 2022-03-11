@@ -2,6 +2,8 @@
 
 use w3csspress\W3csspress_Walker_Nav_Menu;
 
+get_template_part( 'class-w3csspress-walker-nav-menu' );
+
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>

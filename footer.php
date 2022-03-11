@@ -4,11 +4,11 @@
 		&copy; <?php echo esc_html( date_i18n( __( 'Y', 'w3csspress' ) ) ); ?> <?php echo esc_html( get_bloginfo( 'name' ) ); ?>
 	</span>
 	<?php
-	$footer = get_option( 'w3csspress_footer' );
-	if ( '' !== $footer ) {
+	$w3csspress_footer = get_option( 'w3csspress_footer' );
+	if ( '' !== $w3csspress_footer ) {
 		?>
 	<span>
-		<?php echo esc_html( $footer ); ?>
+		<?php echo esc_html( $w3csspress_footer ); ?>
 	</span>
 	<?php } ?>
 </footer>
