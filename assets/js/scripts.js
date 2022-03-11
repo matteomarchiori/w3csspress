@@ -1,5 +1,5 @@
 jQuery(document).ready(function($) {
-	var excluded = "#wpadminbar, #wpadminbar *";
+    var excluded = "#wpadminbar, #wpadminbar *";
     var deviceAgent = navigator.userAgent.toLowerCase();
     if (deviceAgent.match(/(iphone|ipod|ipad)/)) {
         $("html").addClass("ios");
@@ -37,8 +37,8 @@ jQuery(document).ready(function($) {
     $(".nav-links").addClass("w3-cell-row");
     $(".nav-previous").addClass("w3-cell");
     $(".nav-next").addClass("w3-cell w3-right-align");
-	$(".search-form").addClass("w3-cell-row");
-	$(".search-form > label, .search-form > input").addClass("w3-cell");
+    $(".search-form").addClass("w3-cell-row w3-center");
+    $(".search-form > label, .search-form > input").addClass("w3-cell");
     $.each($(".menu-item"), function(index) {
         $(this).children("a").focusin(function(event) {
             $(event.target).parent().closest('.w3-dropdown-focus').addClass("w3-show");
