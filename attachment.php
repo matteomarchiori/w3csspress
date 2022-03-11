@@ -1,4 +1,18 @@
-<?php get_header(); ?>
+<?php
+/**
+ * Template for attachment page
+ *
+ * This file is used to show an attachment like media images in WordPress.
+ *
+ * @link https://developer.wordpress.org/themes/template-files-section/attachment-template-files/
+ *
+ * @package w3csspress
+ * @since 2022.0
+ */
+
+namespace w3csspress;
+
+get_header(); ?>
 <?php global $post; ?>
 <main id="content" role="main">
 	<?php
