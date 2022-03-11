@@ -1,4 +1,18 @@
-<?php get_header(); ?>
+<?php
+/**
+ * Template for category page
+ *
+ * This file is used to show posts in a category in WordPress.
+ *
+ * @link https://codex.wordpress.org/Category_Templates
+ *
+ * @package w3csspress
+ * @since 2022.0
+ */
+
+namespace w3csspress;
+
+get_header(); ?>
 <main id="content" role="main">
 	<header class="header">
 		<h1 class="entry-title">
