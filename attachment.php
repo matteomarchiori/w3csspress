@@ -7,15 +7,6 @@
                     <h1 class="entry-title"><?php the_title(); ?></h1>
                     <?php edit_post_link(); ?>
                     <?php get_template_part('entry', 'meta'); ?>
-                    <a href="<?php 
-                    echo esc_url(get_permalink($post->post_parent)); ?>" rev="attachment">                    
-                    <?php 
-                    /* translators: parent title*/
-                    printf(esc_attr__('%s Return to ', 'w3csspress'), '<span class="meta-nav">&larr;</span>'); ?><?php echo wp_kses_post(get_the_title($post->post_parent)); ?></a>
-                    <nav id="nav-above" class="navigation">
-                        <div class="nav-previous"><?php previous_image_link(false, '&lsaquo;'); ?></div>
-                        <div class="nav-next"><?php next_image_link(false, '&rsaquo;'); ?></div>
-                    </nav>
                 </header>
                 <div class="entry-content">
                     <div class="entry-attachment">
@@ -34,6 +25,12 @@
                         the_post_thumbnail('full');
                     } ?>
                 </div>
+                <footer class="footer">
+                    <nav id="nav-below" class="navigation w3-cell-row">
+                        <div class="nav-previous w3-cell"><?php previous_image_link(false, sprintf(esc_html__('%s older', 'w3csspress'), '<span class="meta-nav">&larr;</span>')); ?></div>
+                        <div class="nav-next w3-cell"><?php next_image_link(false, sprintf(esc_html__('newer %s', 'w3csspress'), '<span class="meta-nav">&rarr;</span>')); ?></div>
+                    </nav>
+                </footer>
             </article>
             <?php comments_template(); ?>
     <?php endwhile;

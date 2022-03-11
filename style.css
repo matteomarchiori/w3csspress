@@ -20,7 +20,7 @@ w3csspress is distributed under the terms of the GNU GPL
 
 * {
     box-sizing: border-box;
-    -webkit-tap-highlight-color: transparent;
+    /*-webkit-tap-highlight-color: transparent;*/
 }
 
 .sticky {}

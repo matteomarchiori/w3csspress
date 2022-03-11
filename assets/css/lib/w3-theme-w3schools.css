@@ -113,6 +113,7 @@
 .w3-code,
 .current-menu-item,
 .menu-item:hover,
+.menu-item>a:focus,
 .w3-theme-action {
     color: #fff !important;
     background-color: #537304 !important
