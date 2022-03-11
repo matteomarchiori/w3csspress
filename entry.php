@@ -4,8 +4,6 @@
  *
  * This file is used to show an article in WordPress.
  *
- * @link https://developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/comment-template/
- *
  * @package w3csspress
  * @since 2022.0
  */

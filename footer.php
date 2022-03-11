@@ -1,3 +1,17 @@
+<?php
+/**
+ * Template for footer in WordPress
+ *
+ * This file is used to show the footer of the website in WordPress.
+ *
+ * @package w3csspress
+ * @since 2022.0
+ */
+
+namespace w3csspress;
+
+?>
+
 </div>
 <footer id="footer" role="contentinfo" class="w3-border-top w3-padding-top w3-center">
 	<span id="copyright">
