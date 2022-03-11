@@ -1,3 +1,16 @@
+<?php
+/**
+ * Template for post footer
+ *
+ * This file is used to show footer of posts in WordPress.
+ *
+ * @package w3csspress
+ * @since 2022.0
+ */
+
+namespace w3csspress;
+?>
+
 <footer class="entry-footer">
 	<span class="cat-links"><?php esc_html_e( 'Categories: ', 'w3csspress' ); ?><?php the_category( ', ' ); ?></span>
 	<span class="tag-links"><?php the_tags(); ?></span>

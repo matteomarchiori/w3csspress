@@ -1,6 +1,6 @@
 <?php
 /**
- * Template for post content
+ * Template for post entry content
  *
  * This file is used to show thumbnails, meta and links of posts in WordPress.
  *
