@@ -18,7 +18,7 @@ msgstr ""
 #: nav-below.php:2
 #, php-format
 msgid "%s older"
-msgstr "%s più vecchio"
+msgstr "%s meno recente"
 
 #: attachment.php:10
 #, php-format
@@ -272,7 +272,7 @@ msgstr "Monospaziato"
 #: nav-below.php:3
 #, php-format
 msgid "newer %s"
-msgstr "più nuovo %s"
+msgstr "più recente %s"
 
 #: 404.php:5
 msgid "Not Found"
