@@ -43,7 +43,7 @@
 							previous_image_link(
 								false,
 								sprintf(
-								/* translators: left arrow */
+									/* translators: left arrow */
 									esc_html__( '%s older', 'w3csspress' ),
 									'<span class="meta-nav">&larr;</span>'
 								)
@@ -55,7 +55,7 @@
 									next_image_link(
 										false,
 										sprintf(
-										/* translators: right arrow */
+											/* translators: right arrow */
 											esc_html__( 'newer %s', 'w3csspress' ),
 											'<span class="meta-nav">&rarr;</span>'
 										)

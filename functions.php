@@ -4,12 +4,7 @@ namespace w3csspress;
 
 use \Walker_Nav_Menu;
 
-class W3csspress_Walker_Nav_Menu extends \Walker_Nav_Menu {
-
-	function start_lvl( &$output, $depth = 0, $args = null ) {
-		$output .= '<ul class="w3-dropdown-content w3-animate-opacity w3-bar-block w3-mobile w3-theme-action sub-menu">';
-	}
-}
+require_once 'class-w3csspress-walker-nav-menu.php';
 
 function wpse_intval( $value ) {
 	return (int) $value;
@@ -843,11 +838,11 @@ function w3csspress_enqueue_script() {
 	$theme_version = wp_get_theme()->get( 'Version' );
 	wp_enqueue_style( 'w3', get_template_directory_uri() . '/assets/css/w3.css', false, '4.15', 'all' );
 	$color_theme = esc_html( get_option( 'w3csspress_color_theme' ) );
-	if ( $color_theme != '' ) {
+	if ( '' !== $color_theme ) {
 		wp_enqueue_style( "w3-theme-$color_theme", get_template_directory_uri() . "/assets/css/lib/w3-theme-$color_theme.css", false, $theme_version, 'all' );
 	}
 	$google_font = esc_html( get_option( 'w3csspress_google_font' ) );
-	if ( $google_font != '' ) {
+	if ( '' !== $google_font ) {
 		wp_enqueue_style( 'google-font', "https://fonts.googleapis.com/css?family=$google_font" );
 	}
 	wp_enqueue_style( 'w3csspress-style', get_stylesheet_uri() );
@@ -893,7 +888,7 @@ function w3csspress_footer() {  ?>
 			<?php
 			$google_font = esc_html( get_option( 'w3csspress_google_font' ) );
 			$max_width   = esc_html( get_option( 'w3csspress_max_width' ) );
-			if ( $google_font != '' ) {
+			if ( '' !== $google_font ) {
 				$font = 'w3-google';
 			} else {
 				$font = esc_html( get_option( 'w3csspress_font_family' ) );
@@ -901,12 +896,12 @@ function w3csspress_footer() {  ?>
 			for ( $i = 1; $i < 7; $i++ ) {
 				echo "$('h" . intval( $i ) . "').addClass(\"" . esc_html( get_option( "w3csspress_font_size_h$i" ) ) . ' ' . esc_html( $font ) . '");';
 			}
-			if ( $google_font != '' ) {
+			if ( '' !== $google_font ) {
 				?>
 				$("<style type='text/css'> .w3-google{font-family:<?php echo esc_html( str_replace( '+', ' ', $google_font ) ); ?>} </style>").appendTo("head");
 			<?php } ?>
 			<?php
-			if ( $max_width != '' ) {
+			if ( '' !== $max_width ) {
 				?>
 				$("<style type='text/css'> body{margin:auto; max-width:<?php echo intval( $max_width ); ?>vw;} </style>").appendTo("head");
 			<?php } ?>
@@ -923,7 +918,7 @@ function w3csspress_document_title_separator( $sep ) {
 
 add_filter( 'the_title', __NAMESPACE__ . '\\w3csspress_title' );
 function w3csspress_title( $title ) {
-	if ( $title == '' ) {
+	if ( '' === $title ) {
 		return '...';
 	} else {
 		return $title;
@@ -1004,7 +999,7 @@ add_filter( 'nav_menu_css_class', __NAMESPACE__ . '\\add_additional_class_on_li'
 function add_additional_class_on_li( $classes, $item, $args ) {
 	$classes[] = 'w3-bar-item';
 	$classes[] = 'w3-mobile';
-	if ( in_array( 'menu-item-has-children', $classes ) ) {
+	if ( in_array( 'menu-item-has-children', $classes, true ) ) {
 		$classes[] = 'w3-dropdown-hover w3-dropdown-focus';
 	}
 	return $classes;
@@ -1021,13 +1016,13 @@ function dashicons_front_end() {
 add_filter( 'body_class', __NAMESPACE__ . '\\w3csspress_body_class' );
 function w3csspress_body_class( $classes ) {
 	$theme_kind = esc_html( get_option( 'w3csspress_theme_kind' ) );
-	if ( $theme_kind != '' ) {
+	if ( '' !== $theme_kind ) {
 		$classes[] = "w3-theme-$theme_kind";
 	} else {
 		$classes[] = 'w3-theme';
 	}
 	$google_font = esc_html( get_option( 'w3csspress_google_font' ) );
-	if ( $google_font == '' ) {
+	if ( '' === $google_font ) {
 		$classes[] = esc_html( get_option( 'w3csspress_font_family' ) );
 	} else {
 		$classes[] = 'w3-google';

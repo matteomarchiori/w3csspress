@@ -5,7 +5,7 @@
 		<h1 class="entry-title author"><?php the_author_link(); ?></h1>
 		<div class="archive-meta">
 			<?php
-			if ( '' != get_the_author_meta( 'user_description' ) ) {
+			if ( '' !== get_the_author_meta( 'user_description' ) ) {
 				echo esc_html( get_the_author_meta( 'user_description' ) );
 			}
 			?>
