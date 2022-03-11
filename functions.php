@@ -741,13 +741,6 @@ function w3csspress_title($title)
     }
 }
 
-if (!function_exists('w3csspress_wp_body_open')) {
-    function w3csspress_wp_body_open()
-    {
-        do_action('wp_body_open');
-    }
-}
-
 add_action('wp_body_open', __NAMESPACE__ . '\\w3csspress_skip_link');
 function w3csspress_skip_link()
 {
