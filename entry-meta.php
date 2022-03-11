@@ -1,3 +1,17 @@
+<?php
+/**
+ * Template for post entry meta
+ *
+ * This file is used to show meta of posts in WordPress.
+ *
+ * @package w3csspress
+ * @since 2022.0
+ */
+
+namespace w3csspress;
+
+?>
+
 <div class="entry-meta">
 	<span class="author vcard">
 	<?php the_author_posts_link(); ?>
