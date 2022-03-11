@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/functionality/404-pages/
  *
- * @package WordPress
+ * @package w3csspress
  * @since 2022.0
  */
 
