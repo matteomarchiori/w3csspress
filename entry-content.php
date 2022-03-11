@@ -1,4 +1,12 @@
 <?php
+/**
+ * Template for post content
+ *
+ * This file is used to show thumbnails, meta and links of posts in WordPress.
+ *
+ * @package w3csspress
+ * @since 2022.0
+ */
 
 namespace w3csspress;
 
