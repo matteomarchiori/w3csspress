@@ -1,4 +1,18 @@
-<?php get_header(); ?>
+<?php
+/**
+ * Template for not found page
+ *
+ * This file is used when a requested WordPress page is not found.
+ *
+ * @link https://developer.wordpress.org/themes/functionality/404-pages/
+ *
+ * @package WordPress
+ * @since 2022.0
+ */
+
+namespace w3csspress;
+
+get_header(); ?>
 <main id="content" role="main">
 	<article id="post-0" class="post not-found">
 		<header class="header">
