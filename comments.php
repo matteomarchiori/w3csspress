@@ -1,4 +1,19 @@
-<div id="comments" >
+<?php
+/**
+ * Template for comments
+ *
+ * This file is used to show comments of posts in WordPress.
+ *
+ * @link https://developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/comment-template/
+ *
+ * @package w3csspress
+ * @since 2022.0
+ */
+
+namespace w3csspress;
+?>
+
+<div id="comments">
 	<?php
 	if ( have_comments() ) :
 		global $w3csspress_comments_by_type;
