@@ -1,4 +1,4 @@
-=== w3csspress ===
+=== W3CSS Press ===
 
 Contributors: matteomarchiori97
 Theme link: https://github.com/matteomarchiori/w3csspress
@@ -18,7 +18,7 @@ The theme is accessibility ready.
 
 In its unchanged and original state:
 
-w3csspress WordPress Theme © 2022 Matteo Marchiori
-w3csspress is distributed under the terms of the GNU GPL
+W3CSS Press WordPress Theme © 2022 Matteo Marchiori
+W3CSS Press is distributed under the terms of the GNU GPL
 
-The w3csspress theme package and all files contained within are distributed under the terms of the GNU GPL v3 or Later (https://www.gnu.org/licenses/gpl.html).
+The W3CSS Press theme package and all files contained within are distributed under the terms of the GNU GPL v3 or Later (https://www.gnu.org/licenses/gpl.html).
