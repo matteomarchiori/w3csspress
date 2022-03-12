@@ -2,7 +2,7 @@
 
 Contributors: matteomarchiori97
 Theme link: https://github.com/matteomarchiori/w3csspress
-Tags: blog, accessibility-ready, one-column, custom-menu, featured-images, sticky-post, threaded-comments, translation-ready
+Tags: blog, news, portfolio, accessibility-ready, one-column, custom-menu, featured-images, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
 Requires at least: 5.8
 Tested up to: 5.9
 Stable tag: trunk
