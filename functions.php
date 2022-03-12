@@ -142,7 +142,7 @@ function w3csspress_customize_register( $wp_customize ) {
 		array(
 			'default'           => '',
 			'type'              => 'option',
-			'sanitize_callback' => 'sanitize_select',
+			'sanitize_callback' => 'w3csspress\sanitize_select',
 		)
 	);
 
@@ -151,7 +151,7 @@ function w3csspress_customize_register( $wp_customize ) {
 		array(
 			'default'           => '',
 			'type'              => 'option',
-			'sanitize_callback' => 'sanitize_select',
+			'sanitize_callback' => 'w3csspress\sanitize_select',
 		)
 	);
 
@@ -160,7 +160,7 @@ function w3csspress_customize_register( $wp_customize ) {
 		array(
 			'default'           => '',
 			'type'              => 'option',
-			'sanitize_callback' => 'sanitize_select',
+			'sanitize_callback' => 'w3csspress\sanitize_select',
 		)
 	);
 
@@ -178,7 +178,7 @@ function w3csspress_customize_register( $wp_customize ) {
 		array(
 			'default'           => '',
 			'type'              => 'option',
-			'sanitize_callback' => 'sanitize_select',
+			'sanitize_callback' => 'w3csspress\sanitize_select',
 		)
 	);
 
@@ -187,7 +187,7 @@ function w3csspress_customize_register( $wp_customize ) {
 		array(
 			'default'           => '',
 			'type'              => 'option',
-			'sanitize_callback' => 'sanitize_select',
+			'sanitize_callback' => 'w3csspress\sanitize_select',
 		)
 	);
 
@@ -196,7 +196,7 @@ function w3csspress_customize_register( $wp_customize ) {
 		array(
 			'default'           => '',
 			'type'              => 'option',
-			'sanitize_callback' => 'sanitize_select',
+			'sanitize_callback' => 'w3csspress\sanitize_select',
 		)
 	);
 
@@ -205,7 +205,7 @@ function w3csspress_customize_register( $wp_customize ) {
 		array(
 			'default'           => '',
 			'type'              => 'option',
-			'sanitize_callback' => 'sanitize_select',
+			'sanitize_callback' => 'w3csspress\sanitize_select',
 		)
 	);
 
@@ -214,7 +214,7 @@ function w3csspress_customize_register( $wp_customize ) {
 		array(
 			'default'           => '',
 			'type'              => 'option',
-			'sanitize_callback' => 'sanitize_select',
+			'sanitize_callback' => 'w3csspress\sanitize_select',
 		)
 	);
 
@@ -223,7 +223,7 @@ function w3csspress_customize_register( $wp_customize ) {
 		array(
 			'default'           => '',
 			'type'              => 'option',
-			'sanitize_callback' => 'sanitize_select',
+			'sanitize_callback' => 'w3csspress\sanitize_select',
 		)
 	);
 
@@ -232,7 +232,7 @@ function w3csspress_customize_register( $wp_customize ) {
 		array(
 			'default'           => '',
 			'type'              => 'option',
-			'sanitize_callback' => 'sanitize_select',
+			'sanitize_callback' => 'w3csspress\sanitize_select',
 		)
 	);
 
@@ -241,7 +241,7 @@ function w3csspress_customize_register( $wp_customize ) {
 		array(
 			'default'           => '',
 			'type'              => 'option',
-			'sanitize_callback' => 'sanitize_select',
+			'sanitize_callback' => 'w3csspress\sanitize_select',
 		)
 	);
 
@@ -250,7 +250,7 @@ function w3csspress_customize_register( $wp_customize ) {
 		array(
 			'default'           => '',
 			'type'              => 'option',
-			'sanitize_callback' => 'sanitize_select',
+			'sanitize_callback' => 'w3csspress\sanitize_select',
 		)
 	);
 
@@ -259,7 +259,7 @@ function w3csspress_customize_register( $wp_customize ) {
 		array(
 			'default'           => '',
 			'type'              => 'option',
-			'sanitize_callback' => 'sanitize_select',
+			'sanitize_callback' => 'w3csspress\sanitize_select',
 		)
 	);
 
@@ -268,7 +268,7 @@ function w3csspress_customize_register( $wp_customize ) {
 		array(
 			'default'           => '',
 			'type'              => 'option',
-			'sanitize_callback' => 'sanitize_select',
+			'sanitize_callback' => 'w3csspress\sanitize_select',
 		)
 	);
 
@@ -277,7 +277,7 @@ function w3csspress_customize_register( $wp_customize ) {
 		array(
 			'default'           => '',
 			'type'              => 'option',
-			'sanitize_callback' => 'sanitize_select',
+			'sanitize_callback' => 'w3csspress\sanitize_select',
 		)
 	);
 
@@ -285,49 +285,49 @@ function w3csspress_customize_register( $wp_customize ) {
 		'w3csspress_rounded_img',
 		array(
 			'type'              => 'option',
-			'sanitize_callback' => 'sanitize_checkbox',
+			'sanitize_callback' => 'w3csspress\sanitize_checkbox',
 		)
 	);
 	$wp_customize->add_setting(
 		'w3csspress_circle_img',
 		array(
 			'type'              => 'option',
-			'sanitize_callback' => 'sanitize_checkbox',
+			'sanitize_callback' => 'w3csspress\sanitize_checkbox',
 		)
 	);
 	$wp_customize->add_setting(
 		'w3csspress_bordered_img',
 		array(
 			'type'              => 'option',
-			'sanitize_callback' => 'sanitize_checkbox',
+			'sanitize_callback' => 'w3csspress\sanitize_checkbox',
 		)
 	);
 	$wp_customize->add_setting(
 		'w3csspress_cards_img',
 		array(
 			'type'              => 'option',
-			'sanitize_callback' => 'sanitize_checkbox',
+			'sanitize_callback' => 'w3csspress\sanitize_checkbox',
 		)
 	);
 	$wp_customize->add_setting(
 		'w3csspress_opacity_img',
 		array(
 			'type'              => 'option',
-			'sanitize_callback' => 'sanitize_checkbox',
+			'sanitize_callback' => 'w3csspress\sanitize_checkbox',
 		)
 	);
 	$wp_customize->add_setting(
 		'w3csspress_grayscale_img',
 		array(
 			'type'              => 'option',
-			'sanitize_callback' => 'sanitize_checkbox',
+			'sanitize_callback' => 'w3csspress\sanitize_checkbox',
 		)
 	);
 	$wp_customize->add_setting(
 		'w3csspress_sepia_img',
 		array(
 			'type'              => 'option',
-			'sanitize_callback' => 'sanitize_checkbox',
+			'sanitize_callback' => 'w3csspress\sanitize_checkbox',
 		)
 	);
 
@@ -336,7 +336,7 @@ function w3csspress_customize_register( $wp_customize ) {
 		array(
 			'default'           => '80',
 			'type'              => 'option',
-			'sanitize_callback' => 'w3csspress_intval',
+			'sanitize_callback' => 'w3csspress\w3csspress_intval',
 		)
 	);
 
@@ -586,7 +586,7 @@ function w3csspress_customize_register( $wp_customize ) {
 			array(
 				'default'           => '',
 				'type'              => 'option',
-				'sanitize_callback' => 'sanitize_select',
+				'sanitize_callback' => 'w3csspress\sanitize_select',
 			)
 		);
 
@@ -595,7 +595,7 @@ function w3csspress_customize_register( $wp_customize ) {
 			array(
 				'default'           => '',
 				'type'              => 'option',
-				'sanitize_callback' => 'sanitize_select',
+				'sanitize_callback' => 'w3csspress\sanitize_select',
 			)
 		);
 	}
