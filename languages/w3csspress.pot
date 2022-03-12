@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: w3csspress\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-12 13:34+0000\n"
+"POT-Creation-Date: 2022-03-12 15:00+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -499,10 +499,10 @@ msgstr ""
 
 #. Description of the theme
 msgid ""
-"Simple minimal theme made to integrate the W3.CSS framework inside Wordpress,"
+"Simple minimal theme made to integrate the W3.CSS framework inside WordPress,"
 " with global custom options and all of the W3.CSS framework functionalities. "
 "The theme has been developed starting from resources on the w3schools "
-"website applied to the blankslate Wordpress theme, slightly modified."
+"website applied to the blankslate WordPress theme, slightly modified."
 msgstr ""
 
 #: functions.php:983
@@ -539,7 +539,7 @@ msgid "Using this option you can change the theme colors."
 msgstr ""
 
 #. Name of the theme
-msgid "W3CSS Press"
+msgid "W3CSSPress"
 msgstr ""
 
 #: functions.php:64
