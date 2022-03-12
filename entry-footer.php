@@ -9,6 +9,7 @@
  */
 
 namespace w3csspress;
+
 ?>
 
 <footer class="entry-footer">

@@ -11,6 +11,7 @@
  */
 
 namespace w3csspress;
+
 ?>
 
 <div id="comments">

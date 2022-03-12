@@ -1,25 +1,63 @@
 <?php
+/**
+ * Functions of the w3csspress theme
+ *
+ * This file is used for functions used to customize the w3csspress theme.
+ *
+ * @package w3csspress
+ * @since 2022.0
+ */
 
 namespace w3csspress;
 
-use \Walker_Nav_Menu;
-
 get_template_part( 'class-w3csspress-walker-nav-menu' );
 
-function wpse_intval( $value ) {
+/**
+ * Returns the integer value of a variable.
+ *
+ * @since 2022.0
+ *
+ * @param int $value Required. Value to be checked.
+ * @return int Integer value of the variable.
+ */
+function w3csspress_intval( $value ) {
 	return (int) $value;
 }
 
+/**
+ * Returns the sanitized value of a checkbox.
+ *
+ * @since 2022.0
+ *
+ * @param int $input Required. Value to be checked.
+ * @return int,string 1 if checked, '' otherwise.
+ */
 function sanitize_checkbox( $input ) {
 	return filter_var( $input, FILTER_SANITIZE_NUMBER_INT );
 }
 
+/**
+ * Returns the sanitized value of a select input.
+ *
+ * @since 2022.0
+ *
+ * @param string   $input Required. Value to be checked.
+ * @param stdClass $setting settings with the possible values.
+ * @return string $input if exists, default value otherwise.
+ */
 function sanitize_select( $input, $setting ) {
 	$choices = $setting->manager->get_control( $setting->id )->choices;
 	return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
 }
 
 add_action( 'customize_register', __NAMESPACE__ . '\\w3csspress_customize_register' );
+/**
+ * Fires once WordPress has loaded, allowing scripts and styles to be initialized.
+ *
+ * @since 2022.0
+ *
+ * @param WP_Customize_Manager $wp_customize Required. WordPress customizer.
+ */
 function w3csspress_customize_register( $wp_customize ) {
 	$color_themes = array(
 		''            => 'Default',
@@ -298,7 +336,7 @@ function w3csspress_customize_register( $wp_customize ) {
 		array(
 			'default'           => '80',
 			'type'              => 'option',
-			'sanitize_callback' => 'wpse_intval',
+			'sanitize_callback' => 'w3csspress_intval',
 		)
 	);
 
@@ -804,6 +842,11 @@ function w3csspress_customize_register( $wp_customize ) {
 }
 
 add_action( 'after_setup_theme', __NAMESPACE__ . '\\w3csspress_setup' );
+/**
+ * Fires to finish the w3csspress theme setup.
+ *
+ * @since 2022.0
+ */
 function w3csspress_setup() {
 	load_theme_textdomain( 'w3csspress', get_template_directory() . '/languages' );
 	add_theme_support( 'title-tag' );
@@ -826,8 +869,14 @@ function w3csspress_setup() {
 }
 
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\w3csspress_enqueue_script' );
+/**
+ * Fires once WordPress has loaded, allowing scripts and styles to be initialized.
+ *
+ * @since 2022.0
+ */
 function w3csspress_enqueue_script() {
 	$theme_version = wp_get_theme()->get( 'Version' );
+	wp_enqueue_style( 'dashicons' );
 	wp_enqueue_style( 'w3', get_template_directory_uri() . '/assets/css/w3.css', false, '4.15', 'all' );
 	$color_theme = esc_html( get_option( 'w3csspress_color_theme' ) );
 	if ( '' !== $color_theme ) {
@@ -843,7 +892,12 @@ function w3csspress_enqueue_script() {
 }
 
 add_action( 'wp_footer', __NAMESPACE__ . '\\w3csspress_footer' );
-function w3csspress_footer() {  ?>
+/**
+ * Fires when WordPress loads the footer, to enqueue some customizer checks.
+ *
+ * @since 2022.0
+ */
+function w3csspress_footer() {    ?>
 	<script type="text/javascript">
 		jQuery(document).ready(function($) {
 			var excluded = "#wpadminbar, #wpadminbar *";
@@ -902,13 +956,15 @@ function w3csspress_footer() {  ?>
 	<?php
 }
 
-add_filter( 'document_title_separator', __NAMESPACE__ . '\\w3csspress_document_title_separator' );
-function w3csspress_document_title_separator( $sep ) {
-	$sep = '|';
-	return $sep;
-}
-
 add_filter( 'the_title', __NAMESPACE__ . '\\w3csspress_title' );
+/**
+ * Filter for empty titles, replace with three periods.
+ *
+ * @since 2022.0
+ *
+ * @param string $title Required. The title of the post or page.
+ * @return string The new title.
+ */
 function w3csspress_title( $title ) {
 	if ( '' === $title ) {
 		return '...';
@@ -918,11 +974,23 @@ function w3csspress_title( $title ) {
 }
 
 add_action( 'wp_body_open', __NAMESPACE__ . '\\w3csspress_skip_link' );
+/**
+ * Add skip to the content link.
+ *
+ * @since 2022.0
+ */
 function w3csspress_skip_link() {
 	echo '<a href="#content" class="skip-link screen-reader-text">' . esc_html__( 'Skip to the content', 'w3csspress' ) . '</a>';
 }
 
 add_filter( 'the_content_more_link', __NAMESPACE__ . '\\w3csspress_read_more_link' );
+/**
+ * Add read more link.
+ *
+ * @since 2022.0
+ *
+ * @return string Read more link.
+ */
 function w3csspress_read_more_link() {
 	if ( ! is_admin() ) {
 		return ' <a href="' . esc_url( get_permalink() ) . '" class="more-link">' . sprintf(
@@ -934,6 +1002,15 @@ function w3csspress_read_more_link() {
 }
 
 add_filter( 'excerpt_more', __NAMESPACE__ . '\\w3csspress_excerpt_read_more_link', 5 );
+/**
+ * Add read more  for excerpt.
+ *
+ * @since 2022.0
+ *
+ * @param string $more Required. Default more string.
+ *
+ * @return string Read more link.
+ */
 function w3csspress_excerpt_read_more_link( $more ) {
 	if ( ! is_admin() ) {
 		global $post;
@@ -948,6 +1025,15 @@ function w3csspress_excerpt_read_more_link( $more ) {
 add_filter( 'big_image_size_threshold', '__return_false' );
 
 add_filter( 'intermediate_image_sizes_advanced', __NAMESPACE__ . '\\w3csspress_image_insert_override' );
+/**
+ * Customize sizes for media.
+ *
+ * @since 2022.0
+ *
+ * @param array $sizes Required. Default media sizes.
+ *
+ * @return array media sizes.
+ */
 function w3csspress_image_insert_override( $sizes ) {
 	unset( $sizes['medium_large'] );
 	unset( $sizes['1536x1536'] );
@@ -956,6 +1042,11 @@ function w3csspress_image_insert_override( $sizes ) {
 }
 
 add_action( 'wp_head', __NAMESPACE__ . '\\w3csspress_pingback_header' );
+/**
+ * Add pingback header.
+ *
+ * @since 2022.0
+ */
 function w3csspress_pingback_header() {
 	if ( is_singular() && pings_open() ) {
 		printf( '<link rel="pingback" href="%s" />' . "\n", esc_url( get_bloginfo( 'pingback_url' ) ) );
@@ -963,12 +1054,24 @@ function w3csspress_pingback_header() {
 }
 
 add_action( 'comment_form_before', __NAMESPACE__ . '\\w3csspress_enqueue_comment_reply_script' );
+/**
+ * Add comment reply function
+ *
+ * @since 2022.0
+ */
 function w3csspress_enqueue_comment_reply_script() {
 	if ( esc_html( get_option( 'thread_comments' ) ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
 
+/**
+ * Show trackbacks and pingbacks.
+ *
+ * @param string $comment Required. Comment.
+ *
+ * @since 2022.0
+ */
 function w3csspress_custom_pings( $comment ) {
 	?>
 	<li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>"><?php echo esc_url( comment_author_link() ); ?></li>
@@ -976,6 +1079,14 @@ function w3csspress_custom_pings( $comment ) {
 }
 
 add_filter( 'get_comments_number', __NAMESPACE__ . '\\w3csspress_comment_count', 0 );
+/**
+ * Counter for comments.
+ *
+ * @since 2022.0
+ *
+ * @param int $count Required. Default count.
+ * @return int Count of comments for post.
+ */
 function w3csspress_comment_count( $count ) {
 	if ( ! is_admin() ) {
 		global $id;
@@ -988,6 +1099,17 @@ function w3csspress_comment_count( $count ) {
 }
 
 add_filter( 'nav_menu_css_class', __NAMESPACE__ . '\\add_additional_class_on_li', 1, 3 );
+/**
+ * Filters the CSS classes applied to a menu item’s list item element.
+ *
+ * @since 2022.0
+ *
+ * @param array    $classes Array of the CSS classes that are applied to the menu item's <li> element.
+ * @param WP_Post  $item The current menu item object.
+ * @param stdClass $args An object of wp_nav_menu() arguments.
+ *
+ * @return array Array of the CSS classes that are applied to the menu item's <li> element.
+ */
 function add_additional_class_on_li( $classes, $item, $args ) {
 	$classes[] = 'w3-bar-item';
 	$classes[] = 'w3-mobile';
@@ -1000,12 +1122,16 @@ function add_additional_class_on_li( $classes, $item, $args ) {
 remove_filter( 'the_content', 'wpautop' );
 remove_filter( 'the_excerpt', 'wpautop' );
 
-add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\dashicons_front_end' );
-function dashicons_front_end() {
-	wp_enqueue_style( 'dashicons' );
-}
-
 add_filter( 'body_class', __NAMESPACE__ . '\\w3csspress_body_class' );
+/**
+ * Displays the class names for the body element.
+ *
+ * @since 2022.0
+ *
+ * @param array $classes Optional. Space-separated string or array of class names to add to the class list.
+ *
+ * @return array $classes Space-separated string or array of class names to add to the class list.
+ */
 function w3csspress_body_class( $classes ) {
 	$theme_kind = esc_html( get_option( 'w3csspress_theme_kind' ) );
 	if ( '' !== $theme_kind ) {
