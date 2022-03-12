@@ -1,4 +1,16 @@
-<?php get_header(); ?>
+<?php
+/**
+ * Template for search results in WordPress
+ *
+ * This file is used to show the results of a search in WordPress.
+ *
+ * @package w3csspress
+ * @since 2022.0
+ */
+
+namespace w3csspress;
+
+get_header(); ?>
 <main id="content" role="main">
 	<?php
 	if ( have_posts() ) :

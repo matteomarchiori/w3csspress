@@ -1,4 +1,16 @@
-<?php get_header(); ?>
+<?php
+/**
+ * Template for tagged posts in WordPress
+ *
+ * This file is used to show tagged posts in WordPress.
+ *
+ * @package w3csspress
+ * @since 2022.0
+ */
+
+namespace w3csspress;
+
+get_header(); ?>
 <main id="content" role="main">
 	<header class="header">
 		<h1 class="entry-title"><?php single_term_title(); ?></h1>

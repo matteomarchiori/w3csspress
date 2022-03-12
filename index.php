@@ -1,4 +1,4 @@
-<?php 
+<?php
 /**
  * Template for index in WordPress
  *
