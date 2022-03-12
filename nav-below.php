@@ -1,4 +1,16 @@
-<?php $w3csspress_args = array(
+<?php
+/**
+ * Template for generic nav below post.
+ *
+ * This file is used to show the navigation arrows under a generic post.
+ *
+ * @package w3csspress
+ * @since 2022.0
+ */
+
+namespace w3csspress;
+
+$w3csspress_args = array(
 	'prev_text' => sprintf(
 		/* translators: arrow and text */
 		esc_html__( '%s older', 'w3csspress' ),
