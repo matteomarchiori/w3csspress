@@ -1,4 +1,14 @@
 <?php
+/**
+ * Template for header in WordPress
+ *
+ * This file is used to show the header of the website in WordPress.
+ *
+ * @package w3csspress
+ * @since 2022.0
+ */
+
+namespace w3csspress;
 
 use w3csspress\W3csspress_Walker_Nav_Menu;
 
