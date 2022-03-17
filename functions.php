@@ -888,7 +888,7 @@ function w3csspress_enqueue_script() {
 	}
 	wp_enqueue_style( 'w3csspress-style', get_stylesheet_uri(), false, $theme_version, 'all' );
 	wp_enqueue_script( 'jquery' );
-	wp_enqueue_script( 'scripts', get_template_directory_uri() . '/assets/js/scripts.js', array( 'jquery' ), $theme_version, true );
+	wp_enqueue_script( 'w3csspress-scripts', get_template_directory_uri() . '/assets/js/scripts.js', array( 'jquery' ), $theme_version, true );
 }
 
 add_action( 'wp_footer', __NAMESPACE__ . '\\w3csspress_footer' );
