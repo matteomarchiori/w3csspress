@@ -22,3 +22,7 @@ W3CSSPress WordPress Theme © 2022 Matteo Marchiori
 W3CSSPress is distributed under the terms of the GNU GPL
 
 The W3CSSPress theme package and all files contained within are distributed under the terms of the GNU GPL v3 or Later (https://www.gnu.org/licenses/gpl.html).
+
+Image for theme screenshot, Copyright Sagar Ladani
+License: CC0 1.0 Universal (CC0 1.0)
+Source: https://wordpress.org/photos/photo/7176232111
