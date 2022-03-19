@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Template for header in WordPress
  *
