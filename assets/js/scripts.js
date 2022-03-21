@@ -23,7 +23,8 @@ jQuery(document).ready(function($) {
             $("#menu").toggle();
         });
     }
-    $("header,footer,div,p,form,img,table,article,section,figure,nav,summary").not(excluded).addClass("w3-section");
+    $("header:not('#header'),footer,div:not('#branding,#wrapper'),p,form,img,table,article,section,figure,nav,summary").not(excluded).addClass("w3-section");
+	$("#header").addClass("w3-container");
     $("input:not(':button, :reset,[type=\"button\"],[type=\"submit\"],[type=\"reset\"]')").not(excluded).addClass("w3-input");
     $("button,reset").not(excluded).addClass("w3-btn w3-theme-action");
     $("input[type='button'],input[type='submit'],input[type='reset']").not(excluded).addClass("w3-btn");

@@ -856,10 +856,18 @@ function w3csspress_setup() {
 	add_theme_support( 'html5', array( 'search-form', 'navigation-widgets' ) );
 	add_theme_support( 'woocommerce' );
 	add_theme_support( 'custom-logo' );
-	global $w3csspress_content_width;
-	if ( ! isset( $w3csspress_content_width ) ) {
-		$w3csspress_content_width = 1920;
-	}
+	add_theme_support(
+		'custom-header',
+		array(
+			'default-image' => get_template_directory_uri() . '/assets/images/header.jpg',
+			'width'              => 0,
+			'height'             => 0,
+			'flex-width'         => true,
+			'flex-height'        => true,
+			'header-text'        => false,
+			'video'              => true,
+		)
+	);
 	register_nav_menus(
 		array(
 			'main-menu' => esc_html__( 'Main Menu', 'w3csspress' ),
@@ -950,6 +958,9 @@ function w3csspress_footer() {    ?>
 			if ( '' !== $max_width ) {
 				?>
 				$("<style type='text/css'> body{margin:auto; max-width:<?php echo intval( $max_width ); ?>vw;} </style>").appendTo("head");
+			<?php }
+			if ( get_header_image() ) {	?>
+				$("<style type='text/css'> #header{background-image:url('<?php echo header_image(); ?>'); background-position:center; background-size:cover; background-repeat:no-repeat;} </style>").appendTo("head");
 			<?php } ?>
 		});
 	</script>
