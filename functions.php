@@ -855,7 +855,13 @@ function w3csspress_setup() {
 	add_theme_support( 'automatic-feed-links' );
 	add_theme_support( 'html5', array( 'search-form', 'navigation-widgets' ) );
 	add_theme_support( 'woocommerce' );
-	add_theme_support( 'custom-logo' );
+	add_theme_support( 'custom-logo', array(
+		'height'               => 0,
+		'width'                => 0,
+		'flex-height'          => true,
+		'flex-width'           => true,
+		'unlink-homepage-logo' => true,
+	) );
 	add_theme_support(
 		'custom-header',
 		array(
