@@ -27,6 +27,10 @@ Default header image, Copyright mdburnette
 License: CC0 1.0 Universal (CC0 1.0)
 Source: https://wordpress.org/photos/photo/43962389f5
 
+Default texture image, Copyright Chuck Grimmett
+License: CC0 1.0 Universal (CC0 1.0)
+Source: https://wordpress.org/photos/photo/6186200939
+
 Image for theme screenshot, Copyright Sagar Ladani
 License: CC0 1.0 Universal (CC0 1.0)
 Source: https://wordpress.org/photos/photo/7176232111

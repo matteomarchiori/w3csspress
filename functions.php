@@ -874,6 +874,16 @@ function w3csspress_setup() {
 			'video'              => true,
 		)
 	);
+	add_theme_support( 'custom-background', array(
+		'default-image'          => get_template_directory_uri() . '/assets/images/texture.jpg',
+		'default-preset'         => 'default', // 'default', 'fill', 'fit', 'repeat', 'custom'
+		'default-position-x'     => 'left',    // 'left', 'center', 'right'
+		'default-position-y'     => 'top',     // 'top', 'center', 'bottom'
+		'default-size'           => 'auto',    // 'auto', 'contain', 'cover'
+		'default-repeat'         => 'repeat',  // 'repeat-x', 'repeat-y', 'repeat', 'no-repeat'
+		'default-attachment'     => 'scroll',  // 'scroll', 'fixed'
+		'default-color'          => '',
+	) );
 	register_nav_menus(
 		array(
 			'main-menu' => esc_html__( 'Main Menu', 'w3csspress' ),
