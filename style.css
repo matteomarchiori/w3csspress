@@ -48,9 +48,9 @@ W3CSSPress is distributed under the terms of the GNU GPL
     margin: -1px;
     overflow: hidden;
     padding: 0;
-    position: absolute!important;
+    position: absolute;
     width: 1px;
-    word-wrap: normal!important;
+    word-wrap: normal;
     word-break: normal
 }
 
@@ -58,7 +58,7 @@ W3CSSPress is distributed under the terms of the GNU GPL
     background-color: #f7f7f7;
     border-radius: 3px;
     box-shadow: 0 0 2px 2px rgba(0, 0, 0, .6);
-    clip: auto!important;
+    clip: auto;
     -webkit-clip-path: none;
     clip-path: none;
     color: #007acc;
@@ -98,7 +98,7 @@ W3CSSPress is distributed under the terms of the GNU GPL
 
 .visually-hidden:not(:focus):not(:active),
 .form-allowed-tags:not(:focus):not(:active) {
-    position: absolute !important;
+    position: absolute ;
     height: 1px;
     width: 1px;
     overflow: hidden;
