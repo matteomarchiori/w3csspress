@@ -855,35 +855,41 @@ function w3csspress_setup() {
 	add_theme_support( 'automatic-feed-links' );
 	add_theme_support( 'html5', array( 'navigation-widgets', 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption', 'style', 'script' ) );
 	add_theme_support( 'woocommerce' );
-	add_theme_support( 'custom-logo', array(
-		'height'               => 0,
-		'width'                => 0,
-		'flex-height'          => true,
-		'flex-width'           => true,
-		'unlink-homepage-logo' => true,
-	) );
+	add_theme_support(
+		'custom-logo',
+		array(
+			'height'               => 0,
+			'width'                => 0,
+			'flex-height'          => true,
+			'flex-width'           => true,
+			'unlink-homepage-logo' => true,
+		)
+	);
 	add_theme_support(
 		'custom-header',
 		array(
 			'default-image' => get_template_directory_uri() . '/assets/images/header.jpg',
-			'width'              => 0,
-			'height'             => 0,
-			'flex-width'         => true,
-			'flex-height'        => true,
-			'header-text'        => false,
-			'video'              => true,
+			'width'         => 0,
+			'height'        => 0,
+			'flex-width'    => true,
+			'flex-height'   => true,
+			'header-text'   => false,
+			'video'         => true,
 		)
 	);
-	add_theme_support( 'custom-background', array(
-		'default-image'          => get_template_directory_uri() . '/assets/images/texture.jpg',
-		'default-preset'         => 'fill',
-		'default-position-x'     => 'center',
-		'default-position-y'     => 'center',
-		'default-size'           => 'contain',
-		'default-repeat'         => 'no-repeat',
-		'default-attachment'     => 'fixed',
-		'default-color'          => '',
-	) );
+	add_theme_support(
+		'custom-background',
+		array(
+			'default-image'      => get_template_directory_uri() . '/assets/images/texture.jpg',
+			'default-preset'     => 'fill',
+			'default-position-x' => 'center',
+			'default-position-y' => 'center',
+			'default-size'       => 'contain',
+			'default-repeat'     => 'no-repeat',
+			'default-attachment' => 'fixed',
+			'default-color'      => '',
+		)
+	);
 	register_nav_menus(
 		array(
 			'main-menu' => esc_html__( 'Main Menu', 'w3csspress' ),
@@ -974,9 +980,11 @@ function w3csspress_footer() {    ?>
 			if ( '' !== $max_width ) {
 				?>
 				$("<style type='text/css'> body{margin:auto; max-width:<?php echo intval( $max_width ); ?>vw;} </style>").appendTo("head");
-			<?php }
-			if ( get_header_image() ) {	?>
-				$("<style type='text/css'> #header{background-image:url('<?php echo header_image(); ?>'); background-position:center; background-size:cover; background-repeat:no-repeat;} </style>").appendTo("head");
+				<?php
+			}
+			if ( get_header_image() ) {
+				?>
+				$("<style type='text/css'> #header{background-image:url('<?php echo esc_url( header_image() ); ?>'); background-position:center; background-size:cover; background-repeat:no-repeat;} </style>").appendTo("head");
 			<?php } ?>
 		});
 	</script>
