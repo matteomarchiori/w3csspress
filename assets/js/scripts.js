@@ -39,6 +39,7 @@ jQuery(document).ready(function($) {
     $(".nav-next").addClass("w3-cell w3-right-align");
     $(".search-form").addClass("w3-cell-row w3-center");
     $(".search-form > label, .search-form > input").addClass("w3-cell");
+    $(".search-form > input").addClass("w3-left w3-margin-left");
     $.each($(".menu-item"), function(index) {
         $(this).children("a").focusin(function(event) {
             $(event.target).parent().closest('.w3-dropdown-focus').addClass("w3-show");
