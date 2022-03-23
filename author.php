@@ -13,7 +13,7 @@
 namespace w3csspress;
 
 get_header(); ?>
-<main id="content" role="main">
+<main id="content" class="w3-container" role="main">
 	<header class="header">
 		<?php the_post(); ?>
 		<h1 class="entry-title author"><?php the_author_link(); ?></h1>

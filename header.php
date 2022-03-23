@@ -27,7 +27,7 @@ get_template_part( 'class-w3csspress-walker-nav-menu' );
 <body <?php body_class(); ?>>
 	<?php wp_body_open(); ?>
 	<div id="wrapper" class="hfeed">
-		<header id="header" role="banner">
+		<header id="header" role="banner" class="w3-container">
 			<div id="branding">
 				<?php
 				if ( has_custom_logo() ) {
