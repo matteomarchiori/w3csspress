@@ -1,5 +1,12 @@
 jQuery(document).ready(function($) {
-    var excluded = "#wpadminbar, #wpadminbar *";
+    function menufocus(element){
+		$(element).parent().closest('.w3-dropdown-focus').addClass("w3-show");
+		$(element).parents('.w3-dropdown-content').addClass("w3-show");
+		$(element).next('.w3-dropdown-content').addClass("w3-show");
+		$(element).parent().prev('.w3-dropdown-focus').find('.w3-dropdown-content').removeClass("w3-show");
+	}
+	
+	var excluded = "#wpadminbar, #wpadminbar *";
     var deviceAgent = navigator.userAgent.toLowerCase();
     if (deviceAgent.match(/(iphone|ipod|ipad)/)) {
         $("html").addClass("ios");
@@ -22,8 +29,7 @@ jQuery(document).ready(function($) {
         $("#burger").click(function() {
             $("#menu").toggle();
         });
-    }
-    $("header:not('#header'),footer:not('#footer'),div:not('#branding,#wrapper,#content'),p,form,img,table,article,section,figure,nav,summary").not(excluded).addClass("w3-section");
+    } $("header:not('#header'),footer:not('#footer'),div:not('#branding,#wrapper,#content'),p,form,img,table,article,section,figure,nav,summary").not(excluded).addClass("w3-section");
     $("input:not(':button, :reset,[type=\"button\"],[type=\"submit\"],[type=\"reset\"]')").not(excluded).addClass("w3-input");
     $("button,reset").not(excluded).addClass("w3-btn w3-theme-action");
     $("input[type='button'],input[type='submit'],input[type='reset']").not(excluded).addClass("w3-btn");
@@ -42,11 +48,20 @@ jQuery(document).ready(function($) {
     $(".search-form > input").addClass("w3-left w3-margin-left");
     $.each($(".menu-item"), function(index) {
         $(this).children("a").focusin(function(event) {
-            $(event.target).parent().closest('.w3-dropdown-focus').addClass("w3-show");
-            $(event.target).next('.w3-dropdown-content').addClass("w3-show");
-            $(event.target).parent().prev('.w3-dropdown-focus').find('.w3-dropdown-content').removeClass("w3-show");
+            menufocus(event.target);
+        });
+		$(this).mouseenter(function(event) {
+            $(event.target).children(".w3-dropdown-content").first().addClass("w3-show");
+        });
+		$(this).mouseleave(function(event) {
+            $(event.target).children(".w3-dropdown-content").first().removeClass("w3-show");
         });
     });
+	$.each($(".w3-dropdown-content"), function(index){
+		$(this).mouseleave(function(event) {
+			$(this).removeClass("w3-show");
+		});
+	});
     $.each($(".w3-dropdown-content .menu-item:last-of-type"), function(index) {
         $(this).children("a").keydown(function(event) {
             if (event.which == 9 && !event.shiftKey && $(event.target).next('.w3-dropdown-content').length == 0) {

@@ -874,7 +874,6 @@ function w3csspress_setup() {
 			'flex-width'    => true,
 			'flex-height'   => true,
 			'header-text'   => false,
-			'video'         => true,
 		)
 	);
 	add_theme_support(

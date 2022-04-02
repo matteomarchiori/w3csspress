@@ -481,10 +481,6 @@ a {
     cursor: pointer
 }
 
-.w3-dropdown-hover:hover > .w3-dropdown-content {
-    display: block
-}
-
 .w3-dropdown-hover:first-child,
 .w3-dropdown-click:hover {
     background-color: #ccc;
@@ -501,12 +497,26 @@ a {
     cursor: auto;
     color: #000;
     background-color: #fff;
-    display: none;
+    clip: rect(1px, 1px, 1px, 1px);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+	overflow: hidden;
+	word-wrap: normal;
+    word-break: normal;
     position: absolute;
     min-width: 160px;
     margin: 0;
     padding: 0;
     z-index: 1
+}
+
+.w3-dropdown-content.w3-show{
+	clip: inherit;
+    -webkit-clip-path: inherit;
+    clip-path: inherit;
+	overflow: inherit;
+	word-wrap: inherit;
+    word-break: inherit;
 }
 
 .w3-check,
