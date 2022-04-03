@@ -497,26 +497,17 @@ a {
     cursor: auto;
     color: #000;
     background-color: #fff;
-    clip: rect(1px, 1px, 1px, 1px);
-    -webkit-clip-path: inset(50%);
-    clip-path: inset(50%);
-	overflow: hidden;
-	word-wrap: normal;
-    word-break: normal;
-    position: absolute;
-    min-width: 160px;
-    margin: 0;
-    padding: 0;
-    z-index: 1
-}
-
-.w3-dropdown-content.w3-show{
-	clip: inherit;
+    clip: inherit;
     -webkit-clip-path: inherit;
     clip-path: inherit;
 	overflow: inherit;
 	word-wrap: inherit;
     word-break: inherit;
+    position: absolute;
+    min-width: 160px;
+    margin: 0;
+    padding: 0;
+    z-index: 1
 }
 
 .w3-check,
@@ -713,6 +704,22 @@ a {
 }
 
 @media (min-width:601px) {
+	.w3-dropdown-content {
+		clip: rect(1px, 1px, 1px, 1px);
+		-webkit-clip-path: inset(50%);
+		clip-path: inset(50%);
+		overflow: hidden;
+		word-wrap: normal;
+		word-break: normal;
+	}
+	.w3-dropdown-content.w3-show{
+		clip: inherit;
+		-webkit-clip-path: inherit;
+		clip-path: inherit;
+		overflow: inherit;
+		word-wrap: inherit;
+		word-break: inherit;
+	}
     .w3-col.m1 {
         width: 8.33333%
     }
