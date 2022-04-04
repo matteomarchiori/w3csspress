@@ -30,10 +30,13 @@ jQuery(document).ready(function($) {
             $("#menu").toggle();
         });
     } $("header:not('#header'),footer:not('#footer'),div:not('#branding,#wrapper,#content'),p,form,img,table,article,section,figure,nav,summary").not(excluded).addClass("w3-section");
-    $("input:not(':button, :reset,[type=\"button\"],[type=\"submit\"],[type=\"reset\"]')").not(excluded).addClass("w3-input");
+    $("input[type='text'],input[type='search']").not(excluded).addClass("w3-input");
     $("button,reset").not(excluded).addClass("w3-btn w3-theme-action");
     $("input[type='button'],input[type='submit'],input[type='reset']").not(excluded).addClass("w3-btn");
     $("input,textarea").not(excluded).addClass("w3-theme-action");
+	$("input[type='checkbox']").addClass("w3-check");
+	$("input[type='radio']").addClass("w3-radio");
+	$("select").addClass("w3-select");
     $("table").parent().addClass("w3-responsive");
     $("table").addClass("w3-table-all w3-hoverable");
     $("img").addClass("w3-image");
