@@ -108,7 +108,7 @@ W3CSSPress is distributed under the terms of the GNU GPL
 }
 
 label {
-    vertical-align: top;
+    vertical-align: middle;
 }
 
 .w3-dropdown-focus:first-child,
