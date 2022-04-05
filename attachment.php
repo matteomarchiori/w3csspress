@@ -38,50 +38,52 @@ get_header(); ?>
 						<?php endif; ?>
 					</div>
 					<div class="entry-caption">
-								<?php
-								if ( ! empty( $post->post_excerpt ) ) {
-									the_excerpt();
-								}
-								?>
+						<?php
+						if ( ! empty( $post->post_excerpt ) ) {
+							the_excerpt();
+						}
+						?>
 					</div>
-							<?php
-							if ( has_post_thumbnail() ) {
-								the_post_thumbnail( 'full' );
-							}
-							?>
+					<?php
+					if ( has_post_thumbnail() ) {
+						the_post_thumbnail( 'full' );
+					}
+					?>
 				</div>
 				<footer class="footer">
 					<nav id="nav-below" class="navigation w3-cell-row">
 						<div class="nav-previous w3-cell">
 							<?php
+							$w3csspress_older = is_rtl() ? '&rarr;' : '&larr;';
 							previous_image_link(
 								false,
 								sprintf(
-									/* translators: left arrow */
+									/* translators: arrow */
 									esc_html__( '%s older', 'w3csspress' ),
-									'<span class="meta-nav">&larr;</span>'
+									"<span class='meta-nav'>$w3csspress_older</span>"
 								)
 							);
 							?>
-							</div>
+						</div>
 						<div class="nav-next w3-cell">
-									<?php
-									next_image_link(
-										false,
-										sprintf(
-											/* translators: right arrow */
-											esc_html__( 'newer %s', 'w3csspress' ),
-											'<span class="meta-nav">&rarr;</span>'
-										)
-									);
-									?>
-							</div>
+							<?php
+							$w3csspress_newer = is_rtl() ? '&larr;' : '&rarr;';
+							next_image_link(
+								false,
+								sprintf(
+									/* translators: arrow */
+									esc_html__( 'newer %s', 'w3csspress' ),
+									"<span class='meta-nav'>$w3csspress_newer</span>"
+								)
+							);
+							?>
+						</div>
 					</nav>
 				</footer>
 			</article>
-					<?php comments_template(); ?>
+			<?php comments_template(); ?>
 			<?php
-	endwhile;
+		endwhile;
 	endif;
 	?>
 </main>
