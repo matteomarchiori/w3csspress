@@ -26,12 +26,18 @@ get_header(); ?>
 	</header>
 	<?php
 	if ( have_posts() ) :
-		while ( have_posts() ) :
-			the_post();
-			?>
-			<?php get_template_part( 'entry' ); ?>
+		?>
+		<div class="w3-row-padding">
 			<?php
-	endwhile;
+			while ( have_posts() ) :
+				the_post();
+				?>
+				<?php get_template_part( 'entry' ); ?>
+				<?php
+			endwhile;
+			?>
+		</div>
+		<?php
 	endif;
 	?>
 	<?php get_template_part( 'nav', 'below' ); ?>

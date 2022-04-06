@@ -26,12 +26,14 @@ get_header(); ?>
 			?>
 				</h1>
 		</header>
+		<div class="w3-row-padding">
 		<?php
 		while ( have_posts() ) :
 			the_post();
 			?>
 			<?php get_template_part( 'entry' ); ?>
 		<?php endwhile; ?>
+		</div>
 		<?php get_template_part( 'nav', 'below' ); ?>
 	<?php else : ?>
 		<article id="post-0" class="post no-results not-found">

@@ -14,13 +14,19 @@ get_header(); ?>
 <main id="content" class="w3-container" role="main">
 	<?php
 	if ( have_posts() ) :
-		while ( have_posts() ) :
-			the_post();
-			?>
-			<?php get_template_part( 'entry' ); ?>
-			<?php comments_template(); ?>
+		?>
+		<div class="w3-row-padding">
 			<?php
-	endwhile;
+			while ( have_posts() ) :
+				the_post();
+				?>
+				<?php get_template_part( 'entry' ); ?>
+				<?php comments_template(); ?>
+				<?php
+			endwhile;
+			?>
+		</div>
+		<?php
 	endif;
 	?>
 	<?php get_template_part( 'nav', 'below' ); ?>

@@ -14,17 +14,23 @@ get_header(); ?>
 <main id="content" class="w3-container" role="main">
 	<?php
 	if ( have_posts() ) :
-		while ( have_posts() ) :
-			the_post();
-			?>
-			<?php get_template_part( 'entry' ); ?>
+		?>
+		<div class="w3-row-padding">
 			<?php
-			if ( comments_open() && ! post_password_required() ) {
-				comments_template( '', true );
-			}
+			while ( have_posts() ) :
+				the_post();
+				?>
+				<?php get_template_part( 'entry' ); ?>
+				<?php
+				if ( comments_open() && ! post_password_required() ) {
+					comments_template( '', true );
+				}
+				?>
+				<?php
+			endwhile;
 			?>
-			<?php
-	endwhile;
+		</div>
+		<?php
 	endif;
 	?>
 	<footer class="footer">

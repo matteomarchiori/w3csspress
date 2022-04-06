@@ -123,6 +123,13 @@ function w3csspress_customize_register( $wp_customize ) {
 		$theme_kinds[ "l$i" ] = __( 'Light', 'w3csspress' ) . " $i";
 	}
 
+	$layouts = array(
+		'w3-rest'    => __( 'One Column', 'w3csspress' ),
+		'w3-half'    => __( 'Two Columns', 'w3csspress' ),
+		'w3-third'   => __( 'Three Columns', 'w3csspress' ),
+		'w3-quarter' => __( 'Four Columns', 'w3csspress' ),
+	);
+
 	$priority = 1;
 
 	$wp_customize->add_section(
@@ -346,6 +353,28 @@ function w3csspress_customize_register( $wp_customize ) {
 			'default'           => '',
 			'type'              => 'option',
 			'sanitize_callback' => 'wp_filter_post_kses',
+		)
+	);
+
+	$wp_customize->add_setting(
+		'w3csspress_layout',
+		array(
+			'default'           => '',
+			'type'              => 'option',
+			'sanitize_callback' => 'w3csspress\sanitize_select',
+		)
+	);
+
+	$wp_customize->add_control(
+		'w3csspress_layout',
+		array(
+			'label'       => esc_html__( 'Select layout', 'w3csspress' ),
+			'description' => esc_html__( 'Using this option you can change the page layout.', 'w3csspress' ),
+			'settings'    => 'w3csspress_layout',
+			'priority'    => $priority++,
+			'section'     => 'w3csspress_section',
+			'type'        => 'select',
+			'choices'     => $layouts,
 		)
 	);
 

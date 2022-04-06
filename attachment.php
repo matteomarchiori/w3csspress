@@ -17,6 +17,9 @@ get_header(); ?>
 <main id="content" class="w3-container" role="main">
 	<?php
 	if ( have_posts() ) :
+		?>
+		<div class="w3-row-padding">
+		<?php
 		while ( have_posts() ) :
 			the_post();
 			?>
@@ -84,6 +87,9 @@ get_header(); ?>
 			<?php comments_template(); ?>
 			<?php
 		endwhile;
+		?>
+		</div>
+		<?php
 	endif;
 	?>
 </main>

@@ -23,15 +23,25 @@ get_header(); ?>
 				echo esc_html( get_the_author_meta( 'user_description' ) );
 			}
 			?>
-			</div>
+		</div>
 		<?php rewind_posts(); ?>
 	</header>
-	<?php
-	while ( have_posts() ) :
-		the_post();
+		<?php
+		if ( have_posts() ) :
+			?>
+			<div class="w3-row-padding">
+				<?php
+				while ( have_posts() ) :
+					the_post();
+					?>
+					<?php get_template_part( 'entry' ); ?>
+					<?php
+				endwhile;
+				?>
+			</div>
+			<?php
+		endif;
 		?>
-		<?php get_template_part( 'entry' ); ?>
-	<?php endwhile; ?>
 	<?php get_template_part( 'nav', 'below' ); ?>
 </main>
 <?php get_footer(); ?>
