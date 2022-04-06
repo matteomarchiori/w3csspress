@@ -30,7 +30,7 @@ jQuery(document).ready(function($) {
             $("#menu").toggle();
         });
     } $("header:not('#header'),footer:not('#footer'),div:not('#branding,#wrapper,#content'),p,form,img,table,article,section,figure,nav,summary").not(excluded).addClass("w3-section");
-	$("input[type='text'],input[type='search'],input[type='email'],input[type='url']").not(excluded).addClass("w3-input");
+	$("input[type='text'],input[type='search'],input[type='email'],input[type='url'],input[type='password']").not(excluded).addClass("w3-input");
     $("button,reset").not(excluded).addClass("w3-btn w3-theme-action");
     $("input[type='button'],input[type='submit'],input[type='reset']").not(excluded).addClass("w3-btn");
     $("input,textarea").not(excluded).addClass("w3-theme-action");
