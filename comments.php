@@ -14,7 +14,7 @@ namespace w3csspress;
 
 ?>
 
-<div id="comments">
+<div id="comments" class="w3-col w3-rest">
 	<?php
 	if ( have_comments() ) :
 		global $w3csspress_comments_by_type;
