@@ -1230,6 +1230,7 @@ add_filter(
 		return 26214400;
 	}
 );
+
 add_filter( 'comment_form_defaults', __NAMESPACE__ . '\\w3csspress_comment_form_defaults' );
 /**
  * Changes reply title for comments.
