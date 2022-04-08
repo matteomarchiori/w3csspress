@@ -60,7 +60,7 @@ get_header(); ?>
 								sprintf(
 									/* translators: arrow */
 									esc_html__( '%s older', 'w3csspress' ),
-									"<span class='meta-nav'>$w3csspress_older</span>"
+									"<span aria-hidden='true' class='meta-nav'>$w3csspress_older</span>"
 								)
 							);
 							?>
@@ -73,7 +73,7 @@ get_header(); ?>
 								sprintf(
 									/* translators: arrow */
 									esc_html__( 'newer %s', 'w3csspress' ),
-									"<span class='meta-nav'>$w3csspress_newer</span>"
+									"<span  aria-hidden='true' class='meta-nav'>$w3csspress_newer</span>"
 								)
 							);
 							?>
