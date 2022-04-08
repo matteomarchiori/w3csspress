@@ -1217,3 +1217,31 @@ function w3csspress_body_class( $classes ) {
 }
 
 add_filter( 'use_block_editor_for_post', '__return_false' );
+
+add_filter(
+	'bp_core_avatar_original_max_filesize',
+	function() {
+		return 26214400;
+	}
+);
+add_filter(
+	'bp_attachments_get_max_upload_file_size',
+	function() {
+		return 26214400;
+	}
+);
+add_filter( 'comment_form_defaults', __NAMESPACE__ . '\\w3csspress_comment_form_defaults' );
+/**
+ * Changes reply title for comments.
+ *
+ * @since 2022.4
+ *
+ * @param array $defaults . The default comment form arguments.
+ *
+ * @return array $defaults The default comment form arguments.
+ */
+function w3csspress_comment_form_defaults( $defaults ) {
+	$defaults['title_reply_before'] = '<strong id="reply-title" class="comment-reply-title">';
+	$defaults['title_reply_after']  = '</strong>';
+	return $defaults;
+}

@@ -198,10 +198,6 @@ label {
     z-index: 1
 }
 
-#comments {
-    float: right
-}
-
 @media (min-width:601px) {
     .w3-dropdown-content {
         clip: rect(1px, 1px, 1px, 1px);
