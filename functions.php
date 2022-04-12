@@ -368,6 +368,15 @@ function w3csspress_customize_register( $wp_customize ) {
 		)
 	);
 
+	$wp_customize->add_setting(
+		'w3csspress_grid_enabled',
+		array(
+			'default'           => 1,
+			'type'              => 'option',
+			'sanitize_callback' => 'w3csspress\sanitize_checkbox',
+		)
+	);
+
 	$wp_customize->add_control(
 		'w3csspress_layout',
 		array(
@@ -378,6 +387,18 @@ function w3csspress_customize_register( $wp_customize ) {
 			'section'     => 'w3csspress_section',
 			'type'        => 'select',
 			'choices'     => $layouts,
+		)
+	);
+
+	$wp_customize->add_control(
+		'w3csspress_grid_enabled',
+		array(
+			'label'       => esc_html__( 'Grid layout setting', 'w3csspress' ),
+			'description' => esc_html__( 'Using this option you can enable or disable the grid layout.', 'w3csspress' ),
+			'settings'    => 'w3csspress_grid_enabled',
+			'priority'    => $priority++,
+			'section'     => 'w3csspress_section',
+			'type'        => 'checkbox',
 		)
 	);
 
