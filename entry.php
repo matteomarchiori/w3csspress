@@ -14,8 +14,12 @@ namespace w3csspress;
 
 <article id="post-<?php the_ID(); ?>" 
 <?php
-$w3csspress_layout = esc_html( get_option( 'w3csspress_layout' ) );
-post_class( "w3-col $w3csspress_layout" );
+if ( is_home() ) {
+	$w3csspress_layout = ' ' . esc_html( get_option( 'w3csspress_layout' ) );
+} else {
+	$w3csspress_layout = '';
+}
+post_class( "w3-col$w3csspress_layout" );
 ?>
 >
 	<header>
