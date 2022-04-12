@@ -29,7 +29,7 @@ jQuery(document).ready(function($) {
         $("#burger").click(function() {
             $("#menu").toggle();
         });
-        $(".menu-item:last-of-type").children("a").keydown(function(event) {
+        $(".menu-item").last().children("a").keydown(function(event) {
             event.preventDefault();
             if (event.which == 9 && !event.shiftKey) {
                 $("#burger").focus();
