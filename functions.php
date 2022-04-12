@@ -1282,4 +1282,5 @@ function w3csspress_after_switch_theme() {
 	add_option( 'w3csspress_max_width', '80' );
 	add_option( 'w3csspress_circle_img', 1 );
 	add_option( 'w3csspress_cards_img', 1 );
+	add_option( 'w3csspress_grid_enabled', 1 );
 }
