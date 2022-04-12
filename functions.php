@@ -299,6 +299,7 @@ function w3csspress_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'w3csspress_circle_img',
 		array(
+			'default'           => 1,
 			'type'              => 'option',
 			'sanitize_callback' => 'w3csspress\sanitize_checkbox',
 		)
@@ -313,6 +314,7 @@ function w3csspress_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'w3csspress_cards_img',
 		array(
+			'default'           => 1,
 			'type'              => 'option',
 			'sanitize_callback' => 'w3csspress\sanitize_checkbox',
 		)
@@ -1253,9 +1255,11 @@ add_action( 'after_switch_theme', __NAMESPACE__ . '\\w3csspress_after_switch_the
  * @since 2022.5
  *
  */
-function mytheme_setup_options() {
+function w3csspress_after_switch_theme() {
 	add_option( 'w3csspress_color_theme', 'blue-grey' );
 	add_option( 'w3csspress_theme_kind', 'l3' );
 	add_option( 'w3csspress_google_font', 'Roboto' );
 	add_option( 'w3csspress_max_width', '80' );
+	add_option( 'w3csspress_circle_img', 1 );
+	add_option( 'w3csspress_cards_img', 1 );
 }
