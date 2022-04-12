@@ -124,7 +124,7 @@ function w3csspress_customize_register( $wp_customize ) {
 	}
 
 	$layouts = array(
-		''            => __( 'Default', 'w3csspress' ),
+		''           => __( 'Default', 'w3csspress' ),
 		'w3-rest'    => __( 'One Column', 'w3csspress' ),
 		'w3-half'    => __( 'Two Columns', 'w3csspress' ),
 		'w3-third'   => __( 'Three Columns', 'w3csspress' ),
@@ -1244,4 +1244,18 @@ function w3csspress_comment_form_defaults( $defaults ) {
 	$defaults['title_reply_before'] = '<strong id="reply-title" class="comment-reply-title">';
 	$defaults['title_reply_after']  = '</strong>';
 	return $defaults;
+}
+
+add_action( 'after_switch_theme', __NAMESPACE__ . '\\w3csspress_after_switch_theme' );
+/**
+ * Fires on the first WP load after a theme switch if the old theme still exists.
+ *
+ * @since 2022.5
+ *
+ */
+function mytheme_setup_options() {
+	add_option( 'w3csspress_color_theme', 'blue-grey' );
+	add_option( 'w3csspress_theme_kind', 'l3' );
+	add_option( 'w3csspress_google_font', 'Roboto' );
+	add_option( 'w3csspress_max_width', '80' );
 }
