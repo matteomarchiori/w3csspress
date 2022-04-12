@@ -60,7 +60,7 @@ add_action( 'customize_register', __NAMESPACE__ . '\\w3csspress_customize_regist
  */
 function w3csspress_customize_register( $wp_customize ) {
 	$color_themes = array(
-		''            => 'Default',
+		''            => __( 'Default', 'w3csspress' ),
 		'w3schools'   => __( 'W3Schools', 'w3csspress' ),
 		'amber'       => __( 'Amber', 'w3csspress' ),
 		'black'       => __( 'Black', 'w3csspress' ),
@@ -124,6 +124,7 @@ function w3csspress_customize_register( $wp_customize ) {
 	}
 
 	$layouts = array(
+		''            => __( 'Default', 'w3csspress' ),
 		'w3-rest'    => __( 'One Column', 'w3csspress' ),
 		'w3-half'    => __( 'Two Columns', 'w3csspress' ),
 		'w3-third'   => __( 'Three Columns', 'w3csspress' ),
@@ -147,7 +148,7 @@ function w3csspress_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'w3csspress_color_theme',
 		array(
-			'default'           => '',
+			'default'           => 'blue-grey',
 			'type'              => 'option',
 			'sanitize_callback' => 'w3csspress\sanitize_select',
 		)
@@ -156,7 +157,7 @@ function w3csspress_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'w3csspress_theme_kind',
 		array(
-			'default'           => '',
+			'default'           => 'l3',
 			'type'              => 'option',
 			'sanitize_callback' => 'w3csspress\sanitize_select',
 		)
@@ -174,7 +175,7 @@ function w3csspress_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'w3csspress_google_font',
 		array(
-			'default'           => '',
+			'default'           => 'Roboto',
 			'type'              => 'option',
 			'sanitize_callback' => 'sanitize_text_field',
 		)
@@ -897,18 +898,16 @@ function w3csspress_setup() {
 	add_theme_support(
 		'custom-header',
 		array(
-			'default-image' => get_template_directory_uri() . '/assets/images/header.jpg',
-			'width'         => 0,
-			'height'        => 0,
-			'flex-width'    => true,
-			'flex-height'   => true,
-			'header-text'   => false,
+			'width'       => 0,
+			'height'      => 0,
+			'flex-width'  => true,
+			'flex-height' => true,
+			'header-text' => false,
 		)
 	);
 	add_theme_support(
 		'custom-background',
 		array(
-			'default-image'      => get_template_directory_uri() . '/assets/images/texture.jpg',
 			'default-preset'     => 'fill',
 			'default-position-x' => 'center',
 			'default-position-y' => 'center',
