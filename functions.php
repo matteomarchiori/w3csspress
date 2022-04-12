@@ -1253,7 +1253,6 @@ add_action( 'after_switch_theme', __NAMESPACE__ . '\\w3csspress_after_switch_the
  * Fires on the first WP load after a theme switch if the old theme still exists.
  *
  * @since 2022.5
- *
  */
 function w3csspress_after_switch_theme() {
 	add_option( 'w3csspress_color_theme', 'blue-grey' );
