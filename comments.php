@@ -12,9 +12,12 @@
 
 namespace w3csspress;
 
+$w3csspress_layout = 'w3-col w3-rest';
+if ( '1' === esc_html( get_option( 'w3csspress_grid_enabled' ) ) ) {
+	$w3csspress_layout = 'w3-cell w3-padding w3-mobile';
+}
 ?>
-
-<div id="comments" class="w3-col w3-rest">
+<div id="comments" class="<?php echo esc_html( $w3csspress_layout ); ?>">
 	<?php
 	if ( have_comments() ) :
 		global $w3csspress_comments_by_type;
