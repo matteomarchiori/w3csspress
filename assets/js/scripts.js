@@ -6,7 +6,41 @@ jQuery(document).ready(function($) {
         $(element).parent().prev('.w3-dropdown-focus').find('.w3-dropdown-content').removeClass("w3-show");
     }
 
-    var excluded = "#wpadminbar, #wpadminbar *";
+    if ($(window).width() < 600) {
+        $("#menu").hide();
+        $("#menu").addClass("w3-animate-bottom");
+        $("#site-title").after('<button type="button" class="menu-toggle w3-margin-top w3-right" id="burger"><span class="dashicons dashicons-menu"></span>Menu</button>');
+        $("#burger").click(function() {
+            $("#menu").toggle();
+        });
+        $(".menu-item").last().children("a").keydown(function(event) {
+            event.preventDefault();
+            if (event.which == 9 && !event.shiftKey) {
+                $("#burger").focus();
+            }
+        });
+    } else {
+        $("body").width($("body").width() - $("#primary").outerWidth());
+        $("body").width($("body").width() - $("#secondary").outerWidth());
+        if ($(".rtl").length) {
+            if ($("#primary").length) {
+                $("body").css('margin-right', $("#primary").outerWidth() + 'px');
+            }
+            if ($("#secondary").length) {
+                $("body").css('margin-left', $("#secondary").outerWidth() + 'px');
+            }
+        } else {
+            if ($("#primary").length) {
+
+                $("body").css('margin-left', $("#primary").outerWidth() + 'px');
+            }
+            if ($("#secondary").length) {
+                $("body").css('margin-right', $("#secondary").outerWidth() + 'px');
+            }
+        }
+    }
+
+    var excluded = "#wpadminbar, #wpadminbar *, .sidebar";
     var deviceAgent = navigator.userAgent.toLowerCase();
     if (deviceAgent.match(/(iphone|ipod|ipad)/)) {
         $("html").addClass("ios");
@@ -21,20 +55,6 @@ jQuery(document).ready(function($) {
         $("html").addClass("safari");
     } else if (navigator.userAgent.search("Opera") >= 0) {
         $("html").addClass("opera");
-    }
-    if ($(window).width() < 600) {
-        $("#menu").hide();
-        $("#menu").addClass("w3-animate-bottom");
-        $("#site-title").after('<button type="button" class="menu-toggle w3-margin-top w3-right" id="burger"><span class="dashicons dashicons-menu"></span>Menu</button>');
-        $("#burger").click(function() {
-            $("#menu").toggle();
-        });
-        $(".menu-item").last().children("a").keydown(function(event) {
-            event.preventDefault();
-            if (event.which == 9 && !event.shiftKey) {
-                $("#burger").focus();
-            }
-        });
     }
     $("header:not('#header'),footer:not('#footer'),div:not('#branding,#wrapper,#content'),p,form,img,table,article,section,figure,nav,summary").not(excluded).addClass("w3-section");
     $("input:not(input[type='button'],input[type='submit'],input[type='reset'],input[type='checkbox'],input[type='radio'])").not(excluded).addClass("w3-input");

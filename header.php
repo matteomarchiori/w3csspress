@@ -62,6 +62,8 @@ get_template_part( 'class-w3csspress-walker-nav-menu' );
 				}
 				?>
 			</nav>
-			<div id="search"><?php get_search_form(); ?></div>
+			<?php get_sidebar( 'headwidgets' ); ?>
+			<?php get_sidebar( 'primary' ); ?>
+			<?php get_sidebar( 'secondary' ); ?>
 		</header>
 		<div id="container">

@@ -1040,7 +1040,7 @@ function w3csspress_footer() {    ?>
 			if ( get_header_image() ) {
 				?>
 				$("<style type='text/css'> #header{background-image:url('<?php echo esc_url( header_image() ); ?>'); background-position:center; background-size:cover; background-repeat:no-repeat;} </style>").appendTo("head");
-			<?php } ?>
+				<?php } ?>
 		});
 	</script>
 	<?php
@@ -1283,4 +1283,49 @@ function w3csspress_after_switch_theme() {
 	add_option( 'w3csspress_circle_img', 1 );
 	add_option( 'w3csspress_cards_img', 1 );
 	add_option( 'w3csspress_grid_enabled', 1 );
+}
+
+add_action( 'widgets_init', __NAMESPACE__ . '\\w3csspress_register_sidebars' );
+/**
+ * Register the w3csspress sidebars
+ *
+ * @since 2022.7
+ */
+function w3csspress_register_sidebars() {
+	register_sidebar(
+		array(
+			'id'            => 'primary',
+			'name'          => __( 'Primary Sidebar', 'w3csspress' ),
+			'description'   => __( 'Sidebar on the left.', 'w3csspress' ),
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</div>',
+		)
+	);
+	register_sidebar(
+		array(
+			'id'            => 'secondary',
+			'name'          => __( 'Secondary Sidebar', 'w3csspress' ),
+			'description'   => __( 'Sidebar on the right.', 'w3csspress' ),
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</div>',
+		)
+	);
+	register_sidebar(
+		array(
+			'id'            => 'headwidgets',
+			'name'          => __( 'Head widgets Sidebar', 'w3csspress' ),
+			'description'   => __( 'Widgets area on the head of the website.', 'w3csspress' ),
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</div>',
+		)
+	);
+	register_sidebar(
+		array(
+			'id'            => 'footwidgets',
+			'name'          => __( 'Foot widgets Sidebar', 'w3csspress' ),
+			'description'   => __( 'Widgets area on the foot of the website.', 'w3csspress' ),
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</div>',
+		)
+	);
 }
