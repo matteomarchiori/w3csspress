@@ -13,7 +13,7 @@
 namespace w3csspress;
 
 $w3csspress_layout = 'w3-col w3-rest';
-if ( '1' === esc_html( get_option( 'w3csspress_grid_enabled' ) ) ) {
+if ( ! is_page_template( 'full-width.php' ) && '1' === esc_html( get_option( 'w3csspress_grid_enabled' ) ) ) {
 	$w3csspress_layout = 'w3-cell w3-padding w3-mobile';
 }
 ?>
