@@ -225,6 +225,7 @@ body.home h1>a {
     position: relative;
     width: inherit;
     background-color: transparent;
+    z-index: 0;
 }
 
 .w3-sidebar::-webkit-scrollbar {
