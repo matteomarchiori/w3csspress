@@ -76,6 +76,7 @@ jQuery(document).ready(function($) {
     $(".search-form").addClass("w3-cell-row w3-center");
     $(".search-form > label, .search-form > input").addClass("w3-cell");
     $(".search-form > input").addClass("w3-left w3-margin-left");
+    $("article.sticky").addClass("w3-card-4");
     $.each($(".menu-item"), function(index) {
         $(this).children("a").focusin(function(event) {
             menufocus(event.target);
