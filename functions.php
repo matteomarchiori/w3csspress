@@ -945,7 +945,12 @@ function w3csspress_setup() {
 			'main-menu' => esc_html__( 'Main Menu', 'w3csspress' ),
 		)
 	);
-	add_editor_style( 'editor-style.css' );
+	add_editor_style(
+		array(
+			'assets/css/w3.css',
+			'assets/css/editor-style.css',
+		)
+	);
 }
 
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\w3csspress_enqueue_script' );
@@ -982,7 +987,7 @@ add_action( 'wp_footer', __NAMESPACE__ . '\\w3csspress_footer' );
  *
  * @since 2022.0
  */
-function w3csspress_footer() {    ?>
+function w3csspress_footer() {     ?>
 	<script type="text/javascript">
 		jQuery(document).ready(function($) {
 			var excluded = "#wpadminbar, #wpadminbar *";
@@ -1040,7 +1045,7 @@ function w3csspress_footer() {    ?>
 			if ( get_header_image() ) {
 				?>
 				$("<style type='text/css'> #header{background-image:url('<?php echo esc_url( header_image() ); ?>'); background-position:center; background-size:cover; background-repeat:no-repeat;} </style>").appendTo("head");
-				<?php } ?>
+			<?php } ?>
 		});
 	</script>
 	<?php
@@ -1242,13 +1247,13 @@ add_filter( 'use_block_editor_for_post', '__return_false' );
 
 add_filter(
 	'bp_core_avatar_original_max_filesize',
-	function() {
+	function () {
 		return 26214400;
 	}
 );
 add_filter(
 	'bp_attachments_get_max_upload_file_size',
-	function() {
+	function () {
 		return 26214400;
 	}
 );
