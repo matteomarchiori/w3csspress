@@ -66,4 +66,4 @@ get_template_part( 'class-w3csspress-walker-nav-menu' );
 			<?php get_sidebar( 'primary' ); ?>
 			<?php get_sidebar( 'secondary' ); ?>
 		</header>
-		<div id="container">
+		<div id="container" class="w3-container">

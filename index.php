@@ -11,7 +11,7 @@
 namespace w3csspress;
 
 get_header(); ?>
-<main id="content" class="w3-container" role="main">
+<main id="content" role="main">
 	<?php
 	if ( have_posts() ) :
 		$w3csspress_layout = esc_html( get_option( 'w3csspress_layout' ) );

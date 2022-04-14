@@ -13,7 +13,7 @@
 namespace w3csspress;
 
 get_header(); ?>
-<main id="content" class="w3-container" role="main">
+<main id="content" role="main">
 	<article id="post-0" class="post not-found">
 		<header class="header">
 			<h1 class="entry-title"><?php esc_html_e( 'Not Found', 'w3csspress' ); ?></h1>

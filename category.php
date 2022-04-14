@@ -13,7 +13,7 @@
 namespace w3csspress;
 
 get_header(); ?>
-<main id="content" class="w3-container" role="main">
+<main id="content" role="main">
 	<header class="header">
 		<h1 class="entry-title">
 			<?php single_term_title(); ?>

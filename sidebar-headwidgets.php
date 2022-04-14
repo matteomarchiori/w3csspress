@@ -11,7 +11,7 @@
 namespace w3csspress;
 
 ?>
-<div id="headwidgets" class="sidebar w3-sidebar w3-bar-block w3-container">
+<div id="headwidgets" class="sidebar w3-sidebar w3-bar-block">
 	<aside id="search" class="widget widget_search">
 		<?php get_search_form(); ?>
 	</aside>
