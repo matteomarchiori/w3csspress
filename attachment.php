@@ -45,7 +45,7 @@ get_header(); ?>
 						?>
 					</div>
 					<?php
-					if ( has_post_thumbnail() ) {
+					if ( esc_html( get_option( 'w3csspress_post_thumbnail' ) ) && has_post_thumbnail() ) {
 						the_post_thumbnail( 'full' );
 					}
 					?>

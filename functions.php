@@ -377,6 +377,24 @@ function w3csspress_customize_register( $wp_customize ) {
 		)
 	);
 
+	$wp_customize->add_setting(
+		'w3csspress_header_thumbnail',
+		array(
+			'default'           => 1,
+			'type'              => 'option',
+			'sanitize_callback' => 'w3csspress\sanitize_checkbox',
+		)
+	);
+
+	$wp_customize->add_setting(
+		'w3csspress_post_thumbnail',
+		array(
+			'default'           => 1,
+			'type'              => 'option',
+			'sanitize_callback' => 'w3csspress\sanitize_checkbox',
+		)
+	);
+
 	$wp_customize->add_control(
 		'w3csspress_layout',
 		array(
@@ -892,6 +910,30 @@ function w3csspress_customize_register( $wp_customize ) {
 			'type'        => 'checkbox',
 		)
 	);
+
+	$wp_customize->add_control(
+		'w3csspress_header_thumbnail',
+		array(
+			'label'       => esc_html__( 'Header thumbnail', 'w3csspress' ),
+			'description' => esc_html__( 'Posts get the thumbnail as header image if they have one.', 'w3csspress' ),
+			'settings'    => 'w3csspress_header_thumbnail',
+			'priority'    => $priority++,
+			'section'     => 'w3csspress_section',
+			'type'        => 'checkbox',
+		)
+	);
+
+	$wp_customize->add_control(
+		'w3csspress_post_thumbnail',
+		array(
+			'label'       => esc_html__( 'Post thumbnail', 'w3csspress' ),
+			'description' => esc_html__( 'Posts show the thumbnail if they have.', 'w3csspress' ),
+			'settings'    => 'w3csspress_post_thumbnail',
+			'priority'    => $priority++,
+			'section'     => 'w3csspress_section',
+			'type'        => 'checkbox',
+		)
+	);
 }
 
 add_action( 'after_setup_theme', __NAMESPACE__ . '\\w3csspress_setup' );
@@ -911,8 +953,8 @@ function w3csspress_setup() {
 	add_theme_support(
 		'custom-logo',
 		array(
-			'height'               => 0,
-			'width'                => 0,
+			'height'               => 250,
+			'width'                => 250,
 			'flex-height'          => true,
 			'flex-width'           => true,
 			'unlink-homepage-logo' => true,
@@ -921,8 +963,8 @@ function w3csspress_setup() {
 	add_theme_support(
 		'custom-header',
 		array(
-			'width'       => 0,
-			'height'      => 0,
+			'width'       => 1920,
+			'height'      => 300,
 			'flex-width'  => true,
 			'flex-height' => true,
 			'header-text' => false,
@@ -1039,12 +1081,16 @@ function w3csspress_footer() {     ?>
 			<?php
 			if ( '' !== $max_width ) {
 				?>
-				$("<style type='text/css'> body{margin:auto; max-width:<?php echo intval( $max_width ); ?>vw;} </style>").appendTo("head");
+				$("<style type='text/css'> body{max-width:<?php echo intval( $max_width ); ?>vw;} </style>").appendTo("head");
 				<?php
 			}
-			if ( get_header_image() ) {
+			if ( esc_html( get_option( 'w3csspress_header_thumbnail' ) ) && has_post_thumbnail() ) {
 				?>
-				$("<style type='text/css'> #header{background-image:url('<?php echo esc_url( header_image() ); ?>'); background-position:center; background-size:cover; background-repeat:no-repeat;} </style>").appendTo("head");
+				$("<style type='text/css'> #header{background-image:url('<?php echo esc_url( get_the_post_thumbnail_url( null, 'full' ) ); ?>');} </style>").appendTo("head");
+				<?php
+			} elseif ( has_header_image() ) {
+				?>
+				$("<style type='text/css'> #header{background-image:url('<?php echo esc_url( header_image() ); ?>');} </style>").appendTo("head");
 			<?php } ?>
 		});
 	</script>
@@ -1288,6 +1334,8 @@ function w3csspress_after_switch_theme() {
 	add_option( 'w3csspress_circle_img', 1 );
 	add_option( 'w3csspress_cards_img', 1 );
 	add_option( 'w3csspress_grid_enabled', 1 );
+	add_option( 'w3csspress_header_thumbnail', 1 );
+	add_option( 'w3csspress_post_thumbnail', 1 );
 }
 
 add_action( 'widgets_init', __NAMESPACE__ . '\\w3csspress_register_sidebars' );
