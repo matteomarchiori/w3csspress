@@ -28,8 +28,6 @@ get_template_part( 'class-w3csspress-walker-nav-menu' );
 	<?php
 	if ( function_exists( 'wp_body_open' ) ) {
 		wp_body_open();
-	} else {
-		do_action( 'wp_body_open' );
 	}
 	?>
 	<div id="wrapper" class="hfeed">

@@ -14,4 +14,8 @@ $w3csspress_args = array(
 	'prev_text' => '<span aria-hidden="true" class="meta-nav">&larr;</span> %title',
 	'next_text' => '%title <span aria-hidden="true" class="meta-nav">&rarr;</span>',
 );
-the_post_navigation( $w3csspress_args );
+if ( function_exists( 'the_posts_navigation' ) ) {
+	the_posts_navigation( $w3csspress_args );
+} else {
+	echo esc_html( get_the_posts_navigation( $w3csspress_args ) );
+}

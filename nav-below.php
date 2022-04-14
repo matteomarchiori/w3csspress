@@ -28,5 +28,5 @@ $w3csspress_args = array(
 if ( function_exists( 'the_posts_navigation' ) ) {
 	the_posts_navigation( $w3csspress_args );
 } else {
-	echo get_the_posts_navigation( $args );
+	echo esc_html( get_the_posts_navigation( $w3csspress_args ) );
 }

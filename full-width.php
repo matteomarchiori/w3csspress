@@ -6,7 +6,7 @@
  * This file is used to show a full width page in WordPress.
  *
  * @package w3csspress
- * @since 2022.8
+ * @since 2022.9
  */
 
 namespace w3csspress;
