@@ -25,12 +25,18 @@ get_template_part( 'class-w3csspress-walker-nav-menu' );
 </head>
 
 <body <?php body_class(); ?>>
-	<?php wp_body_open(); ?>
+	<?php
+	if ( function_exists( 'wp_body_open' ) ) {
+		wp_body_open();
+	} else {
+		do_action( 'wp_body_open' );
+	}
+	?>
 	<div id="wrapper" class="hfeed">
 		<header id="header" role="banner" class="w3-container">
 			<div id="branding">
 				<?php
-				if ( has_custom_logo() ) {
+				if ( function_exists( 'has_custom_logo' ) && has_custom_logo() ) {
 					if ( function_exists( 'the_custom_logo' ) ) {
 						the_custom_logo();
 					}

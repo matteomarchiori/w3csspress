@@ -1084,11 +1084,11 @@ function w3csspress_footer() {     ?>
 				$("<style type='text/css'> body{max-width:<?php echo intval( $max_width ); ?>vw;} </style>").appendTo("head");
 				<?php
 			}
-			if ( esc_html( get_option( 'w3csspress_header_thumbnail' ) ) && has_post_thumbnail() ) {
+			if ( function_exists( 'get_the_post_thumbnail_url' ) && esc_html( get_option( 'w3csspress_header_thumbnail' ) ) && has_post_thumbnail() ) {
 				?>
 				$("<style type='text/css'> #header{background-image:url('<?php echo esc_url( get_the_post_thumbnail_url( null, 'full' ) ); ?>');} </style>").appendTo("head");
 				<?php
-			} elseif ( has_header_image() ) {
+			} elseif ( function_exists( 'has_header_image' ) && has_header_image() ) {
 				?>
 				$("<style type='text/css'> #header{background-image:url('<?php echo esc_url( header_image() ); ?>');} </style>").appendTo("head");
 			<?php } ?>

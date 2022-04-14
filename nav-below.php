@@ -25,4 +25,8 @@ $w3csspress_args = array(
 		"<span aria-hidden='true' class='meta-nav'>$w3csspress_newer</span>"
 	),
 );
-the_posts_navigation( $w3csspress_args );
+if ( function_exists( 'the_posts_navigation' ) ) {
+	the_posts_navigation( $w3csspress_args );
+} else {
+	echo get_the_posts_navigation( $args );
+}
