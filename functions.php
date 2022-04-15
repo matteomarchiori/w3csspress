@@ -148,7 +148,7 @@ function w3csspress_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'w3csspress_color_theme',
 		array(
-			'default'           => 'blue-grey',
+			'default'           => '',
 			'type'              => 'option',
 			'sanitize_callback' => 'w3csspress\sanitize_select',
 		)
@@ -157,7 +157,7 @@ function w3csspress_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'w3csspress_theme_kind',
 		array(
-			'default'           => 'l3',
+			'default'           => '',
 			'type'              => 'option',
 			'sanitize_callback' => 'w3csspress\sanitize_select',
 		)
@@ -175,7 +175,7 @@ function w3csspress_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'w3csspress_google_font',
 		array(
-			'default'           => 'Roboto',
+			'default'           => '',
 			'type'              => 'option',
 			'sanitize_callback' => 'sanitize_text_field',
 		)
@@ -1290,6 +1290,8 @@ function w3csspress_body_class( $classes ) {
 }
 
 add_filter( 'use_block_editor_for_post', '__return_false' );
+
+add_filter( 'use_widgets_block_editor', '__return_false' );
 
 add_filter(
 	'bp_core_avatar_original_max_filesize',
