@@ -987,6 +987,7 @@ function w3csspress_setup() {
 		array(
 			'aside',
 			'gallery',
+			'image',
 			'link',
 			'quote',
 			'status',
