@@ -992,7 +992,7 @@ function w3csspress_setup() {
 			'status',
 			'video',
 			'audio',
-			'chat'
+			'chat',
 		)
 	);
 	register_nav_menus(
