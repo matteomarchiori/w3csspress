@@ -982,6 +982,19 @@ function w3csspress_setup() {
 			'default-color'      => '',
 		)
 	);
+	add_theme_support(
+		'post-formats',
+		array(
+			'aside',
+			'gallery',
+			'link',
+			'quote',
+			'status',
+			'video',
+			'audio',
+			'chat'
+		)
+	);
 	register_nav_menus(
 		array(
 			'main-menu' => esc_html__( 'Main Menu', 'w3csspress' ),

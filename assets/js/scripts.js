@@ -77,6 +77,21 @@ jQuery(document).ready(function($) {
     $(".search-form > label, .search-form > input").addClass("w3-cell");
     $(".search-form > input").addClass("w3-left w3-margin-left");
     $("article.sticky").addClass("w3-card-4");
+    $(".format-aside .entry-content").addClass("w3-topbar w3-bottombar w3-border-theme w3-panel");
+    $(".gallery-columns-2,.gallery-columns-3,.gallery-columns-4,.gallery-columns-5,.gallery-columns-6,.gallery-columns-7,.gallery-columns-8,.gallery-columns-9").addClass("w3-row");
+    $(".gallery-columns-2 .gallery-item").addClass("w3-half");
+    $(".gallery-columns-3 .gallery-item").addClass("w3-third");
+    $(".gallery-columns-4 .gallery-item").addClass("w3-quarter");
+    $(".gallery-columns-5 .gallery-item").addClass("w3-fifth");
+    $(".gallery-columns-6 .gallery-item").addClass("w3-sixth");
+    $(".gallery-columns-7 .gallery-item").addClass("w3-seventh");
+    $(".gallery-columns-8 .gallery-item").addClass("w3-eighth");
+    $(".gallery-columns-9 .gallery-item").addClass("w3-nineth");
+    $("blockquote").addClass("w3-leftbar w3-border-theme w3-panel");
+    $("cite").addClass("w3-show w3-margin-top");
+    $(".format-status .entry-content").addClass("w3-leftbar w3-rightbar w3-border-theme w3-panel");
+    $(".format-video .entry-content > iframe").addClass("w3-show");
+    $(".format-chat .entry-content").addClass("w3-monospace w3-leftbar w3-rightbar w3-border-theme w3-panel");
     $.each($(".menu-item"), function(index) {
         $(this).children("a").focusin(function(event) {
             menufocus(event.target);
