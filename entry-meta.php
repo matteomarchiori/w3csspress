@@ -24,10 +24,10 @@ namespace w3csspress;
 	<?php the_author_posts_link(); ?></span></span>
 	<span class="meta-sep"> | </span>
 	<time class="entry-date" datetime="<?php echo esc_attr( get_the_date( 'c' ) ); ?>" title="<?php echo esc_attr( get_the_date( 'c' ) ); ?>" 
-												  <?php
-													if ( is_single() ) {
-														echo 'itemprop="datePublished" pubdate'; }
-													?>
+	<?php
+	if ( is_single() ) {
+		echo 'itemprop="datePublished" pubdate'; }
+	?>
 	><?php the_time( get_option( 'date_format' ) ); ?></time>
 <?php
 if ( is_single() ) {

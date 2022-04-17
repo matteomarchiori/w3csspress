@@ -1396,8 +1396,13 @@ function w3csspress_register_sidebars() {
 	);
 }
 
+/**
+ * Return schema.org type based on page
+ *
+ * @since 2022.12
+ */
 function w3csspress_schema_type() {
-	 $schema = 'https://schema.org/';
+	$schema = 'https://schema.org/';
 	if ( is_single() ) {
 		$type = 'Article';
 	} elseif ( is_author() ) {
@@ -1407,9 +1412,17 @@ function w3csspress_schema_type() {
 	} else {
 		$type = 'WebPage';
 	}
-	echo 'itemscope itemtype="' . $schema . $type . '"';
+	echo esc_html( 'itemscope itemtype="' . $schema . $type . '"' );
 }
-add_filter( 'nav_menu_link_attributes', 'w3csspress_schema_url', 10 );
+
+add_filter( 'nav_menu_link_attributes', __NAMESPACE__ . '\\w3csspress_schema_url', 10 );
+/**
+ * Filters the HTML attributes applied to a menu item’s anchor element.
+ *
+ * @param array $atts The HTML attributes applied to the menu item's <a> element, empty strings are ignored.
+ *
+ * @since 2022.12
+ */
 function w3csspress_schema_url( $atts ) {
 	$atts['itemprop'] = 'url';
 	return $atts;
