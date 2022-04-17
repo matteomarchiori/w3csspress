@@ -26,7 +26,7 @@ post_class( $w3csspress_layout . ' hentry h-entry' );
 	<header>
 		<?php
 		if ( is_singular() ) {
-			echo '<h1 class="p-name entry-title">';
+			echo '<h1 class="p-name entry-title" itemprop="headline">';
 		} else {
 			echo '<h2 class="p-name entry-title">';
 		}

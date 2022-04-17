@@ -1395,3 +1395,22 @@ function w3csspress_register_sidebars() {
 		)
 	);
 }
+
+function w3csspress_schema_type() {
+	 $schema = 'https://schema.org/';
+	if ( is_single() ) {
+		$type = 'Article';
+	} elseif ( is_author() ) {
+		$type = 'ProfilePage';
+	} elseif ( is_search() ) {
+		$type = 'SearchResultsPage';
+	} else {
+		$type = 'WebPage';
+	}
+	echo 'itemscope itemtype="' . $schema . $type . '"';
+}
+add_filter( 'nav_menu_link_attributes', 'w3csspress_schema_url', 10 );
+function w3csspress_schema_url( $atts ) {
+	$atts['itemprop'] = 'url';
+	return $atts;
+}

@@ -22,17 +22,17 @@ get_header(); ?>
 			?>
 			<article id="post-<?php the_ID(); ?>" <?php post_class( 'hentry h-entry' ); ?>>
 				<header class="header">
-					<h1 class="p-name entry-title"><?php the_title(); ?></h1>
+					<h1 class="p-name entry-title" itemprop="name"><?php the_title(); ?></h1>
 					<?php edit_post_link(); ?>
 					<?php get_template_part( 'entry', 'meta' ); ?>
 				</header>
-				<div class="e-content entry-content">
+				<div class="e-content entry-content" itemprop="mainContentOfPage">
 					<div class="entry-attachment">
 						<?php
 						if ( wp_attachment_is_image( $post->ID ) ) :
 							$w3csspress_att_image = wp_get_attachment_image_src( $post->ID, 'full' );
 							?>
-							<p class="attachment"><a href="<?php echo esc_url( wp_get_attachment_url( $post->ID ) ); ?>" title="<?php the_title_attribute(); ?>" rel="attachment" class="p-category"><img src="<?php echo esc_url( $w3csspress_att_image[0] ); ?>" width="<?php echo esc_attr( $w3csspress_att_image[1] ); ?>" height="<?php echo esc_attr( $w3csspress_att_image[2] ); ?>" class="attachment-full" alt="<?php $post->post_excerpt; ?>" /></a></p>
+							<p class="attachment"><a href="<?php echo esc_url( wp_get_attachment_url( $post->ID ) ); ?>" title="<?php the_title_attribute(); ?>" rel="attachment" class="p-category"><img src="<?php echo esc_url( $w3csspress_att_image[0] ); ?>" width="<?php echo esc_attr( $w3csspress_att_image[1] ); ?>" height="<?php echo esc_attr( $w3csspress_att_image[2] ); ?>" class="attachment-full" alt="<?php $post->post_excerpt; ?>" itemprop="image" /></a></p>
 						<?php else : ?>
 							<a href="<?php echo esc_url( wp_get_attachment_url( $post->ID ) ); ?>" title="<?php echo esc_attr( get_the_title( $post->ID ), 1 ); ?>" rel="attachment" class="p-category"><?php echo esc_url( basename( $post->guid ) ); ?></a>
 						<?php endif; ?>
@@ -46,7 +46,7 @@ get_header(); ?>
 					</div>
 					<?php
 					if ( esc_html( get_option( 'w3csspress_post_thumbnail' ) ) && has_post_thumbnail() ) {
-						the_post_thumbnail( 'full' );
+						the_post_thumbnail( 'full', array( 'itemprop' => 'image' ) );
 					}
 					?>
 				</div>

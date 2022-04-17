@@ -54,12 +54,12 @@ get_header(); ?>
 				?>
 			>
 				<header class="header">
-					<h1 class="p-name entry-title"><?php the_title(); ?></h1> <?php edit_post_link(); ?>
+					<h1 class="p-name entry-title" itemprop="name"><?php the_title(); ?></h1> <?php edit_post_link(); ?>
 				</header>
-				<div class="e-content entry-content">
+				<div class="e-content entry-content" itemprop="mainContentOfPage">
 					<?php
 					if ( esc_html( get_option( 'w3csspress_post_thumbnail' ) ) && has_post_thumbnail() ) {
-						the_post_thumbnail( 'full' );
+						the_post_thumbnail( 'full', array( 'itemprop' => 'image' ) );
 					}
 					?>
 					<?php the_content(); ?>

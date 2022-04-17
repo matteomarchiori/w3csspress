@@ -16,9 +16,9 @@ get_header(); ?>
 <main id="content" role="main">
 	<article id="post-0" class="hentry h-entry post not-found">
 		<header class="header">
-			<h1 class="p-name entry-title"><?php esc_html_e( 'Not Found', 'w3csspress' ); ?></h1>
+			<h1 class="p-name entry-title" itemprop="name"><?php esc_html_e( 'Not Found', 'w3csspress' ); ?></h1>
 		</header>
-		<div class="e-content entry-content">
+		<div class="e-content entry-content" itemprop="mainContentOfPage">
 			<p><?php esc_html_e( 'Nothing found for the requested page. Try a search instead?', 'w3csspress' ); ?></p>
 			<?php get_search_form(); ?>
 		</div>

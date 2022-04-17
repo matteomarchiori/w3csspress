@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Template for header in WordPress
  *
@@ -16,7 +17,7 @@ get_template_part( 'class-w3csspress-walker-nav-menu' );
 
 ?>
 <!DOCTYPE html>
-<html <?php language_attributes(); ?>>
+<html <?php language_attributes(); ?> <?php w3csspress_schema_type(); ?>>
 
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
@@ -40,34 +41,41 @@ get_template_part( 'class-w3csspress-walker-nav-menu' );
 					}
 				}
 				?>
-				<div id="site-title">
+				<div id="site-title" itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
 					<?php
 					if ( is_front_page() || is_home() || is_front_page() && is_home() ) {
 						echo '<h1>';
 					}
-					echo '<a href="' . esc_url( home_url( '/' ) ) . '" title="' . esc_attr( get_bloginfo( 'name' ) ) . '" rel="home">' . esc_html( get_bloginfo( 'name' ) ) . '</a>';
+					echo '<a href="' . esc_url( home_url( '/' ) ) . '" title="' . esc_attr( get_bloginfo( 'name' ) ) . '" rel="home" itemprop="url"><span itemprop="name">' . esc_html( get_bloginfo( 'name' ) ) . '</span></a>';
 					if ( is_front_page() || is_home() || is_front_page() && is_home() ) {
 						echo '</h1>';
 					}
 					?>
 				</div>
-				<div id="site-description"><?php bloginfo( 'description' ); ?></div>
-			</div>
-			<nav id="menu" role="navigation">
+				<div id="site-description" 
 				<?php
-				if ( has_nav_menu( 'main-menu' ) ) {
-					wp_nav_menu(
-						array(
-							'theme_location' => 'main-menu',
-							'menu_class'     => 'menu w3-bar w3-section',
-							'walker'         => new W3csspress_Walker_Nav_Menu(),
-						)
-					);
+				if ( ! is_single() ) {
+												echo ' itemprop="description"';
 				}
 				?>
-			</nav>
-			<?php get_sidebar( 'headwidgets' ); ?>
-			<?php get_sidebar( 'primary' ); ?>
-			<?php get_sidebar( 'secondary' ); ?>
-		</header>
-		<div id="container" class="w3-container">
+											><?php bloginfo( 'description' ); ?></div>
+			</div>
+	</div>
+	<nav id="menu" role="navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
+		<?php
+		if ( has_nav_menu( 'main-menu' ) ) {
+			wp_nav_menu(
+				array(
+					'theme_location' => 'main-menu',
+					'menu_class'     => 'menu w3-bar w3-section',
+					'walker'         => new W3csspress_Walker_Nav_Menu(),
+				)
+			);
+		}
+		?>
+	</nav>
+	<?php get_sidebar( 'headwidgets' ); ?>
+	<?php get_sidebar( 'primary' ); ?>
+	<?php get_sidebar( 'secondary' ); ?>
+	</header>
+	<div id="container" class="w3-container">

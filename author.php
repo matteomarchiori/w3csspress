@@ -16,8 +16,8 @@ get_header(); ?>
 <main id="content" role="main">
 	<header class="header">
 		<?php the_post(); ?>
-		<h1 class="p-name entry-title author"><?php the_author_link(); ?></h1>
-		<div class="archive-meta">
+		<h1 class="p-name entry-title author" itemprop="name"><?php the_author_link(); ?></h1>
+		<div class="archive-meta" itemprop="description">
 			<?php
 			if ( '' !== get_the_author_meta( 'user_description' ) ) {
 				echo esc_html( get_the_author_meta( 'user_description' ) );
