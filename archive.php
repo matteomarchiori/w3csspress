@@ -15,7 +15,7 @@ namespace w3csspress;
 get_header(); ?>
 <main id="content" role="main">
 	<header class="header">
-		<h1 class="entry-title"><?php the_archive_title(); ?></h1>
+		<h1 class="p-name entry-title"><?php the_archive_title(); ?></h1>
 		<div class="archive-meta">
 			<?php
 			if ( '' !== the_archive_description() ) {

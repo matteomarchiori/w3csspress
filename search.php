@@ -32,7 +32,7 @@ get_header(); ?>
 		}
 		?>
 		<header class="header">
-			<h1 class="entry-title">
+			<h1 class="p-name entry-title">
 			<?php
 			printf(
 				/* translators: search text completed with query text */
@@ -58,11 +58,11 @@ get_header(); ?>
 		</div>
 		<?php get_template_part( 'nav', 'below' ); ?>
 	<?php else : ?>
-		<article id="post-0" class="post no-results not-found">
+		<article id="post-0" class="post no-results not-found hentry h-entry">
 			<header class="header">
-				<h1 class="entry-title"><?php esc_html_e( 'Nothing Found', 'w3csspress' ); ?></h1>
+				<h1 class="p-name entry-title"><?php esc_html_e( 'Nothing Found', 'w3csspress' ); ?></h1>
 			</header>
-			<div class="entry-content">
+			<div class="e-content entry-content">
 				<p><?php esc_html_e( 'Sorry, nothing matched your search. Please try again.', 'w3csspress' ); ?></p>
 				<?php get_search_form(); ?>
 			</div>

@@ -15,7 +15,7 @@ namespace w3csspress;
 get_header(); ?>
 <main id="content" role="main">
 	<header class="header">
-		<h1 class="entry-title">
+		<h1 class="p-name entry-title">
 			<?php single_term_title(); ?>
 		</h1>
 		<div class="archive-meta">

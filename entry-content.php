@@ -12,7 +12,7 @@ namespace w3csspress;
 
 ?>
 
-<div class="entry-content">
+<div class="e-content entry-content">
 	<?php if ( esc_html( get_option( 'w3csspress_post_thumbnail' ) ) && has_post_thumbnail() ) : ?>
 		<a href="<?php echo esc_url( wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'full', false )[0] ); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail( 'full' ); ?></a>
 	<?php endif; ?>

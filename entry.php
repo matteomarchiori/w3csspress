@@ -20,18 +20,18 @@ if ( '1' === esc_html( get_option( 'w3csspress_grid_enabled' ) ) ) {
 } elseif ( is_home() || is_archive() || is_search() ) {
 	$w3csspress_layout .= esc_html( get_option( 'w3csspress_layout' ) );
 }
-post_class( $w3csspress_layout );
+post_class( $w3csspress_layout . ' hentry h-entry' );
 ?>
 >
 	<header>
 		<?php
 		if ( is_singular() ) {
-			echo '<h1 class="entry-title">';
+			echo '<h1 class="p-name entry-title">';
 		} else {
-			echo '<h2 class="entry-title">';
+			echo '<h2 class="p-name entry-title">';
 		}
 		?>
-		<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark"><?php the_title(); ?></a>
+		<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark" class="u-url u-uid"><?php the_title(); ?></a>
 		<?php
 		if ( is_singular() ) {
 			echo '</h1>';

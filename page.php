@@ -50,13 +50,13 @@ get_header(); ?>
 				} elseif ( is_home() || is_archive() || is_search() ) {
 					$w3csspress_layout .= esc_html( get_option( 'w3csspress_layout' ) );
 				}
-				post_class( $w3csspress_layout );
+				post_class( $w3csspress_layout . ' hentry h-entry' );
 				?>
 			>
 				<header class="header">
-					<h1 class="entry-title"><?php the_title(); ?></h1> <?php edit_post_link(); ?>
+					<h1 class="p-name entry-title"><?php the_title(); ?></h1> <?php edit_post_link(); ?>
 				</header>
-				<div class="entry-content">
+				<div class="e-content entry-content">
 					<?php
 					if ( esc_html( get_option( 'w3csspress_post_thumbnail' ) ) && has_post_thumbnail() ) {
 						the_post_thumbnail( 'full' );

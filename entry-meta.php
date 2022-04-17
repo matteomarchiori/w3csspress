@@ -13,7 +13,7 @@ namespace w3csspress;
 ?>
 
 <div class="entry-meta">
-	<span class="author vcard">
+	<span class="p-author author h-card vcard">
 	<?php the_author_posts_link(); ?>
 	</span>
 	<span class="meta-sep"> | </span>

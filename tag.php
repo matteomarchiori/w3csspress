@@ -13,7 +13,7 @@ namespace w3csspress;
 get_header(); ?>
 <main id="content" role="main">
 	<header class="header">
-		<h1 class="entry-title"><?php single_term_title(); ?></h1>
+		<h1 class="p-name entry-title"><?php single_term_title(); ?></h1>
 		<div class="archive-meta">
 			<?php
 			if ( '' !== the_archive_description() ) {
