@@ -651,6 +651,24 @@ function w3csspress_customize_register( $wp_customize ) {
 		)
 	);
 
+	$wp_customize->add_setting(
+		'w3csspress_color_theme_custom',
+		array(
+			'default'           => '',
+			'type'              => 'option',
+			'sanitize_callback' => 'sanitize_hex_color',
+		)
+	);
+
+	$wp_customize->add_setting(
+		'w3csspress_color_link',
+		array(
+			'default'           => '',
+			'type'              => 'option',
+			'sanitize_callback' => 'sanitize_hex_color',
+		)
+	);
+
 	for ( $i = 1; $i < 7; $i++ ) {
 		$wp_customize->add_setting(
 			"w3csspress_font_size_h$i",
@@ -669,161 +687,106 @@ function w3csspress_customize_register( $wp_customize ) {
 				'sanitize_callback' => 'w3csspress\sanitize_select',
 			)
 		);
+
+		$wp_customize->add_setting(
+			"w3csspress_color_h$i",
+			array(
+				'default'           => '',
+				'type'              => 'option',
+				'sanitize_callback' => 'sanitize_hex_color',
+			)
+		);
+
+		$wp_customize->add_control(
+			"w3csspress_font_size_h$i",
+			array(
+				'label'       => sprintf(
+					/* translators: index for headings */
+					esc_html__( 'Select h%s font size', 'w3csspress' ),
+					$i
+				),
+				'description' => sprintf(
+					/* translators: index for headings */
+					esc_html__( 'Change font size of h%s.', 'w3csspress' ),
+					$i
+				),
+				'settings'    => "w3csspress_font_size_h$i",
+				'priority'    => $priority++,
+				'section'     => 'w3csspress_section',
+				'type'        => 'select',
+				'choices'     => $font_sizes,
+			)
+		);
+
+		$wp_customize->add_control(
+			"w3csspress_font_weight_h$i",
+			array(
+				'label'       => sprintf(
+					/* translators: index for headings */
+					esc_html__( 'Select h%s font weight', 'w3csspress' ),
+					$i
+				),
+				'description' => sprintf(
+					/* translators: index for headings */
+					esc_html__( 'Change font weight of h%s.', 'w3csspress' ),
+					$i
+				),
+				'settings'    => "w3csspress_font_weight_h$i",
+				'priority'    => $priority++,
+				'section'     => 'w3csspress_section',
+				'type'        => 'select',
+				'choices'     => $font_weights,
+			)
+		);
+
+		$wp_customize->add_control(
+			new \WP_Customize_Color_Control(
+				$wp_customize,
+				"w3csspress_color_h$i",
+				array(
+					'label'       => sprintf(
+						/* translators: index for headings */
+						esc_html__( 'H%s color', 'w3csspress' ),
+						$i
+					),
+					'description' => sprintf(
+						/* translators: index for headings */
+						esc_html__( 'Change color of h%s.', 'w3csspress' ),
+						$i
+					),
+					'settings'    => "w3csspress_color_h$i",
+					'priority'    => $priority++,
+					'section'     => 'colors',
+				)
+			)
+		);
 	}
 
 	$wp_customize->add_control(
-		'w3csspress_font_size_h1',
-		array(
-			'label'       => esc_html__( 'Select h1 font size', 'w3csspress' ),
-			'description' => esc_html__( 'Change font size of h1.', 'w3csspress' ),
-			'settings'    => 'w3csspress_font_size_h1',
-			'priority'    => $priority++,
-			'section'     => 'w3csspress_section',
-			'type'        => 'select',
-			'choices'     => $font_sizes,
+		new \WP_Customize_Color_Control(
+			$wp_customize,
+			'w3csspress_color_theme_custom',
+			array(
+				'label'       => esc_html__( 'Theme color', 'w3csspress' ),
+				'description' => esc_html__( 'Change theme color', 'w3csspress' ),
+				'settings'    => 'w3csspress_color_theme_custom',
+				'priority'    => $priority++,
+				'section'     => 'colors',
+			)
 		)
 	);
 
 	$wp_customize->add_control(
-		'w3csspress_font_size_h2',
-		array(
-			'label'       => esc_html__( 'Select h2 font size', 'w3csspress' ),
-			'description' => esc_html__( 'Change font size of h2.', 'w3csspress' ),
-			'settings'    => 'w3csspress_font_size_h2',
-			'priority'    => $priority++,
-			'section'     => 'w3csspress_section',
-			'type'        => 'select',
-			'choices'     => $font_sizes,
-		)
-	);
-
-	$wp_customize->add_control(
-		'w3csspress_font_size_h3',
-		array(
-			'label'       => esc_html__( 'Select h3 font size', 'w3csspress' ),
-			'description' => esc_html__( 'Change font size of h3.', 'w3csspress' ),
-			'settings'    => 'w3csspress_font_size_h3',
-			'priority'    => $priority++,
-			'section'     => 'w3csspress_section',
-			'type'        => 'select',
-			'choices'     => $font_sizes,
-		)
-	);
-
-	$wp_customize->add_control(
-		'w3csspress_font_size_h4',
-		array(
-			'label'       => esc_html__( 'Select h4 font size', 'w3csspress' ),
-			'description' => esc_html__( 'Change font size of h4.', 'w3csspress' ),
-			'settings'    => 'w3csspress_font_size_h4',
-			'priority'    => $priority++,
-			'section'     => 'w3csspress_section',
-			'type'        => 'select',
-			'choices'     => $font_sizes,
-		)
-	);
-
-	$wp_customize->add_control(
-		'w3csspress_font_size_h5',
-		array(
-			'label'       => esc_html__( 'Select h5 font size', 'w3csspress' ),
-			'description' => esc_html__( 'Change font size of h5.', 'w3csspress' ),
-			'settings'    => 'w3csspress_font_size_h5',
-			'priority'    => $priority++,
-			'section'     => 'w3csspress_section',
-			'type'        => 'select',
-			'choices'     => $font_sizes,
-		)
-	);
-
-	$wp_customize->add_control(
-		'w3csspress_font_size_h6',
-		array(
-			'label'       => esc_html__( 'Select h6 font size', 'w3csspress' ),
-			'description' => esc_html__( 'Change font size of h6.', 'w3csspress' ),
-			'settings'    => 'w3csspress_font_size_h6',
-			'priority'    => $priority++,
-			'section'     => 'w3csspress_section',
-			'type'        => 'select',
-			'choices'     => $font_sizes,
-		)
-	);
-
-	$wp_customize->add_control(
-		'w3csspress_font_weight_h1',
-		array(
-			'label'       => esc_html__( 'Select h1 font weight', 'w3csspress' ),
-			'description' => esc_html__( 'Change font weight of h1.', 'w3csspress' ),
-			'settings'    => 'w3csspress_font_weight_h1',
-			'priority'    => $priority++,
-			'section'     => 'w3csspress_section',
-			'type'        => 'select',
-			'choices'     => $font_weights,
-		)
-	);
-
-	$wp_customize->add_control(
-		'w3csspress_font_weight_h2',
-		array(
-			'label'       => esc_html__( 'Select h2 font weight', 'w3csspress' ),
-			'description' => esc_html__( 'Change font weight of h2.', 'w3csspress' ),
-			'settings'    => 'w3csspress_font_weight_h2',
-			'priority'    => $priority++,
-			'section'     => 'w3csspress_section',
-			'type'        => 'select',
-			'choices'     => $font_weights,
-		)
-	);
-
-	$wp_customize->add_control(
-		'w3csspress_font_weight_h3',
-		array(
-			'label'       => esc_html__( 'Select h3 font weight', 'w3csspress' ),
-			'description' => esc_html__( 'Change font weight of h3.', 'w3csspress' ),
-			'settings'    => 'w3csspress_font_weight_h3',
-			'priority'    => $priority++,
-			'section'     => 'w3csspress_section',
-			'type'        => 'select',
-			'choices'     => $font_weights,
-		)
-	);
-
-	$wp_customize->add_control(
-		'w3csspress_font_weight_h4',
-		array(
-			'label'       => esc_html__( 'Select h4 font weight', 'w3csspress' ),
-			'description' => esc_html__( 'Change font weight of h4.', 'w3csspress' ),
-			'settings'    => 'w3csspress_font_weight_h4',
-			'priority'    => $priority++,
-			'section'     => 'w3csspress_section',
-			'type'        => 'select',
-			'choices'     => $font_weights,
-		)
-	);
-
-	$wp_customize->add_control(
-		'w3csspress_font_weight_h5',
-		array(
-			'label'       => esc_html__( 'Select h5 font weight', 'w3csspress' ),
-			'description' => esc_html__( 'Change font weight of h5.', 'w3csspress' ),
-			'settings'    => 'w3csspress_font_weight_h5',
-			'priority'    => $priority++,
-			'section'     => 'w3csspress_section',
-			'type'        => 'select',
-			'choices'     => $font_weights,
-		)
-	);
-
-	$wp_customize->add_control(
-		'w3csspress_font_weight_h6',
-		array(
-			'label'       => esc_html__( 'Select h6 font weight', 'w3csspress' ),
-			'description' => esc_html__( 'Change font weight of h6.', 'w3csspress' ),
-			'settings'    => 'w3csspress_font_weight_h6',
-			'priority'    => $priority++,
-			'section'     => 'w3csspress_section',
-			'type'        => 'select',
-			'choices'     => $font_weights,
+		new \WP_Customize_Color_Control(
+			$wp_customize,
+			'w3csspress_color_link',
+			array(
+				'label'       => esc_html__( 'Link color', 'w3csspress' ),
+				'description' => esc_html__( 'Change link color', 'w3csspress' ),
+				'settings'    => 'w3csspress_color_link',
+				'priority'    => $priority++,
+				'section'     => 'colors',
+			)
 		)
 	);
 
@@ -1043,10 +1006,10 @@ add_action( 'wp_footer', __NAMESPACE__ . '\\w3csspress_footer' );
  *
  * @since 2022.0
  */
-function w3csspress_footer() {     ?>
+function w3csspress_footer() {       ?>
 	<script type="text/javascript">
 		jQuery(document).ready(function($) {
-			var excluded = "#wpadminbar, #wpadminbar *";
+			var excluded = "#wpadminbar, #wpadminbar *, .sidebar";
 			<?php if ( esc_html( get_option( 'w3csspress_rounded_img' ) ) ) { ?>
 				$("img").addClass("w3-round");
 			<?php } ?>
@@ -1086,7 +1049,22 @@ function w3csspress_footer() {     ?>
 				$font = esc_html( get_option( 'w3csspress_font_family' ) );
 			}
 			for ( $i = 1; $i < 7; $i++ ) {
-				echo "$('h" . intval( $i ) . "').addClass(\"" . esc_html( get_option( "w3csspress_font_size_h$i" ) ) . ' ' . esc_html( $font ) . '");';
+				echo "$('h" . intval( $i ) . "').addClass(\"" . esc_html( get_option( "w3csspress_font_size_h$i" ) ) . ' ' . esc_html( get_option( "w3csspress_font_weight_h$i" ) ) . ' ' . esc_html( $font ) . '");';
+				if ( '' !== esc_html( get_option( "w3csspress_color_h$i" ) ) ) {
+					?>
+					$("<style type='text/css'>h<?php echo esc_html( $i ); ?>{color:<?php echo esc_html( get_option( "w3csspress_color_h$i" ) ); ?>} </style>").appendTo("head");
+					<?php
+				}
+			}
+			if ( '' !== esc_html( get_option( 'w3csspress_color_theme_custom' ) ) ) {
+				?>
+				$("<style type='text/css'>body:not("+excluded+"){color:<?php echo esc_html( get_option( 'w3csspress_color_theme_custom' ) ); ?> !important} </style>").appendTo("head");
+				<?php
+			}
+			if ( '' !== esc_html( get_option( 'w3csspress_color_link' ) ) ) {
+				?>
+				$("<style type='text/css'>a:not("+excluded+"){color:<?php echo esc_html( get_option( 'w3csspress_color_link' ) ); ?> !important} </style>").appendTo("head");
+				<?php
 			}
 			if ( '' !== $google_font ) {
 				?>
