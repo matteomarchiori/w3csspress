@@ -11,7 +11,7 @@ License URI: https://www.gnu.org/licenses/gpl.html
 
 == Description ==
 
-Simple minimal theme made to integrate the W3.CSS framework inside WordPress, with global custom options and all of the W3.CSS framework functionalities. The theme has been developed starting from resources on the w3schools website applied to the blankslate WordPress theme, slightly modified. The theme is accessibility ready.
+Theme made to integrate the W3CSS framework inside WordPress, with global custom options and all of the W3CSS framework functionalities. The theme has been developed starting from resources on the w3schools website applied to the blankslate WordPress theme, slightly modified. The theme is accessibility ready and it is highly customizable. Please add issues on GitHub or contact me if you are interested in more options.
 
 === Copyright ===
 
