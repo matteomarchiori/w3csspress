@@ -12,7 +12,7 @@ namespace w3csspress;
 
 ?>
 
-<div id="footwidgets" class="sidebar w3-sidebar w3-bar-block">
+<div id="footwidgets" class="sidebar w3-sidebar w3-bar-block w3-container">
 	<?php
 	dynamic_sidebar( 'footwidgets' );
 	?>
