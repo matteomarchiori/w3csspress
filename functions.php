@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Functions of the w3csspress theme
  *
@@ -1098,7 +1097,7 @@ function w3csspress_footer() {        ?>
 			$("table").addClass("<?php echo esc_html( get_option( 'w3csspress_font_size_table' ) ) . ' ' . esc_html( get_option( 'w3csspress_font_weight_table' ) ); ?>");
 			$("ul").not(excluded).addClass("<?php echo esc_html( get_option( 'w3csspress_font_size_ul' ) ) . ' ' . esc_html( get_option( 'w3csspress_font_weight_ul' ) ); ?>");
 			$("ol").not(excluded).addClass("<?php echo esc_html( get_option( 'w3csspress_font_size_ol' ) ) . ' ' . esc_html( get_option( 'w3csspress_font_weight_ol' ) ); ?>");
-			$("header,footer,button,reset,input:not(input[type='checkbox'],input[type='radio']),textarea,ul,ol").not(excluded).addClass("<?php echo esc_html( get_option( 'w3csspress_rounded_style' ) ); ?>");
+			$("header,footer,div,p,form,table,article,section,nav,summary,button,reset,input:not(input[type='checkbox'],input[type='radio']),textarea,ul,ol").not(excluded).addClass("<?php echo esc_html( get_option( 'w3csspress_rounded_style' ) ); ?>");
 			<?php
 			$google_font          = esc_html( str_replace( '+', ' ', get_option( 'w3csspress_google_font' ) ) );
 			$google_font_headings = esc_html( str_replace( '+', ' ', get_option( 'w3csspress_google_font_headings' ) ) );
@@ -1123,12 +1122,12 @@ function w3csspress_footer() {        ?>
 			}
 			if ( '' !== $google_font ) {
 				?>
-				$("<style type='text/css'> .w3-google{font-family:<?php echo $google_font; ?> </style>").appendTo("head");
+				$("<style type='text/css'> .w3-google{font-family:<?php echo esc_html( $google_font ); ?> </style>").appendTo("head");
 				<?php
 			}
 			if ( '' !== $google_font_headings ) {
 				?>
-				$("<style type='text/css'> .w3-google-heading h1,.w3-google-heading h2,.w3-google-heading h3,.w3-google-heading h4,.w3-google-heading h5,.w3-google-heading h6{font-family:<?php echo $google_font_headings; ?> </style>").appendTo("head");
+				$("<style type='text/css'> .w3-google-heading h1,.w3-google-heading h2,.w3-google-heading h3,.w3-google-heading h4,.w3-google-heading h5,.w3-google-heading h6{font-family:<?php echo esc_html( $google_font_headings ); ?> </style>").appendTo("head");
 			<?php } ?>
 			<?php
 			if ( '' !== $max_width ) {
@@ -1445,7 +1444,7 @@ function w3csspress_register_sidebars() {
  * @since 2022.12
  */
 function w3csspress_schema_type() {
-	 $schema = 'https://schema.org/';
+	$schema = 'https://schema.org/';
 	if ( is_single() ) {
 		$type = 'Article';
 	} elseif ( is_author() ) {
