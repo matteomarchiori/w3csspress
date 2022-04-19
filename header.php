@@ -30,7 +30,7 @@ get_template_part( 'class-w3csspress-walker-nav-menu' );
 		wp_body_open();
 	}
 	?>
-	<div id="wrapper" class="hfeed">
+	<div id="wrapper" class="hfeed h-feed">
 		<header id="header" role="banner" class="w3-container">
 			<div id="branding">
 				<?php

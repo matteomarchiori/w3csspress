@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Functions of the w3csspress theme
  *
@@ -131,6 +132,16 @@ function w3csspress_customize_register( $wp_customize ) {
 		'w3-quarter' => __( 'Four Columns', 'w3csspress' ),
 	);
 
+	$rounded = array(
+		''                 => __( 'Default', 'w3csspress' ),
+		'w3-round-small'   => __( 'Small', 'w3csspress' ),
+		'w3-round-medium'  => __( 'Medium', 'w3csspress' ),
+		'w3-round-large'   => __( 'Large', 'w3csspress' ),
+		'w3-round-xlarge'  => __( 'XL', 'w3csspress' ),
+		'w3-round-xxlarge' => __( 'XXL', 'w3csspress' ),
+		'w3-circle'        => __( 'Circle', 'w3csspress' ),
+	);
+
 	$priority = 1;
 
 	$wp_customize->add_section(
@@ -156,6 +167,15 @@ function w3csspress_customize_register( $wp_customize ) {
 
 	$wp_customize->add_setting(
 		'w3csspress_theme_kind',
+		array(
+			'default'           => '',
+			'type'              => 'option',
+			'sanitize_callback' => 'w3csspress\sanitize_select',
+		)
+	);
+
+	$wp_customize->add_setting(
+		'w3csspress_rounded_style',
 		array(
 			'default'           => '',
 			'type'              => 'option',
@@ -414,6 +434,19 @@ function w3csspress_customize_register( $wp_customize ) {
 			'section'     => 'w3csspress_section',
 			'type'        => 'select',
 			'choices'     => $layouts,
+		)
+	);
+
+	$wp_customize->add_control(
+		'w3csspress_rounded_style',
+		array(
+			'label'       => esc_html__( 'Select rounded style', 'w3csspress' ),
+			'description' => esc_html__( 'Using this option you can change some elements roundness (images have more controls).', 'w3csspress' ),
+			'settings'    => 'w3csspress_rounded_style',
+			'priority'    => $priority++,
+			'section'     => 'w3csspress_section',
+			'type'        => 'select',
+			'choices'     => $rounded,
 		)
 	);
 
@@ -1031,7 +1064,7 @@ add_action( 'wp_footer', __NAMESPACE__ . '\\w3csspress_footer' );
  *
  * @since 2022.0
  */
-function w3csspress_footer() {       ?>
+function w3csspress_footer() {        ?>
 	<script type="text/javascript">
 		jQuery(document).ready(function($) {
 			var excluded = "#wpadminbar, #wpadminbar *, .sidebar";
@@ -1065,6 +1098,7 @@ function w3csspress_footer() {       ?>
 			$("table").addClass("<?php echo esc_html( get_option( 'w3csspress_font_size_table' ) ) . ' ' . esc_html( get_option( 'w3csspress_font_weight_table' ) ); ?>");
 			$("ul").not(excluded).addClass("<?php echo esc_html( get_option( 'w3csspress_font_size_ul' ) ) . ' ' . esc_html( get_option( 'w3csspress_font_weight_ul' ) ); ?>");
 			$("ol").not(excluded).addClass("<?php echo esc_html( get_option( 'w3csspress_font_size_ol' ) ) . ' ' . esc_html( get_option( 'w3csspress_font_weight_ol' ) ); ?>");
+			$("header,footer,button,reset,input:not(input[type='checkbox'],input[type='radio']),textarea,ul,ol").not(excluded).addClass("<?php echo esc_html( get_option( 'w3csspress_rounded_style' ) ); ?>");
 			<?php
 			$google_font          = esc_html( str_replace( '+', ' ', get_option( 'w3csspress_google_font' ) ) );
 			$google_font_headings = esc_html( str_replace( '+', ' ', get_option( 'w3csspress_google_font_headings' ) ) );
@@ -1079,12 +1113,12 @@ function w3csspress_footer() {       ?>
 			}
 			if ( '' !== esc_html( get_option( 'w3csspress_color_theme_custom' ) ) ) {
 				?>
-				$("<style type='text/css'>body:not("+excluded+"){color:<?php echo esc_html( get_option( 'w3csspress_color_theme_custom' ) ); ?> !important} </style>").appendTo("head");
+				$("<style type='text/css'>body:not(" + excluded + "){color:<?php echo esc_html( get_option( 'w3csspress_color_theme_custom' ) ); ?> !important} </style>").appendTo("head");
 				<?php
 			}
 			if ( '' !== esc_html( get_option( 'w3csspress_color_link' ) ) ) {
 				?>
-				$("<style type='text/css'>a:not("+excluded+"){color:<?php echo esc_html( get_option( 'w3csspress_color_link' ) ); ?> !important} </style>").appendTo("head");
+				$("<style type='text/css'>a:not(" + excluded + "){color:<?php echo esc_html( get_option( 'w3csspress_color_link' ) ); ?> !important} </style>").appendTo("head");
 				<?php
 			}
 			if ( '' !== $google_font ) {
@@ -1275,6 +1309,7 @@ function add_additional_class_on_li( $classes, $item, $args ) {
 	if ( in_array( 'menu-item-has-children', $classes, true ) ) {
 		$classes[] = 'w3-dropdown-hover w3-dropdown-focus';
 	}
+	$classes[] = get_option( 'w3csspress_rounded_style' );
 	return $classes;
 }
 
@@ -1410,7 +1445,7 @@ function w3csspress_register_sidebars() {
  * @since 2022.12
  */
 function w3csspress_schema_type() {
-	$schema = 'https://schema.org/';
+	 $schema = 'https://schema.org/';
 	if ( is_single() ) {
 		$type = 'Article';
 	} elseif ( is_author() ) {
