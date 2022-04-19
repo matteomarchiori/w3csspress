@@ -173,6 +173,15 @@ function w3csspress_customize_register( $wp_customize ) {
 	);
 
 	$wp_customize->add_setting(
+		'w3csspress_google_font_headings',
+		array(
+			'default'           => '',
+			'type'              => 'option',
+			'sanitize_callback' => 'sanitize_text_field',
+		)
+	);
+
+	$wp_customize->add_setting(
 		'w3csspress_google_font',
 		array(
 			'default'           => '',
@@ -480,6 +489,18 @@ function w3csspress_customize_register( $wp_customize ) {
 			'section'     => 'w3csspress_section',
 			'type'        => 'select',
 			'choices'     => $font_families,
+		)
+	);
+
+	$wp_customize->add_control(
+		'w3csspress_google_font_headings',
+		array(
+			'label'       => esc_html__( 'Use Google font for headings', 'w3csspress' ),
+			'description' => esc_html__( 'Change font family of headings.', 'w3csspress' ),
+			'settings'    => 'w3csspress_google_font_headings',
+			'priority'    => $priority++,
+			'section'     => 'w3csspress_section',
+			'type'        => 'text',
 		)
 	);
 
@@ -994,6 +1015,10 @@ function w3csspress_enqueue_script() {
 	if ( '' !== $google_font ) {
 		wp_enqueue_style( 'google-font', "https://fonts.googleapis.com/css?family=$google_font", false, $theme_version, 'all' );
 	}
+	$google_font_headings = esc_html( get_option( 'w3csspress_google_font_headings' ) );
+	if ( '' !== $google_font_headings ) {
+		wp_enqueue_style( 'google-font-headings', "https://fonts.googleapis.com/css?family=$google_font_headings", false, $theme_version, 'all' );
+	}
 	wp_enqueue_style( 'w3csspress-style', get_stylesheet_uri(), false, $theme_version, 'all' );
 	wp_style_add_data( 'w3csspress-style', 'rtl', 'replace' );
 	wp_enqueue_script( 'jquery' );
@@ -1041,15 +1066,11 @@ function w3csspress_footer() {       ?>
 			$("ul").not(excluded).addClass("<?php echo esc_html( get_option( 'w3csspress_font_size_ul' ) ) . ' ' . esc_html( get_option( 'w3csspress_font_weight_ul' ) ); ?>");
 			$("ol").not(excluded).addClass("<?php echo esc_html( get_option( 'w3csspress_font_size_ol' ) ) . ' ' . esc_html( get_option( 'w3csspress_font_weight_ol' ) ); ?>");
 			<?php
-			$google_font = esc_html( get_option( 'w3csspress_google_font' ) );
-			$max_width   = esc_html( get_option( 'w3csspress_max_width' ) );
-			if ( '' !== $google_font ) {
-				$font = 'w3-google';
-			} else {
-				$font = esc_html( get_option( 'w3csspress_font_family' ) );
-			}
+			$google_font          = esc_html( str_replace( '+', ' ', get_option( 'w3csspress_google_font' ) ) );
+			$google_font_headings = esc_html( str_replace( '+', ' ', get_option( 'w3csspress_google_font_headings' ) ) );
+			$max_width            = esc_html( get_option( 'w3csspress_max_width' ) );
 			for ( $i = 1; $i < 7; $i++ ) {
-				echo "$('h" . intval( $i ) . "').addClass(\"" . esc_html( get_option( "w3csspress_font_size_h$i" ) ) . ' ' . esc_html( get_option( "w3csspress_font_weight_h$i" ) ) . ' ' . esc_html( $font ) . '");';
+				echo "$('h" . intval( $i ) . "').addClass(\"" . esc_html( get_option( "w3csspress_font_size_h$i" ) ) . ' ' . esc_html( get_option( "w3csspress_font_weight_h$i" ) ) . '");';
 				if ( '' !== esc_html( get_option( "w3csspress_color_h$i" ) ) ) {
 					?>
 					$("<style type='text/css'>h<?php echo esc_html( $i ); ?>{color:<?php echo esc_html( get_option( "w3csspress_color_h$i" ) ); ?>} </style>").appendTo("head");
@@ -1068,7 +1089,12 @@ function w3csspress_footer() {       ?>
 			}
 			if ( '' !== $google_font ) {
 				?>
-				$("<style type='text/css'> .w3-google{font-family:<?php echo esc_html( str_replace( '+', ' ', $google_font ) ); ?>} </style>").appendTo("head");
+				$("<style type='text/css'> .w3-google{font-family:<?php echo $google_font; ?> </style>").appendTo("head");
+				<?php
+			}
+			if ( '' !== $google_font_headings ) {
+				?>
+				$("<style type='text/css'> .w3-google-heading h1,.w3-google-heading h2,.w3-google-heading h3,.w3-google-heading h4,.w3-google-heading h5,.w3-google-heading h6{font-family:<?php echo $google_font_headings; ?> </style>").appendTo("head");
 			<?php } ?>
 			<?php
 			if ( '' !== $max_width ) {
@@ -1277,6 +1303,10 @@ function w3csspress_body_class( $classes ) {
 		$classes[] = esc_html( get_option( 'w3csspress_font_family' ) );
 	} else {
 		$classes[] = 'w3-google';
+	}
+	$google_font_headings = esc_html( get_option( 'w3csspress_google_font_headings' ) );
+	if ( '' !== $google_font_headings ) {
+		$classes[] = 'w3-google-heading';
 	}
 	return $classes;
 }
