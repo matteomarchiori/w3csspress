@@ -65,7 +65,7 @@ jQuery(document).ready(function($) {
     $("input[type='radio']").addClass("w3-radio");
     $("select").addClass("w3-select");
     $("table").parent().addClass("w3-responsive");
-    $("table").addClass("w3-table-all w3-hoverable");
+    $("table").addClass("w3-table w3-bordered w3-centered");
     $("img").addClass("w3-image");
     $("code").addClass("w3-code");
     $("ul").not(excluded).addClass("w3-ul");

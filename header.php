@@ -66,7 +66,7 @@ get_template_part( 'class-w3csspress-walker-nav-menu' );
 			wp_nav_menu(
 				array(
 					'theme_location' => 'main-menu',
-					'menu_class'     => 'menu w3-bar w3-section',
+					'menu_class'     => 'menu w3-bar w3-container',
 					'walker'         => new W3csspress_Walker_Nav_Menu(),
 				)
 			);
