@@ -426,7 +426,7 @@ function w3csspress_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'w3csspress_jquery',
 		array(
-			'default'           => 1,
+			'default'           => 0,
 			'type'              => 'option',
 			'sanitize_callback' => 'w3csspress\sanitize_checkbox',
 		)
@@ -1078,9 +1078,9 @@ function w3csspress_enqueue_script() {
 	wp_dequeue_style( 'wp-block-library' );
 	wp_dequeue_style( 'wp-block-library-theme' );
 	if ( esc_html( get_option( 'w3csspress_jquery' ) ) ) {
-		wp_enqueue_script( 'jquery' );
-	} else {
 		wp_deregister_script( 'jquery' );
+	} else {
+		wp_enqueue_script( 'jquery' );
 	}
 }
 
