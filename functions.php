@@ -423,6 +423,15 @@ function w3csspress_customize_register( $wp_customize ) {
 		)
 	);
 
+	$wp_customize->add_setting(
+		'w3csspress_jquery',
+		array(
+			'default'           => 1,
+			'type'              => 'option',
+			'sanitize_callback' => 'w3csspress\sanitize_checkbox',
+		)
+	);
+
 	$wp_customize->add_control(
 		'w3csspress_layout',
 		array(
@@ -950,6 +959,18 @@ function w3csspress_customize_register( $wp_customize ) {
 			'type'        => 'checkbox',
 		)
 	);
+
+	$wp_customize->add_control(
+		'w3csspress_jquery',
+		array(
+			'label'       => esc_html__( 'Disable jQuery', 'w3csspress' ),
+			'description' => esc_html__( 'Disable or enable jQuery (do only if you know what you are doing).', 'w3csspress' ),
+			'settings'    => 'w3csspress_jquery',
+			'priority'    => $priority++,
+			'section'     => 'w3csspress_section',
+			'type'        => 'checkbox',
+		)
+	);
 }
 
 add_action( 'after_setup_theme', __NAMESPACE__ . '\\w3csspress_setup' );
@@ -1053,10 +1074,14 @@ function w3csspress_enqueue_script() {
 	}
 	wp_enqueue_style( 'w3csspress-style', get_stylesheet_uri(), false, $theme_version, 'all' );
 	wp_style_add_data( 'w3csspress-style', 'rtl', 'replace' );
-	wp_enqueue_script( 'jquery' );
-	wp_enqueue_script( 'w3csspress-scripts', get_template_directory_uri() . '/assets/js/scripts.js', array( 'jquery' ), $theme_version, true );
+	wp_enqueue_script( 'w3csspress-scripts', get_template_directory_uri() . '/assets/js/scripts.js', array(), $theme_version, true );
 	wp_dequeue_style( 'wp-block-library' );
 	wp_dequeue_style( 'wp-block-library-theme' );
+	if ( esc_html( get_option( 'w3csspress_jquery' ) ) ) {
+		wp_enqueue_script( 'jquery' );
+	} else {
+		wp_deregister_script( 'jquery' );
+	}
 }
 
 add_action( 'wp_footer', __NAMESPACE__ . '\\w3csspress_footer' );
@@ -1065,87 +1090,112 @@ add_action( 'wp_footer', __NAMESPACE__ . '\\w3csspress_footer' );
  *
  * @since 2022.0
  */
-function w3csspress_footer() {        ?>
+function w3csspress_footer() {          ?>
 	<script type="text/javascript">
-		jQuery(document).ready(function($) {
+		function addClTag(tag, cl) {
+			var tags = document.getElementsByTagName(tag);
+			for (i = 0; i < tags.length; i++) {
+				tags[i].className += ' ' + cl;
+			}
+		}
+
+		function addClSel(sel, cl) {
+			var eles = document.querySelectorAll(sel);
+			for (i = 0; i < eles.length; i++) {
+				eles[i].className += ' ' + cl;
+			}
+		}
+
+		function newStyle(css) {
+			var head = document.head;
+			var style = document.createElement('style');
+			head.appendChild(style);
+			style.type = 'text/css';
+			if (style.styleSheet) {
+				style.styleSheet.cssText = css;
+			} else {
+				style.appendChild(document.createTextNode(css));
+			}
+		}
+		window.addEventListener('load', function() {
 			var excluded = "#wpadminbar, #wpadminbar *, .sidebar";
 			<?php if ( esc_html( get_option( 'w3csspress_rounded_img' ) ) ) { ?>
-				$("img").addClass("w3-round");
+				addClTag("img", "w3-rounded");
 			<?php } ?>
 			<?php if ( esc_html( get_option( 'w3csspress_circle_img' ) ) ) { ?>
-				$("img").addClass("w3-circle");
+				addClTag("img", "w3-circle");
 			<?php } ?>
 			<?php if ( esc_html( get_option( 'w3csspress_bordered_img' ) ) ) { ?>
-				$("img").addClass("w3-border");
+				addClTag("img", "w3-border");
 			<?php } ?>
 			<?php if ( esc_html( get_option( 'w3csspress_cards_img' ) ) ) { ?>
-				$("img").addClass("w3-card");
+				addClTag("img", "w3-card");
 			<?php } ?>
 			<?php if ( esc_html( get_option( 'w3csspress_opacity_img' ) ) ) { ?>
-				$("img").addClass("w3-opacity");
+				addClTag("img", "w3-opacity");
 			<?php } ?>
 			<?php if ( esc_html( get_option( 'w3csspress_grayscale_img' ) ) ) { ?>
-				$("img").addClass("w3-grayscale");
+				addClTag("img", "w3-greyscale");
 			<?php } ?>
 			<?php if ( esc_html( get_option( 'w3csspress_sepia_img' ) ) ) { ?>
-				$("img").addClass("w3-sepia");
+				addClTag("img", "w3-sepia");
 			<?php } ?>
-			$("p").not(excluded).addClass("<?php echo esc_html( get_option( 'w3csspress_font_size_paragraph' ) ) . ' ' . esc_html( get_option( 'w3csspress_font_weight_paragraph' ) ); ?>");
-			$("div").not(excluded).addClass("<?php echo esc_html( get_option( 'w3csspress_font_size_div' ) ) . ' ' . esc_html( get_option( 'w3csspress_font_weight_div' ) ); ?>");
-			$("input").not(excluded).addClass("<?php echo esc_html( get_option( 'w3csspress_font_size_input' ) ) . ' ' . esc_html( get_option( 'w3csspress_font_weight_input' ) ); ?>");
-			$("button").not(excluded).addClass("<?php echo esc_html( get_option( 'w3csspress_font_size_input' ) ) . ' ' . esc_html( get_option( 'w3csspress_font_weight_input' ) ); ?>");
-			$("reset").not(excluded).addClass("<?php echo esc_html( get_option( 'w3csspress_font_size_input' ) ) . ' ' . esc_html( get_option( 'w3csspress_font_weight_input' ) ); ?>");
-			$("textarea").addClass("<?php echo esc_html( get_option( 'w3csspress_font_size_input' ) ) . ' ' . esc_html( get_option( 'w3csspress_font_weight_input' ) ); ?>");
-			$("table").addClass("<?php echo esc_html( get_option( 'w3csspress_font_size_table' ) ) . ' ' . esc_html( get_option( 'w3csspress_font_weight_table' ) ); ?>");
-			$("ul").not(excluded).addClass("<?php echo esc_html( get_option( 'w3csspress_font_size_ul' ) ) . ' ' . esc_html( get_option( 'w3csspress_font_weight_ul' ) ); ?>");
-			$("ol").not(excluded).addClass("<?php echo esc_html( get_option( 'w3csspress_font_size_ol' ) ) . ' ' . esc_html( get_option( 'w3csspress_font_weight_ol' ) ); ?>");
-			$("header,footer,div,p,form,table,article,section,nav,summary,button,reset,input:not(input[type='checkbox'],input[type='radio']),textarea,ul,ol").not(excluded).addClass("<?php echo esc_html( get_option( 'w3csspress_rounded_style' ) ); ?>");
+			addClSel("p:not(" + excluded + ")", "<?php echo esc_html( get_option( 'w3csspress_font_size_paragraph' ) ) . ' ' . esc_html( get_option( 'w3csspress_font_weight_paragraph' ) ); ?>");
+			addClSel("div:not(" + excluded + ")", "<?php echo esc_html( get_option( 'w3csspress_font_size_div' ) ) . ' ' . esc_html( get_option( 'w3csspress_font_weight_div' ) ); ?>");
+			addClSel("input:not(" + excluded + ")", "<?php echo esc_html( get_option( 'w3csspress_font_size_input' ) ) . ' ' . esc_html( get_option( 'w3csspress_font_weight_input' ) ); ?>");
+			addClSel("button:not(" + excluded + ")", "<?php echo esc_html( get_option( 'w3csspress_font_size_input' ) ) . ' ' . esc_html( get_option( 'w3csspress_font_weight_input' ) ); ?>");
+			addClSel("reset:not(" + excluded + ")", "<?php echo esc_html( get_option( 'w3csspress_font_size_input' ) ) . ' ' . esc_html( get_option( 'w3csspress_font_weight_input' ) ); ?>");
+			addClSel("textarea:not(" + excluded + ")", "<?php echo esc_html( get_option( 'w3csspress_font_size_input' ) ) . ' ' . esc_html( get_option( 'w3csspress_font_weight_input' ) ); ?>");
+			addClSel("table:not(" + excluded + ")", "<?php echo esc_html( get_option( 'w3csspress_font_size_table' ) ) . ' ' . esc_html( get_option( 'w3csspress_font_weight_table' ) ); ?>");
+			addClSel("ul:not(" + excluded + ")", "<?php echo esc_html( get_option( 'w3csspress_font_size_ul' ) ) . ' ' . esc_html( get_option( 'w3csspress_font_weight_ul' ) ); ?>");
+			addClSel("ol:not(" + excluded + ")", "<?php echo esc_html( get_option( 'w3csspress_font_size_ol' ) ) . ' ' . esc_html( get_option( 'w3csspress_font_weight_ol' ) ); ?>");
+			addClSel("header:not(" + excluded + "),footer:not(" + excluded + "),div:not(" + excluded + "),p:not(" + excluded + "),form:not(" + excluded + "),table:not(" + excluded + "),article:not(" + excluded + "),section:not(" + excluded + "),nav:not(" + excluded + "),summary:not(" + excluded + "),button:not(" + excluded + "),reset:not(" + excluded + "),input:not(input[type='checkbox'],input[type='radio']," + excluded + "),textarea:not(" + excluded + "),ul:not(" + excluded + "),ol:not(" + excluded + ")", "<?php echo esc_html( get_option( 'w3csspress_rounded_style' ) ); ?>");
 			<?php
 			$google_font          = esc_html( str_replace( '+', ' ', get_option( 'w3csspress_google_font' ) ) );
 			$google_font_headings = esc_html( str_replace( '+', ' ', get_option( 'w3csspress_google_font_headings' ) ) );
 			$max_width            = esc_html( get_option( 'w3csspress_max_width' ) );
 			for ( $i = 1; $i < 7; $i++ ) {
-				echo "$('h" . intval( $i ) . "').addClass(\"" . esc_html( get_option( "w3csspress_font_size_h$i" ) ) . ' ' . esc_html( get_option( "w3csspress_font_weight_h$i" ) ) . '");';
+				echo 'addClTag("h' . intval( $i ) . '","' . esc_html( get_option( "w3csspress_font_size_h$i" ) ) . ' ' . esc_html( get_option( "w3csspress_font_weight_h$i" ) ) . '");';
 				if ( '' !== esc_html( get_option( "w3csspress_color_h$i" ) ) ) {
 					?>
-					$("<style type='text/css'>h<?php echo esc_html( $i ); ?>{color:<?php echo esc_html( get_option( "w3csspress_color_h$i" ) ); ?>} </style>").appendTo("head");
+					newStyle("h<?php echo esc_html( $i ); ?>{color:<?php echo esc_html( get_option( "w3csspress_color_h$i" ) ); ?>}");
 					<?php
 				}
 			}
 			if ( '' !== esc_html( get_option( 'w3csspress_color_theme_custom' ) ) ) {
 				?>
-				$("<style type='text/css'>body:not(" + excluded + "){color:<?php echo esc_html( get_option( 'w3csspress_color_theme_custom' ) ); ?> !important} </style>").appendTo("head");
+				newStyle("body:not(" + excluded + "){color:<?php echo esc_html( get_option( 'w3csspress_color_theme_custom' ) ); ?> !important}");
 				<?php
 			}
 			if ( '' !== esc_html( get_option( 'w3csspress_color_link' ) ) ) {
 				?>
-				$("<style type='text/css'>a:not(" + excluded + "){color:<?php echo esc_html( get_option( 'w3csspress_color_link' ) ); ?> !important} </style>").appendTo("head");
+				newStyle("a:not(" + excluded + "){color:<?php echo esc_html( get_option( 'w3csspress_color_link' ) ); ?> !important}");
 				<?php
 			}
 			if ( '' !== $google_font ) {
 				?>
-				$("<style type='text/css'> .w3-google{font-family:<?php echo esc_html( $google_font ); ?> </style>").appendTo("head");
+				newStyle(".w3-google{font-family:<?php echo esc_html( $google_font ); ?>}");
 				<?php
 			}
 			if ( '' !== $google_font_headings ) {
 				?>
-				$("<style type='text/css'> .w3-google-heading h1,.w3-google-heading h2,.w3-google-heading h3,.w3-google-heading h4,.w3-google-heading h5,.w3-google-heading h6{font-family:<?php echo esc_html( $google_font_headings ); ?> </style>").appendTo("head");
+				newStyle(".w3-google-heading h1,.w3-google-heading h2,.w3-google-heading h3,.w3-google-heading h4,.w3-google-heading h5,.w3-google-heading h6{font-family:<?php echo esc_html( $google_font_headings ); ?>}");
 			<?php } ?>
 			<?php
 			if ( '' !== $max_width ) {
 				?>
-				$("<style type='text/css'> body{max-width:<?php echo intval( $max_width ); ?>vw;} </style>").appendTo("head");
+				newStyle("body{max-width:<?php echo intval( $max_width ); ?>vw;}");
 				<?php
 			}
 			if ( function_exists( 'get_the_post_thumbnail_url' ) && esc_html( get_option( 'w3csspress_header_thumbnail' ) ) && has_post_thumbnail() ) {
 				?>
-				$("<style type='text/css'> #header{background-image:url('<?php echo esc_url( get_the_post_thumbnail_url( null, 'full' ) ); ?>');} </style>").appendTo("head");
+				newStyle("#header{background-image:url('<?php echo esc_url( get_the_post_thumbnail_url( null, 'full' ) ); ?>');}");
 				<?php
 			} elseif ( function_exists( 'has_header_image' ) && has_header_image() ) {
 				?>
-				$("<style type='text/css'> #header{background-image:url('<?php echo esc_url( header_image() ); ?>');} </style>").appendTo("head");
+				newStyle("#header{background-image:url('<?php echo esc_url( header_image() ); ?>')}");
 			<?php } ?>
-		});
+		}, false);
 	</script>
 	<?php
 }

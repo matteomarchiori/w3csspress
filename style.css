@@ -310,6 +310,9 @@ figure {
     .w3-nineth {
         width: 100%;
     }
+    .w3-bar-item.w3-mobile {
+        width: 100%;
+    }
 }
 
 @media (min-width:601px) {
