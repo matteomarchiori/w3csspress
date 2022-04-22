@@ -1430,21 +1430,6 @@ function w3csspress_comment_form_defaults( $defaults ) {
 	return $defaults;
 }
 
-add_action( 'after_switch_theme', __NAMESPACE__ . '\\w3csspress_after_switch_theme' );
-/**
- * Fires on the first WP load after a theme switch if the old theme still exists.
- *
- * @since 2022.5
- */
-function w3csspress_after_switch_theme() {
-	add_option( 'w3csspress_max_width', '80' );
-	add_option( 'w3csspress_circle_img', 1 );
-	add_option( 'w3csspress_cards_img', 1 );
-	add_option( 'w3csspress_grid_enabled', 1 );
-	add_option( 'w3csspress_header_thumbnail', 1 );
-	add_option( 'w3csspress_post_thumbnail', 1 );
-}
-
 add_action( 'widgets_init', __NAMESPACE__ . '\\w3csspress_register_sidebars' );
 /**
  * Register the w3csspress sidebars
