@@ -1124,7 +1124,7 @@ function w3csspress_footer() {           ?>
 		window.addEventListener('load', function() {
 			var excluded = "#wpadminbar, #wpadminbar *, .sidebar";
 			<?php if ( esc_html( get_option( 'w3csspress_rounded_img' ) ) ) { ?>
-				addClTag("img", "w3-rounded");
+				addClTag("img", "w3-round");
 			<?php } ?>
 			<?php if ( esc_html( get_option( 'w3csspress_circle_img' ) ) ) { ?>
 				addClTag("img", "w3-circle");
