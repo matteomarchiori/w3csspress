@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Functions of the w3csspress theme
  *
@@ -1540,7 +1539,7 @@ add_filter( 'script_loader_tag', __NAMESPACE__ . '\\w3csspress_script_loader_tag
  * @since 2022.19
  */
 function w3csspress_script_loader_tag( $tag, $handle ) {
-	if ( $handle == 'w3csspress-scripts' || $handle == 'dashicons' ) {
+	if ( 'w3csspress-scripts' === $handle || 'dashicons' === $handle ) {
 		return str_replace( ' src=', ' async src=', $tag );
 	}
 	return $tag;
