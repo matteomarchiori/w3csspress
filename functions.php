@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Functions of the w3csspress theme
  *
@@ -1058,6 +1057,8 @@ function w3csspress_enqueue_script() {
 	wp_enqueue_style( 'dashicons' );
 	wp_enqueue_style( 'w3', get_template_directory_uri() . '/assets/css/w3.css', false, '4.15', 'all' );
 	wp_style_add_data( 'w3', 'rtl', 'replace' );
+	wp_enqueue_style( 'w3-wide', get_template_directory_uri() . '/assets/css/w3-wide.css', false, '4.15', 'screen and (min-width: 1920px)' );
+	wp_style_add_data( 'w3-wide', 'rtl', 'replace' );
 	$color_theme = esc_html( get_option( 'w3csspress_color_theme' ) );
 	if ( '' !== $color_theme ) {
 		wp_enqueue_style( "w3-theme-$color_theme", get_template_directory_uri() . "/assets/css/lib/w3-theme-$color_theme.css", false, $theme_version, 'all' );
@@ -1484,7 +1485,6 @@ function w3csspress_register_sidebars() {
  * @since 2022.12
  */
 function w3csspress_schema_type() {
-	 $schema = 'https://schema.org/';
 	if ( is_single() ) {
 		$type = 'Article';
 	} elseif ( is_author() ) {
@@ -1494,7 +1494,7 @@ function w3csspress_schema_type() {
 	} else {
 		$type = 'WebPage';
 	}
-	echo esc_html( 'itemscope itemtype="' . $schema . $type . '"' );
+	echo esc_html( 'itemscope itemtype="https://schema.org/' . $type . '"' );
 }
 
 add_filter( 'nav_menu_link_attributes', __NAMESPACE__ . '\\w3csspress_schema_url', 10 );
