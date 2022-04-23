@@ -130,6 +130,8 @@ window.addEventListener('load', function() {
     addClToSelected(selected, "w3-responsive");
     selected = document.getElementsByTagName("img");
     addClToSelected(selected, "w3-image");
+    selected = document.getElementsByTagName("figure");
+    addClToSelected(selected, "w3-image");
     selected = document.getElementsByTagName("code");
     addClToSelected(selected, "w3-code");
     selected = document.querySelectorAll("ul:not(" + excluded + ")");
