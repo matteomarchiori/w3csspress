@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Functions of the w3csspress theme
  *
@@ -1090,19 +1091,21 @@ add_action( 'wp_footer', __NAMESPACE__ . '\\w3csspress_footer' );
  *
  * @since 2022.0
  */
-function w3csspress_footer() {          ?>
+function w3csspress_footer() {           ?>
 	<script type="text/javascript">
 		function addClTag(tag, cl) {
 			var tags = document.getElementsByTagName(tag);
 			for (i = 0; i < tags.length; i++) {
-				tags[i].className += ' ' + cl;
+				if ((' ' + tags[i].className + ' ').indexOf(cl) === -1)
+					tags[i].className += ' ' + cl;
 			}
 		}
 
 		function addClSel(sel, cl) {
 			var eles = document.querySelectorAll(sel);
 			for (i = 0; i < eles.length; i++) {
-				eles[i].className += ' ' + cl;
+				if ((' ' + eles[i].className + ' ').indexOf(cl) === -1)
+					eles[i].className += ' ' + cl;
 			}
 		}
 
@@ -1481,7 +1484,7 @@ function w3csspress_register_sidebars() {
  * @since 2022.12
  */
 function w3csspress_schema_type() {
-	$schema = 'https://schema.org/';
+	 $schema = 'https://schema.org/';
 	if ( is_single() ) {
 		$type = 'Article';
 	} elseif ( is_author() ) {
