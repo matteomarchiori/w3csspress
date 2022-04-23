@@ -69,29 +69,6 @@ window.addEventListener('load', function() {
         var menu = document.getElementById("menu");
         menu.style.display = "none";
         menu.className += " w3-animate-bottom";
-        var buttonMenu = document.createElement('button');
-        buttonMenu.type = "button";
-        buttonMenu.className = "menu-toggle w3-margin-top w3-right";
-        buttonMenu.id = "burger";
-        var dashicon = document.createElement('span');
-        dashicon.className = 'dashicons dashicons-menu';
-        buttonMenu.append(dashicon, "Menu");
-        var siteTitle = document.getElementById("site-title");
-        siteTitle.parentNode.insertBefore(buttonMenu, siteTitle.nextSibling);
-        buttonMenu.addEventListener("click", function() {
-            display = menu.style.display;
-            if (display == "none") menu.style.display = "block";
-            else menu.style.display = "none";
-        });
-        var menuItems = document.getElementsByClassName("menu-item");
-        var lastMenuItem = menuItems[menuItems.length - 1];
-        var lastLink = lastMenuItem.getElementsByTagName("a");
-        if (lastLink.length) lastLink[0].addEventListener("keydown", function(event) {
-            event.preventDefault();
-            if (event.which == 9 && !event.shiftKey) {
-                buttonMenu.focus();
-            }
-        });
     } else {
         var body = document.body;
         var primary = document.getElementById("primary");
@@ -131,8 +108,6 @@ window.addEventListener('load', function() {
     } else if (navigator.userAgent.search("Opera") >= 0) {
         document.documentElement.className += " opera";
     }
-    var selected = document.querySelectorAll("header:not(#header," + excluded + "),footer:not(#footer," + excluded + "),div:not(#branding,#wrapper,#content," + excluded + "),p:not(" + excluded + "),form:not(" + excluded + "),img:not(" + excluded + "),table:not(" + excluded + "),article:not(" + excluded + "),section:not(" + excluded + "),figure:not(" + excluded + "),nav:not(" + excluded + "),summary:not(" + excluded + ")")
-    addClToSelected(selected, "w3-section");
     selected = document.querySelectorAll("input:not(input[type='button'],input[type='submit'],input[type='reset'],input[type='checkbox'],input[type='radio']," + excluded + ")");
     addClToSelected(selected, "w3-input");
     selected = document.querySelectorAll("button:not(" + excluded + "),reset:not(" + excluded + ")");
@@ -153,8 +128,6 @@ window.addEventListener('load', function() {
         selected.push(children[i].parentNode);
     }
     addClToSelected(selected, "w3-responsive");
-    selected = document.getElementsByTagName("table");
-    addClToSelected(selected, "w3-table w3-bordered w3-centered");
     selected = document.getElementsByTagName("img");
     addClToSelected(selected, "w3-image");
     selected = document.getElementsByTagName("code");

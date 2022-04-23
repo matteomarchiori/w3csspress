@@ -50,7 +50,8 @@ get_header(); ?>
 						$w3csspress_layout .= esc_html( get_option( 'w3csspress_layout' ) );
 					}
 						post_class( $w3csspress_layout . ' hentry h-entry' );
-					?>>
+					?>
+					>
 					<header class="header">
 						<h1 class="p-name entry-title" itemprop="name"><?php the_title(); ?></h1> <?php edit_post_link(); ?>
 					</header>
