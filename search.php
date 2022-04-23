@@ -15,15 +15,14 @@ get_header(); ?>
 	<?php
 	if ( have_posts() ) :
 		$w3csspress_layout = esc_html( get_option( 'w3csspress_layout' ) );
-		if ( '' !== $w3csspress_layout && 'w3-rest' !== $w3csspress_layout ) {
-			$w3csspress_i = 0;
-			if ( 'w3-half' === $w3csspress_layout ) {
-				$w3csspress_cols = 2;
-			} elseif ( 'w3-third' === $w3csspress_layout ) {
-				$w3csspress_cols = 3;
-			} elseif ( 'w3-quarter' === $w3csspress_layout ) {
-				$w3csspress_cols = 4;
-			}
+		$w3csspress_i      = 0;
+		$w3csspress_cols   = 1;
+		if ( 'w3-half' === $w3csspress_layout ) {
+			$w3csspress_cols = 2;
+		} elseif ( 'w3-third' === $w3csspress_layout ) {
+			$w3csspress_cols = 3;
+		} elseif ( 'w3-quarter' === $w3csspress_layout ) {
+			$w3csspress_cols = 4;
 		}
 		if ( '1' === esc_html( get_option( 'w3csspress_grid_enabled' ) ) ) {
 			$w3csspress_container = 'w3-cell-row';
@@ -33,14 +32,14 @@ get_header(); ?>
 		?>
 		<header class="header">
 			<h1 class="p-name entry-title" itemprop="name">
-			<?php
-			printf(
-				/* translators: search text completed with query text */
-				esc_html__( 'Search Results for: %s', 'w3csspress' ),
-				get_search_query()
-			);
-			?>
-				</h1>
+				<?php
+				printf(
+					/* translators: search text completed with query text */
+					esc_html__( 'Search Results for: %s', 'w3csspress' ),
+					get_search_query()
+				);
+				?>
+			</h1>
 		</header>
 		<div class="<?php echo esc_html( $w3csspress_container ); ?>">
 			<?php
@@ -54,7 +53,7 @@ get_header(); ?>
 				the_post();
 				?>
 				<?php get_template_part( 'entry' ); ?>
-		<?php endwhile; ?>
+			<?php endwhile; ?>
 		</div>
 		<?php get_template_part( 'nav', 'below' ); ?>
 	<?php else : ?>
