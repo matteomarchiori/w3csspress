@@ -73,22 +73,22 @@ window.addEventListener('load', function() {
         var body = document.body;
         var primary = document.getElementById("primary");
         var secondary = document.getElementById("secondary");
-        if (primary !== null) body.style.width = body.style.width - primary.outerWidth();
-        if (secondary !== null) body.style.width = body.style.width - secondary.outerWidth();
+        if (primary !== null) body.style.width = body.style.width - primary.offsetWidth;
+        if (secondary !== null) body.style.width = body.style.width - secondary.offsetWidth;
 
         if (document.getElementsByClassName("rtl").length) {
             if (primary !== null) {
-                body.style.marginRight = primary.outerWidth() + 'px';
+                body.style.marginRight = primary.offsetWidth + 'px';
             }
             if (secondary !== null) {
-                body.style.marginLeft = secondary.outerWidth() + 'px';
+                body.style.marginLeft = secondary.offsetWidth + 'px';
             }
         } else {
             if (primary !== null) {
-                body.style.marginLeft = primary.outerWidth() + 'px';
+                body.style.marginLeft = primary.offsetWidth + 'px';
             }
             if (secondary !== null) {
-                body.style.marginRight = secondary.outerWidth() + 'px';
+                body.style.marginRight = secondary.offsetWidth + 'px';
             }
         }
     }
