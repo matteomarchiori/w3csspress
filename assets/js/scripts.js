@@ -32,8 +32,9 @@ window.addEventListener('load', function() {
 
     function addClNext(node, cl) {
         if (node.nextSibling !== null) {
+            var spacer = node.nextSibling.className == '' ? '' : ' ';
             if ((' ' + node.nextSibling.className + ' ').indexOf(cl) === -1)
-                node.nextSibling.className += " " + cl;
+                node.nextSibling.className += spacer + cl;
         }
     }
 
@@ -50,8 +51,9 @@ window.addEventListener('load', function() {
     function menufocus(node) {
         var closest = closestCl(node.parentNode, 'w3-dropdown-focus');
         if (closest !== null) {
+            var spacer = closest.className == '' ? '' : ' ';
             if ((' ' + closest.className + ' ').indexOf("w3-show") === -1)
-                closest.className += " w3-show";
+                closest.className += spacer + "w3-show";
         }
         addClParents(node.parentNode, 'w3-dropdown-content', 'w3-show');
         addClNext(node, 'w3-show');
@@ -60,8 +62,9 @@ window.addEventListener('load', function() {
 
     function addClToSelected(selected, cl) {
         for (i = 0; i < selected.length; i++) {
+            var spacer = selected[i].className == '' ? '' : ' ';
             if ((' ' + selected[i].className + ' ').indexOf(cl) === -1)
-                selected[i].className += " " + cl;
+                selected[i].className += spacer + cl;
         }
     }
 
@@ -90,19 +93,20 @@ window.addEventListener('load', function() {
     }
     var excluded = "#wpadminbar, #wpadminbar *, .sidebar";
     var deviceAgent = navigator.userAgent.toLowerCase();
+    var spacer = document.documentElement.className == '' ? '' : ' ';
     if (deviceAgent.match(/(iphone|ipod|ipad)/)) {
-        document.documentElement.className += " ios";
+        document.documentElement.className += spacer + "ios";
     }
     if (navigator.userAgent.search("MSIE") >= 0) {
-        document.documentElement.className += " ie";
+        document.documentElement.className += spacer + "ie";
     } else if (navigator.userAgent.search("Chrome") >= 0) {
-        document.documentElement.className += " chrome";
+        document.documentElement.className += spacer + "chrome";
     } else if (navigator.userAgent.search("Firefox") >= 0) {
-        document.documentElement.className += " firefox";
+        document.documentElement.className += spacer + "firefox";
     } else if (navigator.userAgent.search("Safari") >= 0 && navigator.userAgent.search("Chrome") < 0) {
-        document.documentElement.className += " safari";
+        document.documentElement.className += spacer + "safari";
     } else if (navigator.userAgent.search("Opera") >= 0) {
-        document.documentElement.className += " opera";
+        document.documentElement.className += spacer + "opera";
     }
     selected = document.querySelectorAll("input:not(input[type='button'],input[type='submit'],input[type='reset'],input[type='checkbox'],input[type='radio']," + excluded + ")");
     addClToSelected(selected, "w3-input");
@@ -190,8 +194,9 @@ window.addEventListener('load', function() {
         item.addEventListener("mouseenter", function(event) {
             var dropdown = event.target.getElementsByClassName("w3-dropdown-content");
             if (dropdown.length) {
+                var spacer = dropdown[0].className == '' ? '' : ' ';
                 if ((' ' + dropdown[0].className + ' ').indexOf("w3-show") === -1)
-                    dropdown[0].className += " w3-show";
+                    dropdown[0].className += spacer + "w3-show";
             }
         });
         item.addEventListener("mouseleave", function(event) {

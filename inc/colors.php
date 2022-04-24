@@ -192,7 +192,7 @@ function w3csspress_customize_colors( $wp_customize ) {
  *
  * @since 2022.22
  */
-function w3csspress_enqueue_script_color() {
+function w3csspress_enqueue_script_colors() {
 	$w3csspress_color_theme = esc_html( get_option( 'w3csspress_color_theme' ) );
 	if ( '' !== $w3csspress_color_theme ) {
 		wp_enqueue_style( "w3-theme-$w3csspress_color_theme", get_template_directory_uri() . "/assets/css/lib/w3-theme-$w3csspress_color_theme.css", false, THEME_VERSION, 'all' );
