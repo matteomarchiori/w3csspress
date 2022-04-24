@@ -1197,7 +1197,7 @@ function w3csspress_footer() {             ?>
 			<?php } ?>
 			if (window.outerWidth < 600) {
 				var menu = document.getElementById("menu");
-				if (typeof menu !== undefined) {
+				if (menu != null) {
 					menu.className += " w3-animate-bottom";
 					var buttonMenu = document.createElement('button');
 					buttonMenu.type = "button";
