@@ -11,7 +11,7 @@
 namespace w3csspress;
 
 /**
- * Add colors settings to the WordPress customzer.
+ * Add colors settings to the WordPress customizer.
  *
  * @since 2022.22
  *
