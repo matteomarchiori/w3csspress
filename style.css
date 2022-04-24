@@ -344,6 +344,9 @@ table tr td {
 }
 
 @media (max-width:600px) {
+    #menu {
+        display: none;
+    }
     .w3-sidebar {
         position: relative;
         width: 100%;

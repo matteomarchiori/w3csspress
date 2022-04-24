@@ -65,11 +65,7 @@ window.addEventListener('load', function() {
         }
     }
 
-    if (window.outerWidth < 600) {
-        var menu = document.getElementById("menu");
-        menu.style.display = "none";
-        menu.className += " w3-animate-bottom";
-    } else {
+    if (window.outerWidth > 600) {
         var body = document.body;
         var primary = document.getElementById("primary");
         var secondary = document.getElementById("secondary");

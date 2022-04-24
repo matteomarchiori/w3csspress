@@ -1094,7 +1094,7 @@ add_action( 'wp_footer', __NAMESPACE__ . '\\w3csspress_footer' );
  *
  * @since 2022.0
  */
-function w3csspress_footer() {            ?>
+function w3csspress_footer() {             ?>
 	<script async type="text/javascript">
 		function addClTag(tag, cl) {
 			var tags = document.getElementsByTagName(tag);
@@ -1196,27 +1196,31 @@ function w3csspress_footer() {            ?>
 				newStyle("#header{background-image:url('<?php echo esc_url( header_image() ); ?>')}");
 			<?php } ?>
 			if (window.outerWidth < 600) {
-				var buttonMenu = document.createElement('button');
-				buttonMenu.type = "button";
-				buttonMenu.className = "menu-toggle w3-margin-top w3-right";
-				buttonMenu.id = "burger";
-				buttonMenu.innerHTML = "&equiv; <?php echo esc_html__( 'Menu', 'w3csspress' ); ?>";
-				var siteTitle = document.getElementById("site-title");
-				siteTitle.parentNode.insertBefore(buttonMenu, siteTitle.nextSibling);
-				buttonMenu.addEventListener("click", function() {
-					display = menu.style.display;
-					if (display == "none") menu.style.display = "block";
-					else menu.style.display = "none";
-				});
-				var menuItems = document.getElementsByClassName("menu-item");
-				var lastMenuItem = menuItems[menuItems.length - 1];
-				var lastLink = lastMenuItem.getElementsByTagName("a");
-				if (lastLink.length) lastLink[0].addEventListener("keydown", function(event) {
-					event.preventDefault();
-					if (event.which == 9 && !event.shiftKey) {
-						buttonMenu.focus();
-					}
-				});
+				var menu = document.getElementById("menu");
+				if (typeof menu !== undefined) {
+					menu.className += " w3-animate-bottom";
+					var buttonMenu = document.createElement('button');
+					buttonMenu.type = "button";
+					buttonMenu.className = "menu-toggle w3-margin-top w3-right";
+					buttonMenu.id = "burger";
+					buttonMenu.innerHTML = "&equiv; <?php echo esc_html__( 'Menu', 'w3csspress' ); ?>";
+					buttonMenu.addEventListener("touchstart", function() {
+						display = menu.style.display;
+						if (display == "none" || display == '') menu.style.display = "block";
+						else menu.style.display = "none";
+					});
+					var siteTitle = document.getElementById("site-title");
+					siteTitle.parentNode.insertBefore(buttonMenu, siteTitle.nextSibling);
+					var menuItems = document.getElementsByClassName("menu-item");
+					var lastMenuItem = menuItems[menuItems.length - 1];
+					var lastLink = lastMenuItem.getElementsByTagName("a");
+					if (lastLink.length) lastLink[0].addEventListener("keydown", function(event) {
+						event.preventDefault();
+						if (event.which == 9 && !event.shiftKey) {
+							buttonMenu.focus();
+						}
+					});
+				}
 			}
 		}, false);
 	</script>
