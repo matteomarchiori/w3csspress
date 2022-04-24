@@ -11,6 +11,7 @@
 namespace w3csspress;
 
 require_once get_template_directory() . '/inc/colors.php';
+require_once get_template_directory() . '/inc/content.php';
 
 /**
  * Returns the integer value of a variable.
@@ -60,6 +61,7 @@ add_action( 'customize_register', __NAMESPACE__ . '\\w3csspress_customize_regist
  */
 function w3csspress_customize_register( $wp_customize ) {
 	w3csspress_customize_colors( $wp_customize );
+	w3csspress_customize_content( $wp_customize );
 	$font_sizes = array(
 		''            => __( 'Default', 'w3csspress' ),
 		'w3-tiny'     => __( 'Tiny', 'w3csspress' ),
@@ -316,15 +318,6 @@ function w3csspress_customize_register( $wp_customize ) {
 	);
 
 	$wp_customize->add_setting(
-		'w3csspress_footer',
-		array(
-			'default'           => '',
-			'type'              => 'option',
-			'sanitize_callback' => 'wp_filter_post_kses',
-		)
-	);
-
-	$wp_customize->add_setting(
 		'w3csspress_layout',
 		array(
 			'default'           => '',
@@ -413,18 +406,6 @@ function w3csspress_customize_register( $wp_customize ) {
 			'priority'    => $priority++,
 			'section'     => 'w3csspress_section',
 			'type'        => 'checkbox',
-		)
-	);
-
-	$wp_customize->add_control(
-		'w3csspress_footer',
-		array(
-			'label'       => esc_html__( 'Footer content', 'w3csspress' ),
-			'description' => esc_html__( 'Set footer content.', 'w3csspress' ),
-			'settings'    => 'w3csspress_footer',
-			'priority'    => $priority++,
-			'section'     => 'w3csspress_section',
-			'type'        => 'text',
 		)
 	);
 
@@ -1067,34 +1048,6 @@ function w3csspress_title( $title ) {
 	}
 }
 
-add_action( 'wp_body_open', __NAMESPACE__ . '\\w3csspress_skip_link' );
-/**
- * Add skip to the content link.
- *
- * @since 2022.0
- */
-function w3csspress_skip_link() {
-	echo '<a href="#content" class="skip-link screen-reader-text">' . esc_html__( 'Skip to the content', 'w3csspress' ) . '</a>';
-}
-
-add_filter( 'the_content_more_link', __NAMESPACE__ . '\\w3csspress_read_more_link' );
-/**
- * Add read more link.
- *
- * @since 2022.0
- *
- * @return string Read more link.
- */
-function w3csspress_read_more_link() {
-	if ( ! is_admin() ) {
-		return ' <a href="' . esc_url( get_permalink() ) . '" class="more-link">' . sprintf(
-			/* translators: read more link */
-			esc_html__( '...%s', 'w3csspress' ),
-			'<span class="screen-reader-text">  ' . esc_html( get_the_title() ) . '</span>'
-		) . '</a>';
-	}
-}
-
 add_filter( 'excerpt_more', __NAMESPACE__ . '\\w3csspress_excerpt_read_more_link', 5 );
 /**
  * Add read more  for excerpt.
@@ -1213,9 +1166,6 @@ function add_additional_class_on_li( $classes, $item, $args ) {
 	$classes[] = get_option( 'w3csspress_rounded_style' );
 	return $classes;
 }
-
-remove_filter( 'the_content', 'wpautop' );
-remove_filter( 'the_excerpt', 'wpautop' );
 
 add_filter( 'body_class', __NAMESPACE__ . '\\w3csspress_body_class' );
 /**
