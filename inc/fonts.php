@@ -201,7 +201,7 @@ function w3csspress_customize_fonts( $wp_customize ) {
 			'description' => esc_html__( 'Change font family of website.', 'w3csspress' ),
 			'settings'    => 'w3csspress_font_family',
 			'priority'    => $w3csspress_priority++,
-			'section'     => 'w3csspress_section',
+			'section'     => 'w3csspress_fonts',
 			'type'        => 'select',
 			'choices'     => $w3csspress_font_families,
 		)
@@ -214,7 +214,7 @@ function w3csspress_customize_fonts( $wp_customize ) {
 			'description' => esc_html__( 'Change font family of headings.', 'w3csspress' ),
 			'settings'    => 'w3csspress_google_font_headings',
 			'priority'    => $w3csspress_priority++,
-			'section'     => 'w3csspress_section',
+			'section'     => 'w3csspress_fonts',
 			'type'        => 'text',
 		)
 	);
@@ -226,7 +226,7 @@ function w3csspress_customize_fonts( $wp_customize ) {
 			'description' => esc_html__( 'Change font family of website.', 'w3csspress' ),
 			'settings'    => 'w3csspress_google_font',
 			'priority'    => $w3csspress_priority++,
-			'section'     => 'w3csspress_section',
+			'section'     => 'w3csspress_fonts',
 			'type'        => 'text',
 		)
 	);
@@ -238,7 +238,7 @@ function w3csspress_customize_fonts( $wp_customize ) {
 			'description' => esc_html__( 'Change font size of paragraphs.', 'w3csspress' ),
 			'settings'    => 'w3csspress_font_size_paragraph',
 			'priority'    => $w3csspress_priority++,
-			'section'     => 'w3csspress_section',
+			'section'     => 'w3csspress_fonts',
 			'type'        => 'select',
 			'choices'     => $w3csspress_font_sizes,
 		)
@@ -251,7 +251,7 @@ function w3csspress_customize_fonts( $wp_customize ) {
 			'description' => esc_html__( 'Change font size of div.', 'w3csspress' ),
 			'settings'    => 'w3csspress_font_size_div',
 			'priority'    => $w3csspress_priority++,
-			'section'     => 'w3csspress_section',
+			'section'     => 'w3csspress_fonts',
 			'type'        => 'select',
 			'choices'     => $w3csspress_font_sizes,
 		)
@@ -264,7 +264,7 @@ function w3csspress_customize_fonts( $wp_customize ) {
 			'description' => esc_html__( 'Change font size of inputs.', 'w3csspress' ),
 			'settings'    => 'w3csspress_font_size_input',
 			'priority'    => $w3csspress_priority++,
-			'section'     => 'w3csspress_section',
+			'section'     => 'w3csspress_fonts',
 			'type'        => 'select',
 			'choices'     => $w3csspress_font_sizes,
 		)
@@ -277,7 +277,7 @@ function w3csspress_customize_fonts( $wp_customize ) {
 			'description' => esc_html__( 'Change font size of tables.', 'w3csspress' ),
 			'settings'    => 'w3csspress_font_size_table',
 			'priority'    => $w3csspress_priority++,
-			'section'     => 'w3csspress_section',
+			'section'     => 'w3csspress_fonts',
 			'type'        => 'select',
 			'choices'     => $w3csspress_font_sizes,
 		)
@@ -290,7 +290,7 @@ function w3csspress_customize_fonts( $wp_customize ) {
 			'description' => esc_html__( 'Change font size of unordered list.', 'w3csspress' ),
 			'settings'    => 'w3csspress_font_size_ul',
 			'priority'    => $w3csspress_priority++,
-			'section'     => 'w3csspress_section',
+			'section'     => 'w3csspress_fonts',
 			'type'        => 'select',
 			'choices'     => $w3csspress_font_sizes,
 		)
@@ -303,7 +303,7 @@ function w3csspress_customize_fonts( $wp_customize ) {
 			'description' => esc_html__( 'Change font size of ordered list.', 'w3csspress' ),
 			'settings'    => 'w3csspress_font_size_ol',
 			'priority'    => $w3csspress_priority++,
-			'section'     => 'w3csspress_section',
+			'section'     => 'w3csspress_fonts',
 			'type'        => 'select',
 			'choices'     => $w3csspress_font_sizes,
 		)
@@ -316,7 +316,7 @@ function w3csspress_customize_fonts( $wp_customize ) {
 			'description' => esc_html__( 'Change font weight of paragraphs.', 'w3csspress' ),
 			'settings'    => 'w3csspress_font_weight_paragraph',
 			'priority'    => $w3csspress_priority++,
-			'section'     => 'w3csspress_section',
+			'section'     => 'w3csspress_fonts',
 			'type'        => 'select',
 			'choices'     => $w3csspress_font_weights,
 		)
@@ -329,7 +329,7 @@ function w3csspress_customize_fonts( $wp_customize ) {
 			'description' => esc_html__( 'Change font weight of div.', 'w3csspress' ),
 			'settings'    => 'w3csspress_font_weight_div',
 			'priority'    => $w3csspress_priority++,
-			'section'     => 'w3csspress_section',
+			'section'     => 'w3csspress_fonts',
 			'type'        => 'select',
 			'choices'     => $w3csspress_font_weights,
 		)
@@ -342,7 +342,7 @@ function w3csspress_customize_fonts( $wp_customize ) {
 			'description' => esc_html__( 'Change font weight of inputs.', 'w3csspress' ),
 			'settings'    => 'w3csspress_font_weight_input',
 			'priority'    => $w3csspress_priority++,
-			'section'     => 'w3csspress_section',
+			'section'     => 'w3csspress_fonts',
 			'type'        => 'select',
 			'choices'     => $w3csspress_font_weights,
 		)
@@ -355,7 +355,7 @@ function w3csspress_customize_fonts( $wp_customize ) {
 			'description' => esc_html__( 'Change font weight of tables.', 'w3csspress' ),
 			'settings'    => 'w3csspress_font_weight_table',
 			'priority'    => $w3csspress_priority++,
-			'section'     => 'w3csspress_section',
+			'section'     => 'w3csspress_fonts',
 			'type'        => 'select',
 			'choices'     => $w3csspress_font_weights,
 		)
@@ -368,7 +368,7 @@ function w3csspress_customize_fonts( $wp_customize ) {
 			'description' => esc_html__( 'Change font weight of unordered list.', 'w3csspress' ),
 			'settings'    => 'w3csspress_font_weight_ul',
 			'priority'    => $w3csspress_priority++,
-			'section'     => 'w3csspress_section',
+			'section'     => 'w3csspress_fonts',
 			'type'        => 'select',
 			'choices'     => $w3csspress_font_weights,
 		)
@@ -381,7 +381,7 @@ function w3csspress_customize_fonts( $wp_customize ) {
 			'description' => esc_html__( 'Change font weight of ordered list.', 'w3csspress' ),
 			'settings'    => 'w3csspress_font_weight_ol',
 			'priority'    => $w3csspress_priority++,
-			'section'     => 'w3csspress_section',
+			'section'     => 'w3csspress_fonts',
 			'type'        => 'select',
 			'choices'     => $w3csspress_font_weights,
 		)
@@ -421,7 +421,7 @@ function w3csspress_customize_fonts( $wp_customize ) {
 				),
 				'settings'    => "w3csspress_font_size_h$i",
 				'priority'    => $w3csspress_priority++,
-				'section'     => 'w3csspress_section',
+				'section'     => 'w3csspress_fonts',
 				'type'        => 'select',
 				'choices'     => $w3csspress_font_sizes,
 			)
@@ -442,7 +442,7 @@ function w3csspress_customize_fonts( $wp_customize ) {
 				),
 				'settings'    => "w3csspress_font_weight_h$i",
 				'priority'    => $w3csspress_priority++,
-				'section'     => 'w3csspress_section',
+				'section'     => 'w3csspress_fonts',
 				'type'        => 'select',
 				'choices'     => $w3csspress_font_weights,
 			)
@@ -500,13 +500,13 @@ function w3csspress_footer_fonts() {
 		echo 'addClSel("reset:not(" + excluded + ")", "' . esc_html( get_option( 'w3csspress_font_size_input' ) ) . '");';
 	}
 	if ( '' !== esc_html( get_option( 'w3csspress_font_weight_input' ) ) ) {
-		echo  'addClSel("reset:not(" + excluded + ")", "' . esc_html( get_option( 'w3csspress_font_weight_input' ) ) . '");';
+		echo 'addClSel("reset:not(" + excluded + ")", "' . esc_html( get_option( 'w3csspress_font_weight_input' ) ) . '");';
 	}
 	if ( '' !== esc_html( get_option( 'w3csspress_font_size_input' ) ) ) {
 		echo 'addClSel("textarea:not(" + excluded + ")", "' . esc_html( get_option( 'w3csspress_font_size_input' ) ) . '");';
 	}
 	if ( '' !== esc_html( get_option( 'w3csspress_font_weight_input' ) ) ) {
-		echo  'addClSel("textarea:not(" + excluded + ")", "' . esc_html( get_option( 'w3csspress_font_weight_input' ) ) . '");';
+		echo 'addClSel("textarea:not(" + excluded + ")", "' . esc_html( get_option( 'w3csspress_font_weight_input' ) ) . '");';
 	}
 	if ( '' !== esc_html( get_option( 'w3csspress_font_size_table' ) ) ) {
 		echo 'addClSel("table:not(" + excluded + ")", "' . esc_html( get_option( 'w3csspress_font_size_table' ) ) . '");';
@@ -533,7 +533,7 @@ function w3csspress_footer_fonts() {
 			echo 'addClTag("h' . intval( $i ) . '","' . esc_html( get_option( "w3csspress_font_size_h$i" ) ) . '");';
 		}
 		if ( '' !== esc_html( get_option( "w3csspress_font_weight_h$i" ) ) ) {
-			echo  'addClTag("h' . intval( $i ) . '","' . esc_html( get_option( "w3csspress_font_weight_h$i" ) ) . '");';
+			echo 'addClTag("h' . intval( $i ) . '","' . esc_html( get_option( "w3csspress_font_weight_h$i" ) ) . '");';
 		}
 	}
 	if ( '' !== $w3csspress_google_font ) {
