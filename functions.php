@@ -31,62 +31,7 @@ function w3csspress_customize_register( $wp_customize ) {
 	w3csspress_customize_fonts( $wp_customize );
 	w3csspress_customize_images( $wp_customize );
 	w3csspress_customize_layout( $wp_customize );
-
-	$priority = 1;
-
-	$wp_customize->add_section(
-		'w3csspress_section',
-		array(
-			'title'          => esc_html__( 'Custom W3.CSS options', 'w3csspress' ),
-			'description'    => esc_html__( 'Customize W3.CSS options here.', 'w3csspress' ),
-			'panel'          => '',
-			'priority'       => $priority++,
-			'capability'     => 'edit_theme_options',
-			'theme_supports' => '',
-		)
-	);
-
-	$wp_customize->add_setting(
-		'w3csspress_jquery',
-		array(
-			'default'           => 0,
-			'type'              => 'option',
-			'sanitize_callback' => 'w3csspress\sanitize_checkbox',
-		)
-	);
-
-	$wp_customize->add_setting(
-		'w3csspress_dashicons',
-		array(
-			'default'           => 0,
-			'type'              => 'option',
-			'sanitize_callback' => 'w3csspress\sanitize_checkbox',
-		)
-	);
-
-	$wp_customize->add_control(
-		'w3csspress_jquery',
-		array(
-			'label'       => esc_html__( 'Disable jQuery', 'w3csspress' ),
-			'description' => esc_html__( 'Disable or enable jQuery (do only if you know what you are doing).', 'w3csspress' ),
-			'settings'    => 'w3csspress_jquery',
-			'priority'    => $priority++,
-			'section'     => 'w3csspress_section',
-			'type'        => 'checkbox',
-		)
-	);
-
-	$wp_customize->add_control(
-		'w3csspress_dashicons',
-		array(
-			'label'       => esc_html__( 'Enable Dashicons', 'w3csspress' ),
-			'description' => esc_html__( 'Enable Dashicons on the frontend.', 'w3csspress' ),
-			'settings'    => 'w3csspress_dashicons',
-			'priority'    => $priority++,
-			'section'     => 'w3csspress_section',
-			'type'        => 'checkbox',
-		)
-	);
+	w3csspress_customize_speed( $wp_customize );
 }
 
 add_action( 'after_setup_theme', __NAMESPACE__ . '\\w3csspress_setup' );
@@ -181,14 +126,7 @@ function w3csspress_enqueue_script() {
 	wp_enqueue_script( 'w3csspress-scripts', get_template_directory_uri() . '/assets/js/scripts.js', array(), W3CSSPRESS_THEME_VERSION, true );
 	wp_dequeue_style( 'wp-block-library' );
 	wp_dequeue_style( 'wp-block-library-theme' );
-	if ( esc_html( get_option( 'w3csspress_jquery' ) ) ) {
-		wp_deregister_script( 'jquery' );
-	} else {
-		wp_enqueue_script( 'jquery' );
-	}
-	if ( esc_html( get_option( 'w3csspress_dashicons' ) ) ) {
-		wp_enqueue_script( 'dashicons' );
-	}
+	w3csspress_enqueue_script_speed();
 }
 
 add_action( 'wp_footer', __NAMESPACE__ . '\\w3csspress_footer' );
@@ -231,9 +169,9 @@ function w3csspress_footer() {              ?>
 		window.addEventListener('load', function() {
 			var excluded = "#wpadminbar, #wpadminbar *, .sidebar";
 			<?php
+			w3csspress_footer_color();
 			w3csspress_footer_images();
 			w3csspress_footer_layout();
-			w3csspress_footer_color();
 			w3csspress_footer_fonts();
 			w3csspress_footer_images();
 			?>
@@ -422,21 +360,7 @@ function w3csspress_body_class( $classes ) {
 }
 
 add_filter( 'use_block_editor_for_post', '__return_false' );
-
 add_filter( 'use_widgets_block_editor', '__return_false' );
-
-add_filter(
-	'bp_core_avatar_original_max_filesize',
-	function () {
-		return 26214400;
-	}
-);
-add_filter(
-	'bp_attachments_get_max_upload_file_size',
-	function () {
-		return 26214400;
-	}
-);
 
 add_filter( 'comment_form_defaults', __NAMESPACE__ . '\\w3csspress_comment_form_defaults' );
 /**
@@ -528,20 +452,4 @@ add_filter( 'nav_menu_link_attributes', __NAMESPACE__ . '\\w3csspress_schema_url
 function w3csspress_schema_url( $atts ) {
 	$atts['itemprop'] = 'url';
 	return $atts;
-}
-
-add_filter( 'script_loader_tag', __NAMESPACE__ . '\\w3csspress_script_loader_tag', 10, 2 );
-/**
- * Filters the HTML script tag of an enqueued script.
- *
- * @param string $tag The <script> tag for the enqueued script.
- * @param string $handle The script's registered handle.
- *
- * @since 2022.19
- */
-function w3csspress_script_loader_tag( $tag, $handle ) {
-	if ( 'w3csspress-scripts' === $handle || 'dashicons' === $handle ) {
-		return str_replace( ' src=', ' async src=', $tag );
-	}
-	return $tag;
 }
