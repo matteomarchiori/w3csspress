@@ -10,48 +10,12 @@
 
 namespace w3csspress;
 
+require_once get_template_directory() . '/inc/sanitize.php';
 require_once get_template_directory() . '/inc/colors.php';
 require_once get_template_directory() . '/inc/content.php';
 require_once get_template_directory() . '/inc/fonts.php';
 require_once get_template_directory() . '/inc/images.php';
-
-/**
- * Returns the integer value of a variable.
- *
- * @since 2022.0
- *
- * @param int $value Required. Value to be checked.
- * @return int Integer value of the variable.
- */
-function w3csspress_intval( $value ) {
-	return (int) $value;
-}
-
-/**
- * Returns the sanitized value of a checkbox.
- *
- * @since 2022.0
- *
- * @param int $input Required. Value to be checked.
- * @return int,string 1 if checked, '' otherwise.
- */
-function sanitize_checkbox( $input ) {
-	return filter_var( $input, FILTER_SANITIZE_NUMBER_INT );
-}
-
-/**
- * Returns the sanitized value of a select input.
- *
- * @since 2022.0
- *
- * @param string   $input Required. Value to be checked.
- * @param stdClass $setting settings with the possible values.
- * @return string $input if exists, default value otherwise.
- */
-function sanitize_select( $input, $setting ) {
-	$choices = $setting->manager->get_control( $setting->id )->choices;
-	return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
-}
+require_once get_template_directory() . '/inc/layout.php';
 
 add_action( 'customize_register', __NAMESPACE__ . '\\w3csspress_customize_register' );
 /**
@@ -66,24 +30,7 @@ function w3csspress_customize_register( $wp_customize ) {
 	w3csspress_customize_content( $wp_customize );
 	w3csspress_customize_fonts( $wp_customize );
 	w3csspress_customize_images( $wp_customize );
-
-	$layouts = array(
-		''           => __( 'Default', 'w3csspress' ),
-		'w3-rest'    => __( 'One Column', 'w3csspress' ),
-		'w3-half'    => __( 'Two Columns', 'w3csspress' ),
-		'w3-third'   => __( 'Three Columns', 'w3csspress' ),
-		'w3-quarter' => __( 'Four Columns', 'w3csspress' ),
-	);
-
-	$rounded = array(
-		''                 => __( 'Default', 'w3csspress' ),
-		'w3-round-small'   => __( 'Small', 'w3csspress' ),
-		'w3-round-medium'  => __( 'Medium', 'w3csspress' ),
-		'w3-round-large'   => __( 'Large', 'w3csspress' ),
-		'w3-round-xlarge'  => __( 'XL', 'w3csspress' ),
-		'w3-round-xxlarge' => __( 'XXL', 'w3csspress' ),
-		'w3-circle'        => __( 'Circle', 'w3csspress' ),
-	);
+	w3csspress_customize_layout( $wp_customize );
 
 	$priority = 1;
 
@@ -96,33 +43,6 @@ function w3csspress_customize_register( $wp_customize ) {
 			'priority'       => $priority++,
 			'capability'     => 'edit_theme_options',
 			'theme_supports' => '',
-		)
-	);
-
-	$wp_customize->add_setting(
-		'w3csspress_rounded_style',
-		array(
-			'default'           => '',
-			'type'              => 'option',
-			'sanitize_callback' => 'w3csspress\sanitize_select',
-		)
-	);
-
-	$wp_customize->add_setting(
-		'w3csspress_layout',
-		array(
-			'default'           => '',
-			'type'              => 'option',
-			'sanitize_callback' => 'w3csspress\sanitize_select',
-		)
-	);
-
-	$wp_customize->add_setting(
-		'w3csspress_grid_enabled',
-		array(
-			'default'           => 1,
-			'type'              => 'option',
-			'sanitize_callback' => 'w3csspress\sanitize_checkbox',
 		)
 	);
 
@@ -141,44 +61,6 @@ function w3csspress_customize_register( $wp_customize ) {
 			'default'           => 0,
 			'type'              => 'option',
 			'sanitize_callback' => 'w3csspress\sanitize_checkbox',
-		)
-	);
-
-	$wp_customize->add_control(
-		'w3csspress_layout',
-		array(
-			'label'       => esc_html__( 'Select layout', 'w3csspress' ),
-			'description' => esc_html__( 'Using this option you can change the page layout.', 'w3csspress' ),
-			'settings'    => 'w3csspress_layout',
-			'priority'    => $priority++,
-			'section'     => 'w3csspress_section',
-			'type'        => 'select',
-			'choices'     => $layouts,
-		)
-	);
-
-	$wp_customize->add_control(
-		'w3csspress_rounded_style',
-		array(
-			'label'       => esc_html__( 'Select rounded style', 'w3csspress' ),
-			'description' => esc_html__( 'Using this option you can change some elements roundness (images have more controls).', 'w3csspress' ),
-			'settings'    => 'w3csspress_rounded_style',
-			'priority'    => $priority++,
-			'section'     => 'w3csspress_section',
-			'type'        => 'select',
-			'choices'     => $rounded,
-		)
-	);
-
-	$wp_customize->add_control(
-		'w3csspress_grid_enabled',
-		array(
-			'label'       => esc_html__( 'Grid layout setting', 'w3csspress' ),
-			'description' => esc_html__( 'Using this option you can enable or disable the grid layout.', 'w3csspress' ),
-			'settings'    => 'w3csspress_grid_enabled',
-			'priority'    => $priority++,
-			'section'     => 'w3csspress_section',
-			'type'        => 'checkbox',
 		)
 	);
 
@@ -348,9 +230,9 @@ function w3csspress_footer() {              ?>
 		}
 		window.addEventListener('load', function() {
 			var excluded = "#wpadminbar, #wpadminbar *, .sidebar";
-			<?php w3csspress_footer_images(); ?>
-			addClSel("header:not(" + excluded + "),footer:not(" + excluded + "),div:not(" + excluded + "),p:not(" + excluded + "),form:not(" + excluded + "),table:not(" + excluded + "),article:not(" + excluded + "),section:not(" + excluded + "),nav:not(" + excluded + "),summary:not(" + excluded + "),button:not(" + excluded + "),reset:not(" + excluded + "),input:not(input[type='checkbox'],input[type='radio']," + excluded + "),textarea:not(" + excluded + "),ul:not(" + excluded + "),ol:not(" + excluded + ")", "<?php echo esc_html( get_option( 'w3csspress_rounded_style' ) ); ?>");
 			<?php
+			w3csspress_footer_images();
+			w3csspress_footer_layout();
 			w3csspress_footer_color();
 			w3csspress_footer_fonts();
 			w3csspress_footer_images();
@@ -519,7 +401,7 @@ function add_additional_class_on_li( $classes, $item, $args ) {
 	if ( in_array( 'menu-item-has-children', $classes, true ) ) {
 		$classes[] = 'w3-dropdown-hover w3-dropdown-focus';
 	}
-	$classes[] = get_option( 'w3csspress_rounded_style' );
+	$classes = array_merge( $classes, add_additional_class_on_li_layout() );
 	return $classes;
 }
 
