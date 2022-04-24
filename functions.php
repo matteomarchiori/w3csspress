@@ -1204,7 +1204,7 @@ function w3csspress_footer() {             ?>
 					buttonMenu.className = "menu-toggle w3-margin-top w3-right";
 					buttonMenu.id = "burger";
 					buttonMenu.innerHTML = "&equiv; <?php echo esc_html__( 'Menu', 'w3csspress' ); ?>";
-					buttonMenu.addEventListener("touchstart", function() {
+					buttonMenu.addEventListener("click", function() {
 						display = menu.style.display;
 						if (display == "none" || display == '') menu.style.display = "block";
 						else menu.style.display = "none";

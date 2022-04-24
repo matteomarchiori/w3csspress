@@ -60,19 +60,20 @@ get_template_part( 'class-w3csspress-walker-nav-menu' );
 											><?php bloginfo( 'description' ); ?></div>
 			</div>
 	</div>
+	<?php
+	if ( has_nav_menu( 'main-menu' ) ) {
+		?>
 	<nav id="menu" role="navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
 		<?php
-		if ( has_nav_menu( 'main-menu' ) ) {
-			wp_nav_menu(
-				array(
-					'theme_location' => 'main-menu',
-					'menu_class'     => 'menu w3-bar w3-container',
-					'walker'         => new W3csspress_Walker_Nav_Menu(),
-				)
-			);
-		}
+		wp_nav_menu(
+			array(
+				'theme_location' => 'main-menu',
+				'menu_class'     => 'menu w3-bar w3-container',
+				'walker'         => new W3csspress_Walker_Nav_Menu(),
+			)
+		);
 		?>
-	</nav>
+	</nav><?php } ?>
 	<?php get_sidebar( 'headwidgets' ); ?>
 	<?php get_sidebar( 'primary' ); ?>
 	<?php get_sidebar( 'secondary' ); ?>
