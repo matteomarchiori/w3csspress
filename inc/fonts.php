@@ -555,9 +555,9 @@ function w3csspress_body_class_fonts() {
 	$w3csspress_classes     = array();
 	$w3csspress_google_font = esc_html( get_option( 'w3csspress_google_font' ) );
 	if ( '' !== $w3csspress_google_font ) {
-		$w3csspress_classes[] = esc_html( get_option( 'w3csspress_font_family' ) );
-	} else {
 		$w3csspress_classes[] = 'w3-google';
+	} else {
+		$w3csspress_classes[] = esc_html( get_option( 'w3csspress_font_family' ) );
 	}
 	$w3csspress_google_font_headings = esc_html( get_option( 'w3csspress_google_font_headings' ) );
 	if ( '' !== $w3csspress_google_font_headings ) {

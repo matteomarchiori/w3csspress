@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Functions of the theme related to speed customization
  *

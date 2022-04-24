@@ -10,12 +10,13 @@
 
 namespace w3csspress;
 
-require_once get_template_directory() . '/inc/sanitize.php';
-require_once get_template_directory() . '/inc/colors.php';
-require_once get_template_directory() . '/inc/content.php';
-require_once get_template_directory() . '/inc/fonts.php';
-require_once get_template_directory() . '/inc/images.php';
-require_once get_template_directory() . '/inc/layout.php';
+get_template_part( 'inc/sanitize' );
+get_template_part( 'inc/colors' );
+get_template_part( 'inc/content' );
+get_template_part( 'inc/fonts' );
+get_template_part( 'inc/images' );
+get_template_part( 'inc/layout' );
+get_template_part( 'inc/speed' );
 
 add_action( 'customize_register', __NAMESPACE__ . '\\w3csspress_customize_register' );
 /**

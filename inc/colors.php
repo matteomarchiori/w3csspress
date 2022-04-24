@@ -45,6 +45,8 @@ function w3csspress_customize_colors( $wp_customize ) {
 		'yellow'      => __( 'Yellow', 'w3csspress' ),
 	);
 
+	asort( $w3csspress_themes );
+
 	$w3csspress_theme_kinds = array(
 		'd5' => __( 'Dark', 'w3csspress' ) . ' 5',
 		'd4' => __( 'Dark', 'w3csspress' ) . ' 4',
