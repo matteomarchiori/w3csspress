@@ -32,7 +32,7 @@ get_header(); ?>
 						if ( wp_attachment_is_image( $post->ID ) ) :
 							$w3csspress_att_image = wp_get_attachment_image_src( $post->ID, 'full' );
 							?>
-							<p class="attachment"><a href="<?php echo esc_url( wp_get_attachment_url( $post->ID ) ); ?>" rel="attachment" class="p-category"><img src="<?php echo esc_url( $w3csspress_att_image[0] ); ?>" width="<?php echo esc_attr( $w3csspress_att_image[1] ); ?>" height="<?php echo esc_attr( $w3csspress_att_image[2] ); ?>" class="attachment-full" alt="<?php $post->post_excerpt; ?>" itemprop="image" /></a></p>
+							<p class="attachment"><a href="<?php echo esc_url( wp_get_attachment_url( $post->ID ) ); ?>" title="<?php the_title_attribute(); ?>" rel="attachment" class="p-category"><img src="<?php echo esc_url( $w3csspress_att_image[0] ); ?>" width="<?php echo esc_attr( $w3csspress_att_image[1] ); ?>" height="<?php echo esc_attr( $w3csspress_att_image[2] ); ?>" class="attachment-full" alt="<?php $post->post_excerpt; ?>" itemprop="image" /></a></p>
 						<?php else : ?>
 							<a href="<?php echo esc_url( wp_get_attachment_url( $post->ID ) ); ?>" rel="attachment" class="p-category"><?php echo esc_url( basename( $post->guid ) ); ?></a>
 						<?php endif; ?>
