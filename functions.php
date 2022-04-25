@@ -439,7 +439,7 @@ function w3csspress_schema_type() {
 	} else {
 		$type = 'WebPage';
 	}
-	echo esc_html( 'itemscope itemtype="https://schema.org/' . $type . '"' );
+	echo 'itemscope itemtype=' . esc_attr( "https://schema.org/$type" );
 }
 
 add_filter( 'nav_menu_link_attributes', __NAMESPACE__ . '\\w3csspress_schema_url', 10 );
