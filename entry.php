@@ -31,7 +31,7 @@ post_class( $w3csspress_layout . ' hentry h-entry' );
 			echo '<h2 class="p-name entry-title">';
 		}
 		?>
-		<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark" class="u-url u-uid"><?php the_title(); ?></a>
+		<a href="<?php the_permalink(); ?>" rel="bookmark" class="u-url u-uid"><?php the_title(); ?></a>
 		<?php
 		if ( is_singular() ) {
 			echo '</h1>';
