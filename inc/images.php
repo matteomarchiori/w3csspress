@@ -241,6 +241,6 @@ function w3csspress_footer_images() {
 	if ( function_exists( 'get_the_post_thumbnail_url' ) && esc_html( get_option( 'w3csspress_header_thumbnail' ) ) && has_post_thumbnail() ) {
 		echo 'newStyle("#header{background-image:url(\'' . esc_url( get_the_post_thumbnail_url( null, 'full' ) ) . '\');}");';
 	} elseif ( function_exists( 'has_header_image' ) && has_header_image() ) {
-		echo 'newStyle("#header{background-image:url(\'' . esc_url( header_image() ) . '\')}");';
+		echo 'newStyle("#header{background-image:url(\'' . esc_url( get_header_image() ) . '\');}");';
 	}
 }
