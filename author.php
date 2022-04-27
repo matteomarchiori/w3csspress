@@ -16,7 +16,7 @@ get_header(); ?>
 <main id="content" role="main">
 	<header class="header">
 		<?php the_post(); ?>
-		<h1 class="p-name entry-title author" itemprop="name"><?php the_author_link(); ?></h1>
+		<h1 class="p-name entry-title author" itemprop="name"><?php the_author(); ?></h1>
 		<div class="archive-meta" itemprop="description">
 			<?php
 			if ( '' !== get_the_author_meta( 'user_description' ) ) {
@@ -55,7 +55,7 @@ get_header(); ?>
 				}
 				the_post();
 				?>
-				<?php get_template_part( 'entry' ); ?>
+				<?php get_template_part( 'template-parts/entry/entry' ); ?>
 				<?php
 			endwhile;
 			?>
@@ -63,6 +63,6 @@ get_header(); ?>
 		<?php
 	endif;
 	?>
-	<?php get_template_part( 'nav', 'below' ); ?>
+	<?php get_template_part( 'template-parts/nav/below' ); ?>
 </main>
 <?php get_footer(); ?>

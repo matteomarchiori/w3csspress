@@ -12,7 +12,7 @@ namespace w3csspress;
 
 use w3csspress\W3csspress_Walker_Nav_Menu;
 
-get_template_part( 'class-w3csspress-walker-nav-menu' );
+get_template_part( 'classes/class-w3csspress-walker-nav-menu' );
 
 ?>
 <!DOCTYPE html>
@@ -45,7 +45,7 @@ get_template_part( 'class-w3csspress-walker-nav-menu' );
 					if ( is_front_page() || is_home() || is_front_page() && is_home() ) {
 						echo '<h1>';
 					}
-					echo '<a href="' . esc_url( home_url( '/' ) ) . '" rel="home" itemprop="url"><span itemprop="name">' . esc_html( get_bloginfo( 'name' ) ) . '</span></a>';
+					echo '<span itemprop="name">' . esc_html( get_bloginfo( 'name' ) ) . '</span>';
 					if ( is_front_page() || is_home() || is_front_page() && is_home() ) {
 						echo '</h1>';
 					}

@@ -51,7 +51,7 @@ get_header(); ?>
 				}
 				the_post();
 				?>
-				<?php get_template_part( 'entry' ); ?>
+				<?php get_template_part( 'template-parts/entry/entry' ); ?>
 				<?php
 			endwhile;
 			?>
@@ -59,6 +59,6 @@ get_header(); ?>
 		<?php
 	endif;
 	?>
-	<?php get_template_part( 'nav', 'below' ); ?>
+	<?php get_template_part( 'template-parts/nav/below' ); ?>
 </main>
 <?php get_footer(); ?>

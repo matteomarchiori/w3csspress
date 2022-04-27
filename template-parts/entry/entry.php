@@ -28,28 +28,30 @@ post_class( $w3csspress_layout . ' hentry h-entry' );
 		if ( is_singular() ) {
 			echo '<h1 class="p-name entry-title" itemprop="headline">';
 		} else {
-			echo '<h2 class="p-name entry-title">';
+			echo '<h2 class="p-name entry-title"><a href="';
+			the_permalink();
+			echo '" rel="bookmark" class="u-url u-uid">';
 		}
 		?>
-		<a href="<?php the_permalink(); ?>" rel="bookmark" class="u-url u-uid"><?php the_title(); ?></a>
+		<?php the_title(); ?>
 		<?php
 		if ( is_singular() ) {
 			echo '</h1>';
 		} else {
-			echo '</h2>';
+			echo '</a></h2>';
 		}
 		?>
 		<?php edit_post_link(); ?>
 		<?php
 		if ( ! is_search() ) {
-			get_template_part( 'entry', 'meta' );
+			get_template_part( 'template-parts/entry/meta' );
 		}
 		?>
 	</header>
-	<?php get_template_part( 'entry', ( is_front_page() || is_home() || is_front_page() && is_home() || is_archive() || is_search() ? 'summary' : 'content' ) ); ?>
+	<?php get_template_part( 'template-parts/entry/' . ( is_front_page() || is_home() || is_front_page() && is_home() || is_archive() || is_search() ? 'summary' : 'content' ) ); ?>
 	<?php
 	if ( is_singular() ) {
-		get_template_part( 'entry-footer' );
+		get_template_part( 'template-parts/entry/footer' );
 	}
 	?>
 </article>

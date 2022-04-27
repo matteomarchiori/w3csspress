@@ -20,7 +20,7 @@ get_header(); ?>
 			while ( have_posts() ) :
 				the_post();
 				?>
-				<?php get_template_part( 'entry' ); ?>
+				<?php get_template_part( 'template-parts/entry/entry' ); ?>
 				<?php
 				if ( comments_open() && ! post_password_required() ) {
 					comments_template( '', true );
@@ -34,7 +34,7 @@ get_header(); ?>
 	endif;
 	?>
 	<footer class="footer">
-		<?php get_template_part( 'nav', 'below-single' ); ?>
+		<?php get_template_part( 'template-parts/nav/below-single' ); ?>
 	</footer>
 </main>
 <?php get_footer(); ?>
