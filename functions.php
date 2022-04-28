@@ -136,7 +136,7 @@ add_action( 'wp_footer', __NAMESPACE__ . '\\w3csspress_footer' );
  *
  * @since 2022.0
  */
-function w3csspress_footer() {              ?>
+function w3csspress_footer() {               ?>
 	<script async type="text/javascript">
 		function addClTag(tag, cl) {
 			var tags = document.getElementsByTagName(tag);
@@ -169,14 +169,7 @@ function w3csspress_footer() {              ?>
 		}
 		window.addEventListener('load', function() {
 			var excluded = "#wpadminbar, #wpadminbar *, .sidebar";
-			<?php
-			w3csspress_footer_color();
-			w3csspress_footer_images();
-			w3csspress_footer_layout();
-			w3csspress_footer_fonts();
-			w3csspress_footer_images();
-			?>
-			if (window.outerWidth < 600) {
+			if (window.outerWidth <= 600) {
 				var menu = document.getElementById("menu");
 				if (menu != null) {
 					menu.className += " w3-animate-bottom";
@@ -203,6 +196,13 @@ function w3csspress_footer() {              ?>
 					});
 				}
 			}
+			<?php
+			w3csspress_footer_color();
+			w3csspress_footer_images();
+			w3csspress_footer_layout();
+			w3csspress_footer_fonts();
+			w3csspress_footer_images();
+			?>
 		}, false);
 	</script>
 	<?php

@@ -68,29 +68,6 @@ window.addEventListener('load', function() {
         }
     }
 
-    if (window.outerWidth > 600) {
-        var body = document.body;
-        var primary = document.getElementById("primary");
-        var secondary = document.getElementById("secondary");
-        if (primary !== null) body.style.width = body.style.width - primary.offsetWidth;
-        if (secondary !== null) body.style.width = body.style.width - secondary.offsetWidth;
-
-        if (document.getElementsByClassName("rtl").length) {
-            if (primary !== null) {
-                body.style.marginRight = primary.offsetWidth + 'px';
-            }
-            if (secondary !== null) {
-                body.style.marginLeft = secondary.offsetWidth + 'px';
-            }
-        } else {
-            if (primary !== null) {
-                body.style.marginLeft = primary.offsetWidth + 'px';
-            }
-            if (secondary !== null) {
-                body.style.marginRight = secondary.offsetWidth + 'px';
-            }
-        }
-    }
     var excluded = "#wpadminbar, #wpadminbar *, .sidebar";
     var deviceAgent = navigator.userAgent.toLowerCase();
     var spacer = document.documentElement.className == '' ? '' : ' ';
@@ -236,5 +213,21 @@ window.addEventListener('load', function() {
                 }
             }
         });
+    }
+    var body = document.body;
+    var primary = document.getElementById("primary");
+    var secondary = document.getElementById("secondary");
+    var rtl = document.getElementsByClassName("rtl").length;
+    if (window.outerWidth > 600) {
+        if (primary !== null) {
+            body.style.width = body.style.width - primary.offsetWidth;
+            if (rtl) body.style.marginRight = primary.offsetWidth + 'px';
+            else body.style.marginLeft = primary.offsetWidth + 'px';
+        }
+        if (secondary !== null) {
+            body.style.width = body.style.width - secondary.offsetWidth;
+            if (rtl) body.style.marginLeft = secondary.offsetWidth + 'px';
+            else body.style.marginRight = secondary.offsetWidth + 'px';
+        }
     }
 }, false);

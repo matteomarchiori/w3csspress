@@ -122,7 +122,7 @@ function w3csspress_customize_layout( $wp_customize ) {
  * @since 2022.22
  */
 function w3csspress_footer_layout() {
-	echo 'addClSel("header:not(" + excluded + "),footer:not(" + excluded + "),div:not(" + excluded + "),p:not(" + excluded + "),form:not(" + excluded + "),table:not(" + excluded + "),article:not(" + excluded + "),section:not(" + excluded + "),nav:not(" + excluded + "),summary:not(" + excluded + "),button:not(" + excluded + "),reset:not(" + excluded + "),input:not(input[type=\'checkbox\'],input[type=\'radio\']," + excluded + "),textarea:not(" + excluded + "),ul:not(" + excluded + "),ol:not(" + excluded + ")", "' . esc_html( get_option( 'w3csspress_rounded_style' ) ) . '");';
+	echo 'addClSel("article:not(" + excluded + "),section:not(" + excluded + "),nav:not(" + excluded + "),summary:not(" + excluded + "),button:not(" + excluded + "),reset:not(" + excluded + "),input:not(input[type=\'checkbox\'],input[type=\'radio\']," + excluded + "),textarea:not(" + excluded + "),ul:not(" + excluded + "),ol:not(" + excluded + ")", "' . esc_html( get_option( 'w3csspress_rounded_style' ) ) . '");';
 }
 
 /**
