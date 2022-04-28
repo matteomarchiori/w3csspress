@@ -536,6 +536,11 @@ function w3csspress_footer_fonts() {
 			echo 'addClTag("h' . intval( $i ) . '","' . esc_html( get_option( "w3csspress_font_weight_h$i" ) ) . '");';
 		}
 	}
+	if ( '' !== get_option( 'w3csspress_font_family' ) ) {
+		for ( $i = 1; $i < 7; $i++ ) {
+			echo 'addClTag("h' . intval( $i ) . '","' . esc_html( get_option( 'w3csspress_font_family' ) ) . '");';
+		}
+	}
 	if ( '' !== $w3csspress_google_font ) {
 		echo 'newStyle(".w3-google{font-family:' . esc_html( $w3csspress_google_font ) . '}");';
 	}

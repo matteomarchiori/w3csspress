@@ -198,7 +198,6 @@ function w3csspress_footer() {               ?>
 			}
 			<?php
 			w3csspress_footer_color();
-			w3csspress_footer_images();
 			w3csspress_footer_layout();
 			w3csspress_footer_fonts();
 			w3csspress_footer_images();
