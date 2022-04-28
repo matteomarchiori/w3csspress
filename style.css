@@ -343,6 +343,13 @@ table tr td {
     text-align: center
 }
 
+#gototop {
+    position: fixed;
+    bottom: 3vmax;
+    right: 3vmax;
+    display: none;
+}
+
 @media (max-width:600px) {
     #menu {
         display: none;

@@ -230,4 +230,12 @@ window.addEventListener('load', function() {
             else body.style.marginRight = secondary.offsetWidth + 'px';
         }
     }
+    var gototop = document.getElementById("gototop");
+    document.addEventListener('scroll', function() {
+        if (document.documentElement.scrollTop > 100) gototop.style.display = "block";
+        else gototop.style.display = "none";
+    });
+    gototop.addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
 }, false);

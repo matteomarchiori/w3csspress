@@ -27,6 +27,7 @@ namespace w3csspress;
 		&copy; <?php echo esc_html( date_i18n( __( 'Y', 'w3csspress' ) ) ); ?> <?php echo esc_html( get_bloginfo( 'name' ) ); ?>
 	</span>
 	<?php } ?>
+	<button id="gototop">&and;</button>
 </footer>
 </div>
 <?php wp_footer(); ?>
