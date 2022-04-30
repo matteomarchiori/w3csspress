@@ -18,23 +18,6 @@ get_template_part( 'inc/images' );
 get_template_part( 'inc/layout' );
 get_template_part( 'inc/speed' );
 
-add_action( 'customize_register', __NAMESPACE__ . '\\w3csspress_customize_register' );
-/**
- * Fires once WordPress has loaded, allowing scripts and styles to be initialized.
- *
- * @since 2022.0
- *
- * @param WP_Customize_Manager $wp_customize Required. WordPress customizer.
- */
-function w3csspress_customize_register( $wp_customize ) {
-	w3csspress_customize_colors( $wp_customize );
-	w3csspress_customize_content( $wp_customize );
-	w3csspress_customize_fonts( $wp_customize );
-	w3csspress_customize_images( $wp_customize );
-	w3csspress_customize_layout( $wp_customize );
-	w3csspress_customize_speed( $wp_customize );
-}
-
 add_action( 'after_setup_theme', __NAMESPACE__ . '\\w3csspress_after_setup_theme' );
 /**
  * Fires to finish the w3csspress theme setup.
@@ -120,14 +103,11 @@ function w3csspress_wp_enqueue_scripts() {
 	wp_style_add_data( 'w3', 'rtl', 'replace' );
 	wp_enqueue_style( 'w3-wide', get_template_directory_uri() . '/assets/css/w3-wide.css', false, '4.15', 'screen and (min-width: 1920px)' );
 	wp_style_add_data( 'w3-wide', 'rtl', 'replace' );
-	w3csspress_enqueue_script_colors();
-	w3csspress_enqueue_script_fonts();
 	wp_enqueue_style( 'w3csspress-style', get_stylesheet_uri(), false, W3CSSPRESS_THEME_VERSION, 'all' );
 	wp_style_add_data( 'w3csspress-style', 'rtl', 'replace' );
 	wp_enqueue_script( 'w3csspress-scripts', get_template_directory_uri() . '/assets/js/scripts.js', array(), W3CSSPRESS_THEME_VERSION, true );
 	wp_dequeue_style( 'wp-block-library' );
 	wp_dequeue_style( 'wp-block-library-theme' );
-	w3csspress_enqueue_script_speed();
 }
 
 add_action( 'wp_footer', __NAMESPACE__ . '\\w3csspress_wp_footer' );
@@ -197,10 +177,10 @@ function w3csspress_wp_footer() {               ?>
 				}
 			}
 			<?php
-			w3csspress_footer_color();
-			w3csspress_footer_layout();
-			w3csspress_footer_fonts();
-			w3csspress_footer_images();
+			do_action( 'w3csspress_footer_color' );
+			do_action( 'w3csspress_footer_fonts' );
+			do_action( 'w3csspress_footer_layout' );
+			do_action( 'w3csspress_footer_images' );
 			?>
 		}, false);
 	</script>
@@ -340,22 +320,6 @@ function w3csspress_nav_menu_css_class( $classes, $item, $args ) {
 		$classes[] = 'w3-dropdown-hover w3-dropdown-focus';
 	}
 	$classes = array_merge( $classes, add_additional_class_on_li_layout() );
-	return $classes;
-}
-
-add_filter( 'body_class', __NAMESPACE__ . '\\w3csspress_body_class' );
-/**
- * Displays the class names for the body element.
- *
- * @since 2022.0
- *
- * @param array $classes Optional. Space-separated string or array of class names to add to the class list.
- *
- * @return array $classes Space-separated string or array of class names to add to the class list.
- */
-function w3csspress_body_class( $classes ) {
-	$classes = array_merge( $classes, w3csspress_body_class_color() );
-	$classes = array_merge( $classes, w3csspress_body_class_fonts() );
 	return $classes;
 }
 

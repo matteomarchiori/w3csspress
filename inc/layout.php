@@ -10,6 +10,7 @@
 
 namespace w3csspress;
 
+add_action( 'customize_register', __NAMESPACE__ . '\\w3csspress_customize_layout' );
 /**
  * Add layout settings to the WordPress customizer.
  *
@@ -116,6 +117,7 @@ function w3csspress_customize_layout( $wp_customize ) {
 	);
 }
 
+add_action( 'w3csspress_footer_layout', __NAMESPACE__ . '\\w3csspress_footer_layout' );
 /**
  * Add layout JavaScript to the footer.
  *

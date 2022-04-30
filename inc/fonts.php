@@ -10,6 +10,7 @@
 
 namespace w3csspress;
 
+add_action( 'customize_register', __NAMESPACE__ . '\\w3csspress_customize_fonts' );
 /**
  * Add fonts settings to the WordPress customizer.
  *
@@ -450,22 +451,25 @@ function w3csspress_customize_fonts( $wp_customize ) {
 	}
 }
 
+add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\w3csspress_enqueue_script_fonts' );
 /**
  * Add scripts and styles related to fonts.
  *
  * @since 2022.22
  */
 function w3csspress_enqueue_script_fonts() {
+	$w3csspress_version     = wp_get_theme()->get( 'Version' );
 	$w3csspress_google_font = esc_html( get_option( 'w3csspress_google_font' ) );
 	if ( '' !== $w3csspress_google_font ) {
-		wp_enqueue_style( 'google-font', "https://fonts.googleapis.com/css?family=$w3csspress_google_font&display=swap", false, W3CSSPRESS_THEME_VERSION, 'all' );
+		wp_enqueue_style( 'google-font', "https://fonts.googleapis.com/css?family=$w3csspress_google_font&display=swap", false, $w3csspress_version, 'all' );
 	}
 	$w3csspress_google_font_headings = esc_html( get_option( 'w3csspress_google_font_headings' ) );
 	if ( '' !== $w3csspress_google_font_headings ) {
-		wp_enqueue_style( 'google-font-headings', "https://fonts.googleapis.com/css?family=$w3csspress_google_font_headings&display=swap", false, W3CSSPRESS_THEME_VERSION, 'all' );
+		wp_enqueue_style( 'google-font-headings', "https://fonts.googleapis.com/css?family=$w3csspress_google_font_headings&display=swap", false, $w3csspress_version, 'all' );
 	}
 }
 
+add_action( 'w3csspress_footer_fonts', __NAMESPACE__ . '\\w3csspress_footer_fonts' );
 /**
  * Add fonts JavaScript to the footer.
  *
@@ -549,24 +553,26 @@ function w3csspress_footer_fonts() {
 	}
 }
 
+add_filter( 'body_class', __NAMESPACE__ . '\\w3csspress_body_class_fonts' );
 /**
- * Add fonts related class names to the body element
+ * Displays the fonts class names for the body element.
  *
- * @since 2022.22
+ * @since 2022.26
+ *
+ * @param array $classes Optional. Space-separated string or array of class names to add to the class list.
  *
  * @return array $classes Space-separated string or array of class names to add to the class list.
  */
-function w3csspress_body_class_fonts() {
-	$w3csspress_classes     = array();
+function w3csspress_body_class_fonts( $classes ) {
 	$w3csspress_google_font = esc_html( get_option( 'w3csspress_google_font' ) );
 	if ( '' !== $w3csspress_google_font ) {
-		$w3csspress_classes[] = 'w3-google';
+		$classes[] = 'w3-google';
 	} else {
-		$w3csspress_classes[] = esc_html( get_option( 'w3csspress_font_family' ) );
+		$classes[] = esc_html( get_option( 'w3csspress_font_family' ) );
 	}
 	$w3csspress_google_font_headings = esc_html( get_option( 'w3csspress_google_font_headings' ) );
 	if ( '' !== $w3csspress_google_font_headings ) {
-		$w3csspress_classes[] = 'w3-google-heading';
+		$classes[] = 'w3-google-heading';
 	}
-	return $w3csspress_classes;
+	return $classes;
 }

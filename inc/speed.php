@@ -10,6 +10,7 @@
 
 namespace w3csspress;
 
+add_action( 'customize_register', __NAMESPACE__ . '\\w3csspress_customize_speed' );
 /**
  * Add speed settings to the WordPress customizer.
  *
@@ -75,6 +76,7 @@ function w3csspress_customize_speed( $wp_customize ) {
 	);
 }
 
+add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\w3csspress_enqueue_script_speed' );
 /**
  * Settings to improve website speed or customization
  *

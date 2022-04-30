@@ -41,6 +41,7 @@ function w3csspress_read_more_link() {
 remove_filter( 'the_content', 'wpautop' );
 remove_filter( 'the_excerpt', 'wpautop' );
 
+add_action( 'customize_register', __NAMESPACE__ . '\\w3csspress_customize_content' );
 /**
  * Add content settings to the WordPress customizer.
  *

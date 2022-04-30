@@ -10,6 +10,7 @@
 
 namespace w3csspress;
 
+add_action( 'customize_register', __NAMESPACE__ . '\\w3csspress_customize_images' );
 /**
  * Add images settings to the WordPress customizer.
  *
@@ -211,6 +212,7 @@ function w3csspress_customize_images( $wp_customize ) {
 	);
 }
 
+add_action( 'w3csspress_footer_images', __NAMESPACE__ . '\\w3csspress_footer_images' );
 /**
  * Add images JavaScript to the footer.
  *

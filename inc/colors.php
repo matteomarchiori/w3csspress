@@ -10,6 +10,7 @@
 
 namespace w3csspress;
 
+add_action( 'customize_register', __NAMESPACE__ . '\\w3csspress_customize_colors' );
 /**
  * Add colors settings to the WordPress customizer.
  *
@@ -189,25 +190,28 @@ function w3csspress_customize_colors( $wp_customize ) {
 	}
 }
 
+add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\w3csspress_enqueue_script_colors' );
 /**
  * Add scripts and styles related to colors.
  *
  * @since 2022.22
  */
 function w3csspress_enqueue_script_colors() {
+	$w3csspress_version     = wp_get_theme()->get( 'Version' );
 	$w3csspress_color_theme = esc_html( get_option( 'w3csspress_color_theme' ) );
 	if ( '' !== $w3csspress_color_theme ) {
-		wp_enqueue_style( "w3-theme-$w3csspress_color_theme", get_template_directory_uri() . "/assets/css/lib/w3-theme-$w3csspress_color_theme.css", false, W3CSSPRESS_THEME_VERSION, 'all' );
+		wp_enqueue_style( "w3-theme-$w3csspress_color_theme", get_template_directory_uri() . "/assets/css/lib/w3-theme-$w3csspress_color_theme.css", false, $w3csspress_version, 'all' );
 		if ( strpos( $w3csspress_color_theme, 'w3schools' ) !== false ) {
 			wp_style_add_data( "w3-theme-$w3csspress_color_theme", 'rtl', 'replace' );
 		}
 	}
 }
 
+add_action( 'w3csspress_footer_color', __NAMESPACE__ . '\\w3csspress_footer_color' );
 /**
- * Add colors JavaScript to the footer.
+ * Fires when WordPress loads the footer, to enqueue colors checks.
  *
- * @since 2022.22
+ * @since 2022.26
  */
 function w3csspress_footer_color() {
 	for ( $i = 1; $i < 7; $i++ ) {
@@ -223,20 +227,23 @@ function w3csspress_footer_color() {
 	}
 }
 
+
+add_filter( 'body_class', __NAMESPACE__ . '\\w3csspress_body_class_color' );
 /**
- * Add colors related class names to the body element
+ * Displays the colors class names for the body element.
  *
- * @since 2022.22
+ * @since 2022.26
+ *
+ * @param array $classes Optional. Space-separated string or array of class names to add to the class list.
  *
  * @return array $classes Space-separated string or array of class names to add to the class list.
  */
-function w3csspress_body_class_color() {
-	$w3csspress_classes          = array();
+function w3csspress_body_class_color( $classes ) {
 	$w3csspress_color_theme_kind = esc_html( get_option( 'w3csspress_color_theme_kind' ) );
 	if ( '' !== $w3csspress_color_theme_kind ) {
-		$w3csspress_classes[] = "w3-theme-$w3csspress_color_theme_kind";
+		$classes[] = "w3-theme-$w3csspress_color_theme_kind";
 	} else {
-		$w3csspress_classes[] = 'w3-theme';
+		$classes[] = 'w3-theme';
 	}
-	return $w3csspress_classes;
+	return $classes;
 }
