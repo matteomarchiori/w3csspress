@@ -35,13 +35,13 @@ function w3csspress_customize_register( $wp_customize ) {
 	w3csspress_customize_speed( $wp_customize );
 }
 
-add_action( 'after_setup_theme', __NAMESPACE__ . '\\w3csspress_setup' );
+add_action( 'after_setup_theme', __NAMESPACE__ . '\\w3csspress_after_setup_theme' );
 /**
  * Fires to finish the w3csspress theme setup.
  *
  * @since 2022.0
  */
-function w3csspress_setup() {
+function w3csspress_after_setup_theme() {
 	load_theme_textdomain( 'w3csspress', get_template_directory() . '/languages' );
 	add_theme_support( 'title-tag' );
 	add_theme_support( 'post-thumbnails' );
@@ -108,13 +108,13 @@ function w3csspress_setup() {
 	);
 }
 
-add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\w3csspress_enqueue_script' );
+add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\w3csspress_wp_enqueue_scripts' );
 /**
  * Fires once WordPress has loaded, allowing scripts and styles to be initialized.
  *
  * @since 2022.0
  */
-function w3csspress_enqueue_script() {
+function w3csspress_wp_enqueue_scripts() {
 	define( 'W3CSSPRESS_THEME_VERSION', wp_get_theme()->get( 'Version' ) );
 	wp_enqueue_style( 'w3', get_template_directory_uri() . '/assets/css/w3.css', false, '4.15', 'all' );
 	wp_style_add_data( 'w3', 'rtl', 'replace' );
@@ -130,13 +130,13 @@ function w3csspress_enqueue_script() {
 	w3csspress_enqueue_script_speed();
 }
 
-add_action( 'wp_footer', __NAMESPACE__ . '\\w3csspress_footer' );
+add_action( 'wp_footer', __NAMESPACE__ . '\\w3csspress_wp_footer' );
 /**
  * Fires when WordPress loads the footer, to enqueue some customizer checks.
  *
  * @since 2022.0
  */
-function w3csspress_footer() {               ?>
+function w3csspress_wp_footer() {               ?>
 	<script async type="text/javascript">
 		function addClTag(tag, cl) {
 			var tags = document.getElementsByTagName(tag);
@@ -207,7 +207,7 @@ function w3csspress_footer() {               ?>
 	<?php
 }
 
-add_filter( 'the_title', __NAMESPACE__ . '\\w3csspress_title' );
+add_filter( 'the_title', __NAMESPACE__ . '\\w3csspress_the_title' );
 /**
  * Filter for empty titles, replace with three periods.
  *
@@ -216,7 +216,7 @@ add_filter( 'the_title', __NAMESPACE__ . '\\w3csspress_title' );
  * @param string $title Required. The title of the post or page.
  * @return string The new title.
  */
-function w3csspress_title( $title ) {
+function w3csspress_the_title( $title ) {
 	if ( '' === $title ) {
 		return '...';
 	} else {
@@ -224,7 +224,7 @@ function w3csspress_title( $title ) {
 	}
 }
 
-add_filter( 'excerpt_more', __NAMESPACE__ . '\\w3csspress_excerpt_read_more_link', 5 );
+add_filter( 'excerpt_more', __NAMESPACE__ . '\\w3csspress_excerpt_more', 5 );
 /**
  * Add read more  for excerpt.
  *
@@ -234,7 +234,7 @@ add_filter( 'excerpt_more', __NAMESPACE__ . '\\w3csspress_excerpt_read_more_link
  *
  * @return string Read more link.
  */
-function w3csspress_excerpt_read_more_link( $more ) {
+function w3csspress_excerpt_more( $more ) {
 	if ( ! is_admin() ) {
 		global $post;
 		return ' <a href="' . esc_url( get_permalink( $post->ID ) ) . '" class="more-link">' . sprintf(
@@ -247,7 +247,7 @@ function w3csspress_excerpt_read_more_link( $more ) {
 
 add_filter( 'big_image_size_threshold', '__return_false' );
 
-add_filter( 'intermediate_image_sizes_advanced', __NAMESPACE__ . '\\w3csspress_image_insert_override' );
+add_filter( 'intermediate_image_sizes_advanced', __NAMESPACE__ . '\\w3csspress_intermediate_image_sizes_advanced' );
 /**
  * Customize sizes for media.
  *
@@ -257,32 +257,32 @@ add_filter( 'intermediate_image_sizes_advanced', __NAMESPACE__ . '\\w3csspress_i
  *
  * @return array media sizes.
  */
-function w3csspress_image_insert_override( $sizes ) {
+function w3csspress_intermediate_image_sizes_advanced( $sizes ) {
 	unset( $sizes['medium_large'] );
 	unset( $sizes['1536x1536'] );
 	unset( $sizes['2048x2048'] );
 	return $sizes;
 }
 
-add_action( 'wp_head', __NAMESPACE__ . '\\w3csspress_pingback_header' );
+add_action( 'wp_head', __NAMESPACE__ . '\\w3csspress_wp_head' );
 /**
  * Add pingback header.
  *
  * @since 2022.0
  */
-function w3csspress_pingback_header() {
+function w3csspress_wp_head() {
 	if ( is_singular() && pings_open() ) {
 		printf( '<link rel="pingback" href="%s" />' . "\n", esc_url( get_bloginfo( 'pingback_url' ) ) );
 	}
 }
 
-add_action( 'comment_form_before', __NAMESPACE__ . '\\w3csspress_enqueue_comment_reply_script' );
+add_action( 'comment_form_before', __NAMESPACE__ . '\\w3csspress_comment_form_before' );
 /**
  * Add comment reply function
  *
  * @since 2022.0
  */
-function w3csspress_enqueue_comment_reply_script() {
+function w3csspress_comment_form_before() {
 	if ( esc_html( get_option( 'thread_comments' ) ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
@@ -301,7 +301,7 @@ function w3csspress_custom_pings( $comment ) {
 	<?php
 }
 
-add_filter( 'get_comments_number', __NAMESPACE__ . '\\w3csspress_comment_count', 0 );
+add_filter( 'get_comments_number', __NAMESPACE__ . '\\w3csspress_get_comments_number', 0 );
 /**
  * Counter for comments.
  *
@@ -310,7 +310,7 @@ add_filter( 'get_comments_number', __NAMESPACE__ . '\\w3csspress_comment_count',
  * @param int $count Required. Default count.
  * @return int Count of comments for post.
  */
-function w3csspress_comment_count( $count ) {
+function w3csspress_get_comments_number( $count ) {
 	if ( ! is_admin() ) {
 		global $id;
 		$get_comments     = get_comments( 'status=approve&post_id=' . $id );
@@ -321,7 +321,7 @@ function w3csspress_comment_count( $count ) {
 	}
 }
 
-add_filter( 'nav_menu_css_class', __NAMESPACE__ . '\\add_additional_class_on_li', 1, 3 );
+add_filter( 'nav_menu_css_class', __NAMESPACE__ . '\\w3csspress_nav_menu_css_class', 1, 3 );
 /**
  * Filters the CSS classes applied to a menu item’s list item element.
  *
@@ -333,7 +333,7 @@ add_filter( 'nav_menu_css_class', __NAMESPACE__ . '\\add_additional_class_on_li'
  *
  * @return array Array of the CSS classes that are applied to the menu item's <li> element.
  */
-function add_additional_class_on_li( $classes, $item, $args ) {
+function w3csspress_nav_menu_css_class( $classes, $item, $args ) {
 	$classes[] = 'w3-bar-item';
 	$classes[] = 'w3-mobile';
 	if ( in_array( 'menu-item-has-children', $classes, true ) ) {
@@ -378,13 +378,13 @@ function w3csspress_comment_form_defaults( $defaults ) {
 	return $defaults;
 }
 
-add_action( 'widgets_init', __NAMESPACE__ . '\\w3csspress_register_sidebars' );
+add_action( 'widgets_init', __NAMESPACE__ . '\\w3csspress_widgets_init' );
 /**
  * Register the w3csspress sidebars
  *
  * @since 2022.7
  */
-function w3csspress_register_sidebars() {
+function w3csspress_widgets_init() {
 	register_sidebar(
 		array(
 			'id'            => 'primary',
@@ -441,7 +441,7 @@ function w3csspress_schema_type() {
 	echo 'itemscope itemtype=' . esc_attr( "https://schema.org/$type" );
 }
 
-add_filter( 'nav_menu_link_attributes', __NAMESPACE__ . '\\w3csspress_schema_url', 10 );
+add_filter( 'nav_menu_link_attributes', __NAMESPACE__ . '\\w3csspress_nav_menu_link_attributes', 10 );
 /**
  * Filters the HTML attributes applied to a menu item’s anchor element.
  *
@@ -449,7 +449,7 @@ add_filter( 'nav_menu_link_attributes', __NAMESPACE__ . '\\w3csspress_schema_url
  *
  * @since 2022.12
  */
-function w3csspress_schema_url( $atts ) {
+function w3csspress_nav_menu_link_attributes( $atts ) {
 	$atts['itemprop'] = 'url';
 	return $atts;
 }
