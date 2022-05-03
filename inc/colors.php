@@ -190,23 +190,6 @@ function w3csspress_customize_colors( $wp_customize ) {
 	}
 }
 
-add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\w3csspress_enqueue_script_colors' );
-/**
- * Add scripts and styles related to colors.
- *
- * @since 2022.22
- */
-function w3csspress_enqueue_script_colors() {
-	$w3csspress_version     = wp_get_theme()->get( 'Version' );
-	$w3csspress_color_theme = esc_html( get_option( 'w3csspress_color_theme' ) );
-	if ( '' !== $w3csspress_color_theme ) {
-		wp_enqueue_style( "w3-theme-$w3csspress_color_theme", get_template_directory_uri() . "/assets/css/lib/w3-theme-$w3csspress_color_theme.css", false, $w3csspress_version, 'all' );
-		if ( strpos( $w3csspress_color_theme, 'w3schools' ) !== false ) {
-			wp_style_add_data( "w3-theme-$w3csspress_color_theme", 'rtl', 'replace' );
-		}
-	}
-}
-
 add_action( 'w3csspress_footer_color', __NAMESPACE__ . '\\w3csspress_footer_color' );
 /**
  * Fires when WordPress loads the footer, to enqueue colors checks.

@@ -103,6 +103,13 @@ function w3csspress_wp_enqueue_scripts() {
 	wp_style_add_data( 'w3', 'rtl', 'replace' );
 	wp_enqueue_style( 'w3-wide', get_template_directory_uri() . '/assets/css/w3-wide.css', false, '4.15', 'screen and (min-width: 1920px)' );
 	wp_style_add_data( 'w3-wide', 'rtl', 'replace' );
+	$w3csspress_color_theme = esc_html( get_option( 'w3csspress_color_theme' ) );
+	if ( '' !== $w3csspress_color_theme ) {
+		wp_enqueue_style( "w3-theme-$w3csspress_color_theme", get_template_directory_uri() . "/assets/css/lib/w3-theme-$w3csspress_color_theme.css", false, $w3csspress_version, 'all' );
+		if ( strpos( $w3csspress_color_theme, 'w3schools' ) !== false ) {
+			wp_style_add_data( "w3-theme-$w3csspress_color_theme", 'rtl', 'replace' );
+		}
+	}
 	wp_enqueue_style( 'w3csspress-style', get_stylesheet_uri(), false, $w3csspress_version, 'all' );
 	wp_style_add_data( 'w3csspress-style', 'rtl', 'replace' );
 	wp_enqueue_script( 'w3csspress-scripts', get_template_directory_uri() . '/assets/js/scripts.js', array(), $w3csspress_version, true );
