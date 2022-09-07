@@ -106,7 +106,7 @@ function w3csspress_customize_images( $wp_customize ) {
 	$wp_customize->add_control(
 		'w3csspress_rounded_img',
 		array(
-			'label'       => esc_html__( 'Rounded img', 'w3csspress' ),
+			'label'       => esc_html__( 'Rounded images', 'w3csspress' ),
 			'description' => esc_html__( 'Round images on the page.', 'w3csspress' ),
 			'settings'    => 'w3csspress_rounded_img',
 			'priority'    => $w3csspress_priority++,
@@ -118,7 +118,7 @@ function w3csspress_customize_images( $wp_customize ) {
 	$wp_customize->add_control(
 		'w3csspress_circle_img',
 		array(
-			'label'       => esc_html__( 'Circle img', 'w3csspress' ),
+			'label'       => esc_html__( 'Circle images', 'w3csspress' ),
 			'description' => esc_html__( 'Circle images on the page.', 'w3csspress' ),
 			'settings'    => 'w3csspress_circle_img',
 			'priority'    => $w3csspress_priority++,
@@ -130,7 +130,7 @@ function w3csspress_customize_images( $wp_customize ) {
 	$wp_customize->add_control(
 		'w3csspress_bordered_img',
 		array(
-			'label'       => esc_html__( 'Bordered img', 'w3csspress' ),
+			'label'       => esc_html__( 'Bordered images', 'w3csspress' ),
 			'description' => esc_html__( 'Border images on the page.', 'w3csspress' ),
 			'settings'    => 'w3csspress_bordered_img',
 			'priority'    => $w3csspress_priority++,
@@ -142,8 +142,8 @@ function w3csspress_customize_images( $wp_customize ) {
 	$wp_customize->add_control(
 		'w3csspress_cards_img',
 		array(
-			'label'       => esc_html__( 'Card img', 'w3csspress' ),
-			'description' => esc_html__( 'Image with card effect.', 'w3csspress' ),
+			'label'       => esc_html__( 'Card images', 'w3csspress' ),
+			'description' => esc_html__( 'Images with card effect.', 'w3csspress' ),
 			'settings'    => 'w3csspress_cards_img',
 			'priority'    => $w3csspress_priority++,
 			'section'     => 'w3csspress_images',
@@ -154,8 +154,8 @@ function w3csspress_customize_images( $wp_customize ) {
 	$wp_customize->add_control(
 		'w3csspress_opacity_img',
 		array(
-			'label'       => esc_html__( 'Opacity img', 'w3csspress' ),
-			'description' => esc_html__( 'Image with opacity effect.', 'w3csspress' ),
+			'label'       => esc_html__( 'Opacity images', 'w3csspress' ),
+			'description' => esc_html__( 'Images with opacity effect.', 'w3csspress' ),
 			'settings'    => 'w3csspress_opacity_img',
 			'priority'    => $w3csspress_priority++,
 			'section'     => 'w3csspress_images',
@@ -166,8 +166,8 @@ function w3csspress_customize_images( $wp_customize ) {
 	$wp_customize->add_control(
 		'w3csspress_grayscale_img',
 		array(
-			'label'       => esc_html__( 'Grayscale img', 'w3csspress' ),
-			'description' => esc_html__( 'Image with grayscale effect.', 'w3csspress' ),
+			'label'       => esc_html__( 'Grayscale images', 'w3csspress' ),
+			'description' => esc_html__( 'Images with grayscale effect.', 'w3csspress' ),
 			'settings'    => 'w3csspress_grayscale_img',
 			'priority'    => $w3csspress_priority++,
 			'section'     => 'w3csspress_images',
@@ -178,8 +178,8 @@ function w3csspress_customize_images( $wp_customize ) {
 	$wp_customize->add_control(
 		'w3csspress_sepia_img',
 		array(
-			'label'       => esc_html__( 'Sepia img', 'w3csspress' ),
-			'description' => esc_html__( 'Image with sepia effect.', 'w3csspress' ),
+			'label'       => esc_html__( 'Sepia images', 'w3csspress' ),
+			'description' => esc_html__( 'Images with sepia effect.', 'w3csspress' ),
 			'settings'    => 'w3csspress_sepia_img',
 			'priority'    => $w3csspress_priority++,
 			'section'     => 'w3csspress_images',

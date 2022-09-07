@@ -26,8 +26,6 @@ if ( ! class_exists( 'w3csspress\W3csspress_Walker_Nav_Menu' ) ) {
 		/**
 		 * Starts the list before the elements are added.
 		 *
-		 * Starts the list before the elements are added.
-		 *
 		 * @since 2022.0
 		 *
 		 * @see Walker_Nav_Menu::start_lvl

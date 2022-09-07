@@ -78,6 +78,8 @@ function w3csspress_after_setup_theme() {
 			'chat',
 		)
 	);
+	add_theme_support( 'wp-block-styles' );
+	add_theme_support( 'align-wide' );
 	register_nav_menus(
 		array(
 			'main-menu' => esc_html__( 'Main Menu', 'w3csspress' ),
@@ -113,8 +115,6 @@ function w3csspress_wp_enqueue_scripts() {
 	wp_enqueue_style( 'w3csspress-style', get_stylesheet_uri(), false, $w3csspress_version, 'all' );
 	wp_style_add_data( 'w3csspress-style', 'rtl', 'replace' );
 	wp_enqueue_script( 'w3csspress-scripts', get_template_directory_uri() . '/assets/js/scripts.js', array(), $w3csspress_version, true );
-	wp_dequeue_style( 'wp-block-library' );
-	wp_dequeue_style( 'wp-block-library-theme' );
 }
 
 add_action( 'wp_footer', __NAMESPACE__ . '\\w3csspress_wp_footer' );
@@ -329,9 +329,6 @@ function w3csspress_nav_menu_css_class( $classes, $item, $args ) {
 	$classes = array_merge( $classes, add_additional_class_on_li_layout() );
 	return $classes;
 }
-
-add_filter( 'use_block_editor_for_post', '__return_false' );
-add_filter( 'use_widgets_block_editor', '__return_false' );
 
 add_filter( 'comment_form_defaults', __NAMESPACE__ . '\\w3csspress_comment_form_defaults' );
 /**

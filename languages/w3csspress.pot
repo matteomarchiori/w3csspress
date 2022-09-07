@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: w3csspress\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-04-24 21:09+0000\n"
+"POT-Creation-Date: 2022-09-07 21:06+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -18,152 +18,152 @@ msgstr ""
 
 #. arrow
 #. arrow and text
-#: attachment.php:62 nav-below.php:19
+#: attachment.php:62 template-parts/nav/below.php:19
 #, php-format
 msgid "%s older"
 msgstr ""
 
 #. read more link
-#: functions.php:243 inc/content.php:35
+#: functions.php:228 inc/content.php:35
 #, php-format
 msgid "...%s"
 msgstr ""
 
-#: inc/colors.php:24
+#: inc/colors.php:25
 msgid "Amber"
 msgstr ""
 
-#: inc/colors.php:25
+#: inc/colors.php:26
 msgid "Black"
 msgstr ""
 
-#: inc/colors.php:26
+#: inc/colors.php:27
 msgid "Blue"
 msgstr ""
 
-#: inc/colors.php:27
+#: inc/colors.php:28
 msgid "Blue Grey"
 msgstr ""
 
-#: inc/images.php:133
+#: inc/images.php:134
 msgid "Border images on the page."
 msgstr ""
 
-#: inc/images.php:132
-msgid "Bordered img"
+#: inc/images.php:133
+msgid "Bordered images"
 msgstr ""
 
-#: inc/colors.php:28
+#: inc/colors.php:29
 msgid "Brown"
 msgstr ""
 
-#: inc/images.php:144
-msgid "Card img"
+#: inc/images.php:145
+msgid "Card images"
 msgstr ""
 
-#: entry-footer.php:16
+#: template-parts/entry/footer.php:16
 msgid "Categories: "
 msgstr ""
 
 #. index for headings
-#: inc/colors.php:180
+#: inc/colors.php:181
 #, php-format
 msgid "Change color of h%s."
 msgstr ""
 
-#: inc/fonts.php:214
+#: inc/fonts.php:215
 msgid "Change font family of headings."
 msgstr ""
 
-#: inc/fonts.php:201 inc/fonts.php:226
+#: inc/fonts.php:202 inc/fonts.php:227
 msgid "Change font family of website."
 msgstr ""
 
-#: inc/fonts.php:251
+#: inc/fonts.php:252
 msgid "Change font size of div."
 msgstr ""
 
 #. index for headings
-#: inc/fonts.php:419
+#: inc/fonts.php:420
 #, php-format
 msgid "Change font size of h%s."
 msgstr ""
 
-#: inc/fonts.php:264
+#: inc/fonts.php:265
 msgid "Change font size of inputs."
 msgstr ""
 
-#: inc/fonts.php:303
+#: inc/fonts.php:304
 msgid "Change font size of ordered list."
 msgstr ""
 
-#: inc/fonts.php:238
+#: inc/fonts.php:239
 msgid "Change font size of paragraphs."
 msgstr ""
 
-#: inc/fonts.php:277
+#: inc/fonts.php:278
 msgid "Change font size of tables."
 msgstr ""
 
-#: inc/fonts.php:290
+#: inc/fonts.php:291
 msgid "Change font size of unordered list."
 msgstr ""
 
-#: inc/fonts.php:329
+#: inc/fonts.php:330
 msgid "Change font weight of div."
 msgstr ""
 
 #. index for headings
-#: inc/fonts.php:440
+#: inc/fonts.php:441
 #, php-format
 msgid "Change font weight of h%s."
 msgstr ""
 
-#: inc/fonts.php:342
+#: inc/fonts.php:343
 msgid "Change font weight of inputs."
 msgstr ""
 
-#: inc/fonts.php:381
+#: inc/fonts.php:382
 msgid "Change font weight of ordered list."
 msgstr ""
 
-#: inc/fonts.php:316
+#: inc/fonts.php:317
 msgid "Change font weight of paragraphs."
 msgstr ""
 
-#: inc/fonts.php:355
+#: inc/fonts.php:356
 msgid "Change font weight of tables."
 msgstr ""
 
-#: inc/fonts.php:368
+#: inc/fonts.php:369
 msgid "Change font weight of unordered list."
 msgstr ""
 
-#: inc/colors.php:159
+#: inc/colors.php:160
 msgid "Change link color"
 msgstr ""
 
-#: inc/colors.php:145
+#: inc/colors.php:146
 msgid "Change theme text color"
 msgstr ""
 
-#: inc/layout.php:50
+#: inc/layout.php:51
 msgid "Circle"
 msgstr ""
 
 #: inc/images.php:121
-msgid "Circle images on the page."
+msgid "Circle images"
 msgstr ""
 
-#: inc/images.php:120
-msgid "Circle img"
+#: inc/images.php:122
+msgid "Circle images on the page."
 msgstr ""
 
 #: comments.php:65
 msgid "Comment:"
 msgstr ""
 
-#: entry-footer.php:20
+#: template-parts/entry/footer.php:20
 msgid "Comments"
 msgstr ""
 
@@ -174,89 +174,113 @@ msgid_plural "Trackbacks and Pingbacks"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/content.php:57
+#: inc/content.php:58
 msgid "Content options"
 msgstr ""
 
-#: inc/fonts.php:59
+#: inc/fonts.php:60
 msgid "Cursive"
 msgstr ""
 
-#: inc/content.php:58
+#: inc/content.php:59
 msgid "Customize content options here."
 msgstr ""
 
-#: inc/fonts.php:27
+#: inc/fonts.php:28
 msgid "Customize fonts options here."
 msgstr ""
 
-#: inc/images.php:27
+#: inc/images.php:28
 msgid "Customize images options here."
 msgstr ""
 
-#: inc/layout.php:27
+#: inc/layout.php:28
 msgid "Customize layout options here."
 msgstr ""
 
-#: inc/speed.php:27
+#: inc/speed.php:28
 msgid "Customize speed options here."
 msgstr ""
 
-#: inc/colors.php:29
+#: inc/colors.php:30
 msgid "Cyan"
 msgstr ""
 
-#: inc/colors.php:51 inc/colors.php:52 inc/colors.php:53 inc/colors.php:54
-#: inc/colors.php:55
+#: inc/colors.php:52 inc/colors.php:53 inc/colors.php:54 inc/colors.php:55
+#: inc/colors.php:56
 msgid "Dark"
 msgstr ""
 
-#: inc/colors.php:30
+#: inc/colors.php:31
 msgid "Dark Grey"
 msgstr ""
 
-#: inc/colors.php:31
+#: inc/colors.php:32
 msgid "Deep Orange"
 msgstr ""
 
-#: inc/colors.php:32
+#: inc/colors.php:33
 msgid "Deep Purple"
 msgstr ""
 
-#: inc/colors.php:22 inc/colors.php:56 inc/layout.php:36 inc/layout.php:44
-#: inc/fonts.php:36 inc/fonts.php:48 inc/fonts.php:55
+#: inc/colors.php:23 inc/colors.php:57 inc/layout.php:37 inc/layout.php:45
+#: inc/fonts.php:37 inc/fonts.php:49 inc/fonts.php:56
 msgid "Default"
 msgstr ""
 
-#: inc/speed.php:56
+#: inc/speed.php:84
 msgid "Disable jQuery"
 msgstr ""
 
-#: inc/speed.php:57
+#: inc/speed.php:85
 msgid "Disable or enable jQuery (do only if you know what you are doing)."
 msgstr ""
 
-#: inc/speed.php:68
+#: inc/speed.php:132
+msgid "Enable block styles"
+msgstr ""
+
+#: inc/speed.php:133
+msgid "Enable block styles."
+msgstr ""
+
+#: inc/speed.php:96
 msgid "Enable Dashicons"
 msgstr ""
 
-#: inc/speed.php:69
+#: inc/speed.php:97
 msgid "Enable Dashicons on the frontend."
 msgstr ""
 
-#: inc/fonts.php:26
+#: inc/speed.php:108
+msgid "Enable Gutenberg for posts"
+msgstr ""
+
+#: inc/speed.php:120
+msgid "Enable Gutenberg for widgets"
+msgstr ""
+
+#: inc/speed.php:109
+msgid "Enable Gutenberg to edit posts."
+msgstr ""
+
+#: inc/speed.php:121
+msgid "Enable Gutenberg to edit widgets."
+msgstr ""
+
+#: inc/fonts.php:27
 msgid "Fonts options"
 msgstr ""
 
-#: functions.php:419
+#: functions.php:385
 msgid "Foot widgets Sidebar"
 msgstr ""
 
-#: inc/content.php:78
+#: inc/content.php:79
 msgid "Footer content"
 msgstr ""
 
-#: inc/layout.php:40
+#: inc/layout.php:41
 msgid "Four Columns"
 msgstr ""
 
@@ -264,33 +288,33 @@ msgstr ""
 msgid "Full-Width"
 msgstr ""
 
-#: inc/images.php:168
-msgid "Grayscale img"
-msgstr ""
-
-#: inc/colors.php:33
-msgid "Green"
+#: inc/images.php:169
+msgid "Grayscale images"
 msgstr ""
 
 #: inc/colors.php:34
+msgid "Green"
+msgstr ""
+
+#: inc/colors.php:35
 msgid "Grey"
 msgstr ""
 
-#: inc/layout.php:109
+#: inc/layout.php:110
 msgid "Grid layout setting"
 msgstr ""
 
 #. index for headings
-#: inc/colors.php:175
+#: inc/colors.php:176
 #, php-format
 msgid "H%s color"
 msgstr ""
 
-#: functions.php:410
+#: functions.php:376
 msgid "Head widgets Sidebar"
 msgstr ""
 
-#: inc/images.php:192
+#: inc/images.php:193
 msgid "Header thumbnail"
 msgstr ""
 
@@ -302,68 +326,68 @@ msgstr ""
 msgid "https://github.com/matteomarchiori/w3csspress"
 msgstr ""
 
-#: inc/images.php:145
-msgid "Image with card effect."
-msgstr ""
-
-#: inc/images.php:169
-msgid "Image with grayscale effect."
-msgstr ""
-
-#: inc/images.php:157
-msgid "Image with opacity effect."
-msgstr ""
-
-#: inc/images.php:181
-msgid "Image with sepia effect."
-msgstr ""
-
-#: inc/images.php:26
+#: inc/images.php:27
 msgid "Images options"
 msgstr ""
 
-#: inc/colors.php:35
-msgid "Indigo"
+#: inc/images.php:146
+msgid "Images with card effect."
 msgstr ""
 
-#: inc/fonts.php:44
-msgid "Jumbo"
+#: inc/images.php:170
+msgid "Images with grayscale effect."
+msgstr ""
+
+#: inc/images.php:158
+msgid "Images with opacity effect."
+msgstr ""
+
+#: inc/images.php:182
+msgid "Images with sepia effect."
 msgstr ""
 
 #: inc/colors.php:36
-msgid "Khaki"
+msgid "Indigo"
 msgstr ""
 
-#: inc/layout.php:47 inc/fonts.php:40
-msgid "Large"
-msgstr ""
-
-#: inc/layout.php:26
-msgid "Layout options"
-msgstr ""
-
-#: inc/colors.php:57 inc/colors.php:58 inc/colors.php:59 inc/colors.php:60
-#: inc/colors.php:61
-msgid "Light"
+#: inc/fonts.php:45
+msgid "Jumbo"
 msgstr ""
 
 #: inc/colors.php:37
-msgid "Light Blue"
+msgid "Khaki"
+msgstr ""
+
+#: inc/layout.php:48 inc/fonts.php:41
+msgid "Large"
+msgstr ""
+
+#: inc/layout.php:27
+msgid "Layout options"
+msgstr ""
+
+#: inc/colors.php:58 inc/colors.php:59 inc/colors.php:60 inc/colors.php:61
+#: inc/colors.php:62
+msgid "Light"
 msgstr ""
 
 #: inc/colors.php:38
-msgid "Light Green"
+msgid "Light Blue"
 msgstr ""
 
 #: inc/colors.php:39
+msgid "Light Green"
+msgstr ""
+
+#: inc/colors.php:40
 msgid "Lime"
 msgstr ""
 
-#: inc/colors.php:158
+#: inc/colors.php:159
 msgid "Link color"
 msgstr ""
 
-#: functions.php:100
+#: functions.php:84
 msgid "Main Menu"
 msgstr ""
 
@@ -371,21 +395,21 @@ msgstr ""
 msgid "matteomarchiori97"
 msgstr ""
 
-#: inc/layout.php:46 inc/fonts.php:39
+#: inc/layout.php:47 inc/fonts.php:40
 msgid "Medium"
 msgstr ""
 
-#: functions.php:187
+#: functions.php:166
 msgid "Menu"
 msgstr ""
 
-#: inc/fonts.php:58
+#: inc/fonts.php:59
 msgid "Monospace"
 msgstr ""
 
 #. arrow
 #. arrow and text
-#: attachment.php:75 nav-below.php:24
+#: attachment.php:75 template-parts/nav/below.php:24
 #, php-format
 msgid "newer %s"
 msgstr ""
@@ -402,55 +426,55 @@ msgstr ""
 msgid "Nothing found for the requested page. Try a search instead?"
 msgstr ""
 
-#: inc/layout.php:37
+#: inc/layout.php:38
 msgid "One Column"
 msgstr ""
 
-#: inc/images.php:156
-msgid "Opacity img"
-msgstr ""
-
-#: inc/colors.php:40
-msgid "Orange"
+#: inc/images.php:157
+msgid "Opacity images"
 msgstr ""
 
 #: inc/colors.php:41
-msgid "Pink"
-msgstr ""
-
-#: inc/images.php:204
-msgid "Post thumbnail"
-msgstr ""
-
-#: inc/images.php:193
-msgid "Posts get the thumbnail as header image if they have one."
-msgstr ""
-
-#: inc/images.php:205
-msgid "Posts show the thumbnail if they have."
-msgstr ""
-
-#: functions.php:392
-msgid "Primary Sidebar"
+msgid "Orange"
 msgstr ""
 
 #: inc/colors.php:42
-msgid "Purple"
+msgid "Pink"
+msgstr ""
+
+#: inc/images.php:205
+msgid "Post thumbnail"
+msgstr ""
+
+#: inc/images.php:194
+msgid "Posts get the thumbnail as header image if they have one."
+msgstr ""
+
+#: inc/images.php:206
+msgid "Posts show the thumbnail if they have."
+msgstr ""
+
+#: functions.php:358
+msgid "Primary Sidebar"
 msgstr ""
 
 #: inc/colors.php:43
+msgid "Purple"
+msgstr ""
+
+#: inc/colors.php:44
 msgid "Red"
 msgstr ""
 
-#: inc/images.php:109
+#: inc/images.php:110
 msgid "Round images on the page."
 msgstr ""
 
-#: inc/images.php:108
-msgid "Rounded img"
+#: inc/images.php:109
+msgid "Rounded images"
 msgstr ""
 
-#: inc/fonts.php:57
+#: inc/fonts.php:58
 msgid "Sans serif"
 msgstr ""
 
@@ -460,107 +484,107 @@ msgstr ""
 msgid "Search Results for: %s"
 msgstr ""
 
-#: functions.php:401
+#: functions.php:367
 msgid "Secondary Sidebar"
 msgstr ""
 
-#: inc/colors.php:116
+#: inc/colors.php:117
 msgid "Select color theme"
 msgstr ""
 
-#: inc/fonts.php:250
+#: inc/fonts.php:251
 msgid "Select div font size"
 msgstr ""
 
-#: inc/fonts.php:328
+#: inc/fonts.php:329
 msgid "Select div font weight"
 msgstr ""
 
-#: inc/fonts.php:200
+#: inc/fonts.php:201
 msgid "Select font family"
 msgstr ""
 
 #. index for headings
-#: inc/fonts.php:414
+#: inc/fonts.php:415
 #, php-format
 msgid "Select h%s font size"
 msgstr ""
 
 #. index for headings
-#: inc/fonts.php:435
+#: inc/fonts.php:436
 #, php-format
 msgid "Select h%s font weight"
 msgstr ""
 
-#: inc/fonts.php:263
+#: inc/fonts.php:264
 msgid "Select input font size"
 msgstr ""
 
-#: inc/fonts.php:341
+#: inc/fonts.php:342
 msgid "Select input font weight"
 msgstr ""
 
-#: inc/layout.php:83
+#: inc/layout.php:84
 msgid "Select layout"
 msgstr ""
 
-#: inc/fonts.php:302
+#: inc/fonts.php:303
 msgid "Select ordered list font size"
 msgstr ""
 
-#: inc/fonts.php:380
+#: inc/fonts.php:381
 msgid "Select ordered list font weight"
 msgstr ""
 
-#: inc/fonts.php:237
+#: inc/fonts.php:238
 msgid "Select paragraphs font size"
 msgstr ""
 
-#: inc/fonts.php:315
+#: inc/fonts.php:316
 msgid "Select paragraphs font weight"
 msgstr ""
 
-#: inc/layout.php:96
+#: inc/layout.php:97
 msgid "Select rounded style"
 msgstr ""
 
-#: inc/fonts.php:276
+#: inc/fonts.php:277
 msgid "Select table font size"
 msgstr ""
 
-#: inc/fonts.php:354
+#: inc/fonts.php:355
 msgid "Select table font weight"
 msgstr ""
 
-#: inc/colors.php:129
+#: inc/colors.php:130
 msgid "Select theme kind"
 msgstr ""
 
-#: inc/fonts.php:289
+#: inc/fonts.php:290
 msgid "Select unordered list font size"
 msgstr ""
 
-#: inc/fonts.php:367
+#: inc/fonts.php:368
 msgid "Select unordered list font weight"
 msgstr ""
 
-#: inc/images.php:180
-msgid "Sepia img"
+#: inc/images.php:181
+msgid "Sepia images"
 msgstr ""
 
-#: inc/fonts.php:56
+#: inc/fonts.php:57
 msgid "Serif"
 msgstr ""
 
-#: inc/content.php:79
+#: inc/content.php:80
 msgid "Set footer content."
 msgstr ""
 
-#: functions.php:393
+#: functions.php:359
 msgid "Sidebar on the left."
 msgstr ""
 
-#: functions.php:402
+#: functions.php:368
 msgid "Sidebar on the right."
 msgstr ""
 
@@ -568,7 +592,7 @@ msgstr ""
 msgid "Skip to the content"
 msgstr ""
 
-#: inc/layout.php:45 inc/fonts.php:38
+#: inc/layout.php:46 inc/fonts.php:39
 msgid "Small"
 msgstr ""
 
@@ -576,15 +600,15 @@ msgstr ""
 msgid "Sorry, nothing matched your search. Please try again."
 msgstr ""
 
-#: inc/speed.php:26
+#: inc/speed.php:27
 msgid "Speed options"
 msgstr ""
 
-#: inc/colors.php:44
+#: inc/colors.php:45
 msgid "Teal"
 msgstr ""
 
-#: inc/colors.php:144
+#: inc/colors.php:145
 msgid "Text theme color"
 msgstr ""
 
@@ -598,46 +622,46 @@ msgid ""
 "GitHub or contact me if you are interested in more options."
 msgstr ""
 
-#: inc/layout.php:39
+#: inc/layout.php:40
 msgid "Three Columns"
 msgstr ""
 
-#: inc/fonts.php:37
+#: inc/fonts.php:38
 msgid "Tiny"
 msgstr ""
 
-#: inc/layout.php:38
+#: inc/layout.php:39
 msgid "Two Columns"
 msgstr ""
 
-#: inc/fonts.php:225
+#: inc/fonts.php:226
 msgid "Use Google font"
 msgstr ""
 
-#: inc/fonts.php:213
+#: inc/fonts.php:214
 msgid "Use Google font for headings"
 msgstr ""
 
-#: inc/layout.php:97
+#: inc/layout.php:98
 msgid ""
 "Using this option you can change some elements roundness (images have more "
 "controls)."
 msgstr ""
 
-#: inc/layout.php:84
+#: inc/layout.php:85
 msgid "Using this option you can change the page layout."
 msgstr ""
 
-#: inc/colors.php:130
+#: inc/colors.php:131
 msgid ""
 "Using this option you can change the theme between default, light and dark."
 msgstr ""
 
-#: inc/colors.php:117
+#: inc/colors.php:118
 msgid "Using this option you can change the theme colors."
 msgstr ""
 
-#: inc/layout.php:110
+#: inc/layout.php:111
 msgid "Using this option you can enable or disable the grid layout."
 msgstr ""
 
@@ -645,31 +669,31 @@ msgstr ""
 msgid "W3CSSPress"
 msgstr ""
 
-#: inc/colors.php:23
+#: inc/colors.php:24
 msgid "W3Schools"
 msgstr ""
 
-#: inc/fonts.php:51
+#: inc/fonts.php:52
 msgid "Weight"
 msgstr ""
 
-#: functions.php:420
+#: functions.php:386
 msgid "Widgets area on the foot of the website."
 msgstr ""
 
-#: functions.php:411
+#: functions.php:377
 msgid "Widgets area on the head of the website."
 msgstr ""
 
-#: inc/layout.php:48 inc/fonts.php:41
+#: inc/layout.php:49 inc/fonts.php:42
 msgid "XL"
 msgstr ""
 
-#: inc/layout.php:49 inc/fonts.php:42
+#: inc/layout.php:50 inc/fonts.php:43
 msgid "XXL"
 msgstr ""
 
-#: inc/fonts.php:43
+#: inc/fonts.php:44
 msgid "XXXL"
 msgstr ""
 
@@ -677,6 +701,6 @@ msgstr ""
 msgid "Y"
 msgstr ""
 
-#: inc/colors.php:45
+#: inc/colors.php:46
 msgid "Yellow"
 msgstr ""
