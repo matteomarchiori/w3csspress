@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: w3csspress\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-07 21:06+0000\n"
+"POT-Creation-Date: 2022-09-14 21:02+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -24,7 +24,7 @@ msgid "%s older"
 msgstr ""
 
 #. read more link
-#: functions.php:228 inc/content.php:35
+#: functions.php:233 inc/content.php:35
 #, php-format
 msgid "...%s"
 msgstr ""
@@ -272,12 +272,16 @@ msgstr ""
 msgid "Fonts options"
 msgstr ""
 
-#: functions.php:385
+#: functions.php:390
 msgid "Foot widgets Sidebar"
 msgstr ""
 
 #: inc/content.php:79
 msgid "Footer content"
+msgstr ""
+
+#: inc/block-patterns.php:19
+msgid "Footers"
 msgstr ""
 
 #: inc/layout.php:41
@@ -310,12 +314,16 @@ msgstr ""
 msgid "H%s color"
 msgstr ""
 
-#: functions.php:376
+#: functions.php:381
 msgid "Head widgets Sidebar"
 msgstr ""
 
 #: inc/images.php:193
 msgid "Header thumbnail"
+msgstr ""
+
+#: inc/block-patterns.php:20
+msgid "Headers"
 msgstr ""
 
 #. Author URI of the theme
@@ -387,7 +395,7 @@ msgstr ""
 msgid "Link color"
 msgstr ""
 
-#: functions.php:84
+#: functions.php:86
 msgid "Main Menu"
 msgstr ""
 
@@ -399,12 +407,16 @@ msgstr ""
 msgid "Medium"
 msgstr ""
 
-#: functions.php:166
+#: functions.php:168
 msgid "Menu"
 msgstr ""
 
 #: inc/fonts.php:59
 msgid "Monospace"
+msgstr ""
+
+#: inc/block-patterns.php:21
+msgid "Navigation"
 msgstr ""
 
 #. arrow
@@ -454,7 +466,7 @@ msgstr ""
 msgid "Posts show the thumbnail if they have."
 msgstr ""
 
-#: functions.php:358
+#: functions.php:363
 msgid "Primary Sidebar"
 msgstr ""
 
@@ -484,7 +496,7 @@ msgstr ""
 msgid "Search Results for: %s"
 msgstr ""
 
-#: functions.php:367
+#: functions.php:372
 msgid "Secondary Sidebar"
 msgstr ""
 
@@ -580,11 +592,11 @@ msgstr ""
 msgid "Set footer content."
 msgstr ""
 
-#: functions.php:359
+#: functions.php:364
 msgid "Sidebar on the left."
 msgstr ""
 
-#: functions.php:368
+#: functions.php:373
 msgid "Sidebar on the right."
 msgstr ""
 
@@ -665,6 +677,10 @@ msgstr ""
 msgid "Using this option you can enable or disable the grid layout."
 msgstr ""
 
+#: inc/block-patterns.php:22
+msgid "W3.CSS"
+msgstr ""
+
 #. Name of the theme
 msgid "W3CSSPress"
 msgstr ""
@@ -677,11 +693,11 @@ msgstr ""
 msgid "Weight"
 msgstr ""
 
-#: functions.php:386
+#: functions.php:391
 msgid "Widgets area on the foot of the website."
 msgstr ""
 
-#: functions.php:377
+#: functions.php:382
 msgid "Widgets area on the head of the website."
 msgstr ""
 

@@ -17,6 +17,7 @@ get_template_part( 'inc/fonts' );
 get_template_part( 'inc/images' );
 get_template_part( 'inc/layout' );
 get_template_part( 'inc/speed' );
+get_template_part( 'inc/block-patterns' );
 
 add_action( 'after_setup_theme', __NAMESPACE__ . '\\w3csspress_after_setup_theme' );
 /**
@@ -171,6 +172,9 @@ function w3csspress_wp_footer() {               ?>
 						else menu.style.display = "none";
 					});
 					var siteTitle = document.getElementById("site-title");
+					if(siteTitle==null){
+						siteTitle = document.getElementsByClassName("wp-block-site-title")[0];
+					}
 					siteTitle.parentNode.insertBefore(buttonMenu, siteTitle.nextSibling);
 					var menuItems = document.getElementsByClassName("menu-item");
 					var lastMenuItem = menuItems[menuItems.length - 1];
