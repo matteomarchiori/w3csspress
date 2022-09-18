@@ -10,6 +10,10 @@
 
 namespace w3csspress;
 
+use w3csspress\W3csspress_Constants;
+
+get_template_part( 'classes/class-w3csspress-constants' );
+
 add_action( 'customize_register', __NAMESPACE__ . '\\w3csspress_customize_colors' );
 /**
  * Add colors settings to the WordPress customizer.
@@ -19,48 +23,6 @@ add_action( 'customize_register', __NAMESPACE__ . '\\w3csspress_customize_colors
  * @param WP_Customize_Manager $wp_customize Required. WordPress customizer.
  */
 function w3csspress_customize_colors( $wp_customize ) {
-	$w3csspress_themes = array(
-		''            => __( 'Default', 'w3csspress' ),
-		'w3schools'   => __( 'W3Schools', 'w3csspress' ),
-		'amber'       => __( 'Amber', 'w3csspress' ),
-		'black'       => __( 'Black', 'w3csspress' ),
-		'blue'        => __( 'Blue', 'w3csspress' ),
-		'blue-grey'   => __( 'Blue Grey', 'w3csspress' ),
-		'brown'       => __( 'Brown', 'w3csspress' ),
-		'cyan'        => __( 'Cyan', 'w3csspress' ),
-		'dark-grey'   => __( 'Dark Grey', 'w3csspress' ),
-		'deep-orange' => __( 'Deep Orange', 'w3csspress' ),
-		'deep-purple' => __( 'Deep Purple', 'w3csspress' ),
-		'green'       => __( 'Green', 'w3csspress' ),
-		'grey'        => __( 'Grey', 'w3csspress' ),
-		'indigo'      => __( 'Indigo', 'w3csspress' ),
-		'khaki'       => __( 'Khaki', 'w3csspress' ),
-		'light-blue'  => __( 'Light Blue', 'w3csspress' ),
-		'light-green' => __( 'Light Green', 'w3csspress' ),
-		'lime'        => __( 'Lime', 'w3csspress' ),
-		'orange'      => __( 'Orange', 'w3csspress' ),
-		'pink'        => __( 'Pink', 'w3csspress' ),
-		'purple'      => __( 'Purple', 'w3csspress' ),
-		'red'         => __( 'Red', 'w3csspress' ),
-		'teal'        => __( 'Teal', 'w3csspress' ),
-		'yellow'      => __( 'Yellow', 'w3csspress' ),
-	);
-
-	asort( $w3csspress_themes );
-
-	$w3csspress_theme_kinds = array(
-		'd5' => __( 'Dark', 'w3csspress' ) . ' 5',
-		'd4' => __( 'Dark', 'w3csspress' ) . ' 4',
-		'd3' => __( 'Dark', 'w3csspress' ) . ' 3',
-		'd2' => __( 'Dark', 'w3csspress' ) . ' 2',
-		'd1' => __( 'Dark', 'w3csspress' ) . ' 1',
-		''   => __( 'Default', 'w3csspress' ),
-		'l1' => __( 'Light', 'w3csspress' ) . ' 1',
-		'l2' => __( 'Light', 'w3csspress' ) . ' 2',
-		'l3' => __( 'Light', 'w3csspress' ) . ' 3',
-		'l4' => __( 'Light', 'w3csspress' ) . ' 4',
-		'l5' => __( 'Light', 'w3csspress' ) . ' 5',
-	);
 
 	$w3csspress_priority = 1;
 
@@ -120,7 +82,7 @@ function w3csspress_customize_colors( $wp_customize ) {
 			'priority'    => $w3csspress_priority++,
 			'section'     => 'colors',
 			'type'        => 'select',
-			'choices'     => $w3csspress_themes,
+			'choices'     => W3csspress_Constants::w3csspress_themes(),
 		)
 	);
 
@@ -133,7 +95,7 @@ function w3csspress_customize_colors( $wp_customize ) {
 			'priority'    => $w3csspress_priority++,
 			'section'     => 'colors',
 			'type'        => 'select',
-			'choices'     => $w3csspress_theme_kinds,
+			'choices'     => W3csspress_Constants::w3csspress_theme_kinds(),
 		)
 	);
 

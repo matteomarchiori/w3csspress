@@ -10,6 +10,10 @@
 
 namespace w3csspress;
 
+use w3csspress\W3csspress_Constants;
+
+get_template_part( 'classes/class-w3csspress-constants' );
+
 add_action( 'customize_register', __NAMESPACE__ . '\\w3csspress_customize_layout' );
 /**
  * Add layout settings to the WordPress customizer.
@@ -31,24 +35,6 @@ function w3csspress_customize_layout( $wp_customize ) {
 			'capability'     => 'edit_theme_options',
 			'theme_supports' => '',
 		)
-	);
-
-	$w3csspress_layouts = array(
-		''           => __( 'Default', 'w3csspress' ),
-		'w3-rest'    => __( 'One Column', 'w3csspress' ),
-		'w3-half'    => __( 'Two Columns', 'w3csspress' ),
-		'w3-third'   => __( 'Three Columns', 'w3csspress' ),
-		'w3-quarter' => __( 'Four Columns', 'w3csspress' ),
-	);
-
-	$w3csspress_rounded = array(
-		''                 => __( 'Default', 'w3csspress' ),
-		'w3-round-small'   => __( 'Small', 'w3csspress' ),
-		'w3-round-medium'  => __( 'Medium', 'w3csspress' ),
-		'w3-round-large'   => __( 'Large', 'w3csspress' ),
-		'w3-round-xlarge'  => __( 'XL', 'w3csspress' ),
-		'w3-round-xxlarge' => __( 'XXL', 'w3csspress' ),
-		'w3-circle'        => __( 'Circle', 'w3csspress' ),
 	);
 
 	$wp_customize->add_setting(
@@ -87,7 +73,7 @@ function w3csspress_customize_layout( $wp_customize ) {
 			'priority'    => $w3csspress_priority++,
 			'section'     => 'w3csspress_layout',
 			'type'        => 'select',
-			'choices'     => $w3csspress_layouts,
+			'choices'     => W3csspress_Constants::w3csspress_layouts(),
 		)
 	);
 
@@ -100,7 +86,7 @@ function w3csspress_customize_layout( $wp_customize ) {
 			'priority'    => $w3csspress_priority++,
 			'section'     => 'w3csspress_layout',
 			'type'        => 'select',
-			'choices'     => $w3csspress_rounded,
+			'choices'     => W3csspress_Constants::w3csspress_rounded(),
 		)
 	);
 

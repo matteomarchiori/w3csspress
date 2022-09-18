@@ -10,6 +10,10 @@
 
 namespace w3csspress;
 
+use w3csspress\W3csspress_Constants;
+
+get_template_part( 'classes/class-w3csspress-constants' );
+
 add_action( 'customize_register', __NAMESPACE__ . '\\w3csspress_customize_fonts' );
 /**
  * Add fonts settings to the WordPress customizer.
@@ -31,33 +35,6 @@ function w3csspress_customize_fonts( $wp_customize ) {
 			'capability'     => 'edit_theme_options',
 			'theme_supports' => '',
 		)
-	);
-
-	$w3csspress_font_sizes = array(
-		''            => __( 'Default', 'w3csspress' ),
-		'w3-tiny'     => __( 'Tiny', 'w3csspress' ),
-		'w3-small'    => __( 'Small', 'w3csspress' ),
-		'w3-medium'   => __( 'Medium', 'w3csspress' ),
-		'w3-large'    => __( 'Large', 'w3csspress' ),
-		'w3-xlarge'   => __( 'XL', 'w3csspress' ),
-		'w3-xxlarge'  => __( 'XXL', 'w3csspress' ),
-		'w3-xxxlarge' => __( 'XXXL', 'w3csspress' ),
-		'w3-jumbo'    => __( 'Jumbo', 'w3csspress' ),
-	);
-
-	$w3csspress_font_weights = array(
-		'' => __( 'Default', 'w3csspress' ),
-	);
-	for ( $i = 1; $i < 10; $i++ ) {
-		$w3csspress_font_weights[ "w3-weight-$i" . '00' ] = __( 'Weight', 'w3csspress' ) . " $i" . '00';
-	}
-
-	$w3csspress_font_families = array(
-		''              => __( 'Default', 'w3csspress' ),
-		'w3-serif'      => __( 'Serif', 'w3csspress' ),
-		'w3-sans-serif' => __( 'Sans serif', 'w3csspress' ),
-		'w3-monospace'  => __( 'Monospace', 'w3csspress' ),
-		'w3-cursive'    => __( 'Cursive', 'w3csspress' ),
 	);
 
 	$wp_customize->add_setting(
@@ -204,7 +181,7 @@ function w3csspress_customize_fonts( $wp_customize ) {
 			'priority'    => $w3csspress_priority++,
 			'section'     => 'w3csspress_fonts',
 			'type'        => 'select',
-			'choices'     => $w3csspress_font_families,
+			'choices'     => W3csspress_Constants::w3csspress_font_families(),
 		)
 	);
 
@@ -241,7 +218,7 @@ function w3csspress_customize_fonts( $wp_customize ) {
 			'priority'    => $w3csspress_priority++,
 			'section'     => 'w3csspress_fonts',
 			'type'        => 'select',
-			'choices'     => $w3csspress_font_sizes,
+			'choices'     => W3csspress_Constants::w3csspress_font_sizes(),
 		)
 	);
 
@@ -254,7 +231,7 @@ function w3csspress_customize_fonts( $wp_customize ) {
 			'priority'    => $w3csspress_priority++,
 			'section'     => 'w3csspress_fonts',
 			'type'        => 'select',
-			'choices'     => $w3csspress_font_sizes,
+			'choices'     => W3csspress_Constants::w3csspress_font_sizes(),
 		)
 	);
 
@@ -267,7 +244,7 @@ function w3csspress_customize_fonts( $wp_customize ) {
 			'priority'    => $w3csspress_priority++,
 			'section'     => 'w3csspress_fonts',
 			'type'        => 'select',
-			'choices'     => $w3csspress_font_sizes,
+			'choices'     => W3csspress_Constants::w3csspress_font_sizes(),
 		)
 	);
 
@@ -280,7 +257,7 @@ function w3csspress_customize_fonts( $wp_customize ) {
 			'priority'    => $w3csspress_priority++,
 			'section'     => 'w3csspress_fonts',
 			'type'        => 'select',
-			'choices'     => $w3csspress_font_sizes,
+			'choices'     => W3csspress_Constants::w3csspress_font_sizes(),
 		)
 	);
 
@@ -293,7 +270,7 @@ function w3csspress_customize_fonts( $wp_customize ) {
 			'priority'    => $w3csspress_priority++,
 			'section'     => 'w3csspress_fonts',
 			'type'        => 'select',
-			'choices'     => $w3csspress_font_sizes,
+			'choices'     => W3csspress_Constants::w3csspress_font_sizes(),
 		)
 	);
 
@@ -306,7 +283,7 @@ function w3csspress_customize_fonts( $wp_customize ) {
 			'priority'    => $w3csspress_priority++,
 			'section'     => 'w3csspress_fonts',
 			'type'        => 'select',
-			'choices'     => $w3csspress_font_sizes,
+			'choices'     => W3csspress_Constants::w3csspress_font_sizes(),
 		)
 	);
 
@@ -319,7 +296,7 @@ function w3csspress_customize_fonts( $wp_customize ) {
 			'priority'    => $w3csspress_priority++,
 			'section'     => 'w3csspress_fonts',
 			'type'        => 'select',
-			'choices'     => $w3csspress_font_weights,
+			'choices'     => W3csspress_Constants::w3csspress_font_weights(),
 		)
 	);
 
@@ -332,7 +309,7 @@ function w3csspress_customize_fonts( $wp_customize ) {
 			'priority'    => $w3csspress_priority++,
 			'section'     => 'w3csspress_fonts',
 			'type'        => 'select',
-			'choices'     => $w3csspress_font_weights,
+			'choices'     => W3csspress_Constants::w3csspress_font_weights(),
 		)
 	);
 
@@ -345,7 +322,7 @@ function w3csspress_customize_fonts( $wp_customize ) {
 			'priority'    => $w3csspress_priority++,
 			'section'     => 'w3csspress_fonts',
 			'type'        => 'select',
-			'choices'     => $w3csspress_font_weights,
+			'choices'     => W3csspress_Constants::w3csspress_font_weights(),
 		)
 	);
 
@@ -358,7 +335,7 @@ function w3csspress_customize_fonts( $wp_customize ) {
 			'priority'    => $w3csspress_priority++,
 			'section'     => 'w3csspress_fonts',
 			'type'        => 'select',
-			'choices'     => $w3csspress_font_weights,
+			'choices'     => W3csspress_Constants::w3csspress_font_weights(),
 		)
 	);
 
@@ -371,7 +348,7 @@ function w3csspress_customize_fonts( $wp_customize ) {
 			'priority'    => $w3csspress_priority++,
 			'section'     => 'w3csspress_fonts',
 			'type'        => 'select',
-			'choices'     => $w3csspress_font_weights,
+			'choices'     => W3csspress_Constants::w3csspress_font_weights(),
 		)
 	);
 
@@ -384,7 +361,7 @@ function w3csspress_customize_fonts( $wp_customize ) {
 			'priority'    => $w3csspress_priority++,
 			'section'     => 'w3csspress_fonts',
 			'type'        => 'select',
-			'choices'     => $w3csspress_font_weights,
+			'choices'     => W3csspress_Constants::w3csspress_font_weights(),
 		)
 	);
 
@@ -424,7 +401,7 @@ function w3csspress_customize_fonts( $wp_customize ) {
 				'priority'    => $w3csspress_priority++,
 				'section'     => 'w3csspress_fonts',
 				'type'        => 'select',
-				'choices'     => $w3csspress_font_sizes,
+				'choices'     => W3csspress_Constants::w3csspress_font_sizes(),
 			)
 		);
 
@@ -445,7 +422,7 @@ function w3csspress_customize_fonts( $wp_customize ) {
 				'priority'    => $w3csspress_priority++,
 				'section'     => 'w3csspress_fonts',
 				'type'        => 'select',
-				'choices'     => $w3csspress_font_weights,
+				'choices'     => W3csspress_Constants::w3csspress_font_weights(),
 			)
 		);
 	}
