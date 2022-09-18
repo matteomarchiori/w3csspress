@@ -78,6 +78,15 @@ function w3csspress_customize_speed( $wp_customize ) {
 		)
 	);
 
+	$wp_customize->add_setting(
+		'w3csspress_fse',
+		array(
+			'default'           => 1,
+			'type'              => 'option',
+			'sanitize_callback' => 'w3csspress\sanitize_checkbox',
+		)
+	);
+
 	$wp_customize->add_control(
 		'w3csspress_jquery',
 		array(
@@ -132,6 +141,18 @@ function w3csspress_customize_speed( $wp_customize ) {
 			'label'       => esc_html__( 'Enable block styles', 'w3csspress' ),
 			'description' => esc_html__( 'Enable block styles.', 'w3csspress' ),
 			'settings'    => 'w3csspress_gutenberg_styles',
+			'priority'    => $w3csspress_priority++,
+			'section'     => 'w3csspress_speed',
+			'type'        => 'checkbox',
+		)
+	);
+
+	$wp_customize->add_control(
+		'w3csspress_fse',
+		array(
+			'label'       => esc_html__( 'Enable full site editor', 'w3csspress' ),
+			'description' => esc_html__( 'Enable the full site editor.', 'w3csspress' ),
+			'settings'    => 'w3csspress_fse',
 			'priority'    => $w3csspress_priority++,
 			'section'     => 'w3csspress_speed',
 			'type'        => 'checkbox',
@@ -200,3 +221,19 @@ add_filter( 'use_widgets_block_editor', __NAMESPACE__ . '\\w3csspress_use_widget
 function w3csspress_use_widgets_block_editor() {
 	return esc_html( get_option( 'w3csspress_gutenberg_widgets' ) );
 }
+
+function w3csspress_fse() {
+	global $wp_filesystem;
+	require_once ABSPATH . 'wp-admin/includes/file.php';
+	WP_Filesystem();
+	$w3csspress_index_template        = get_template_directory() . '/templates/index.html';
+	$w3csspress_index_template_exists = $wp_filesystem->exists( $w3csspress_index_template );
+	if ( ! ( esc_html( get_option( 'w3csspress_fse' ) ) ) && $w3csspress_index_template_exists ) {
+		$wp_filesystem->move( $w3csspress_index_template, get_template_directory() . '/templates/inactive-index.html' );
+	}
+	if ( esc_html( get_option( 'w3csspress_fse' ) ) && ! $w3csspress_index_template_exists ) {
+		$wp_filesystem->move( get_template_directory() . '/templates/inactive-index.html', $w3csspress_index_template );
+	}
+}
+
+w3csspress_fse();
