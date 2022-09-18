@@ -16,6 +16,7 @@ namespace w3csspress;
  */
 function w3csspress_register_block_patterns() {
 	$w3csspress_block_pattern_categories = array(
+		'badges'     => array( 'label' => __( 'Badges', 'w3csspress' ) ),
 		'borders'    => array( 'label' => __( 'Borders', 'w3csspress' ) ),
 		'colors'     => array( 'label' => __( 'Colors', 'w3csspress' ) ),
 		'containers' => array( 'label' => __( 'Containers', 'w3csspress' ) ),

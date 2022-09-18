@@ -18,7 +18,7 @@ function w3csspress_register_block_pattern_panel() {
 		'w3csspress/panel',
 		array(
 			'title'      => __( 'panel', 'w3csspress' ),
-			'categories' => array( 'w3css', 'design', 'panels' ),
+			'categories' => array( 'w3css', 'panels' ),
 			'blockTypes' => array( 'core/panel' ),
 			'content'    => '<!-- wp:group {"className":"w3-panel","layout":{"type":"default"}} --><div class="wp-block-group w3-panel"><!-- wp:heading --><h2>Lorem Ipsum</h2><!-- /wp:heading --><!-- wp:paragraph --><p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."</p><!-- /wp:paragraph --></div><!-- /wp:group -->',
 		)
@@ -34,7 +34,7 @@ function w3csspress_register_block_pattern_panel() {
 						esc_html__( 'panel %s', 'w3csspress' ),
 						$w3csspress_theme_translation
 					),
-					'categories' => array( 'w3css', 'design', 'panels', 'colors' ),
+					'categories' => array( 'w3css', 'panels', 'colors' ),
 					'blockTypes' => array( 'core/panel' ),
 					'content'    => '<!-- wp:group {"className":"w3-panel w3-' . $w3csspress_theme . '","layout":{"type":"default"}} --><div class="wp-block-group w3-panel w3-' . $w3csspress_theme . '"><!-- wp:heading --><h2>Lorem Ipsum</h2><!-- /wp:heading --><!-- wp:paragraph --><p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."</p><!-- /wp:paragraph --></div><!-- /wp:group -->',
 				)
@@ -49,7 +49,7 @@ function w3csspress_register_block_pattern_panel() {
 							$w3csspress_theme_translation,
 							$w3csspress_border_translation
 						),
-						'categories' => array( 'w3css', 'design', 'panels', 'colors', 'borders' ),
+						'categories' => array( 'w3css', 'panels', 'colors', 'borders' ),
 						'blockTypes' => array( 'core/panel' ),
 						'content'    => '<!-- wp:group {"className":"w3-panel w3-' . $w3csspress_theme . ' ' . $w3csspress_border . '","layout":{"type":"default"}} --><div class="wp-block-group w3-panel w3-' . $w3csspress_theme . ' ' . $w3csspress_border . '"><!-- wp:heading --><h2>Lorem Ipsum</h2><!-- /wp:heading --><!-- wp:paragraph --><p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."</p><!-- /wp:paragraph --></div><!-- /wp:group -->',
 					)
@@ -65,7 +65,7 @@ function w3csspress_register_block_pattern_panel() {
 							$w3csspress_theme_translation,
 							$w3csspress_border_translation
 						),
-						'categories' => array( 'w3css', 'design', 'panels', 'colors', 'borders', 'hover' ),
+						'categories' => array( 'w3css', 'panels', 'colors', 'borders', 'hover' ),
 						'blockTypes' => array( 'core/panel' ),
 						'content'    => '<!-- wp:group {"className":"w3-panel w3-' . $w3csspress_theme . ' ' . $w3csspress_border . '","layout":{"type":"default"}} --><div class="wp-block-group w3-panel w3-' . $w3csspress_theme . ' ' . $w3csspress_border . '"><!-- wp:heading --><h2>Lorem Ipsum</h2><!-- /wp:heading --><!-- wp:paragraph --><p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."</p><!-- /wp:paragraph --></div><!-- /wp:group -->',
 					)
