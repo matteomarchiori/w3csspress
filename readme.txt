@@ -2,7 +2,7 @@
 
 Contributors: matteomarchiori97
 Theme link: https://github.com/matteomarchiori/w3csspress
-Tags: blog, news, portfolio, accessibility-ready, grid-layout, one-column, two-columns, three-columns, four-columns, left-sidebar, right-sidebar, custom-background, custom-header, custom-logo, custom-menu, featured-images, featured-image-header, sticky-post, theme-options, threaded-comments, translation-ready, rtl-language-support, flexible-header, footer-widgets, full-width-template, editor-style, post-formats, microformats, custom-colors, block-patterns, block-styles, full-site-editing, template-editing, wide-blocks
+Tags: blog, news, portfolio, accessibility-ready, grid-layout, one-column, two-columns, three-columns, four-columns, left-sidebar, right-sidebar, custom-background, custom-header, custom-logo, custom-menu, featured-images, featured-image-header, sticky-post, theme-options, threaded-comments, translation-ready, rtl-language-support, flexible-header, footer-widgets, full-width-template, editor-style, post-formats, microformats, custom-colors, block-patterns, full-site-editing, template-editing, wide-blocks
 Requires at least: 4.1
 Tested up to: 6.0
 Stable tag: trunk
