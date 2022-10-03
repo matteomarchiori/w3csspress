@@ -39,38 +39,6 @@ function w3csspress_register_block_pattern_container() {
 					'content'    => '<!-- wp:group {"className":"w3-container w3-' . $w3csspress_theme . '","layout":{"type":"default"}} --><div class="wp-block-group w3-container w3-' . $w3csspress_theme . '"><!-- wp:heading --><h2>Lorem Ipsum</h2><!-- /wp:heading --><!-- wp:paragraph --><p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."</p><!-- /wp:paragraph --></div><!-- /wp:group -->',
 				)
 			);
-			foreach ( W3csspress_Constants::w3csspress_borders() as $w3csspress_border => $w3csspress_border_translation ) {
-				register_block_pattern(
-					"w3csspress/container/$w3csspress_theme/$w3csspress_border",
-					array(
-						'title'      => sprintf(
-							/* translators: color of the container and kind of border */
-							esc_html__( 'container %1$s %2$s', 'w3csspress' ),
-							$w3csspress_theme_translation,
-							$w3csspress_border_translation
-						),
-						'categories' => array( 'containers', 'colors', $w3csspress_theme, 'borders' ),
-						'blockTypes' => array( 'core/container' ),
-						'content'    => '<!-- wp:group {"className":"w3-container w3-' . $w3csspress_theme . ' ' . $w3csspress_border . '","layout":{"type":"default"}} --><div class="wp-block-group w3-container w3-' . $w3csspress_theme . ' ' . $w3csspress_border . '"><!-- wp:heading --><h2>Lorem Ipsum</h2><!-- /wp:heading --><!-- wp:paragraph --><p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."</p><!-- /wp:paragraph --></div><!-- /wp:group -->',
-					)
-				);
-			}
-			foreach ( W3csspress_Constants::w3csspress_hover_borders() as $w3csspress_border => $w3csspress_border_translation ) {
-				register_block_pattern(
-					"w3csspress/container/$w3csspress_theme/hover/$w3csspress_border",
-					array(
-						'title'      => sprintf(
-							/* translators: color of the container and kind of border */
-							esc_html__( 'container %1$s %2$s', 'w3csspress' ),
-							$w3csspress_theme_translation,
-							$w3csspress_border_translation
-						),
-						'categories' => array( 'containers', 'colors', $w3csspress_theme, 'borders', 'hover' ),
-						'blockTypes' => array( 'core/container' ),
-						'content'    => '<!-- wp:group {"className":"w3-container w3-' . $w3csspress_theme . ' ' . $w3csspress_border . '","layout":{"type":"default"}} --><div class="wp-block-group w3-container w3-' . $w3csspress_theme . ' ' . $w3csspress_border . '"><!-- wp:heading --><h2>Lorem Ipsum</h2><!-- /wp:heading --><!-- wp:paragraph --><p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."</p><!-- /wp:paragraph --></div><!-- /wp:group -->',
-					)
-				);
-			}
 		}
 	}
 }
