@@ -18,7 +18,7 @@ function w3csspress_register_block_pattern_navigation() {
 		'w3csspress/navigation',
 		array(
 			'title'      => __( 'basic navigation', 'w3csspress' ),
-			'categories' => array( 'w3css', 'navigation' ),
+			'categories' => array( 'navigation' ),
 			'blockTypes' => array( 'core/navigation' ),
 			'content'    => '<!-- wp:html --><nav id="menu" role="navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">' .
 				wp_nav_menu(

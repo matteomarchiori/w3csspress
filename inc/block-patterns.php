@@ -8,6 +8,10 @@
 
 namespace w3csspress;
 
+use w3csspress\W3csspress_Constants;
+
+get_template_part( 'classes/class-w3csspress-constants' );
+
 /**
  * Registers block patterns and categories.
  *
@@ -18,15 +22,20 @@ function w3csspress_register_block_patterns() {
 	$w3csspress_block_pattern_categories = array(
 		'badges'     => array( 'label' => __( 'Badges', 'w3csspress' ) ),
 		'borders'    => array( 'label' => __( 'Borders', 'w3csspress' ) ),
+		'cards'      => array( 'label' => __( 'Cards', 'w3csspress' ) ),
 		'colors'     => array( 'label' => __( 'Colors', 'w3csspress' ) ),
 		'containers' => array( 'label' => __( 'Containers', 'w3csspress' ) ),
 		'footer'     => array( 'label' => __( 'Footers', 'w3csspress' ) ),
 		'header'     => array( 'label' => __( 'Headers', 'w3csspress' ) ),
 		'hover'      => array( 'label' => __( 'Hover', 'w3csspress' ) ),
+		'images'      => array( 'label' => __( 'Images', 'w3csspress' ) ),
 		'navigation' => array( 'label' => __( 'Navigation', 'w3csspress' ) ),
 		'panels'     => array( 'label' => __( 'Panels', 'w3csspress' ) ),
-		'w3css'      => array( 'label' => __( 'W3.CSS', 'w3csspress' ) ),
 	);
+
+	foreach ( W3csspress_Constants::w3csspress_themes() as $w3csspress_theme => $w3csspress_theme_translation ) {
+		$w3csspress_block_pattern_categories[ $w3csspress_theme ] = array( 'label' => $w3csspress_theme_translation );
+	}
 
 	/**
 	 * Filters the theme block pattern categories.

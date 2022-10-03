@@ -159,12 +159,13 @@ if ( ! class_exists( 'w3csspress\W3csspress_Constants' ) ) {
 			$w3csspress_borders = array();
 			foreach ( _w3csspress_borders() as $_w3csspress_border => $_w3csspress_border_translation ) {
 				foreach ( W3csspress_Constants::w3csspress_themes() as $w3csspress_theme => $w3csspress_theme_translation ) {
-					$w3csspress_borders[ "$_w3csspress_border w3-border-$w3csspress_theme" ] = sprintf(
+					if ( 'w3schools' != $w3csspress_theme && '' != $w3csspress_theme ) {
+						$w3csspress_borders[ "$_w3csspress_border w3-border-$w3csspress_theme" ] = sprintf(
 						/* translators: border and color */
-						esc_html__( '%1$s %2$s', 'w3csspress' ),
-						$_w3csspress_border_translation,
-						$w3csspress_theme_translation
-					);
+							esc_html__( '%1$s %2$s', 'w3csspress' ),
+							$_w3csspress_border_translation,
+							$w3csspress_theme_translation
+						);}
 				}
 			}
 			return $w3csspress_borders;
@@ -174,12 +175,14 @@ if ( ! class_exists( 'w3csspress\W3csspress_Constants' ) ) {
 			$w3csspress_borders = array();
 			foreach ( _w3csspress_borders() as $_w3csspress_border => $_w3csspress_border_translation ) {
 				foreach ( W3csspress_Constants::w3csspress_themes() as $w3csspress_theme => $w3csspress_theme_translation ) {
-					$w3csspress_borders[ "$_w3csspress_border w3-hover-border-$w3csspress_theme" ] = sprintf(
+					if ( 'w3schools' != $w3csspress_theme && '' != $w3csspress_theme ) {
+						$w3csspress_borders[ "$_w3csspress_border w3-hover-border-$w3csspress_theme" ] = sprintf(
 						/* translators: hover border and color */
-						esc_html__( 'hover %1$s %2$s', 'w3csspress' ),
-						$_w3csspress_border_translation,
-						$w3csspress_theme_translation
-					);
+							esc_html__( 'hover %1$s %2$s', 'w3csspress' ),
+							$_w3csspress_border_translation,
+							$w3csspress_theme_translation
+						);
+					}
 				}
 			}
 			return $w3csspress_borders;
