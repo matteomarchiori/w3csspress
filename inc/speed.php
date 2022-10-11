@@ -178,7 +178,7 @@ function w3csspress_enqueue_script_speed() {
 	if ( ! ( esc_html( get_option( 'w3csspress_gutenberg_styles' ) ) ) ) {
 		global $wp_styles;
 
-		foreach ( $wp_styles->queue as $key => $handle ) {
+		foreach ( $wp_styles->queue as $handle ) {
 			if ( strpos( $handle, 'wp-block-' ) === 0 ) {
 				wp_dequeue_style( $handle );
 			}

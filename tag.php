@@ -40,12 +40,12 @@ get_header(); ?>
 			$w3csspress_container = 'w3-row-padding';
 		}
 		?>
-		<div class="<?php echo esc_html( $w3csspress_container ); ?>">
+		<div class="<?php echo esc_attr( $w3csspress_container ); ?>">
 			<?php
 			while ( have_posts() ) :
 				if ( isset( $w3csspress_i ) ) {
 					if ( 0 !== $w3csspress_i && 0 === $w3csspress_i % $w3csspress_cols ) {
-						echo '</div><div class="' . esc_html( $w3csspress_container ) . '">';
+						echo '</div><div class="' . esc_attr( $w3csspress_container ) . '">';
 					}
 					$w3csspress_i++;
 				}

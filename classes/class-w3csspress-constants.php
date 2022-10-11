@@ -102,7 +102,6 @@ if ( ! class_exists( 'w3csspress\W3csspress_Constants' ) ) {
 				'l4' => __( 'light', 'w3csspress' ) . ' 4',
 				'l5' => __( 'light', 'w3csspress' ) . ' 5',
 			);
-
 		}
 
 		/**

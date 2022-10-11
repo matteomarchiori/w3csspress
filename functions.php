@@ -221,11 +221,9 @@ add_filter( 'excerpt_more', __NAMESPACE__ . '\\w3csspress_excerpt_more', 5 );
  *
  * @since 2022.0
  *
- * @param string $more Required. Default more string.
- *
  * @return string Read more link.
  */
-function w3csspress_excerpt_more( $more ) {
+function w3csspress_excerpt_more() {
 	if ( ! is_admin() ) {
 		global $post;
 		return ' <a href="' . esc_url( get_permalink( $post->ID ) ) . '" class="more-link">' . sprintf(
@@ -282,11 +280,9 @@ function w3csspress_comment_form_before() {
 /**
  * Show trackbacks and pingbacks.
  *
- * @param string $comment Required. Comment.
- *
  * @since 2022.0
  */
-function w3csspress_custom_pings( $comment ) {
+function w3csspress_custom_pings() {
 	?>
 	<li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>"><?php echo esc_url( comment_author_link() ); ?></li>
 	<?php
@@ -319,12 +315,10 @@ add_filter( 'nav_menu_css_class', __NAMESPACE__ . '\\w3csspress_nav_menu_css_cla
  * @since 2022.0
  *
  * @param array    $classes Array of the CSS classes that are applied to the menu item's <li> element.
- * @param WP_Post  $item The current menu item object.
- * @param stdClass $args An object of wp_nav_menu() arguments.
  *
  * @return array Array of the CSS classes that are applied to the menu item's <li> element.
  */
-function w3csspress_nav_menu_css_class( $classes, $item, $args ) {
+function w3csspress_nav_menu_css_class( $classes ) {
 	$classes[] = 'w3-bar-item';
 	$classes[] = 'w3-mobile';
 	if ( in_array( 'menu-item-has-children', $classes, true ) ) {

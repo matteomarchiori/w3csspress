@@ -17,11 +17,11 @@ if ( ! is_page_template( 'full-width.php' ) && '1' === esc_html( get_option( 'w3
 	$w3csspress_layout = 'w3-cell w3-padding w3-mobile';
 }
 ?>
-<div id="comments" class="<?php echo esc_html( $w3csspress_layout ); ?>">
+<div id="comments" class="<?php echo esc_attr( $w3csspress_layout ); ?>">
 	<?php
 	if ( have_comments() ) :
 		global $w3csspress_comments_by_type;
-		$w3csspress_comments_by_type = separate_comments( $comments );
+		$w3csspress_comments_by_type = separate_comments();
 		if ( ! empty( $w3csspress_comments_by_type['comment'] ) ) :
 			?>
 			<section id="comments-list" class="comments">
