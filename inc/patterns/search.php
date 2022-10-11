@@ -8,6 +8,12 @@
 
 namespace w3csspress;
 
+/**
+ * Register search w3csspress block patterns
+ *
+ * @since 2022.30
+ * @package w3csspress
+ */
 function w3csspress_register_block_pattern_search() {
 
 	register_block_pattern(
@@ -16,7 +22,7 @@ function w3csspress_register_block_pattern_search() {
 			'title'      => __( 'search bar', 'w3csspress' ),
 			'categories' => array( 'search' ),
 			'blockTypes' => array( 'core/search' ),
-			'content'    => '<!-- wp:search {"label":"'.__('Search','w3csspress').'","buttonText":"'.__('Search','w3csspress').'"} /-->',
+			'content'    => '<!-- wp:search {"label":"' . __( 'Search', 'w3csspress' ) . '","buttonText":"' . __( 'Search', 'w3csspress' ) . '"} /-->',
 		)
 	);
 }

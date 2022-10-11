@@ -8,6 +8,12 @@
 
 namespace w3csspress;
 
+/**
+ * Register query w3csspress block patterns
+ *
+ * @since 2022.30
+ * @package w3csspress
+ */
 function w3csspress_register_block_pattern_query() {
 
 	register_block_pattern(
@@ -24,7 +30,7 @@ function w3csspress_register_block_pattern_query() {
 				
 				<!-- wp:post-featured-image {"isLink":true} /-->
 				
-				<!-- wp:post-excerpt {"moreText":"'.__('Read all','w3csspress').'"} /-->
+				<!-- wp:post-excerpt {"moreText":"' . __( 'Read all', 'w3csspress' ) . '"} /-->
 				<!-- /wp:post-template -->
 				
 				<!-- wp:query-pagination {"paginationArrow":"arrow","layout":{"type":"flex","justifyContent":"space-between","flexWrap":"wrap"}} -->
@@ -34,8 +40,8 @@ function w3csspress_register_block_pattern_query() {
 				<!-- /wp:query-pagination -->
 				
 				<!-- wp:query-no-results -->
-				<!-- wp:paragraph {"placeholder":"'.__('Add text or blocks to display when the query returns no results.','w3csspress').'"} -->
-				<p>'.__('The query did not return any results.','w3csspress').'</p>
+				<!-- wp:paragraph {"placeholder":"' . __( 'Add text or blocks to display when the query returns no results.', 'w3csspress' ) . '"} -->
+				<p>' . __( 'The query did not return any results.', 'w3csspress' ) . '</p>
 				<!-- /wp:paragraph -->
 				<!-- /wp:query-no-results -->
 			</div>

@@ -222,6 +222,12 @@ function w3csspress_use_widgets_block_editor() {
 	return esc_html( get_option( 'w3csspress_gutenberg_widgets' ) );
 }
 
+/**
+ * Enable or disable the full site editing mode
+ *
+ * @since 2022.30
+ * @package w3csspress
+ */
 function w3csspress_fse() {
 	global $wp_filesystem;
 	require_once ABSPATH . 'wp-admin/includes/file.php';

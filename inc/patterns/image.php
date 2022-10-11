@@ -8,10 +8,12 @@
 
 namespace w3csspress;
 
-use w3csspress\W3csspress_Constants;
-
-get_template_part( 'classes/class-w3csspress-constants' );
-
+/**
+ * Register images w3csspress block patterns
+ *
+ * @since 2022.30
+ * @package w3csspress
+ */
 function w3csspress_register_block_pattern_image() {
 
 	register_block_pattern(
@@ -26,7 +28,6 @@ function w3csspress_register_block_pattern_image() {
 		)
 	);
 
-	
 }
 
 w3csspress_register_block_pattern_image();

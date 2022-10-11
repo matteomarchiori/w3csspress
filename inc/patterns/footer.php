@@ -8,6 +8,12 @@
 
 namespace w3csspress;
 
+/**
+ * Register footer w3csspress block patterns
+ *
+ * @since 2022.30
+ * @package w3csspress
+ */
 function w3csspress_register_block_pattern_footer() {
 	$w3csspress_footer = get_option( 'w3csspress_footer' );
 	if ( '' !== $w3csspress_footer ) {

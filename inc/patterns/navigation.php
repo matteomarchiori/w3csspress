@@ -12,6 +12,12 @@ use w3csspress\W3csspress_Walker_Nav_Menu;
 
 get_template_part( 'classes/class-w3csspress-walker-nav-menu' );
 
+/**
+ * Register navigation w3csspress block patterns
+ *
+ * @since 2022.30
+ * @package w3csspress
+ */
 function w3csspress_register_block_pattern_navigation() {
 
 	register_block_pattern(

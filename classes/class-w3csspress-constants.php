@@ -12,6 +12,12 @@ namespace w3csspress;
 
 if ( ! class_exists( 'w3csspress\W3csspress_Constants' ) ) {
 
+	/**
+	 * Function used from the W3csspress_Constants to generate w3css borders
+	 *
+	 * @package w3csspress
+	 * @since 2022.30
+	 */
 	function _w3csspress_borders() {
 		$w3csspress_directions = W3csspress_Constants::w3csspress_directions();
 		$w3csspress_borders    = array();
@@ -36,10 +42,14 @@ if ( ! class_exists( 'w3csspress\W3csspress_Constants' ) ) {
 	 *
 	 * This class is used to define constant values used across the theme.
 	 *
+	 * @package w3csspress
 	 * @since 2022.30
 	 */
 	class W3csspress_Constants {
 
+		/**
+		 * Returns the w3css color themes
+		 */
 		public static function w3csspress_themes() {
 			$w3csspress_themes = array(
 				''            => __( 'default', 'w3csspress' ),
@@ -72,6 +82,12 @@ if ( ! class_exists( 'w3csspress\W3csspress_Constants' ) ) {
 			return $w3csspress_themes;
 		}
 
+		/**
+		 * Returns the w3css light and dark variants
+		 *
+		 * @package w3csspress
+		 * @since 2022.30
+		 */
 		public static function w3csspress_theme_kinds() {
 			return array(
 				'd5' => __( 'dark', 'w3csspress' ) . ' 5',
@@ -89,6 +105,12 @@ if ( ! class_exists( 'w3csspress\W3csspress_Constants' ) ) {
 
 		}
 
+		/**
+		 * Returns the w3css font sizes
+		 *
+		 * @package w3csspress
+		 * @since 2022.30
+		 */
 		public static function w3csspress_font_sizes() {
 			return array(
 				''            => __( 'default', 'w3csspress' ),
@@ -103,6 +125,12 @@ if ( ! class_exists( 'w3csspress\W3csspress_Constants' ) ) {
 			);
 		}
 
+		/**
+		 * Returns the w3css font weights
+		 *
+		 * @package w3csspress
+		 * @since 2022.30
+		 */
 		public static function w3csspress_font_weights() {
 			$w3csspress_font_weights = array(
 				'' => __( 'default', 'w3csspress' ),
@@ -114,6 +142,12 @@ if ( ! class_exists( 'w3csspress\W3csspress_Constants' ) ) {
 			return $w3csspress_font_weights;
 		}
 
+		/**
+		 * Returns the w3css font families
+		 *
+		 * @package w3csspress
+		 * @since 2022.30
+		 */
 		public static function w3csspress_font_families() {
 			return array(
 				''              => __( 'default', 'w3csspress' ),
@@ -124,6 +158,12 @@ if ( ! class_exists( 'w3csspress\W3csspress_Constants' ) ) {
 			);
 		}
 
+		/**
+		 * Returns the w3css layouts
+		 *
+		 * @package w3csspress
+		 * @since 2022.30
+		 */
 		public static function w3csspress_layouts() {
 			return array(
 				''           => __( 'default', 'w3csspress' ),
@@ -134,6 +174,12 @@ if ( ! class_exists( 'w3csspress\W3csspress_Constants' ) ) {
 			);
 		}
 
+		/**
+		 * Returns the w3css rounded styles
+		 *
+		 * @package w3csspress
+		 * @since 2022.30
+		 */
 		public static function w3csspress_rounded() {
 			return array(
 				''                 => __( 'default', 'w3csspress' ),
@@ -146,6 +192,12 @@ if ( ! class_exists( 'w3csspress\W3csspress_Constants' ) ) {
 			);
 		}
 
+		/**
+		 * Returns some directions
+		 *
+		 * @package w3csspress
+		 * @since 2022.30
+		 */
 		public static function w3csspress_directions() {
 			return array(
 				'top'    => __( 'top', 'w3csspress' ),
@@ -155,13 +207,19 @@ if ( ! class_exists( 'w3csspress\W3csspress_Constants' ) ) {
 			);
 		}
 
+		/**
+		 * Returns the w3css colored borders
+		 *
+		 * @package w3csspress
+		 * @since 2022.30
+		 */
 		public static function w3csspress_borders() {
 			$w3csspress_borders = array();
 			foreach ( _w3csspress_borders() as $_w3csspress_border => $_w3csspress_border_translation ) {
-				foreach ( W3csspress_Constants::w3csspress_themes() as $w3csspress_theme => $w3csspress_theme_translation ) {
-					if ( 'w3schools' != $w3csspress_theme && '' != $w3csspress_theme ) {
+				foreach ( self::w3csspress_themes() as $w3csspress_theme => $w3csspress_theme_translation ) {
+					if ( 'w3schools' !== $w3csspress_theme && '' !== $w3csspress_theme ) {
 						$w3csspress_borders[ "$_w3csspress_border w3-border-$w3csspress_theme" ] = sprintf(
-						/* translators: border and color */
+							/* translators: border and color */
 							esc_html__( '%1$s %2$s', 'w3csspress' ),
 							$_w3csspress_border_translation,
 							$w3csspress_theme_translation
@@ -171,13 +229,19 @@ if ( ! class_exists( 'w3csspress\W3csspress_Constants' ) ) {
 			return $w3csspress_borders;
 		}
 
+		/**
+		 * Returns the w3css colored hoverable borders
+		 *
+		 * @package w3csspress
+		 * @since 2022.30
+		 */
 		public static function w3csspress_hover_borders() {
 			$w3csspress_borders = array();
 			foreach ( _w3csspress_borders() as $_w3csspress_border => $_w3csspress_border_translation ) {
-				foreach ( W3csspress_Constants::w3csspress_themes() as $w3csspress_theme => $w3csspress_theme_translation ) {
-					if ( 'w3schools' != $w3csspress_theme && '' != $w3csspress_theme ) {
+				foreach ( self::w3csspress_themes() as $w3csspress_theme => $w3csspress_theme_translation ) {
+					if ( 'w3schools' !== $w3csspress_theme && '' !== $w3csspress_theme ) {
 						$w3csspress_borders[ "$_w3csspress_border w3-hover-border-$w3csspress_theme" ] = sprintf(
-						/* translators: hover border and color */
+							/* translators: hover border and color */
 							esc_html__( 'hover %1$s %2$s', 'w3csspress' ),
 							$_w3csspress_border_translation,
 							$w3csspress_theme_translation

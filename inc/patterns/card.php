@@ -12,6 +12,12 @@ use w3csspress\W3csspress_Constants;
 
 get_template_part( 'classes/class-w3csspress-constants' );
 
+/**
+ * Register cards w3csspress block patterns
+ *
+ * @since 2022.30
+ * @package w3csspress
+ */
 function w3csspress_register_block_pattern_card() {
 
 	register_block_pattern(
@@ -25,7 +31,7 @@ function w3csspress_register_block_pattern_card() {
 	);
 
 	foreach ( W3csspress_Constants::w3csspress_themes() as $w3csspress_theme => $w3csspress_theme_translation ) {
-		if ( 'w3schools' != $w3csspress_theme && '' != $w3csspress_theme ) {
+		if ( 'w3schools' !== $w3csspress_theme && '' !== $w3csspress_theme ) {
 			register_block_pattern(
 				"w3csspress/card/$w3csspress_theme",
 				array(
