@@ -20,7 +20,7 @@ get_template_part( 'classes/class-w3csspress-constants' );
  */
 function w3csspress_register_block_patterns() {
 	$w3csspress_block_pattern_categories = array(
-		'404'        => array( 'label' => __( '404 not found', 'w3csspress' ) ),
+		'notfound'   => array( 'label' => __( '404 not found', 'w3csspress' ) ),
 		'badges'     => array( 'label' => __( 'Badges', 'w3csspress' ) ),
 		'borders'    => array( 'label' => __( 'Borders', 'w3csspress' ) ),
 		'cards'      => array( 'label' => __( 'Cards', 'w3csspress' ) ),
@@ -37,7 +37,9 @@ function w3csspress_register_block_patterns() {
 	);
 
 	foreach ( W3csspress_Constants::w3csspress_themes() as $w3csspress_theme => $w3csspress_theme_translation ) {
-		$w3csspress_block_pattern_categories[ $w3csspress_theme ] = array( 'label' => $w3csspress_theme_translation );
+		if ( '' !== $w3csspress_theme ) {
+			$w3csspress_block_pattern_categories[ $w3csspress_theme ] = array( 'label' => $w3csspress_theme_translation );
+		}
 	}
 
 	/**

@@ -57,7 +57,7 @@ if ( ! class_exists( 'w3csspress\W3csspress_Constants' ) ) {
 				'amber'       => __( 'amber', 'w3csspress' ),
 				'black'       => __( 'black', 'w3csspress' ),
 				'blue'        => __( 'blue', 'w3csspress' ),
-				'blue-grey'   => __( 'blue Grey', 'w3csspress' ),
+				'blue-grey'   => __( 'blue grey', 'w3csspress' ),
 				'brown'       => __( 'brown', 'w3csspress' ),
 				'cyan'        => __( 'cyan', 'w3csspress' ),
 				'dark-grey'   => __( 'dark grey', 'w3csspress' ),

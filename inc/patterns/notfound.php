@@ -20,7 +20,7 @@ function w3csspress_register_block_pattern_404() {
 		'w3csspress/404',
 		array(
 			'title'      => __( '404', 'w3csspress' ),
-			'categories' => array( '404' ),
+			'categories' => array( 'notfound' ),
 			'blockTypes' => array( 'core/404' ),
 			'content'    => '<!-- wp:heading {"level":1} --><h1>' . __( 'Not Found', 'w3csspress' ) . '</h1>
             <!-- /wp:heading -->
