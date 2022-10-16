@@ -158,8 +158,9 @@ function w3csspress_wp_footer() {               ?>
 		window.addEventListener('load', function() {
 			var excluded = "#wpadminbar, #wpadminbar *, .sidebar";
 			if (window.outerWidth <= 600) {
-				var menu = document.getElementById("menu");
-				if (menu != null) {
+				var menus = document.getElementsByClassName("menu");
+				if (menus.length > 0) {
+					var menu = menus[0];
 					menu.className += " w3-animate-bottom";
 					var buttonMenu = document.createElement('button');
 					buttonMenu.type = "button";
@@ -314,15 +315,22 @@ add_filter( 'nav_menu_css_class', __NAMESPACE__ . '\\w3csspress_nav_menu_css_cla
  *
  * @since 2022.0
  *
- * @param array    $classes Array of the CSS classes that are applied to the menu item's <li> element.
+ * @param array   $classes Array of the CSS classes that are applied to the menu item's <li> element.
+ * @param WP_Post $menu_item The current menu item object.
  *
  * @return array Array of the CSS classes that are applied to the menu item's <li> element.
  */
-function w3csspress_nav_menu_css_class( $classes ) {
-	$classes[] = 'w3-bar-item';
-	$classes[] = 'w3-mobile';
+function w3csspress_nav_menu_css_class( $classes, $menu_item ) {
+	$classes[] = 'w3-bar-item w3-mobile';
 	if ( in_array( 'menu-item-has-children', $classes, true ) ) {
 		$classes[] = 'w3-dropdown-hover w3-dropdown-focus';
+	}
+	$actual_link = ( isset( $_SERVER['HTTPS'] ) && 'on' === $_SERVER['HTTPS'] ? 'https' : 'http' ) . '://';
+	if ( isset( $_SERVER['HTTP_HOST'] ) && isset( $_SERVER['REQUEST_URI'] ) ) {
+		$actual_link .= sanitize_text_field( wp_unslash( $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] ) );
+	}
+	if ( $menu_item->url === $actual_link ) {
+		$classes[] = 'current-menu-item';
 	}
 	$classes = array_merge( $classes, add_additional_class_on_li_layout() );
 	return $classes;

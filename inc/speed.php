@@ -169,11 +169,11 @@ add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\w3csspress_enqueue_script_s
 function w3csspress_enqueue_script_speed() {
 	if ( esc_html( get_option( 'w3csspress_jquery' ) ) ) {
 		wp_deregister_script( 'jquery' );
-	} else {
-		wp_enqueue_script( 'jquery' );
 	}
 	if ( esc_html( get_option( 'w3csspress_dashicons' ) ) ) {
-		wp_enqueue_script( 'dashicons' );
+		wp_enqueue_style( 'dashicons' );
+	} else {
+		wp_deregister_style( 'dashicons' );
 	}
 	if ( ! ( esc_html( get_option( 'w3csspress_gutenberg_styles' ) ) ) ) {
 		global $wp_styles;
@@ -232,13 +232,13 @@ function w3csspress_fse() {
 	global $wp_filesystem;
 	require_once ABSPATH . 'wp-admin/includes/file.php';
 	WP_Filesystem();
-	$w3csspress_index_template        = get_template_directory() . '/templates/index.html';
-	$w3csspress_index_template_exists = $wp_filesystem->exists( $w3csspress_index_template );
-	if ( ! ( esc_html( get_option( 'w3csspress_fse' ) ) ) && $w3csspress_index_template_exists ) {
-		$wp_filesystem->move( $w3csspress_index_template, get_template_directory() . '/templates/inactive-index.html' );
+	$w3csspress_templates        = get_template_directory() . '/templates';
+	$w3csspress_templates_exists = $wp_filesystem->exists( $w3csspress_templates );
+	if ( ! ( esc_html( get_option( 'w3csspress_fse' ) ) ) && $w3csspress_templates_exists ) {
+		$wp_filesystem->move( $w3csspress_templates, get_template_directory() . '/inactive-templates' );
 	}
-	if ( esc_html( get_option( 'w3csspress_fse' ) ) && ! $w3csspress_index_template_exists ) {
-		$wp_filesystem->move( get_template_directory() . '/templates/inactive-index.html', $w3csspress_index_template );
+	if ( esc_html( get_option( 'w3csspress_fse' ) ) && ! $w3csspress_templates_exists ) {
+		$wp_filesystem->move( get_template_directory() . '/inactive-templates', $w3csspress_templates );
 	}
 }
 
