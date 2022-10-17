@@ -1,0 +1,15 @@
+body{
+    margin:auto !important;
+}
+
+.products.w3-ul li:last-child{
+    border-bottom: 1px solid #ddd;
+}
+
+.woocommerce div.product form.cart div.quantity:not(#branding):not(#wrapper):not(#content):not(#wpadminbar):not(#wpadminbar *):not(.sidebar){
+    margin-top: 0;
+}
+
+.woocommerce-page .quantity .input-text{
+    padding: 8px;
+}

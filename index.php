@@ -13,6 +13,7 @@ namespace w3csspress;
 get_header(); ?>
 <main id="content" role="main">
 	<?php
+	//get_template_part( 'template-parts/form/post-form' );
 	if ( have_posts() ) :
 		$w3csspress_layout = esc_html( get_option( 'w3csspress_layout' ) );
 		$w3csspress_i      = 0;

@@ -92,6 +92,7 @@ function w3csspress_after_setup_theme() {
 			'assets/css/editor-style.css',
 		)
 	);
+	remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
 }
 
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\w3csspress_wp_enqueue_scripts' );
@@ -112,6 +113,9 @@ function w3csspress_wp_enqueue_scripts() {
 		if ( strpos( $w3csspress_color_theme, 'w3schools' ) !== false ) {
 			wp_style_add_data( "w3-theme-$w3csspress_color_theme", 'rtl', 'replace' );
 		}
+	}
+	if ( class_exists( 'woocommerce' ) ) {
+		wp_enqueue_style( 'w3css-woocommerce', get_template_directory_uri() . '/assets/css/w3css-woocommerce.css', false, $w3csspress_version, 'all' );
 	}
 	wp_enqueue_style( 'w3csspress-style', get_stylesheet_uri(), false, $w3csspress_version, 'all' );
 	wp_style_add_data( 'w3csspress-style', 'rtl', 'replace' );
