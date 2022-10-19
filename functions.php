@@ -431,3 +431,50 @@ function w3csspress_nav_menu_link_attributes( $atts ) {
 	$atts['itemprop'] = 'url';
 	return $atts;
 }
+
+
+add_action( 'wp', __NAMESPACE__ . '\\w3csspress_ob_start' );
+function w3csspress_ob_start() {
+	if ( is_admin() || is_feed() ) {
+		return;
+	}
+	ob_start();
+	add_action( 'shutdown', __NAMESPACE__ . '\\w3csspress_ob_clean', 0 );
+}
+
+function w3csspress_ob_clean() {
+	$final = '';
+	$levels = ob_get_level();
+	for ( $i = 0; $i < $levels; $i++ ) {
+		$final .= ob_get_clean();
+	}
+	echo apply_filters( 'w3csspress_final_output', $final );
+}
+
+add_filter( 'w3csspress_final_output', __NAMESPACE__ . '\\w3csspress_classes', 10, 1 );
+function w3csspress_classes( $output ) {
+	$dom = new \DOMDocument();
+	$libxml_previous_state = libxml_use_internal_errors( true );
+	$dom->loadHTML( mb_convert_encoding( $output, 'HTML-ENTITIES', 'UTF-8' ), LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD );
+	libxml_use_internal_errors( $libxml_previous_state );	
+	$xpath = new \DOMXpath( $dom );
+
+	$inputs = $xpath->query( ".//input[not(@type='button' or @type='submit' or @type='reset' or @type='checkbox' or @type='radio' or contains(@class,'sidebar') or(ancestor::*/@id='wpadminbar'))]" );	
+	$definedClasses = explode( ' ', $dom->documentElement->getAttribute( 'class' ) );
+	$additional_html_classes = array('w3-input');
+	foreach ( $inputs as $html_tag ) {
+		$spacer = ' ';
+		if ( isset( $definedClasses[0] ) && false == $definedClasses[0] ) {
+			$spacer = '';
+		}  
+		foreach ( $additional_html_classes as $additional_html_class ) {
+			if ( ! in_array( $additional_html_class , $definedClasses ) ) {
+				$html_tag->setAttribute(
+					'class', $html_tag->getAttribute( 'class' ) . $spacer . $additional_html_class
+				);
+			}
+			$spacer = ' ';
+		}
+	}	
+	return $dom->saveHTML();     
+}
