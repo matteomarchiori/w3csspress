@@ -21,7 +21,7 @@ if ( ! is_page_template( 'full-width.php' ) && '1' === esc_html( get_option( 'w3
 	<?php
 	if ( have_comments() ) :
 		global $w3csspress_comments_by_type;
-		$w3csspress_comments_by_type = separate_comments();
+		$w3csspress_comments_by_type = separate_comments( $comments );
 		if ( ! empty( $w3csspress_comments_by_type['comment'] ) ) :
 			?>
 			<section id="comments-list" class="comments">
