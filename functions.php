@@ -10,6 +10,8 @@
 
 namespace w3csspress;
 
+use w3csspress\W3csspress_Constants;
+
 get_template_part( 'inc/sanitize' );
 get_template_part( 'inc/colors' );
 get_template_part( 'inc/content' );
@@ -435,11 +437,10 @@ function w3csspress_nav_menu_link_attributes( $atts ) {
 
 add_action( 'wp', __NAMESPACE__ . '\\w3csspress_ob_start' );
 function w3csspress_ob_start() {
-	if ( is_admin() || is_feed() ) {
-		return;
+	if ( ! (is_admin() || is_feed()) ) {
+		ob_start();
+		add_action( 'shutdown', __NAMESPACE__ . '\\w3csspress_ob_clean', 0 );
 	}
-	ob_start();
-	add_action( 'shutdown', __NAMESPACE__ . '\\w3csspress_ob_clean', 0 );
 }
 
 function w3csspress_ob_clean() {
@@ -459,21 +460,19 @@ function w3csspress_classes( $output ) {
 	libxml_use_internal_errors( $libxml_previous_state );	
 	$xpath = new \DOMXpath( $dom );
 
-	$inputs = $xpath->query( ".//input[not(@type='button' or @type='submit' or @type='reset' or @type='checkbox' or @type='radio' or contains(@class,'sidebar') or(ancestor::*/@id='wpadminbar'))]" );	
-	$definedClasses = explode( ' ', $dom->documentElement->getAttribute( 'class' ) );
-	$additional_html_classes = array('w3-input');
-	foreach ( $inputs as $html_tag ) {
-		$spacer = ' ';
-		if ( isset( $definedClasses[0] ) && false == $definedClasses[0] ) {
-			$spacer = '';
-		}  
-		foreach ( $additional_html_classes as $additional_html_class ) {
-			if ( ! in_array( $additional_html_class , $definedClasses ) ) {
-				$html_tag->setAttribute(
-					'class', $html_tag->getAttribute( 'class' ) . $spacer . $additional_html_class
+	$w3csspress_selectors = W3csspress_Constants::w3csspress_additional_selectors();
+	foreach($w3csspress_selectors as $w3csspress_selector){
+		$w3csspress_elements = $xpath->query( $w3csspress_selector['selector'] );	
+		$w3csspress_classes = $w3csspress_selector['classes'];
+		foreach ( $w3csspress_elements as $w3csspress_element ) { 
+			$existent = $w3csspress_element->getAttribute( 'class' );
+			if(''===$existent) $spacer = '';
+			else $spacer = ' ';
+			if(strpos(' '.$existent.' ',$w3csspress_classes)===false){
+				$w3csspress_element->setAttribute(
+					'class',  $existent. $spacer . $w3csspress_classes
 				);
 			}
-			$spacer = ' ';
 		}
 	}	
 	return $dom->saveHTML();     
