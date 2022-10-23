@@ -446,87 +446,67 @@ function w3csspress_enqueue_script_fonts() {
 	}
 }
 
-add_action( 'w3csspress_footer_fonts', __NAMESPACE__ . '\\w3csspress_footer_fonts' );
+add_filter( 'w3csspress_fonts', __NAMESPACE__ . '\\w3csspress_fonts', 10, 2 );
 /**
- * Add fonts JavaScript to the footer.
+ * Add fonts classes and styles.
  *
- * @since 2022.22
+ * @since 2022.32
+ *
+ * @param DOMDocument $dom Required. The DOM document.
+ * @param DOMNode     $head Required. The head of the DOM document.
  */
-function w3csspress_footer_fonts() {
-	if ( '' !== esc_html( get_option( 'w3csspress_font_size_paragraph' ) ) ) {
-		echo 'addClSel("p:not(" + excluded + ")","' . esc_html( get_option( 'w3csspress_font_size_paragraph' ) ) . '");';
-	}
-	if ( '' !== esc_html( get_option( 'w3csspress_font_weight_paragraph' ) ) ) {
-		echo 'addClSel("p:not(" + excluded + ")","' . esc_html( get_option( 'w3csspress_font_weight_paragraph' ) ) . '");';
-	}
-	if ( '' !== esc_html( get_option( 'w3csspress_font_size_div' ) ) ) {
-		echo 'addClSel("div:not(" + excluded + ")","' . esc_html( get_option( 'w3csspress_font_size_div' ) ) . '");';
-	}
-	if ( '' !== esc_html( get_option( 'w3csspress_font_weight_div' ) ) ) {
-		echo 'addClSel("div:not(" + excluded + ")","' . esc_html( get_option( 'w3csspress_font_weight_div' ) ) . '");';
-	}
-	if ( '' !== esc_html( get_option( 'w3csspress_font_size_input' ) ) ) {
-		echo 'addClSel("input:not(" + excluded + "),"' . esc_html( get_option( 'w3csspress_font_size_input' ) ) . '");';
-	}
-	if ( '' !== esc_html( get_option( 'w3csspress_font_weight_input' ) ) ) {
-		echo 'addClSel("input:not(" + excluded + "),"' . esc_html( get_option( 'w3csspress_font_weight_input' ) ) . '");';
-	}
-	if ( '' !== esc_html( get_option( 'w3csspress_font_size_input' ) ) ) {
-		echo 'addClSel("button:not(" + excluded + ")", "' . esc_html( get_option( 'w3csspress_font_size_input' ) ) . '");';
-	}
-	if ( '' !== esc_html( get_option( 'w3csspress_font_weight_input' ) ) ) {
-		echo 'addClSel("button:not(" + excluded + ")", "' . esc_html( get_option( 'w3csspress_font_weight_input' ) ) . '");';
-	}
-	if ( '' !== esc_html( get_option( 'w3csspress_font_size_input' ) ) ) {
-		echo 'addClSel("reset:not(" + excluded + ")", "' . esc_html( get_option( 'w3csspress_font_size_input' ) ) . '");';
-	}
-	if ( '' !== esc_html( get_option( 'w3csspress_font_weight_input' ) ) ) {
-		echo 'addClSel("reset:not(" + excluded + ")", "' . esc_html( get_option( 'w3csspress_font_weight_input' ) ) . '");';
-	}
-	if ( '' !== esc_html( get_option( 'w3csspress_font_size_input' ) ) ) {
-		echo 'addClSel("textarea:not(" + excluded + ")", "' . esc_html( get_option( 'w3csspress_font_size_input' ) ) . '");';
-	}
-	if ( '' !== esc_html( get_option( 'w3csspress_font_weight_input' ) ) ) {
-		echo 'addClSel("textarea:not(" + excluded + ")", "' . esc_html( get_option( 'w3csspress_font_weight_input' ) ) . '");';
-	}
-	if ( '' !== esc_html( get_option( 'w3csspress_font_size_table' ) ) ) {
-		echo 'addClSel("table:not(" + excluded + ")", "' . esc_html( get_option( 'w3csspress_font_size_table' ) ) . '");';
-	}
-	if ( '' !== esc_html( get_option( 'w3csspress_font_weight_table' ) ) ) {
-		echo 'addClSel("table:not(" + excluded + ")", "' . esc_html( get_option( 'w3csspress_font_weight_table' ) ) . '");';
-	}
-	if ( '' !== esc_html( get_option( 'w3csspress_font_size_ul' ) ) ) {
-		echo 'addClSel("ul:not(" + excluded + ")", "' . esc_html( get_option( 'w3csspress_font_size_ul' ) ) . '");';
-	}
-	if ( '' !== esc_html( get_option( 'w3csspress_font_weight_ul' ) ) ) {
-		echo 'addClSel("ul:not(" + excluded + ")", "' . esc_html( get_option( 'w3csspress_font_weight_ul' ) ) . '");';
-	}
-	if ( '' !== esc_html( get_option( 'w3csspress_font_size_ol' ) ) ) {
-		echo 'addClSel("ol:not(" + excluded + ")", "' . esc_html( get_option( 'w3csspress_font_size_ol' ) ) . '");';
-	}
-	if ( '' !== esc_html( get_option( 'w3csspress_font_weight_ol' ) ) ) {
-		echo 'addClSel("ol:not(" + excluded + ")", "' . esc_html( get_option( 'w3csspress_font_weight_ol' ) ) . '");';
+function w3csspress_fonts( $dom, $head ) {
+	$xpath               = new \DOMXPath( $dom );
+	$w3csspress_elements = $xpath->query( '//p[not (ancestor::*/@id="wpadminbar")]' );
+	$w3csspress_classes  = esc_html( get_option( 'w3csspress_font_size_paragraph' ) );
+	apply_filters( 'w3csspress_add_classes', $w3csspress_elements, $w3csspress_classes );
+	$w3csspress_classes = esc_html( get_option( 'w3csspress_font_weight_paragraph' ) );
+	apply_filters( 'w3csspress_add_classes', $w3csspress_elements, $w3csspress_classes );
+	$w3csspress_elements = $xpath->query( '//div[not (ancestor::*/@id="wpadminbar")]' );
+	$w3csspress_classes  = esc_html( get_option( 'w3csspress_font_size_div' ) );
+	apply_filters( 'w3csspress_add_classes', $w3csspress_elements, $w3csspress_classes );
+	$w3csspress_classes = esc_html( get_option( 'w3csspress_font_weight_div' ) );
+	apply_filters( 'w3csspress_add_classes', $w3csspress_elements, $w3csspress_classes );
+	$w3csspress_elements = $xpath->query( '(//input|//button|//reset|//textarea)[not (ancestor::*/@id="wpadminbar")]' );
+	$w3csspress_classes  = esc_html( get_option( 'w3csspress_font_size_input' ) );
+	apply_filters( 'w3csspress_add_classes', $w3csspress_elements, $w3csspress_classes );
+	$w3csspress_classes = esc_html( get_option( 'w3csspress_font_weight_input' ) );
+	apply_filters( 'w3csspress_add_classes', $w3csspress_elements, $w3csspress_classes );
+	$w3csspress_elements = $xpath->query( '//table[not (ancestor::*/@id="wpadminbar")]' );
+	$w3csspress_classes  = esc_html( get_option( 'w3csspress_font_size_table' ) );
+	apply_filters( 'w3csspress_add_classes', $w3csspress_elements, $w3csspress_classes );
+	$w3csspress_classes = esc_html( get_option( 'w3csspress_font_weight_table' ) );
+	apply_filters( 'w3csspress_add_classes', $w3csspress_elements, $w3csspress_classes );
+	$w3csspress_elements = $xpath->query( '//ul[not (ancestor::*/@id="wpadminbar")]' );
+	$w3csspress_classes  = esc_html( get_option( 'w3csspress_font_size_ul' ) );
+	apply_filters( 'w3csspress_add_classes', $w3csspress_elements, $w3csspress_classes );
+	$w3csspress_classes = esc_html( get_option( 'w3csspress_font_weight_ul' ) );
+	apply_filters( 'w3csspress_add_classes', $w3csspress_elements, $w3csspress_classes );
+	$w3csspress_elements = $xpath->query( '//ol[not (ancestor::*/@id="wpadminbar")]' );
+	$w3csspress_classes  = esc_html( get_option( 'w3csspress_font_size_ol' ) );
+	apply_filters( 'w3csspress_add_classes', $w3csspress_elements, $w3csspress_classes );
+	$w3csspress_classes = esc_html( get_option( 'w3csspress_font_weight_ol' ) );
+	apply_filters( 'w3csspress_add_classes', $w3csspress_elements, $w3csspress_classes );
+	for ( $i = 1; $i < 7; $i++ ) {
+		$w3csspress_elements = $xpath->query( "//h$i" );
+		$w3csspress_classes  = esc_html( get_option( "w3csspress_font_size_h$i" ) );
+		apply_filters( 'w3csspress_add_classes', $w3csspress_elements, $w3csspress_classes );
+		$w3csspress_classes = esc_html( get_option( "w3csspress_font_weight_h$i" ) );
+		apply_filters( 'w3csspress_add_classes', $w3csspress_elements, $w3csspress_classes );
+		$w3csspress_classes = esc_html( get_option( 'w3csspress_font_family' ) );
+		apply_filters( 'w3csspress_add_classes', $w3csspress_elements, $w3csspress_classes );
 	}
 	$w3csspress_google_font          = esc_html( str_replace( '+', ' ', get_option( 'w3csspress_google_font' ) ) );
 	$w3csspress_google_font_headings = esc_html( str_replace( '+', ' ', get_option( 'w3csspress_google_font_headings' ) ) );
-	for ( $i = 1; $i < 7; $i++ ) {
-		if ( '' !== esc_html( get_option( "w3csspress_font_size_h$i" ) ) ) {
-			echo 'addClTag("h' . intval( $i ) . '","' . esc_html( get_option( "w3csspress_font_size_h$i" ) ) . '");';
-		}
-		if ( '' !== esc_html( get_option( "w3csspress_font_weight_h$i" ) ) ) {
-			echo 'addClTag("h' . intval( $i ) . '","' . esc_html( get_option( "w3csspress_font_weight_h$i" ) ) . '");';
-		}
-	}
-	if ( '' !== get_option( 'w3csspress_font_family' ) ) {
-		for ( $i = 1; $i < 7; $i++ ) {
-			echo 'addClTag("h' . intval( $i ) . '","' . esc_html( get_option( 'w3csspress_font_family' ) ) . '");';
-		}
-	}
 	if ( '' !== $w3csspress_google_font ) {
-		echo 'newStyle(".w3-google{font-family:' . esc_html( $w3csspress_google_font ) . '}");';
+		$style = $dom->createElement( 'style', '.w3-google{font-family:' . esc_html( $w3csspress_google_font ) . '}' );
+		$style->setAttribute( 'type', 'text/css' );
+		$head->appendChild( $style );
 	}
 	if ( '' !== $w3csspress_google_font_headings ) {
-		echo 'newStyle(".w3-google-heading h1,.w3-google-heading h2,.w3-google-heading h3,.w3-google-heading h4,.w3-google-heading h5,.w3-google-heading h6{font-family:' . esc_html( $w3csspress_google_font_headings ) . '}");';
+		$style = $dom->createElement( 'style', '.w3-google-heading h1,.w3-google-heading h2,.w3-google-heading h3,.w3-google-heading h4,.w3-google-heading h5,.w3-google-heading h6{font-family:' . esc_html( $w3csspress_google_font_headings ) . '}' );
+		$style->setAttribute( 'type', 'text/css' );
+		$head->appendChild( $style );
 	}
 }
 

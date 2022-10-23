@@ -132,35 +132,6 @@ add_action( 'wp_footer', __NAMESPACE__ . '\\w3csspress_wp_footer' );
  */
 function w3csspress_wp_footer() {               ?>
 	<script async type="text/javascript">
-		function addClTag(tag, cl) {
-			var tags = document.getElementsByTagName(tag);
-			for (i = 0; i < tags.length; i++) {
-				var spacer = tags[i].className == '' ? '' : ' ';
-				if ((' ' + tags[i].className + ' ').indexOf(cl) === -1)
-					tags[i].className += spacer + cl;
-			}
-		}
-
-		function addClSel(sel, cl) {
-			var eles = document.querySelectorAll(sel);
-			for (i = 0; i < eles.length; i++) {
-				var spacer = eles[i].className == '' ? '' : ' ';
-				if ((' ' + eles[i].className + ' ').indexOf(cl) === -1)
-					eles[i].className += spacer + cl;
-			}
-		}
-
-		function newStyle(css) {
-			var head = document.head;
-			var style = document.createElement('style');
-			head.appendChild(style);
-			style.type = 'text/css';
-			if (style.styleSheet) {
-				style.styleSheet.cssText = css;
-			} else {
-				style.appendChild(document.createTextNode(css));
-			}
-		}
 		window.addEventListener('load', function() {
 			var excluded = "#wpadminbar, #wpadminbar *, .sidebar";
 			if (window.outerWidth <= 600) {
@@ -194,12 +165,6 @@ function w3csspress_wp_footer() {               ?>
 					});
 				}
 			}
-			<?php
-			do_action( 'w3csspress_footer_color' );
-			do_action( 'w3csspress_footer_fonts' );
-			do_action( 'w3csspress_footer_layout' );
-			do_action( 'w3csspress_footer_images' );
-			?>
 		}, false);
 	</script>
 	<?php
@@ -452,7 +417,21 @@ function w3csspress_ob_clean() {
 	echo apply_filters( 'w3csspress_final_output', $final );
 }
 
-add_filter( 'w3csspress_final_output', __NAMESPACE__ . '\\w3csspress_classes', 10, 1 );
+add_filter('w3csspress_add_classes',__NAMESPACE__.'\\w3csspress_add_classes',10,2);
+function w3csspress_add_classes($elements,$classes){
+	foreach ( $elements as $w3csspress_element ) { 
+		$existent = $w3csspress_element->getAttribute( 'class' );
+		if(''===$existent) $spacer = '';
+		else $spacer = ' ';
+		if(''!==$classes && strpos(' '.$existent.' ',$classes)===false){
+			$w3csspress_element->setAttribute(
+				'class',  $existent. $spacer . $classes
+			);
+		}
+	}
+}
+
+add_filter( 'w3csspress_final_output', __NAMESPACE__ . '\\w3csspress_classes');
 function w3csspress_classes( $output ) {
 	$dom = new \DOMDocument();
 	$libxml_previous_state = libxml_use_internal_errors( true );
@@ -464,16 +443,11 @@ function w3csspress_classes( $output ) {
 	foreach($w3csspress_selectors as $w3csspress_selector){
 		$w3csspress_elements = $xpath->query( $w3csspress_selector['selector'] );	
 		$w3csspress_classes = $w3csspress_selector['classes'];
-		foreach ( $w3csspress_elements as $w3csspress_element ) { 
-			$existent = $w3csspress_element->getAttribute( 'class' );
-			if(''===$existent) $spacer = '';
-			else $spacer = ' ';
-			if(strpos(' '.$existent.' ',$w3csspress_classes)===false){
-				$w3csspress_element->setAttribute(
-					'class',  $existent. $spacer . $w3csspress_classes
-				);
-			}
-		}
-	}	
+		apply_filters('w3csspress_add_classes',$w3csspress_elements,$w3csspress_classes);
+	}
+	$head = $xpath->query( '//head[1]' )[0];
+	apply_filters('w3csspress_colors',$dom,$head);
+	apply_filters('w3csspress_fonts',$dom,$head);
+	apply_filters('w3csspress_images',$dom,$head);
 	return $dom->saveHTML();     
 }

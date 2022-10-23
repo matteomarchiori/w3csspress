@@ -60,14 +60,6 @@ window.addEventListener('load', function() {
         removeClPrevInner(node.parentNode, 'w3-dropdown-focus', 'w3-dropdown-content', 'w3-show');
     }
 
-    function addClToSelected(selected, cl) {
-        for (i = 0; i < selected.length; i++) {
-            var spacer = selected[i].className == '' ? '' : ' ';
-            if ((' ' + selected[i].className + ' ').indexOf(cl) === -1)
-                selected[i].className += spacer + cl;
-        }
-    }
-
     var excluded = "#wpadminbar, #wpadminbar *, .sidebar";
     var deviceAgent = navigator.userAgent.toLowerCase();
     var spacer = document.documentElement.className == '' ? '' : ' ';

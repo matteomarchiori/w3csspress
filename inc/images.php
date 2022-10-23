@@ -212,37 +212,48 @@ function w3csspress_customize_images( $wp_customize ) {
 	);
 }
 
-add_action( 'w3csspress_footer_images', __NAMESPACE__ . '\\w3csspress_footer_images' );
+add_filter( 'w3csspress_images', __NAMESPACE__ . '\\w3csspress_images', 10, 2 );
 /**
- * Add images JavaScript to the footer.
+ * Add images classes.
  *
- * @since 2022.22
+ * @since 2022.32
+ *
+ * @param DOMDocument $dom Required. The DOM document.
+ * @param DOMNode     $head Required. The head of the DOM document.
  */
-function w3csspress_footer_images() {
+function w3csspress_images( $dom, $head ) {
+	$xpath               = new \DOMXPath( $dom );
+	$w3csspress_elements = $xpath->query( '//img' );
 	if ( esc_html( get_option( 'w3csspress_rounded_img' ) ) ) {
-		echo 'addClTag("img", "w3-round");';
+		$w3csspress_classes = 'w3-round';
+		apply_filters( 'w3csspress_add_classes', $w3csspress_elements, $w3csspress_classes );
 	}
 	if ( esc_html( get_option( 'w3csspress_circle_img' ) ) ) {
-		echo 'addClTag("img", "w3-circle");';
+		$w3csspress_classes = 'w3-circle';
+		apply_filters( 'w3csspress_add_classes', $w3csspress_elements, $w3csspress_classes );
 	}
 	if ( esc_html( get_option( 'w3csspress_bordered_img' ) ) ) {
-		echo 'addClTag("img", "w3-border");';
-	}
+		$w3csspress_classes = 'w3-border';
+		apply_filters( 'w3csspress_add_classes', $w3csspress_elements, $w3csspress_classes );   }
 	if ( esc_html( get_option( 'w3csspress_cards_img' ) ) ) {
-		echo 'addClTag("img", "w3-card");';
-	}
+		$w3csspress_classes = 'w3-card';
+		apply_filters( 'w3csspress_add_classes', $w3csspress_elements, $w3csspress_classes );   }
 	if ( esc_html( get_option( 'w3csspress_opacity_img' ) ) ) {
-		echo 'addClTag("img", "w3-opacity");';
-	}
+		$w3csspress_classes = 'w3-opacity';
+		apply_filters( 'w3csspress_add_classes', $w3csspress_elements, $w3csspress_classes );   }
 	if ( esc_html( get_option( 'w3csspress_grayscale_img' ) ) ) {
-		echo 'addClTag("img", "w3-greyscale");';
-	}
+		$w3csspress_classes = 'w3-greyscale';
+		apply_filters( 'w3csspress_add_classes', $w3csspress_elements, $w3csspress_classes );   }
 	if ( esc_html( get_option( 'w3csspress_sepia_img' ) ) ) {
-		echo 'addClTag("img", "w3-sepia");';
-	}
+		$w3csspress_classes = 'w3-sepia';
+		apply_filters( 'w3csspress_add_classes', $w3csspress_elements, $w3csspress_classes );   }
 	if ( function_exists( 'get_the_post_thumbnail_url' ) && esc_html( get_option( 'w3csspress_header_thumbnail' ) ) && has_post_thumbnail() ) {
-		echo 'newStyle("#header{background-image:url(\'' . esc_url( get_the_post_thumbnail_url( null, 'full' ) ) . '\');}");';
+		$style = $dom->createElement( 'style', '#header{background-image:url(\'' . esc_url( get_the_post_thumbnail_url( null, 'full' ) ) . '\');}' );
+		$style->setAttribute( 'type', 'text/css' );
+		$head->appendChild( $style );
 	} elseif ( function_exists( 'has_header_image' ) && has_header_image() ) {
-		echo 'newStyle("#header{background-image:url(\'' . esc_url( get_header_image() ) . '\');}");';
+		$style = $dom->createElement( 'style', '#header{background-image:url(\'' . esc_url( get_header_image() ) . '\');}' );
+		$style->setAttribute( 'type', 'text/css' );
+		$head->appendChild( $style );
 	}
 }

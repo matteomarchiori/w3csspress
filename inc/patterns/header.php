@@ -45,7 +45,7 @@ function w3csspress_register_block_pattern_header() {
 		)
 	);
 
-    register_block_pattern(
+	register_block_pattern(
 		'w3csspress/home-header',
 		array(
 			'title'      => __( 'homepage header', 'w3csspress' ),

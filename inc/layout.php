@@ -103,16 +103,6 @@ function w3csspress_customize_layout( $wp_customize ) {
 	);
 }
 
-add_action( 'w3csspress_footer_layout', __NAMESPACE__ . '\\w3csspress_footer_layout' );
-/**
- * Add layout JavaScript to the footer.
- *
- * @since 2022.22
- */
-function w3csspress_footer_layout() {
-	echo 'addClSel("article:not(" + excluded + "),section:not(" + excluded + "),nav:not(" + excluded + "),summary:not(" + excluded + "),button:not(" + excluded + "),reset:not(" + excluded + "),input:not(input[type=\'checkbox\'],input[type=\'radio\']," + excluded + "),textarea:not(" + excluded + "),ul:not(" + excluded + "),ol:not(" + excluded + ")", "' . esc_html( get_option( 'w3csspress_rounded_style' ) ) . '");';
-}
-
 /**
  * Filters the CSS classes applied to a menu item’s list item element.
  *

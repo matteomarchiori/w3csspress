@@ -152,26 +152,34 @@ function w3csspress_customize_colors( $wp_customize ) {
 	}
 }
 
-add_action( 'w3csspress_footer_color', __NAMESPACE__ . '\\w3csspress_footer_color' );
+add_filter( 'w3csspress_colors', __NAMESPACE__ . '\\w3csspress_colors', 10, 2 );
 /**
- * Fires when WordPress loads the footer, to enqueue colors checks.
+ * Fires to enqueue colors checks.
  *
- * @since 2022.26
+ * @since 2022.32
+ *
+ * @param DOMDocument $dom Required. The DOM document.
+ * @param DOMNode     $head Required. The head of the DOM document.
  */
-function w3csspress_footer_color() {
+function w3csspress_colors( $dom, $head ) {
 	for ( $i = 1; $i < 7; $i++ ) {
 		if ( '' !== esc_html( get_option( "w3csspress_color_h$i" ) ) ) {
-			echo 'newStyle("h' . esc_html( $i ) . '{color:' . esc_html( get_option( "w3csspress_color_h$i" ) ) . '}");';
+			$style = $dom->createElement( 'style', 'h' . esc_html( $i ) . '{color:' . esc_html( get_option( "w3csspress_color_h$i" ) ) . '}' );
+			$style->setAttribute( 'type', 'text/css' );
+			$head->appendChild( $style );
 		}
 	}
 	if ( '' !== esc_html( get_option( 'w3csspress_color_theme_text_custom' ) ) ) {
-		echo 'newStyle("body:not(" + excluded + "){color:' . esc_html( get_option( 'w3csspress_color_theme_text_custom' ) ) . ' !important}");';
+		$style = $dom->createElement( 'style', 'body:not(#wpadminbar, #wpadminbar *, .sidebar){color:' . esc_html( get_option( 'w3csspress_color_theme_text_custom' ) ) . ' !important}' );
+		$style->setAttribute( 'type', 'text/css' );
+		$head->appendChild( $style );
 	}
 	if ( '' !== esc_html( get_option( 'w3csspress_color_link' ) ) ) {
-		echo 'newStyle("a:not(" + excluded + "){color:' . esc_html( get_option( 'w3csspress_color_link' ) ) . ' !important}");';
+		$style = $dom->createElement( 'style', 'a:not(#wpadminbar, #wpadminbar *, .sidebar){color:' . esc_html( get_option( 'w3csspress_color_link' ) ) . ' !important}' );
+		$style->setAttribute( 'type', 'text/css' );
+		$head->appendChild( $style );
 	}
 }
-
 
 add_filter( 'body_class', __NAMESPACE__ . '\\w3csspress_body_class_color' );
 /**
