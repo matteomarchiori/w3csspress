@@ -4,8 +4,8 @@ Theme URI: https://github.com/matteomarchiori/w3csspress
 Author: matteomarchiori97
 Author URI: https://github.com/matteomarchiori
 Description: Universal theme with classic mode and blocks mode made to integrate the W3CSS framework inside WordPress, with global custom options and all of the W3CSS framework functionalities. The theme has been developed starting from resources on the w3schools website applied to the blankslate WordPress theme, slightly modified. The theme is accessibility ready and it is highly customizable. Please add issues on GitHub or contact me if you are interested in more options.
-Tags: blog, news, e-commerce, accessibility-ready, grid-layout, one-column, two-columns, three-columns, four-columns, left-sidebar, right-sidebar, custom-background, custom-header, custom-logo, custom-menu, featured-images, featured-image-header, sticky-post, theme-options, threaded-comments, translation-ready, rtl-language-support, flexible-header, footer-widgets, full-width-template, editor-style, post-formats, microformats, custom-colors, block-patterns, full-site-editing, template-editing, wide-blocks, buddypress, bbpress
-Version: 2022.31
+Tags: blog, news, e-commerce, accessibility-ready, grid-layout, one-column, two-columns, three-columns, four-columns, left-sidebar, right-sidebar, custom-background, custom-header, custom-logo, custom-menu, featured-images, featured-image-header, sticky-post, theme-options, threaded-comments, translation-ready, rtl-language-support, flexible-header, footer-widgets, full-width-template, editor-style, post-formats, microformats, custom-colors, block-patterns, full-site-editing, template-editing, wide-blocks, buddypress
+Version: 2022.32
 Requires at least: 4.1
 Tested up to: 6.0
 Requires PHP: 5.6
@@ -205,6 +205,7 @@ body.home .custom-logo-link,
 body.home h1>a {
     pointer-events: none;
     text-decoration: none;
+    border-radius: inherit;
 }
 
 .w3-sidebar {
@@ -351,7 +352,8 @@ table tr td {
 }
 
 .alignfull {
-	width: 100vw;
+    width: 100vw;
+    max-width: 100vw;
     position: relative;
     right: 50%;
     left: 50%;
@@ -360,7 +362,8 @@ table tr td {
 }
 
 .alignwide {
-	width: 80vw;
+    width: 80vw;
+    max-width: 80vw;
     position: relative;
     right: 50%;
     left: 50%;
@@ -368,7 +371,7 @@ table tr td {
     margin-left: -40vw;
 }
 
-.wp-block-post-template.w3-ul li:last-child{
+.wp-block-post-template.w3-ul li:last-child {
     border-bottom: 1px solid #ddd;
 }
 
@@ -376,10 +379,12 @@ table tr td {
     .menu {
         display: none;
     }
+
     .w3-sidebar {
         position: relative;
         width: 100%;
     }
+
     .w3-fifth,
     .w3-sixth,
     .w3-seventh,
@@ -387,6 +392,7 @@ table tr td {
     .w3-nineth {
         width: 100%;
     }
+
     .w3-bar-item.w3-mobile {
         width: 100%;
     }
@@ -396,6 +402,7 @@ table tr td {
     body {
         max-width: 80vw;
     }
+
     .w3-dropdown-content {
         clip: rect(1px, 1px, 1px, 1px);
         -webkit-clip-path: inset(50%);
@@ -404,6 +411,7 @@ table tr td {
         word-wrap: normal;
         word-break: normal;
     }
+
     .w3-dropdown-content.w3-show {
         clip: inherit;
         -webkit-clip-path: inherit;

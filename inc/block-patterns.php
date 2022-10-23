@@ -47,7 +47,7 @@ function w3csspress_register_block_patterns() {
 	 *
 	 * @since 2022.29
 	 *
-	 * @param array[] $block_pattern_categories {
+	 * @param array $block_pattern_categories {
 	 *     An associative array of block pattern categories, keyed by category name.
 	 *
 	 *     @type array[] $properties {

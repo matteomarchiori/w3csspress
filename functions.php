@@ -401,15 +401,25 @@ function w3csspress_nav_menu_link_attributes( $atts ) {
 
 
 add_action( 'wp', __NAMESPACE__ . '\\w3csspress_ob_start' );
+/**
+ * Turn on output buffering
+ *
+ * @since 2022.32
+ */
 function w3csspress_ob_start() {
-	if ( ! (is_admin() || is_feed()) ) {
+	if ( ! ( is_admin() || is_feed() ) ) {
 		ob_start();
 		add_action( 'shutdown', __NAMESPACE__ . '\\w3csspress_ob_clean', 0 );
 	}
 }
 
+/**
+ * Get current content of buffer
+ *
+ * @since 2022.32
+ */
 function w3csspress_ob_clean() {
-	$final = '';
+	$final  = '';
 	$levels = ob_get_level();
 	for ( $i = 0; $i < $levels; $i++ ) {
 		$final .= ob_get_clean();
@@ -417,37 +427,56 @@ function w3csspress_ob_clean() {
 	echo apply_filters( 'w3csspress_final_output', $final );
 }
 
-add_filter('w3csspress_add_classes',__NAMESPACE__.'\\w3csspress_add_classes',10,2);
-function w3csspress_add_classes($elements,$classes){
-	foreach ( $elements as $w3csspress_element ) { 
+add_filter( 'w3csspress_add_classes', __NAMESPACE__ . '\\w3csspress_add_classes', 10, 2 );
+/**
+ * Add w3csspress classes to the elements
+ *
+ * @since 2022.32
+ *
+ * @param array $elements Elements to apply the classes.
+ * @param string $classes Classes to be applied.
+ */
+function w3csspress_add_classes( $elements, $classes ) {
+	foreach ( $elements as $w3csspress_element ) {
 		$existent = $w3csspress_element->getAttribute( 'class' );
-		if(''===$existent) $spacer = '';
-		else $spacer = ' ';
-		if(''!==$classes && strpos(' '.$existent.' ',$classes)===false){
+		if ( '' === $existent ) {
+			$spacer = '';
+		} else {
+			$spacer = ' ';
+		}
+		if ( '' !== $classes && strpos( ' ' . $existent . ' ', $classes ) === false ) {
 			$w3csspress_element->setAttribute(
-				'class',  $existent. $spacer . $classes
+				'class',
+				$existent . $spacer . $classes
 			);
 		}
 	}
 }
 
-add_filter( 'w3csspress_final_output', __NAMESPACE__ . '\\w3csspress_classes');
-function w3csspress_classes( $output ) {
-	$dom = new \DOMDocument();
+add_filter( 'w3csspress_final_output', __NAMESPACE__ . '\\w3csspress_final_output' );
+/**
+ * Function to output the final result.
+ *
+ * @since 2022.32
+ *
+ * @param string $output String with the output.
+ */
+function w3csspress_final_output( $output ) {
+	$dom                   = new \DOMDocument();
 	$libxml_previous_state = libxml_use_internal_errors( true );
 	$dom->loadHTML( mb_convert_encoding( $output, 'HTML-ENTITIES', 'UTF-8' ), LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD );
-	libxml_use_internal_errors( $libxml_previous_state );	
+	libxml_use_internal_errors( $libxml_previous_state );
 	$xpath = new \DOMXpath( $dom );
 
 	$w3csspress_selectors = W3csspress_Constants::w3csspress_additional_selectors();
-	foreach($w3csspress_selectors as $w3csspress_selector){
-		$w3csspress_elements = $xpath->query( $w3csspress_selector['selector'] );	
-		$w3csspress_classes = $w3csspress_selector['classes'];
-		apply_filters('w3csspress_add_classes',$w3csspress_elements,$w3csspress_classes);
+	foreach ( $w3csspress_selectors as $w3csspress_selector ) {
+		$w3csspress_elements = $xpath->query( $w3csspress_selector['selector'] );
+		$w3csspress_classes  = $w3csspress_selector['classes'];
+		apply_filters( 'w3csspress_add_classes', $w3csspress_elements, $w3csspress_classes );
 	}
 	$head = $xpath->query( '//head[1]' )[0];
-	apply_filters('w3csspress_colors',$dom,$head);
-	apply_filters('w3csspress_fonts',$dom,$head);
-	apply_filters('w3csspress_images',$dom,$head);
-	return $dom->saveHTML();     
+	apply_filters( 'w3csspress_colors', $dom, $head );
+	apply_filters( 'w3csspress_fonts', $dom, $head );
+	apply_filters( 'w3csspress_images', $dom, $head );
+	return $dom->saveHTML();
 }
