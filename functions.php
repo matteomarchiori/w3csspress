@@ -133,7 +133,6 @@ add_action( 'wp_footer', __NAMESPACE__ . '\\w3csspress_wp_footer' );
 function w3csspress_wp_footer() {               ?>
 	<script async type="text/javascript">
 		window.addEventListener('load', function() {
-			var excluded = "#wpadminbar, #wpadminbar *, .sidebar";
 			if (window.outerWidth <= 600) {
 				var menus = document.getElementsByClassName("menu");
 				if (menus.length > 0) {
