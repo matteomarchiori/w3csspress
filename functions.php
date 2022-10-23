@@ -433,7 +433,7 @@ add_filter( 'w3csspress_add_classes', __NAMESPACE__ . '\\w3csspress_add_classes'
  *
  * @since 2022.32
  *
- * @param array $elements Elements to apply the classes.
+ * @param array  $elements Elements to apply the classes.
  * @param string $classes Classes to be applied.
  */
 function w3csspress_add_classes( $elements, $classes ) {
