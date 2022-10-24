@@ -19,7 +19,9 @@ get_template_part( 'inc/fonts' );
 get_template_part( 'inc/images' );
 get_template_part( 'inc/layout' );
 get_template_part( 'inc/speed' );
-get_template_part( 'inc/block-patterns' );
+if ( function_exists( 'register_block_pattern' ) ) {
+	get_template_part( 'inc/block-patterns' );
+}
 
 add_action( 'after_setup_theme', __NAMESPACE__ . '\\w3csspress_after_setup_theme' );
 /**
@@ -463,7 +465,7 @@ add_filter( 'w3csspress_final_output', __NAMESPACE__ . '\\w3csspress_final_outpu
 function w3csspress_final_output( $output ) {
 	$dom                   = new \DOMDocument();
 	$libxml_previous_state = libxml_use_internal_errors( true );
-	$dom->loadHTML( mb_convert_encoding( $output, 'HTML-ENTITIES', 'UTF-8' ), LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD );
+	$dom->loadHTML( \mb_convert_encoding( $output, 'HTML-ENTITIES', 'UTF-8' ), LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD );
 	libxml_use_internal_errors( $libxml_previous_state );
 	$xpath = new \DOMXpath( $dom );
 

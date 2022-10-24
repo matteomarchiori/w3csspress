@@ -27,6 +27,8 @@ function w3csspress_register_block_pattern_image() {
 			<!-- /wp:image -->',
 		)
 	);
+
+	/* TODO */
 }
 
 w3csspress_register_block_pattern_image();
