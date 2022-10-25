@@ -142,7 +142,7 @@ function w3csspress_wp_footer() {               ?>
 					menu.className += " w3-animate-bottom";
 					var buttonMenu = document.createElement('button');
 					buttonMenu.type = "button";
-					buttonMenu.className = "menu-toggle w3-margin-top w3-right";
+					buttonMenu.className = "menu-toggle w3-btn w3-theme-action w3-margin-top w3-right <?php echo esc_html( get_option( 'w3csspress_rounded_style' ) ) . ' ' . esc_html( get_option( 'w3csspress_font_size_input' ) ) . ' ' . esc_html( get_option( 'w3csspress_font_weight_input' ) ); ?>";
 					buttonMenu.id = "burger";
 					buttonMenu.innerHTML = "&equiv; <?php echo esc_html__( 'Menu', 'w3csspress' ); ?>";
 					buttonMenu.addEventListener("click", function() {

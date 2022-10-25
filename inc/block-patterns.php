@@ -34,6 +34,7 @@ function w3csspress_register_block_patterns() {
 		'panels'     => array( 'label' => __( 'Panels', 'w3csspress' ) ),
 		'query'      => array( 'label' => __( 'Query', 'w3csspress' ) ),
 		'search'     => array( 'label' => __( 'Search', 'w3csspress' ) ),
+		'sidebars'   => array( 'label' => __( 'Sidebars', 'w3csspress' ) ),
 	);
 
 	foreach ( W3csspress_Constants::w3csspress_themes() as $w3csspress_theme => $w3csspress_theme_translation ) {
