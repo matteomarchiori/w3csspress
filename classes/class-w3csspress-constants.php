@@ -182,11 +182,11 @@ if ( ! class_exists( 'w3csspress\W3csspress_Constants' ) ) {
 		public static function w3csspress_rounded() {
 			return array(
 				''                 => __( 'default', 'w3csspress' ),
-				'w3-round-small'   => __( 'small', 'w3csspress' ),
-				'w3-round-medium'  => __( 'medium', 'w3csspress' ),
-				'w3-round-large'   => __( 'large', 'w3csspress' ),
-				'w3-round-xlarge'  => __( 'XL', 'w3csspress' ),
-				'w3-round-xxlarge' => __( 'XXL', 'w3csspress' ),
+				'w3-round-small'   => __( 'round small', 'w3csspress' ),
+				'w3-round-medium'  => __( 'round medium', 'w3csspress' ),
+				'w3-round-large'   => __( 'round large', 'w3csspress' ),
+				'w3-round-xlarge'  => __( 'round xlarge', 'w3csspress' ),
+				'w3-round-xxlarge' => __( 'round xxlarge', 'w3csspress' ),
 				'w3-circle'        => __( 'circle', 'w3csspress' ),
 			);
 		}

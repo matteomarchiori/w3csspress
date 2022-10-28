@@ -19,10 +19,10 @@ function w3csspress_register_block_pattern_search() {
 	register_block_pattern(
 		'w3csspress/search',
 		array(
-			'title'      => __( 'search bar', 'w3csspress' ),
+			'title'      => ucfirst( __( 'search bar', 'w3csspress' ) ),
 			'categories' => array( 'search' ),
 			'blockTypes' => array( 'core/search' ),
-			'content'    => '<!-- wp:search {"label":"' . __( 'Search', 'w3csspress' ) . '","buttonText":"' . __( 'Search', 'w3csspress' ) . '"} /-->',
+			'content'    => '<!-- wp:search {"label":"' . ucfirst( __( 'search', 'w3csspress' ) ) . '","buttonText":"' . ucfirst( __( 'search', 'w3csspress' ) ) . '"} /-->',
 		)
 	);
 }

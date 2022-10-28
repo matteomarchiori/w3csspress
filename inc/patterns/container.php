@@ -23,7 +23,7 @@ function w3csspress_register_block_pattern_container() {
 	register_block_pattern(
 		'w3csspress/container',
 		array(
-			'title'      => __( 'containers', 'w3csspress' ),
+			'title'      => ucfirst( __( 'containers', 'w3csspress' ) ),
 			'categories' => array( 'containers' ),
 			'blockTypes' => array( 'core/container' ),
 			'content'    => '<!-- wp:group {"className":"w3-container","layout":{"type":"default"}} --><div class="wp-block-group w3-container"><!-- wp:heading --><h2>Lorem Ipsum</h2><!-- /wp:heading --><!-- wp:paragraph --><p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."</p><!-- /wp:paragraph --></div><!-- /wp:group -->',
@@ -37,7 +37,7 @@ function w3csspress_register_block_pattern_container() {
 				array(
 					'title'      => sprintf(
 						/* translators: color of the container */
-						esc_html__( 'container %s', 'w3csspress' ),
+						esc_html( ucfirst( __( 'container %s', 'w3csspress' ) ) ),
 						$w3csspress_theme_translation
 					),
 					'categories' => array( 'containers', 'colors', $w3csspress_theme ),

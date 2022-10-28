@@ -22,11 +22,11 @@ function w3csspress_register_block_pattern_404() {
 			'title'      => __( '404', 'w3csspress' ),
 			'categories' => array( 'notfound' ),
 			'blockTypes' => array( 'core/404' ),
-			'content'    => '<!-- wp:heading {"level":1} --><h1>' . __( 'Not Found', 'w3csspress' ) . '</h1>
+			'content'    => '<!-- wp:heading {"level":1} --><h1>' . ucfirst( __( 'not found', 'w3csspress' ) ) . '</h1>
             <!-- /wp:heading -->
             
             <!-- wp:paragraph -->
-            <p>' . __( 'Nothing found for the requested page. Try a search instead?', 'w3csspress' ) . '</p>
+            <p>' . ucfirst( __( 'nothing found for the requested page. Try a search instead?', 'w3csspress' ) ) . '</p>
             <!-- /wp:paragraph -->',
 		)
 	);

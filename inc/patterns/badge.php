@@ -27,10 +27,10 @@ function w3csspress_register_block_pattern_badge() {
 				array(
 					'title'      => sprintf(
 						/* translators: color of the container */
-						esc_html__( 'badge %s', 'w3csspress' ),
+						esc_html( ucfirst( __( 'badge %s', 'w3csspress' ) ) ),
 						$w3csspress_theme_translation
 					),
-					'categories' => array( 'badges', 'colors' ),
+					'categories' => array( 'badges', 'colors', $w3csspress_theme ),
 					'blockTypes' => array( 'core/badge' ),
 					'content'    => '<!-- wp:paragraph --><span class="w3-badge w3-' . $w3csspress_theme . '">1</span><!-- /wp:paragraph -->',
 				)

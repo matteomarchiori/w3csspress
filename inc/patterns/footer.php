@@ -25,7 +25,7 @@ function w3csspress_register_block_pattern_footer() {
 	register_block_pattern(
 		'w3csspress/footer',
 		array(
-			'title'      => __( 'footer', 'w3csspress' ),
+			'title'      => ucfirst( __( 'footer', 'w3csspress' ) ),
 			'categories' => array( 'footer' ),
 			'blockTypes' => array( 'core/template-part' ),
 			'content'    => '<!-- wp:paragraph {"align":"center"} --><p class="has-text-align-center">' . $w3csspress_content_footer . '</p><!-- /wp:paragraph --><!-- wp:html --><button id="gototop">∧</button><!-- /wp:html -->',

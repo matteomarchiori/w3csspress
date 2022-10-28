@@ -62,7 +62,7 @@ if ( ! is_page_template( 'full-width.php' ) && '1' === esc_html( get_option( 'w3
 		comment_form(
 			array(
 				'comment_field' => '<p class="comment-form-comment">' .
-					'<label for="comment">' . esc_html__( 'Comment:', 'w3csspress' ) . '</label>' .
+					'<label for="comment">' . esc_html( ucfirst( __( 'comment:', 'w3csspress' ) ) ) . '</label>' .
 					'<textarea id="comment" name="comment" class="w3-input w3-border" aria-required="true"></textarea>' .
 					'</p>',
 			)

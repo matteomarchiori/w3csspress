@@ -28,8 +28,8 @@ function w3csspress_customize_fonts( $wp_customize ) {
 	$wp_customize->add_section(
 		'w3csspress_fonts',
 		array(
-			'title'          => esc_html__( 'Fonts options', 'w3csspress' ),
-			'description'    => esc_html__( 'Customize fonts options here.', 'w3csspress' ),
+			'title'          => esc_html( ucfirst( __( 'fonts options', 'w3csspress' ) ) ),
+			'description'    => esc_html( ucfirst( __( 'customize fonts options here.', 'w3csspress' ) ) ),
 			'panel'          => '',
 			'priority'       => $w3csspress_priority++,
 			'capability'     => 'edit_theme_options',
@@ -175,21 +175,21 @@ function w3csspress_customize_fonts( $wp_customize ) {
 	$wp_customize->add_control(
 		'w3csspress_font_family',
 		array(
-			'label'       => esc_html__( 'Select font family', 'w3csspress' ),
-			'description' => esc_html__( 'Change font family of website.', 'w3csspress' ),
+			'label'       => esc_html( ucfirst( __( 'select font family', 'w3csspress' ) ) ),
+			'description' => esc_html( ucfirst( __( 'change font family of website.', 'w3csspress' ) ) ),
 			'settings'    => 'w3csspress_font_family',
 			'priority'    => $w3csspress_priority++,
 			'section'     => 'w3csspress_fonts',
 			'type'        => 'select',
-			'choices'     => W3csspress_Constants::w3csspress_font_families(),
+			'choices'     => array_map( 'ucfirst', W3csspress_Constants::w3csspress_font_families() ),
 		)
 	);
 
 	$wp_customize->add_control(
 		'w3csspress_google_font_headings',
 		array(
-			'label'       => esc_html__( 'Use Google font for headings', 'w3csspress' ),
-			'description' => esc_html__( 'Change font family of headings.', 'w3csspress' ),
+			'label'       => esc_html( ucfirst( __( 'use Google font for headings', 'w3csspress' ) ) ),
+			'description' => esc_html( ucfirst( __( 'change font family of headings.', 'w3csspress' ) ) ),
 			'settings'    => 'w3csspress_google_font_headings',
 			'priority'    => $w3csspress_priority++,
 			'section'     => 'w3csspress_fonts',
@@ -200,8 +200,8 @@ function w3csspress_customize_fonts( $wp_customize ) {
 	$wp_customize->add_control(
 		'w3csspress_google_font',
 		array(
-			'label'       => esc_html__( 'Use Google font', 'w3csspress' ),
-			'description' => esc_html__( 'Change font family of website.', 'w3csspress' ),
+			'label'       => esc_html( ucfirst( __( 'use Google font', 'w3csspress' ) ) ),
+			'description' => esc_html( ucfirst( __( 'change font family of website.', 'w3csspress' ) ) ),
 			'settings'    => 'w3csspress_google_font',
 			'priority'    => $w3csspress_priority++,
 			'section'     => 'w3csspress_fonts',
@@ -212,156 +212,156 @@ function w3csspress_customize_fonts( $wp_customize ) {
 	$wp_customize->add_control(
 		'w3csspress_font_size_paragraph',
 		array(
-			'label'       => esc_html__( 'Select paragraphs font size', 'w3csspress' ),
-			'description' => esc_html__( 'Change font size of paragraphs.', 'w3csspress' ),
+			'label'       => esc_html( ucfirst( __( 'select paragraphs font size', 'w3csspress' ) ) ),
+			'description' => esc_html( ucfirst( __( 'change font size of paragraphs.', 'w3csspress' ) ) ),
 			'settings'    => 'w3csspress_font_size_paragraph',
 			'priority'    => $w3csspress_priority++,
 			'section'     => 'w3csspress_fonts',
 			'type'        => 'select',
-			'choices'     => W3csspress_Constants::w3csspress_font_sizes(),
+			'choices'     => array_map( 'ucfirst', W3csspress_Constants::w3csspress_font_sizes() ),
 		)
 	);
 
 	$wp_customize->add_control(
 		'w3csspress_font_size_div',
 		array(
-			'label'       => esc_html__( 'Select div font size', 'w3csspress' ),
-			'description' => esc_html__( 'Change font size of div.', 'w3csspress' ),
+			'label'       => esc_html( ucfirst( __( 'select div font size', 'w3csspress' ) ) ),
+			'description' => esc_html( ucfirst( __( 'change font size of div.', 'w3csspress' ) ) ),
 			'settings'    => 'w3csspress_font_size_div',
 			'priority'    => $w3csspress_priority++,
 			'section'     => 'w3csspress_fonts',
 			'type'        => 'select',
-			'choices'     => W3csspress_Constants::w3csspress_font_sizes(),
+			'choices'     => array_map( 'ucfirst', W3csspress_Constants::w3csspress_font_sizes() ),
 		)
 	);
 
 	$wp_customize->add_control(
 		'w3csspress_font_size_input',
 		array(
-			'label'       => esc_html__( 'Select input font size', 'w3csspress' ),
-			'description' => esc_html__( 'Change font size of inputs.', 'w3csspress' ),
+			'label'       => esc_html( ucfirst( __( 'select input font size', 'w3csspress' ) ) ),
+			'description' => esc_html( ucfirst( __( 'change font size of inputs.', 'w3csspress' ) ) ),
 			'settings'    => 'w3csspress_font_size_input',
 			'priority'    => $w3csspress_priority++,
 			'section'     => 'w3csspress_fonts',
 			'type'        => 'select',
-			'choices'     => W3csspress_Constants::w3csspress_font_sizes(),
+			'choices'     => array_map( 'ucfirst', W3csspress_Constants::w3csspress_font_sizes() ),
 		)
 	);
 
 	$wp_customize->add_control(
 		'w3csspress_font_size_table',
 		array(
-			'label'       => esc_html__( 'Select table font size', 'w3csspress' ),
-			'description' => esc_html__( 'Change font size of tables.', 'w3csspress' ),
+			'label'       => esc_html( ucfirst( __( 'select table font size', 'w3csspress' ) ) ),
+			'description' => esc_html( ucfirst( __( 'change font size of tables.', 'w3csspress' ) ) ),
 			'settings'    => 'w3csspress_font_size_table',
 			'priority'    => $w3csspress_priority++,
 			'section'     => 'w3csspress_fonts',
 			'type'        => 'select',
-			'choices'     => W3csspress_Constants::w3csspress_font_sizes(),
+			'choices'     => array_map( 'ucfirst', W3csspress_Constants::w3csspress_font_sizes() ),
 		)
 	);
 
 	$wp_customize->add_control(
 		'w3csspress_font_size_ul',
 		array(
-			'label'       => esc_html__( 'Select unordered list font size', 'w3csspress' ),
-			'description' => esc_html__( 'Change font size of unordered list.', 'w3csspress' ),
+			'label'       => esc_html( ucfirst( __( 'select unordered list font size', 'w3csspress' ) ) ),
+			'description' => esc_html( ucfirst( __( 'change font size of unordered list.', 'w3csspress' ) ) ),
 			'settings'    => 'w3csspress_font_size_ul',
 			'priority'    => $w3csspress_priority++,
 			'section'     => 'w3csspress_fonts',
 			'type'        => 'select',
-			'choices'     => W3csspress_Constants::w3csspress_font_sizes(),
+			'choices'     => array_map( 'ucfirst', W3csspress_Constants::w3csspress_font_sizes() ),
 		)
 	);
 
 	$wp_customize->add_control(
 		'w3csspress_font_size_ol',
 		array(
-			'label'       => esc_html__( 'Select ordered list font size', 'w3csspress' ),
-			'description' => esc_html__( 'Change font size of ordered list.', 'w3csspress' ),
+			'label'       => esc_html( ucfirst( __( 'select ordered list font size', 'w3csspress' ) ) ),
+			'description' => esc_html( ucfirst( __( 'change font size of ordered list.', 'w3csspress' ) ) ),
 			'settings'    => 'w3csspress_font_size_ol',
 			'priority'    => $w3csspress_priority++,
 			'section'     => 'w3csspress_fonts',
 			'type'        => 'select',
-			'choices'     => W3csspress_Constants::w3csspress_font_sizes(),
+			'choices'     => array_map( 'ucfirst', W3csspress_Constants::w3csspress_font_sizes() ),
 		)
 	);
 
 	$wp_customize->add_control(
 		'w3csspress_font_weight_paragraph',
 		array(
-			'label'       => esc_html__( 'Select paragraphs font weight', 'w3csspress' ),
-			'description' => esc_html__( 'Change font weight of paragraphs.', 'w3csspress' ),
+			'label'       => esc_html( ucfirst( __( 'select paragraphs font weight', 'w3csspress' ) ) ),
+			'description' => esc_html( ucfirst( __( 'change font weight of paragraphs.', 'w3csspress' ) ) ),
 			'settings'    => 'w3csspress_font_weight_paragraph',
 			'priority'    => $w3csspress_priority++,
 			'section'     => 'w3csspress_fonts',
 			'type'        => 'select',
-			'choices'     => W3csspress_Constants::w3csspress_font_weights(),
+			'choices'     => array_map( 'ucfirst', W3csspress_Constants::w3csspress_font_weights() ),
 		)
 	);
 
 	$wp_customize->add_control(
 		'w3csspress_font_weight_div',
 		array(
-			'label'       => esc_html__( 'Select div font weight', 'w3csspress' ),
-			'description' => esc_html__( 'Change font weight of div.', 'w3csspress' ),
+			'label'       => esc_html( ucfirst( __( 'select div font weight', 'w3csspress' ) ) ),
+			'description' => esc_html( ucfirst( __( 'change font weight of div.', 'w3csspress' ) ) ),
 			'settings'    => 'w3csspress_font_weight_div',
 			'priority'    => $w3csspress_priority++,
 			'section'     => 'w3csspress_fonts',
 			'type'        => 'select',
-			'choices'     => W3csspress_Constants::w3csspress_font_weights(),
+			'choices'     => array_map( 'ucfirst', W3csspress_Constants::w3csspress_font_weights() ),
 		)
 	);
 
 	$wp_customize->add_control(
 		'w3csspress_font_weight_input',
 		array(
-			'label'       => esc_html__( 'Select input font weight', 'w3csspress' ),
-			'description' => esc_html__( 'Change font weight of inputs.', 'w3csspress' ),
+			'label'       => esc_html( ucfirst( __( 'select input font weight', 'w3csspress' ) ) ),
+			'description' => esc_html( ucfirst( __( 'change font weight of inputs.', 'w3csspress' ) ) ),
 			'settings'    => 'w3csspress_font_weight_input',
 			'priority'    => $w3csspress_priority++,
 			'section'     => 'w3csspress_fonts',
 			'type'        => 'select',
-			'choices'     => W3csspress_Constants::w3csspress_font_weights(),
+			'choices'     => array_map( 'ucfirst', W3csspress_Constants::w3csspress_font_weights() ),
 		)
 	);
 
 	$wp_customize->add_control(
 		'w3csspress_font_weight_table',
 		array(
-			'label'       => esc_html__( 'Select table font weight', 'w3csspress' ),
-			'description' => esc_html__( 'Change font weight of tables.', 'w3csspress' ),
+			'label'       => esc_html( ucfirst( __( 'select table font weight', 'w3csspress' ) ) ),
+			'description' => esc_html( ucfirst( __( 'change font weight of tables.', 'w3csspress' ) ) ),
 			'settings'    => 'w3csspress_font_weight_table',
 			'priority'    => $w3csspress_priority++,
 			'section'     => 'w3csspress_fonts',
 			'type'        => 'select',
-			'choices'     => W3csspress_Constants::w3csspress_font_weights(),
+			'choices'     => array_map( 'ucfirst', W3csspress_Constants::w3csspress_font_weights() ),
 		)
 	);
 
 	$wp_customize->add_control(
 		'w3csspress_font_weight_ul',
 		array(
-			'label'       => esc_html__( 'Select unordered list font weight', 'w3csspress' ),
-			'description' => esc_html__( 'Change font weight of unordered list.', 'w3csspress' ),
+			'label'       => esc_html( ucfirst( __( 'select unordered list font weight', 'w3csspress' ) ) ),
+			'description' => esc_html( ucfirst( __( 'change font weight of unordered list.', 'w3csspress' ) ) ),
 			'settings'    => 'w3csspress_font_weight_ul',
 			'priority'    => $w3csspress_priority++,
 			'section'     => 'w3csspress_fonts',
 			'type'        => 'select',
-			'choices'     => W3csspress_Constants::w3csspress_font_weights(),
+			'choices'     => array_map( 'ucfirst', W3csspress_Constants::w3csspress_font_weights() ),
 		)
 	);
 
 	$wp_customize->add_control(
 		'w3csspress_font_weight_ol',
 		array(
-			'label'       => esc_html__( 'Select ordered list font weight', 'w3csspress' ),
-			'description' => esc_html__( 'Change font weight of ordered list.', 'w3csspress' ),
+			'label'       => esc_html( ucfirst( __( 'select ordered list font weight', 'w3csspress' ) ) ),
+			'description' => esc_html( ucfirst( __( 'change font weight of ordered list.', 'w3csspress' ) ) ),
 			'settings'    => 'w3csspress_font_weight_ol',
 			'priority'    => $w3csspress_priority++,
 			'section'     => 'w3csspress_fonts',
 			'type'        => 'select',
-			'choices'     => W3csspress_Constants::w3csspress_font_weights(),
+			'choices'     => array_map( 'ucfirst', W3csspress_Constants::w3csspress_font_weights() ),
 		)
 	);
 
@@ -389,19 +389,19 @@ function w3csspress_customize_fonts( $wp_customize ) {
 			array(
 				'label'       => sprintf(
 					/* translators: index for headings */
-					esc_html__( 'Select h%s font size', 'w3csspress' ),
+					esc_html( ucfirst( __( 'select h%s font size', 'w3csspress' ) ) ),
 					$i
 				),
 				'description' => sprintf(
 					/* translators: index for headings */
-					esc_html__( 'Change font size of h%s.', 'w3csspress' ),
+					esc_html( ucfirst( __( 'change font size of h%s.', 'w3csspress' ) ) ),
 					$i
 				),
 				'settings'    => "w3csspress_font_size_h$i",
 				'priority'    => $w3csspress_priority++,
 				'section'     => 'w3csspress_fonts',
 				'type'        => 'select',
-				'choices'     => W3csspress_Constants::w3csspress_font_sizes(),
+				'choices'     => array_map( 'ucfirst', W3csspress_Constants::w3csspress_font_sizes() ),
 			)
 		);
 
@@ -410,19 +410,19 @@ function w3csspress_customize_fonts( $wp_customize ) {
 			array(
 				'label'       => sprintf(
 					/* translators: index for headings */
-					esc_html__( 'Select h%s font weight', 'w3csspress' ),
+					esc_html( ucfirst( __( 'select h%s font weight', 'w3csspress' ) ) ),
 					$i
 				),
 				'description' => sprintf(
 					/* translators: index for headings */
-					esc_html__( 'Change font weight of h%s.', 'w3csspress' ),
+					esc_html( ucfirst( __( 'change font weight of h%s.', 'w3csspress' ) ) ),
 					$i
 				),
 				'settings'    => "w3csspress_font_weight_h$i",
 				'priority'    => $w3csspress_priority++,
 				'section'     => 'w3csspress_fonts',
 				'type'        => 'select',
-				'choices'     => W3csspress_Constants::w3csspress_font_weights(),
+				'choices'     => array_map( 'ucfirst', W3csspress_Constants::w3csspress_font_weights() ),
 			)
 		);
 	}

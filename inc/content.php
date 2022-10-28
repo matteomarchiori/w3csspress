@@ -17,7 +17,7 @@ add_action( 'wp_body_open', __NAMESPACE__ . '\\w3csspress_skip_link' );
  * @since 2022.0
  */
 function w3csspress_skip_link() {
-	echo '<a href="#content" class="skip-link screen-reader-text">' . esc_html__( 'Skip to the content', 'w3csspress' ) . '</a>';
+	echo '<a href="#content" class="skip-link screen-reader-text">' . esc_html( ucfirst( __( 'skip to the content', 'w3csspress' ) ) ) . '</a>';
 }
 
 add_filter( 'the_content_more_link', __NAMESPACE__ . '\\w3csspress_read_more_link' );
@@ -32,7 +32,7 @@ function w3csspress_read_more_link() {
 	if ( ! is_admin() ) {
 		return ' <a href="' . esc_url( get_permalink() ) . '" class="more-link">' . sprintf(
 			/* translators: read more link */
-			esc_html__( '...%s', 'w3csspress' ),
+			esc_html( '&hellip;%s' ),
 			'<span class="screen-reader-text">  ' . esc_html( get_the_title() ) . '</span>'
 		) . '</a>';
 	}
@@ -55,8 +55,8 @@ function w3csspress_customize_content( $wp_customize ) {
 	$wp_customize->add_section(
 		'w3csspress_content',
 		array(
-			'title'          => esc_html__( 'Content options', 'w3csspress' ),
-			'description'    => esc_html__( 'Customize content options here.', 'w3csspress' ),
+			'title'          => esc_html( ucfirst( __( 'content options', 'w3csspress' ) ) ),
+			'description'    => esc_html( ucfirst( __( 'customize content options here.', 'w3csspress' ) ) ),
 			'panel'          => '',
 			'priority'       => $w3csspress_priority++,
 			'capability'     => 'edit_theme_options',
@@ -76,8 +76,8 @@ function w3csspress_customize_content( $wp_customize ) {
 	$wp_customize->add_control(
 		'w3csspress_footer',
 		array(
-			'label'       => esc_html__( 'Footer content', 'w3csspress' ),
-			'description' => esc_html__( 'Set footer content.', 'w3csspress' ),
+			'label'       => esc_html( ucfirst( __( 'footer content', 'w3csspress' ) ) ),
+			'description' => esc_html( ucfirst( __( 'set footer content.', 'w3csspress' ) ) ),
 			'settings'    => 'w3csspress_footer',
 			'priority'    => $w3csspress_priority++,
 			'section'     => 'w3csspress_content',

@@ -35,7 +35,7 @@ get_header(); ?>
 				<?php
 				printf(
 					/* translators: search text completed with query text */
-					esc_html__( 'Search Results for: %s', 'w3csspress' ),
+					esc_html( ucfirst( __( 'search results for: %s', 'w3csspress' ) ) ),
 					get_search_query()
 				);
 				?>

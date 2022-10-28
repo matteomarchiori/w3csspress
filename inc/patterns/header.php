@@ -18,7 +18,7 @@ function w3csspress_register_block_pattern_header() {
 	register_block_pattern(
 		'w3csspress/header',
 		array(
-			'title'      => __( 'header', 'w3csspress' ),
+			'title'      => ucfirst( __( 'header', 'w3csspress' ) ),
 			'categories' => array( 'header' ),
 			'blockTypes' => array( 'core/template-part' ),
 			'content'    => '<!-- wp:columns {"verticalAlignment":"center"} -->
@@ -48,7 +48,7 @@ function w3csspress_register_block_pattern_header() {
 	register_block_pattern(
 		'w3csspress/home-header',
 		array(
-			'title'      => __( 'homepage header', 'w3csspress' ),
+			'title'      => ucfirst( __( 'homepage header', 'w3csspress' ) ),
 			'categories' => array( 'header' ),
 			'blockTypes' => array( 'core/template-part' ),
 			'content'    => '<!-- wp:columns {"verticalAlignment":"center"} -->

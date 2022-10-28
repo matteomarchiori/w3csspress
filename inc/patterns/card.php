@@ -23,7 +23,7 @@ function w3csspress_register_block_pattern_card() {
 	register_block_pattern(
 		'w3csspress/card',
 		array(
-			'title'      => __( 'cards', 'w3csspress' ),
+			'title'      => ucfirst( __( 'cards', 'w3csspress' ) ),
 			'categories' => array( 'cards' ),
 			'blockTypes' => array( 'core/card' ),
 			'content'    => '<!-- wp:group {"className":"w3-card","layout":{"type":"default"}} --><div class="wp-block-group w3-card"><!-- wp:heading --><h2>Lorem Ipsum</h2><!-- /wp:heading --><!-- wp:paragraph --><p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."</p><!-- /wp:paragraph --></div><!-- /wp:group -->',
@@ -37,7 +37,7 @@ function w3csspress_register_block_pattern_card() {
 				array(
 					'title'      => sprintf(
 						/* translators: color of the card */
-						esc_html__( 'card %s', 'w3csspress' ),
+						esc_html( ucfirst( __( 'card %s', 'w3csspress' ) ) ),
 						$w3csspress_theme_translation
 					),
 					'categories' => array( 'cards', 'colors', $w3csspress_theme ),
@@ -47,11 +47,11 @@ function w3csspress_register_block_pattern_card() {
 			);
 
 			register_block_pattern(
-				"w3csspress/card/$w3csspress_theme",
+				"w3csspress/card-2/$w3csspress_theme",
 				array(
 					'title'      => sprintf(
 						/* translators: color of the card */
-						esc_html__( 'card-2 %s', 'w3csspress' ),
+						esc_html( ucfirst( __( 'card-2 %s', 'w3csspress' ) ) ),
 						$w3csspress_theme_translation
 					),
 					'categories' => array( 'cards', 'colors', $w3csspress_theme ),
@@ -61,11 +61,11 @@ function w3csspress_register_block_pattern_card() {
 			);
 
 			register_block_pattern(
-				"w3csspress/card/$w3csspress_theme",
+				"w3csspress/card-4/$w3csspress_theme",
 				array(
 					'title'      => sprintf(
 						/* translators: color of the card */
-						esc_html__( 'card-4 %s', 'w3csspress' ),
+						esc_html( ucfirst( __( 'card-4 %s', 'w3csspress' ) ) ),
 						$w3csspress_theme_translation
 					),
 					'categories' => array( 'cards', 'colors', $w3csspress_theme ),

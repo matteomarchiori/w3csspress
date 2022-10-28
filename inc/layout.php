@@ -28,8 +28,8 @@ function w3csspress_customize_layout( $wp_customize ) {
 	$wp_customize->add_section(
 		'w3csspress_layout',
 		array(
-			'title'          => esc_html__( 'Layout options', 'w3csspress' ),
-			'description'    => esc_html__( 'Customize layout options here.', 'w3csspress' ),
+			'title'          => esc_html( ucfirst( __( 'layout options', 'w3csspress' ) ) ),
+			'description'    => esc_html( ucfirst( __( 'customize layout options here.', 'w3csspress' ) ) ),
 			'panel'          => '',
 			'priority'       => $w3csspress_priority++,
 			'capability'     => 'edit_theme_options',
@@ -67,34 +67,34 @@ function w3csspress_customize_layout( $wp_customize ) {
 	$wp_customize->add_control(
 		'w3csspress_layout',
 		array(
-			'label'       => esc_html__( 'Select layout', 'w3csspress' ),
-			'description' => esc_html__( 'Using this option you can change the page layout.', 'w3csspress' ),
+			'label'       => esc_html( ucfirst( __( 'select layout', 'w3csspress' ) ) ),
+			'description' => esc_html( ucfirst( __( 'using this option you can change the page layout.', 'w3csspress' ) ) ),
 			'settings'    => 'w3csspress_layout',
 			'priority'    => $w3csspress_priority++,
 			'section'     => 'w3csspress_layout',
 			'type'        => 'select',
-			'choices'     => W3csspress_Constants::w3csspress_layouts(),
+			'choices'     => array_map( 'ucfirst', W3csspress_Constants::w3csspress_layouts() ),
 		)
 	);
 
 	$wp_customize->add_control(
 		'w3csspress_rounded_style',
 		array(
-			'label'       => esc_html__( 'Select rounded style', 'w3csspress' ),
-			'description' => esc_html__( 'Using this option you can change some elements roundness (images have more controls).', 'w3csspress' ),
+			'label'       => esc_html( ucfirst( __( 'select rounded style', 'w3csspress' ) ) ),
+			'description' => esc_html( ucfirst( __( 'using this option you can change some elements roundness (images have more controls).', 'w3csspress' ) ) ),
 			'settings'    => 'w3csspress_rounded_style',
 			'priority'    => $w3csspress_priority++,
 			'section'     => 'w3csspress_layout',
 			'type'        => 'select',
-			'choices'     => W3csspress_Constants::w3csspress_rounded(),
+			'choices'     => array_map( 'ucfirst', W3csspress_Constants::w3csspress_rounded() ),
 		)
 	);
 
 	$wp_customize->add_control(
 		'w3csspress_grid_enabled',
 		array(
-			'label'       => esc_html__( 'Grid layout setting', 'w3csspress' ),
-			'description' => esc_html__( 'Using this option you can enable or disable the grid layout.', 'w3csspress' ),
+			'label'       => esc_html( ucfirst( __( 'grid layout setting', 'w3csspress' ) ) ),
+			'description' => esc_html( ucfirst( __( 'using this option you can enable or disable the grid layout.', 'w3csspress' ) ) ),
 			'settings'    => 'w3csspress_grid_enabled',
 			'priority'    => $w3csspress_priority++,
 			'section'     => 'w3csspress_layout',

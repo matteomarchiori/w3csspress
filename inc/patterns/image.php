@@ -19,7 +19,7 @@ function w3csspress_register_block_pattern_image() {
 	register_block_pattern(
 		'w3csspress/image',
 		array(
-			'title'      => __( 'image', 'w3csspress' ),
+			'title'      => ucfirst( __( 'image', 'w3csspress' ) ),
 			'categories' => array( 'images' ),
 			'blockTypes' => array( 'core/image' ),
 			'content'    => '<!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"w3-image"} -->
@@ -31,7 +31,7 @@ function w3csspress_register_block_pattern_image() {
 	register_block_pattern(
 		'w3csspress/image/rounded',
 		array(
-			'title'      => __( 'rounded image', 'w3csspress' ),
+			'title'      => ucfirst( __( 'rounded image', 'w3csspress' ) ),
 			'categories' => array( 'images' ),
 			'blockTypes' => array( 'core/image' ),
 			'content'    => '<!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"w3-image w3-round"} -->
@@ -43,7 +43,7 @@ function w3csspress_register_block_pattern_image() {
 	register_block_pattern(
 		'w3csspress/image/circular',
 		array(
-			'title'      => __( 'circular image', 'w3csspress' ),
+			'title'      => ucfirst( __( 'circular image', 'w3csspress' ) ),
 			'categories' => array( 'images' ),
 			'blockTypes' => array( 'core/image' ),
 			'content'    => '<!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"w3-image w3-circle"} -->
@@ -55,7 +55,7 @@ function w3csspress_register_block_pattern_image() {
 	register_block_pattern(
 		'w3csspress/image/bordered',
 		array(
-			'title'      => __( 'bordered image', 'w3csspress' ),
+			'title'      => ucfirst( __( 'bordered image', 'w3csspress' ) ),
 			'categories' => array( 'images' ),
 			'blockTypes' => array( 'core/image' ),
 			'content'    => '<!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"w3-image w3-border"} -->
@@ -67,7 +67,7 @@ function w3csspress_register_block_pattern_image() {
 	register_block_pattern(
 		'w3csspress/image/card',
 		array(
-			'title'      => __( 'card image', 'w3csspress' ),
+			'title'      => ucfirst( __( 'card image', 'w3csspress' ) ),
 			'categories' => array( 'images' ),
 			'blockTypes' => array( 'core/image' ),
 			'content'    => '<!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"w3-image w3-card"} -->
@@ -79,7 +79,7 @@ function w3csspress_register_block_pattern_image() {
 	register_block_pattern(
 		'w3csspress/image/opaque',
 		array(
-			'title'      => __( 'opaque image', 'w3csspress' ),
+			'title'      => ucfirst( __( 'opaque image', 'w3csspress' ) ),
 			'categories' => array( 'images' ),
 			'blockTypes' => array( 'core/image' ),
 			'content'    => '<!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"w3-image w3-opacity"} -->
@@ -91,7 +91,7 @@ function w3csspress_register_block_pattern_image() {
 	register_block_pattern(
 		'w3csspress/image/greyscale',
 		array(
-			'title'      => __( 'greyscale image', 'w3csspress' ),
+			'title'      => ucfirst( __( 'greyscale image', 'w3csspress' ) ),
 			'categories' => array( 'images' ),
 			'blockTypes' => array( 'core/image' ),
 			'content'    => '<!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"w3-image w3-greyscale"} -->
@@ -103,7 +103,7 @@ function w3csspress_register_block_pattern_image() {
 	register_block_pattern(
 		'w3csspress/image/sepia',
 		array(
-			'title'      => __( 'sepia image', 'w3csspress' ),
+			'title'      => ucfirst( __( 'sepia image', 'w3csspress' ) ),
 			'categories' => array( 'images' ),
 			'blockTypes' => array( 'core/image' ),
 			'content'    => '<!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"w3-image w3-sepia"} -->

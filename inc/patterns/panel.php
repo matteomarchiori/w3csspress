@@ -23,7 +23,7 @@ function w3csspress_register_block_pattern_panel() {
 	register_block_pattern(
 		'w3csspress/panel',
 		array(
-			'title'      => __( 'panel', 'w3csspress' ),
+			'title'      => ucfirst( __( 'panel', 'w3csspress' ) ),
 			'categories' => array( 'panels' ),
 			'blockTypes' => array( 'core/panel' ),
 			'content'    => '<!-- wp:group {"className":"w3-panel","layout":{"type":"default"}} --><div class="wp-block-group w3-panel"><!-- wp:heading --><h2>Lorem Ipsum</h2><!-- /wp:heading --><!-- wp:paragraph --><p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."</p><!-- /wp:paragraph --></div><!-- /wp:group -->',
@@ -37,7 +37,7 @@ function w3csspress_register_block_pattern_panel() {
 				array(
 					'title'      => sprintf(
 						/* translators: color of the panel */
-						esc_html__( 'panel %s', 'w3csspress' ),
+						esc_html( ucfirst( __( 'panel %s', 'w3csspress' ) ) ),
 						$w3csspress_theme_translation
 					),
 					'categories' => array( 'panels', $w3csspress_theme, 'colors' ),

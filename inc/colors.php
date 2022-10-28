@@ -76,26 +76,26 @@ function w3csspress_customize_colors( $wp_customize ) {
 	$wp_customize->add_control(
 		'w3csspress_color_theme',
 		array(
-			'label'       => esc_html__( 'Select color theme', 'w3csspress' ),
-			'description' => esc_html__( 'Using this option you can change the theme colors.', 'w3csspress' ),
+			'label'       => esc_html( ucfirst( __( 'select color theme', 'w3csspress' ) ) ),
+			'description' => esc_html( ucfirst( __( 'using this option you can change the theme colors.', 'w3csspress' ) ) ),
 			'settings'    => 'w3csspress_color_theme',
 			'priority'    => $w3csspress_priority++,
 			'section'     => 'colors',
 			'type'        => 'select',
-			'choices'     => W3csspress_Constants::w3csspress_themes(),
+			'choices'     => array_map( 'ucfirst', W3csspress_Constants::w3csspress_themes() ),
 		)
 	);
 
 	$wp_customize->add_control(
 		'w3csspress_color_theme_kind',
 		array(
-			'label'       => esc_html__( 'Select theme kind', 'w3csspress' ),
-			'description' => esc_html__( 'Using this option you can change the theme between default, light and dark.', 'w3csspress' ),
+			'label'       => esc_html( ucfirst( __( 'select theme kind', 'w3csspress' ) ) ),
+			'description' => esc_html( ucfirst( __( 'using this option you can change the theme between default, light and dark.', 'w3csspress' ) ) ),
 			'settings'    => 'w3csspress_color_theme_kind',
 			'priority'    => $w3csspress_priority++,
 			'section'     => 'colors',
 			'type'        => 'select',
-			'choices'     => W3csspress_Constants::w3csspress_theme_kinds(),
+			'choices'     => array_map( 'ucfirst', W3csspress_Constants::w3csspress_theme_kinds() ),
 		)
 	);
 
@@ -104,8 +104,8 @@ function w3csspress_customize_colors( $wp_customize ) {
 			$wp_customize,
 			'w3csspress_color_theme_text_custom',
 			array(
-				'label'       => esc_html__( 'Text theme color', 'w3csspress' ),
-				'description' => esc_html__( 'Change theme text color', 'w3csspress' ),
+				'label'       => esc_html( ucfirst( __( 'text theme color', 'w3csspress' ) ) ),
+				'description' => esc_html( ucfirst( __( 'change theme text color', 'w3csspress' ) ) ),
 				'settings'    => 'w3csspress_color_theme_text_custom',
 				'priority'    => $w3csspress_priority++,
 				'section'     => 'colors',
@@ -118,8 +118,8 @@ function w3csspress_customize_colors( $wp_customize ) {
 			$wp_customize,
 			'w3csspress_color_link',
 			array(
-				'label'       => esc_html__( 'Link color', 'w3csspress' ),
-				'description' => esc_html__( 'Change link color', 'w3csspress' ),
+				'label'       => esc_html( ucfirst( __( 'link color', 'w3csspress' ) ) ),
+				'description' => esc_html( ucfirst( __( 'change link color', 'w3csspress' ) ) ),
 				'settings'    => 'w3csspress_color_link',
 				'priority'    => $w3csspress_priority++,
 				'section'     => 'colors',
@@ -135,12 +135,12 @@ function w3csspress_customize_colors( $wp_customize ) {
 				array(
 					'label'       => sprintf(
 						/* translators: index for headings */
-						esc_html__( 'H%s color', 'w3csspress' ),
+						esc_html( ucfirst( __( 'h%s color', 'w3csspress' ) ) ),
 						$i
 					),
 					'description' => sprintf(
 						/* translators: index for headings */
-						esc_html__( 'Change color of h%s.', 'w3csspress' ),
+						esc_html( ucfirst( __( 'change color of h%s.', 'w3csspress' ) ) ),
 						$i
 					),
 					'settings'    => "w3csspress_color_h$i",

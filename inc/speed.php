@@ -24,8 +24,8 @@ function w3csspress_customize_speed( $wp_customize ) {
 	$wp_customize->add_section(
 		'w3csspress_speed',
 		array(
-			'title'          => esc_html__( 'Speed options', 'w3csspress' ),
-			'description'    => esc_html__( 'Customize speed options here.', 'w3csspress' ),
+			'title'          => esc_html( ucfirst( __( 'speed options', 'w3csspress' ) ) ),
+			'description'    => esc_html( ucfirst( __( 'customize speed options here.', 'w3csspress' ) ) ),
 			'panel'          => '',
 			'priority'       => $w3csspress_priority++,
 			'capability'     => 'edit_theme_options',
@@ -90,8 +90,8 @@ function w3csspress_customize_speed( $wp_customize ) {
 	$wp_customize->add_control(
 		'w3csspress_jquery',
 		array(
-			'label'       => esc_html__( 'Disable jQuery', 'w3csspress' ),
-			'description' => esc_html__( 'Disable or enable jQuery (do only if you know what you are doing).', 'w3csspress' ),
+			'label'       => esc_html( ucfirst( __( 'disable jQuery', 'w3csspress' ) ) ),
+			'description' => esc_html( ucfirst( __( 'disable or enable jQuery (do only if you know what you are doing).', 'w3csspress' ) ) ),
 			'settings'    => 'w3csspress_jquery',
 			'priority'    => $w3csspress_priority++,
 			'section'     => 'w3csspress_speed',
@@ -102,8 +102,8 @@ function w3csspress_customize_speed( $wp_customize ) {
 	$wp_customize->add_control(
 		'w3csspress_dashicons',
 		array(
-			'label'       => esc_html__( 'Enable Dashicons', 'w3csspress' ),
-			'description' => esc_html__( 'Enable Dashicons on the frontend.', 'w3csspress' ),
+			'label'       => esc_html( ucfirst( __( 'enable Dashicons', 'w3csspress' ) ) ),
+			'description' => esc_html( ucfirst( __( 'enable Dashicons on the frontend.', 'w3csspress' ) ) ),
 			'settings'    => 'w3csspress_dashicons',
 			'priority'    => $w3csspress_priority++,
 			'section'     => 'w3csspress_speed',
@@ -114,8 +114,8 @@ function w3csspress_customize_speed( $wp_customize ) {
 	$wp_customize->add_control(
 		'w3csspress_gutenberg_posts',
 		array(
-			'label'       => esc_html__( 'Enable Gutenberg for posts', 'w3csspress' ),
-			'description' => esc_html__( 'Enable Gutenberg to edit posts.', 'w3csspress' ),
+			'label'       => esc_html( ucfirst( __( 'enable Gutenberg for posts', 'w3csspress' ) ) ),
+			'description' => esc_html( ucfirst( __( 'enable Gutenberg to edit posts.', 'w3csspress' ) ) ),
 			'settings'    => 'w3csspress_gutenberg_posts',
 			'priority'    => $w3csspress_priority++,
 			'section'     => 'w3csspress_speed',
@@ -126,8 +126,8 @@ function w3csspress_customize_speed( $wp_customize ) {
 	$wp_customize->add_control(
 		'w3csspress_gutenberg_widgets',
 		array(
-			'label'       => esc_html__( 'Enable Gutenberg for widgets', 'w3csspress' ),
-			'description' => esc_html__( 'Enable Gutenberg to edit widgets.', 'w3csspress' ),
+			'label'       => esc_html( ucfirst( __( 'enable Gutenberg for widgets', 'w3csspress' ) ) ),
+			'description' => esc_html( ucfirst( __( 'enable Gutenberg to edit widgets.', 'w3csspress' ) ) ),
 			'settings'    => 'w3csspress_gutenberg_widgets',
 			'priority'    => $w3csspress_priority++,
 			'section'     => 'w3csspress_speed',
@@ -138,8 +138,8 @@ function w3csspress_customize_speed( $wp_customize ) {
 	$wp_customize->add_control(
 		'w3csspress_gutenberg_styles',
 		array(
-			'label'       => esc_html__( 'Enable block styles', 'w3csspress' ),
-			'description' => esc_html__( 'Enable block styles.', 'w3csspress' ),
+			'label'       => esc_html( ucfirst( __( 'enable block styles', 'w3csspress' ) ) ),
+			'description' => esc_html( ucfirst( __( 'enable block styles.', 'w3csspress' ) ) ),
 			'settings'    => 'w3csspress_gutenberg_styles',
 			'priority'    => $w3csspress_priority++,
 			'section'     => 'w3csspress_speed',
@@ -150,8 +150,8 @@ function w3csspress_customize_speed( $wp_customize ) {
 	$wp_customize->add_control(
 		'w3csspress_fse',
 		array(
-			'label'       => esc_html__( 'Enable full site editor', 'w3csspress' ),
-			'description' => esc_html__( 'Enable the full site editor.', 'w3csspress' ),
+			'label'       => esc_html( ucfirst( __( 'enable full site editor', 'w3csspress' ) ) ),
+			'description' => esc_html( ucfirst( __( 'enable the full site editor.', 'w3csspress' ) ) ),
 			'settings'    => 'w3csspress_fse',
 			'priority'    => $w3csspress_priority++,
 			'section'     => 'w3csspress_speed',

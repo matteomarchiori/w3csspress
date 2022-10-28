@@ -34,7 +34,7 @@ function w3csspress_register_block_pattern_navigation() {
 	register_block_pattern(
 		'w3csspress/navigation',
 		array(
-			'title'      => __( 'basic navigation', 'w3csspress' ),
+			'title'      => ucfirst( __( 'basic navigation', 'w3csspress' ) ),
 			'categories' => array( 'navigation' ),
 			'blockTypes' => array( 'core/navigation' ),
 			'content'    => $content,

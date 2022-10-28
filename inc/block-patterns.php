@@ -20,26 +20,26 @@ get_template_part( 'classes/class-w3csspress-constants' );
  */
 function w3csspress_register_block_patterns() {
 	$w3csspress_block_pattern_categories = array(
-		'notfound'   => array( 'label' => __( '404 not found', 'w3csspress' ) ),
-		'badges'     => array( 'label' => __( 'Badges', 'w3csspress' ) ),
-		'borders'    => array( 'label' => __( 'Borders', 'w3csspress' ) ),
-		'cards'      => array( 'label' => __( 'Cards', 'w3csspress' ) ),
-		'colors'     => array( 'label' => __( 'Colors', 'w3csspress' ) ),
-		'containers' => array( 'label' => __( 'Containers', 'w3csspress' ) ),
-		'footer'     => array( 'label' => __( 'Footers', 'w3csspress' ) ),
-		'header'     => array( 'label' => __( 'Headers', 'w3csspress' ) ),
-		'hover'      => array( 'label' => __( 'Hover', 'w3csspress' ) ),
-		'images'     => array( 'label' => __( 'Images', 'w3csspress' ) ),
-		'navigation' => array( 'label' => __( 'Navigation', 'w3csspress' ) ),
-		'panels'     => array( 'label' => __( 'Panels', 'w3csspress' ) ),
-		'query'      => array( 'label' => __( 'Query', 'w3csspress' ) ),
-		'search'     => array( 'label' => __( 'Search', 'w3csspress' ) ),
-		'sidebars'   => array( 'label' => __( 'Sidebars', 'w3csspress' ) ),
+		'notfound'   => array( 'label' => ucfirst( __( '404 not found', 'w3csspress' ) ) ),
+		'badges'     => array( 'label' => ucfirst( __( 'badges', 'w3csspress' ) ) ),
+		'borders'    => array( 'label' => ucfirst( __( 'borders', 'w3csspress' ) ) ),
+		'cards'      => array( 'label' => ucfirst( __( 'cards', 'w3csspress' ) ) ),
+		'colors'     => array( 'label' => ucfirst( __( 'colors', 'w3csspress' ) ) ),
+		'containers' => array( 'label' => ucfirst( __( 'containers', 'w3csspress' ) ) ),
+		'footer'     => array( 'label' => ucfirst( __( 'footers', 'w3csspress' ) ) ),
+		'header'     => array( 'label' => ucfirst( __( 'headers', 'w3csspress' ) ) ),
+		'hover'      => array( 'label' => ucfirst( __( 'hover', 'w3csspress' ) ) ),
+		'images'     => array( 'label' => ucfirst( __( 'images', 'w3csspress' ) ) ),
+		'navigation' => array( 'label' => ucfirst( __( 'navigation', 'w3csspress' ) ) ),
+		'panels'     => array( 'label' => ucfirst( __( 'panels', 'w3csspress' ) ) ),
+		'query'      => array( 'label' => ucfirst( __( 'query', 'w3csspress' ) ) ),
+		'search'     => array( 'label' => ucfirst( __( 'search', 'w3csspress' ) ) ),
+		'sidebars'   => array( 'label' => ucfirst( __( 'sidebars', 'w3csspress' ) ) ),
 	);
 
 	foreach ( W3csspress_Constants::w3csspress_themes() as $w3csspress_theme => $w3csspress_theme_translation ) {
 		if ( '' !== $w3csspress_theme ) {
-			$w3csspress_block_pattern_categories[ $w3csspress_theme ] = array( 'label' => $w3csspress_theme_translation );
+			$w3csspress_block_pattern_categories[ $w3csspress_theme ] = array( 'label' => ucfirst( $w3csspress_theme_translation ) );
 		}
 	}
 

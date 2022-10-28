@@ -87,7 +87,7 @@ function w3csspress_after_setup_theme() {
 	add_theme_support( 'align-wide' );
 	register_nav_menus(
 		array(
-			'main-menu' => esc_html__( 'Main Menu', 'w3csspress' ),
+			'main-menu' => esc_html( ucfirst( __( 'main menu', 'w3csspress' ) ) ),
 		)
 	);
 	add_editor_style(
@@ -144,7 +144,7 @@ function w3csspress_wp_footer() {               ?>
 					buttonMenu.type = "button";
 					buttonMenu.className = "menu-toggle w3-btn w3-theme-action w3-margin-top w3-right <?php echo esc_html( get_option( 'w3csspress_rounded_style' ) ) . ' ' . esc_html( get_option( 'w3csspress_font_size_input' ) ) . ' ' . esc_html( get_option( 'w3csspress_font_weight_input' ) ); ?>";
 					buttonMenu.id = "burger";
-					buttonMenu.innerHTML = "&equiv; <?php echo esc_html__( 'Menu', 'w3csspress' ); ?>";
+					buttonMenu.innerHTML = "&equiv; <?php echo esc_html( ucfirst( __( 'menu', 'w3csspress' ) ) ); ?>";
 					buttonMenu.addEventListener("click", function() {
 						display = menu.style.display;
 						if (display == "none" || display == '') menu.style.display = "block";
@@ -182,7 +182,7 @@ add_filter( 'the_title', __NAMESPACE__ . '\\w3csspress_the_title' );
  */
 function w3csspress_the_title( $title ) {
 	if ( '' === $title ) {
-		return '...';
+		return '&hellip;';
 	} else {
 		return $title;
 	}
@@ -201,7 +201,7 @@ function w3csspress_excerpt_more() {
 		global $post;
 		return ' <a href="' . esc_url( get_permalink( $post->ID ) ) . '" class="more-link">' . sprintf(
 			/* translators: read more link */
-			esc_html__( '...%s', 'w3csspress' ),
+			esc_html( '&hellip;%s' ),
 			'<span class="screen-reader-text">  ' . esc_html( get_the_title() ) . '</span>'
 		) . '</a>';
 	}
@@ -334,8 +334,8 @@ function w3csspress_widgets_init() {
 	register_sidebar(
 		array(
 			'id'            => 'primary',
-			'name'          => __( 'Primary Sidebar', 'w3csspress' ),
-			'description'   => __( 'Sidebar on the left.', 'w3csspress' ),
+			'name'          => ucfirst( __( 'primary sidebar', 'w3csspress' ) ),
+			'description'   => ucfirst( __( 'sidebar on the left.', 'w3csspress' ) ),
 			'before_widget' => '<div id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</div>',
 		)
@@ -343,8 +343,8 @@ function w3csspress_widgets_init() {
 	register_sidebar(
 		array(
 			'id'            => 'secondary',
-			'name'          => __( 'Secondary Sidebar', 'w3csspress' ),
-			'description'   => __( 'Sidebar on the right.', 'w3csspress' ),
+			'name'          => ucfirst( __( 'secondary sidebar', 'w3csspress' ) ),
+			'description'   => ucfirst( __( 'sidebar on the right.', 'w3csspress' ) ),
 			'before_widget' => '<div id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</div>',
 		)
@@ -352,8 +352,8 @@ function w3csspress_widgets_init() {
 	register_sidebar(
 		array(
 			'id'            => 'headwidgets',
-			'name'          => __( 'Head widgets Sidebar', 'w3csspress' ),
-			'description'   => __( 'Widgets area on the head of the website.', 'w3csspress' ),
+			'name'          => ucfirst( __( 'head widgets sidebar', 'w3csspress' ) ),
+			'description'   => ucfirst( __( 'widgets area on the head of the website.', 'w3csspress' ) ),
 			'before_widget' => '<div id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</div>',
 		)
@@ -361,8 +361,8 @@ function w3csspress_widgets_init() {
 	register_sidebar(
 		array(
 			'id'            => 'footwidgets',
-			'name'          => __( 'Foot widgets Sidebar', 'w3csspress' ),
-			'description'   => __( 'Widgets area on the foot of the website.', 'w3csspress' ),
+			'name'          => ucfirst( __( 'foot widgets sidebar', 'w3csspress' ) ),
+			'description'   => ucfirst( __( 'widgets area on the foot of the website.', 'w3csspress' ) ),
 			'before_widget' => '<div id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</div>',
 		)
