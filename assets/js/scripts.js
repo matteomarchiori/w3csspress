@@ -31,10 +31,10 @@ window.addEventListener('load', function() {
     }
 
     function addClNext(node, cl) {
-        if (node.nextSibling !== null) {
-            var spacer = node.nextSibling.className == '' ? '' : ' ';
-            if ((' ' + node.nextSibling.className + ' ').indexOf(cl) === -1)
-                node.nextSibling.className += spacer + cl;
+        if (node.nextElementSibling !== null) {
+            var spacer = node.nextElementSibling.className == '' ? '' : ' ';
+            if ((' ' + node.nextElementSibling.className + ' ').indexOf(cl) === -1)
+                node.nextElementSibling.className += spacer + cl;
         }
     }
 
@@ -111,7 +111,7 @@ window.addEventListener('load', function() {
     var lastMenuItems = document.querySelectorAll(".w3-dropdown-content .menu-item:last-of-type a");
     for (i = 0; i < lastMenuItems.length; i++) {
         lastMenuItems[i].addEventListener("keydown", function(event) {
-            if ((event.target.nextSibling == null || event.target.nextSibling.className.indexOf("w3-dropdown-content") === -1) && event.which == 9 && !event.shiftKey) {
+            if ((event.target.nextElementSibling == null || event.target.nextElementSibling.className.indexOf("w3-dropdown-content") === -1) && event.which == 9 && !event.shiftKey) {
                 removeClParents(event.target, "w3-dropdown-focus", "w3-show");
                 var closest = closestCl(event.target.parentNode, 'w3-dropdown-content');
                 if (closest !== null) {
@@ -125,26 +125,40 @@ window.addEventListener('load', function() {
     for (i = 0; i < dropdowns.length; i++) {
         dropdowns[i].addEventListener("keydown", function(event) {
             if (event.which == 9 && event.shiftKey) {
-                if (event.target.nextSibling != null && (' ' + event.target.nextSibling.className + ' ').indexOf("w3-dropdown-content") !== -1) {
-                    removeCl(event.target.nextSibling, "w3-show");
+                if (event.target.nextElementSibling != null && (' ' + event.target.nextElementSibling.className + ' ').indexOf("w3-dropdown-content") !== -1) {
+                    removeCl(event.target.nextElementSibling, "w3-show");
                 }
             }
         });
     }
-    var body = document.body;
     var primary = document.getElementById("primary");
     var secondary = document.getElementById("secondary");
     var rtl = document.getElementsByClassName("rtl").length;
+    var woocommerce = document.getElementsByClassName("woocommerce-page").length;
     if (window.outerWidth > 600) {
         if (primary !== null) {
-            body.style.width = body.style.width - primary.offsetWidth;
-            if (rtl) body.style.marginRight = primary.offsetWidth + 'px';
-            else body.style.marginLeft = primary.offsetWidth + 'px';
+            if(woocommerce) primary.nextElementSibling.style.width = primary.nextElementSibling.style.width - primary.offsetWidth;
+            else document.body.style.width = document.body.style.width - primary.offsetWidth;  
+            if (rtl) {
+                if(woocommerce)primary.previousElementSibling.style.marginRight = primary.offsetWidth + 'px';
+                else document.body.style.marginRight = primary.offsetWidth + 'px';
+            }
+            else {
+                if(woocommerce)primary.nextElementSibling.style.marginLeft = primary.offsetWidth + 'px';
+                else document.body.style.marginLeft = primary.offsetWidth + 'px';
+            }
         }
         if (secondary !== null) {
-            body.style.width = body.style.width - secondary.offsetWidth;
-            if (rtl) body.style.marginLeft = secondary.offsetWidth + 'px';
-            else body.style.marginRight = secondary.offsetWidth + 'px';
+            if(woocommerce) secondary.previousElementSibling.style.width = secondary.previousElementSibling.style.width - secondary.offsetWidth;
+            else document.body.style.width = document.body.style.width - secondary.offsetWidth;
+            if (rtl) {
+                if(woocommerce) secondary.nextElementSibling.style.marginLeft = secondary.offsetWidth + 'px';
+                else document.body.style.marginLeft = secondary.offsetWidth + 'px';
+            }
+            else {
+                if(woocommerce) secondary.previousElementSibling.style.marginRight = secondary.offsetWidth + 'px';
+                else document.body.style.marginRight = secondary.offsetWidth + 'px';
+            }
         }
     }
     var gototop = document.getElementById("gototop");
