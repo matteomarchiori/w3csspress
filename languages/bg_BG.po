@@ -1,0 +1,1193 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: w3csspress\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-10-29 17:02+0000\n"
+"PO-Revision-Date: 2022-10-30 09:16+0000\n"
+"Last-Translator: \n"
+"Language-Team: Bulgarian\n"
+"Language: bg_BG\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.3; wp-6.0.3\n"
+"X-Domain: w3csspress"
+
+#. border and color
+#: classes/class-w3csspress-constants.php:222
+#, fuzzy, php-format
+msgid "%1$s %2$s"
+msgstr "%1$s %2$s"
+
+#. arrow
+#. arrow and text
+#: attachment.php:62 template-parts/nav/below.php:19
+#, fuzzy, php-format
+msgid "%s older"
+msgstr "%s по-стари"
+
+#: inc/patterns/notfound.php:22
+#, fuzzy
+msgid "404"
+msgstr "404"
+
+#: inc/block-patterns.php:23
+#, fuzzy
+msgid "404 not found"
+msgstr "404 не е намерен"
+
+#: inc/patterns/query.php:43
+#, fuzzy
+msgid "add text or blocks to display when the query returns no results."
+msgstr ""
+"добавяне на текст или блокове, които да се показват, когато заявката не "
+"връща резултати."
+
+#: classes/class-w3csspress-constants.php:36
+#, fuzzy
+msgid "all borders"
+msgstr "всички граници"
+
+#: classes/class-w3csspress-constants.php:57
+#, fuzzy
+msgid "amber"
+msgstr "кехлибар"
+
+#. color of the container
+#: inc/patterns/badge.php:30
+#, fuzzy, php-format
+msgid "badge %s"
+msgstr "значка %s"
+
+#: inc/block-patterns.php:24
+#, fuzzy
+msgid "badges"
+msgstr "значки"
+
+#: inc/patterns/navigation.php:37
+#, fuzzy
+msgid "basic navigation"
+msgstr "основна навигация"
+
+#: classes/class-w3csspress-constants.php:58
+#, fuzzy
+msgid "black"
+msgstr "черен"
+
+#: classes/class-w3csspress-constants.php:59
+#, fuzzy
+msgid "blue"
+msgstr "син"
+
+#: classes/class-w3csspress-constants.php:60
+#, fuzzy
+msgid "blue grey"
+msgstr "синьо сиво"
+
+#. border and direction
+#: classes/class-w3csspress-constants.php:27
+#, fuzzy, php-format
+msgid "border %s"
+msgstr "граница %s"
+
+#: inc/images.php:134
+#, fuzzy
+msgid "border images on the page."
+msgstr "гранични изображения на страницата."
+
+#: inc/patterns/image.php:58
+#, fuzzy
+msgid "bordered image"
+msgstr "изображение с рамка"
+
+#: inc/images.php:133
+#, fuzzy
+msgid "bordered images"
+msgstr "рамкирани изображения"
+
+#: inc/block-patterns.php:25
+#, fuzzy
+msgid "borders"
+msgstr "граници"
+
+#: classes/class-w3csspress-constants.php:204
+#, fuzzy
+msgid "bottom"
+msgstr "дъно"
+
+#: classes/class-w3csspress-constants.php:61
+#, fuzzy
+msgid "brown"
+msgstr "кафяво"
+
+#. color of the card
+#: inc/patterns/card.php:40
+#, fuzzy, php-format
+msgid "card %s"
+msgstr "карта %s"
+
+#: inc/patterns/image.php:70
+#, fuzzy
+msgid "card image"
+msgstr "изображение на картата"
+
+#: inc/images.php:145
+#, fuzzy
+msgid "card images"
+msgstr "изображения на карти"
+
+#. color of the card
+#: inc/patterns/card.php:54
+#, fuzzy, php-format
+msgid "card-2 %s"
+msgstr "card-2 %s"
+
+#. color of the card
+#: inc/patterns/card.php:68
+#, fuzzy, php-format
+msgid "card-4 %s"
+msgstr "карта-4 %s"
+
+#: inc/block-patterns.php:26 inc/patterns/card.php:26
+#, fuzzy
+msgid "cards"
+msgstr "карти"
+
+#: template-parts/entry/footer.php:16
+#, fuzzy
+msgid "categories: "
+msgstr "категории"
+
+#. index for headings
+#: inc/colors.php:143
+#, fuzzy, php-format
+msgid "change color of h%s."
+msgstr "промяна на цвета на h%s."
+
+#: inc/fonts.php:192
+#, fuzzy
+msgid "change font family of headings."
+msgstr "промяна на шрифтовото семейство на заглавията."
+
+#: inc/fonts.php:179 inc/fonts.php:204
+#, fuzzy
+msgid "change font family of website."
+msgstr "промяна на шрифтовото семейство на уебсайта."
+
+#: inc/fonts.php:229
+#, fuzzy
+msgid "change font size of div."
+msgstr "промяна на размера на шрифта на div."
+
+#. index for headings
+#: inc/fonts.php:397
+#, fuzzy, php-format
+msgid "change font size of h%s."
+msgstr "промяна на размера на шрифта на h%s."
+
+#: inc/fonts.php:242
+#, fuzzy
+msgid "change font size of inputs."
+msgstr "промяна на размера на шрифта на входовете."
+
+#: inc/fonts.php:281
+#, fuzzy
+msgid "change font size of ordered list."
+msgstr "промяна на размера на шрифта на наредения списък."
+
+#: inc/fonts.php:216
+#, fuzzy
+msgid "change font size of paragraphs."
+msgstr "промяна на размера на шрифта в параграфите."
+
+#: inc/fonts.php:255
+#, fuzzy
+msgid "change font size of tables."
+msgstr "промяна на размера на шрифта на таблиците."
+
+#: inc/fonts.php:268
+#, fuzzy
+msgid "change font size of unordered list."
+msgstr "промяна на размера на шрифта на неподредения списък."
+
+#: inc/fonts.php:307
+#, fuzzy
+msgid "change font weight of div."
+msgstr "промяна на теглото на шрифта на div."
+
+#. index for headings
+#: inc/fonts.php:418
+#, fuzzy, php-format
+msgid "change font weight of h%s."
+msgstr "промяна на теглото на шрифта h%s."
+
+#: inc/fonts.php:320
+#, fuzzy
+msgid "change font weight of inputs."
+msgstr "промяна на теглото на шрифта на входовете."
+
+#: inc/fonts.php:359
+#, fuzzy
+msgid "change font weight of ordered list."
+msgstr "промяна на тежестта на шрифта на наредения списък."
+
+#: inc/fonts.php:294
+#, fuzzy
+msgid "change font weight of paragraphs."
+msgstr "промяна на тежестта на шрифта в параграфите."
+
+#: inc/fonts.php:333
+#, fuzzy
+msgid "change font weight of tables."
+msgstr "промяна на теглото на шрифта на таблиците."
+
+#: inc/fonts.php:346
+#, fuzzy
+msgid "change font weight of unordered list."
+msgstr "промяна на теглото на шрифта на неподредения списък."
+
+#: inc/colors.php:122
+#, fuzzy
+msgid "change link color"
+msgstr "промяна на цвета на връзката"
+
+#: inc/colors.php:108
+#, fuzzy
+msgid "change theme text color"
+msgstr "промяна на цвета на текста на темата"
+
+#: classes/class-w3csspress-constants.php:190
+#, fuzzy
+msgid "circle"
+msgstr "кръг"
+
+#: inc/images.php:121
+#, fuzzy
+msgid "circle images"
+msgstr "изображения на кръга"
+
+#: inc/images.php:122
+#, fuzzy
+msgid "circle images on the page."
+msgstr "кръгови изображения на страницата."
+
+#: inc/patterns/image.php:46
+#, fuzzy
+msgid "circular image"
+msgstr "кръгово изображение"
+
+#: inc/block-patterns.php:27
+#, fuzzy
+msgid "colors"
+msgstr "цветове"
+
+#: comments.php:65
+#, fuzzy
+msgid "comment:"
+msgstr "коментар:"
+
+#: template-parts/entry/footer.php:20
+#, fuzzy
+msgid "comments"
+msgstr "коментари"
+
+#: comments.php:53
+#, fuzzy
+msgctxt "comments count"
+msgid "Trackback or Pingback"
+msgid_plural "Trackbacks and Pingbacks"
+msgstr[0] "Trackback или Pingback"
+msgstr[1] "Trackbacks и Pingbacks"
+
+#. color of the container
+#: inc/patterns/container.php:40
+#, fuzzy, php-format
+msgid "container %s"
+msgstr "контейнер %s"
+
+#: inc/block-patterns.php:28 inc/patterns/container.php:26
+#, fuzzy
+msgid "containers"
+msgstr "контейнери"
+
+#: inc/content.php:58
+#, fuzzy
+msgid "content options"
+msgstr "опции за съдържание"
+
+#: classes/class-w3csspress-constants.php:156
+#, fuzzy
+msgid "cursive"
+msgstr "курсивен"
+
+#: inc/content.php:59
+#, fuzzy
+msgid "customize content options here."
+msgstr "персонализирайте опциите за съдържание тук."
+
+#: inc/fonts.php:32
+#, fuzzy
+msgid "customize fonts options here."
+msgstr "персонализирайте опциите за шрифтове тук."
+
+#: inc/images.php:28
+#, fuzzy
+msgid "customize images options here."
+msgstr "персонализирайте опциите за изображения тук."
+
+#: inc/layout.php:32
+#, fuzzy
+msgid "customize layout options here."
+msgstr "персонализирайте опциите за оформление тук."
+
+#: inc/speed.php:28
+#, fuzzy
+msgid "customize speed options here."
+msgstr "персонализирайте опциите за скорост тук."
+
+#: classes/class-w3csspress-constants.php:62
+#, fuzzy
+msgid "cyan"
+msgstr "циан"
+
+#: classes/class-w3csspress-constants.php:93
+#: classes/class-w3csspress-constants.php:94
+#: classes/class-w3csspress-constants.php:95
+#: classes/class-w3csspress-constants.php:96
+#: classes/class-w3csspress-constants.php:97
+#, fuzzy
+msgid "dark"
+msgstr "тъмен"
+
+#: classes/class-w3csspress-constants.php:63
+#, fuzzy
+msgid "dark grey"
+msgstr "тъмно сиво"
+
+#: classes/class-w3csspress-constants.php:64
+#, fuzzy
+msgid "deep orange"
+msgstr "наситено оранжево"
+
+#: classes/class-w3csspress-constants.php:65
+#, fuzzy
+msgid "deep purple"
+msgstr "тъмнолилаво"
+
+#: classes/class-w3csspress-constants.php:55
+#: classes/class-w3csspress-constants.php:98
+#: classes/class-w3csspress-constants.php:115
+#: classes/class-w3csspress-constants.php:135
+#: classes/class-w3csspress-constants.php:152
+#: classes/class-w3csspress-constants.php:168
+#: classes/class-w3csspress-constants.php:184
+#, fuzzy
+msgid "default"
+msgstr "по подразбиране"
+
+#: inc/speed.php:93
+#, fuzzy
+msgid "disable jQuery"
+msgstr "деактивиране на jQuery"
+
+#: inc/speed.php:94
+#, fuzzy
+msgid "disable or enable jQuery (do only if you know what you are doing)."
+msgstr "деактивирайте или активирайте jQuery (само ако знаете какво правите)."
+
+#: inc/speed.php:141
+#, fuzzy
+msgid "enable block styles"
+msgstr "разрешаване на блокови стилове"
+
+#: inc/speed.php:142
+#, fuzzy
+msgid "enable block styles."
+msgstr "разрешаване на блоковите стилове."
+
+#: inc/speed.php:105
+#, fuzzy
+msgid "enable Dashicons"
+msgstr "разрешаване на тирета"
+
+#: inc/speed.php:106
+#, fuzzy
+msgid "enable Dashicons on the frontend."
+msgstr "разрешаване на функцията Dashicons във frontend."
+
+#: inc/speed.php:153
+#, fuzzy
+msgid "enable full site editor"
+msgstr "разрешаване на пълен редактор на сайта"
+
+#: inc/speed.php:117
+#, fuzzy
+msgid "enable Gutenberg for posts"
+msgstr "разрешаване на Gutenberg за публикации"
+
+#: inc/speed.php:129
+#, fuzzy
+msgid "enable Gutenberg for widgets"
+msgstr "разрешаване на Gutenberg за джаджи"
+
+#: inc/speed.php:118
+#, fuzzy
+msgid "enable Gutenberg to edit posts."
+msgstr "разрешаване на редактирането на публикации в Gutenberg."
+
+#: inc/speed.php:130
+#, fuzzy
+msgid "enable Gutenberg to edit widgets."
+msgstr "разрешаване на Gutenberg за редактиране на уиджети."
+
+#: inc/speed.php:154
+#, fuzzy
+msgid "enable the full site editor."
+msgstr "активиране на пълния редактор на сайта."
+
+#: inc/fonts.php:31
+#, fuzzy
+msgid "fonts options"
+msgstr "опции за шрифтове"
+
+#: functions.php:364
+#, fuzzy
+msgid "foot widgets sidebar"
+msgstr "крак джаджи странична лента"
+
+#: inc/patterns/footer.php:28
+#, fuzzy
+msgid "footer"
+msgstr "footer"
+
+#: inc/content.php:79
+#, fuzzy
+msgid "footer content"
+msgstr "съдържание на колонтитула"
+
+#: inc/block-patterns.php:29
+#, fuzzy
+msgid "footers"
+msgstr "колонтитули"
+
+#: classes/class-w3csspress-constants.php:172
+#, fuzzy
+msgid "four columns"
+msgstr "четири колони"
+
+#. Name of the template
+#, fuzzy
+msgid "Full-Width"
+msgstr "Пълна ширина"
+
+#: inc/images.php:169
+#, fuzzy
+msgid "grayscale images"
+msgstr "изображения в сива скала"
+
+#: classes/class-w3csspress-constants.php:66
+#, fuzzy
+msgid "green"
+msgstr "зелен"
+
+#: classes/class-w3csspress-constants.php:67
+#, fuzzy
+msgid "grey"
+msgstr "сив"
+
+#: inc/patterns/image.php:94
+#, fuzzy
+msgid "greyscale image"
+msgstr "изображение в сива скала"
+
+#: inc/layout.php:96
+#, fuzzy
+msgid "grid layout setting"
+msgstr "настройка на оформлението на мрежата"
+
+#. index for headings
+#: inc/colors.php:138
+#, fuzzy, php-format
+msgid "h%s color"
+msgstr "h%s цвят"
+
+#: functions.php:355
+#, fuzzy
+msgid "head widgets sidebar"
+msgstr "глава джаджи странична лента"
+
+#: inc/patterns/header.php:21
+#, fuzzy
+msgid "header"
+msgstr "заглавие"
+
+#: inc/images.php:193
+#, fuzzy
+msgid "header thumbnail"
+msgstr "миниатюра на заглавието"
+
+#: inc/block-patterns.php:30
+#, fuzzy
+msgid "headers"
+msgstr "заглавия"
+
+#: inc/patterns/header.php:51
+#, fuzzy
+msgid "homepage header"
+msgstr "заглавие на началната страница"
+
+#: inc/block-patterns.php:31
+#, fuzzy
+msgid "hover"
+msgstr "надвесване"
+
+#. hover border and color
+#: classes/class-w3csspress-constants.php:244
+#, fuzzy, php-format
+msgid "hover %1$s %2$s"
+msgstr "hover %1$s %2$s"
+
+#. Author URI of the theme
+#, fuzzy
+msgid "https://github.com/matteomarchiori"
+msgstr "https://github.com/matteomarchiori"
+
+#. URI of the theme
+#, fuzzy
+msgid "https://github.com/matteomarchiori/w3csspress"
+msgstr "https://github.com/matteomarchiori/w3csspress"
+
+#: inc/patterns/image.php:22
+#, fuzzy
+msgid "image"
+msgstr "изображение"
+
+#: inc/block-patterns.php:32
+#, fuzzy
+msgid "images"
+msgstr "изображения"
+
+#: inc/images.php:27
+#, fuzzy
+msgid "images options"
+msgstr "опции за изображения"
+
+#: inc/images.php:146
+#, fuzzy
+msgid "images with card effect."
+msgstr "изображения с ефект на карта."
+
+#: inc/images.php:170
+#, fuzzy
+msgid "images with grayscale effect."
+msgstr "изображения с ефект на сива скала."
+
+#: inc/images.php:158
+#, fuzzy
+msgid "images with opacity effect."
+msgstr "изображения с ефект на непрозрачност."
+
+#: inc/images.php:182
+#, fuzzy
+msgid "images with sepia effect."
+msgstr "изображения с ефект сепия."
+
+#: classes/class-w3csspress-constants.php:68
+#, fuzzy
+msgid "indigo"
+msgstr "индиго"
+
+#: classes/class-w3csspress-constants.php:123
+#, fuzzy
+msgid "jumbo"
+msgstr "джъмбо"
+
+#: classes/class-w3csspress-constants.php:69
+#, fuzzy
+msgid "khaki"
+msgstr "каки"
+
+#: classes/class-w3csspress-constants.php:119
+#, fuzzy
+msgid "large"
+msgstr "голям"
+
+#: inc/layout.php:31
+#, fuzzy
+msgid "layout options"
+msgstr "опции за оформление"
+
+#: classes/class-w3csspress-constants.php:205
+#, fuzzy
+msgid "left"
+msgstr "ляв"
+
+#: inc/patterns/sidebar.php:26
+#, fuzzy
+msgid "left sidebar"
+msgstr "лява странична лента"
+
+#: classes/class-w3csspress-constants.php:99
+#: classes/class-w3csspress-constants.php:100
+#: classes/class-w3csspress-constants.php:101
+#: classes/class-w3csspress-constants.php:102
+#: classes/class-w3csspress-constants.php:103
+#, fuzzy
+msgid "light"
+msgstr "светлина"
+
+#: classes/class-w3csspress-constants.php:70
+#, fuzzy
+msgid "light blue"
+msgstr "светлосиньо"
+
+#: classes/class-w3csspress-constants.php:71
+#, fuzzy
+msgid "light green"
+msgstr "светлозелено"
+
+#: classes/class-w3csspress-constants.php:72
+#, fuzzy
+msgid "lime"
+msgstr "вар"
+
+#: inc/colors.php:121
+#, fuzzy
+msgid "link color"
+msgstr "цвят на връзката"
+
+#: functions.php:90
+#, fuzzy
+msgid "main menu"
+msgstr "основно меню"
+
+#. Author of the theme
+#, fuzzy
+msgid "matteomarchiori97"
+msgstr "математически архив97"
+
+#: classes/class-w3csspress-constants.php:118
+#, fuzzy
+msgid "medium"
+msgstr "среден"
+
+#: functions.php:147
+#, fuzzy
+msgid "menu"
+msgstr "меню"
+
+#: classes/class-w3csspress-constants.php:155
+#, fuzzy
+msgid "monospace"
+msgstr "monospace"
+
+#: inc/block-patterns.php:33
+#, fuzzy
+msgid "navigation"
+msgstr "навигация"
+
+#. arrow
+#. arrow and text
+#: attachment.php:75 template-parts/nav/below.php:24
+#, fuzzy, php-format
+msgid "newer %s"
+msgstr "по-нови %s"
+
+#: 404.php:19
+#, fuzzy
+msgid "Not Found"
+msgstr "Не е намерен"
+
+#: inc/patterns/notfound.php:25
+#, fuzzy
+msgid "not found"
+msgstr "не е намерен"
+
+#: search.php:62
+#, fuzzy
+msgid "Nothing Found"
+msgstr "Нищо не е намерено"
+
+#: 404.php:22
+#, fuzzy
+msgid "Nothing found for the requested page. Try a search instead?"
+msgstr ""
+"Не е намерено нищо за заявената страница. Опитайте с търсене вместо това?"
+
+#: inc/patterns/notfound.php:29
+#, fuzzy
+msgid "nothing found for the requested page. Try a search instead?"
+msgstr ""
+"не е намерено нищо за заявената страница. Опитайте с търсене вместо това?"
+
+#: classes/class-w3csspress-constants.php:169
+#, fuzzy
+msgid "one column"
+msgstr "една колона"
+
+#: inc/images.php:157
+#, fuzzy
+msgid "opacity images"
+msgstr "изображения с непрозрачност"
+
+#: inc/patterns/image.php:82
+#, fuzzy
+msgid "opaque image"
+msgstr "непрозрачно изображение"
+
+#: classes/class-w3csspress-constants.php:73
+#, fuzzy
+msgid "orange"
+msgstr "оранжев"
+
+#: inc/patterns/panel.php:26
+#, fuzzy
+msgid "panel"
+msgstr "панел"
+
+#. color of the panel
+#: inc/patterns/panel.php:40
+#, fuzzy, php-format
+msgid "panel %s"
+msgstr "панел %s"
+
+#: inc/block-patterns.php:34
+#, fuzzy
+msgid "panels"
+msgstr "панели"
+
+#: classes/class-w3csspress-constants.php:74
+#, fuzzy
+msgid "pink"
+msgstr "розов"
+
+#: inc/images.php:205
+#, fuzzy
+msgid "post thumbnail"
+msgstr "миниатюра на публикацията"
+
+#: inc/images.php:194
+#, fuzzy
+msgid "posts get the thumbnail as header image if they have one."
+msgstr ""
+"публикациите получават миниатюрата като заглавно изображение, ако имат "
+"такова."
+
+#: inc/images.php:206
+#, fuzzy
+msgid "posts show the thumbnail if they have."
+msgstr "показва миниатюрата, ако има такава."
+
+#: functions.php:337
+#, fuzzy
+msgid "primary sidebar"
+msgstr "основна странична лента"
+
+#: classes/class-w3csspress-constants.php:75
+#, fuzzy
+msgid "purple"
+msgstr "лилаво"
+
+#: inc/block-patterns.php:35
+#, fuzzy
+msgid "query"
+msgstr "заявка"
+
+#: inc/patterns/query.php:22
+#, fuzzy
+msgid "query loop"
+msgstr "цикъл на заявка"
+
+#: inc/patterns/query.php:33
+#, fuzzy
+msgid "read all"
+msgstr "прочетете всичко"
+
+#: classes/class-w3csspress-constants.php:76
+#, fuzzy
+msgid "red"
+msgstr "червен"
+
+#: classes/class-w3csspress-constants.php:203
+#, fuzzy
+msgid "right"
+msgstr "вдясно"
+
+#: inc/patterns/sidebar.php:36
+#, fuzzy
+msgid "right sidebar"
+msgstr "дясна странична лента"
+
+#: inc/images.php:110
+#, fuzzy
+msgid "round images on the page."
+msgstr "кръгли изображения на страницата."
+
+#: classes/class-w3csspress-constants.php:187
+#, fuzzy
+msgid "round large"
+msgstr "кръгъл голям"
+
+#: classes/class-w3csspress-constants.php:186
+#, fuzzy
+msgid "round medium"
+msgstr "кръгла средна"
+
+#: classes/class-w3csspress-constants.php:185
+#, fuzzy
+msgid "round small"
+msgstr "кръгъл малък"
+
+#: classes/class-w3csspress-constants.php:188
+#, fuzzy
+msgid "round xlarge"
+msgstr "кръгъл xlarge"
+
+#: classes/class-w3csspress-constants.php:189
+#, fuzzy
+msgid "round xxlarge"
+msgstr "кръгла xxlarge"
+
+#: inc/patterns/image.php:34
+#, fuzzy
+msgid "rounded image"
+msgstr "закръглено изображение"
+
+#: inc/images.php:109
+#, fuzzy
+msgid "rounded images"
+msgstr "заоблени изображения"
+
+#: classes/class-w3csspress-constants.php:154
+#, fuzzy
+msgid "sans serif"
+msgstr "sans serif"
+
+#: inc/block-patterns.php:36 inc/patterns/search.php:25
+#: inc/patterns/search.php:25
+#, fuzzy
+msgid "search"
+msgstr "търсене"
+
+#: inc/patterns/search.php:22
+#, fuzzy
+msgid "search bar"
+msgstr "лента за търсене"
+
+#. search text completed with query text
+#: search.php:38
+#, fuzzy, php-format
+msgid "search results for: %s"
+msgstr "резултати за търсене на: %s"
+
+#: functions.php:346
+#, fuzzy
+msgid "secondary sidebar"
+msgstr "вторична странична лента"
+
+#: inc/colors.php:79
+#, fuzzy
+msgid "select color theme"
+msgstr "изберете тема на цвета"
+
+#: inc/fonts.php:228
+#, fuzzy
+msgid "select div font size"
+msgstr "изберете размер на шрифта на дивиди"
+
+#: inc/fonts.php:306
+#, fuzzy
+msgid "select div font weight"
+msgstr "изберете теглото на шрифта div"
+
+#: inc/fonts.php:178
+#, fuzzy
+msgid "select font family"
+msgstr "изберете семейство шрифтове"
+
+#. index for headings
+#: inc/fonts.php:392
+#, fuzzy, php-format
+msgid "select h%s font size"
+msgstr "изберете размер на шрифта h%s"
+
+#. index for headings
+#: inc/fonts.php:413
+#, fuzzy, php-format
+msgid "select h%s font weight"
+msgstr "изберете h%s тегло на шрифта"
+
+#: inc/fonts.php:241
+#, fuzzy
+msgid "select input font size"
+msgstr "избор на размер на входния шрифт"
+
+#: inc/fonts.php:319
+#, fuzzy
+msgid "select input font weight"
+msgstr "изберете тегло на входния шрифт"
+
+#: inc/layout.php:70
+#, fuzzy
+msgid "select layout"
+msgstr "изберете оформление"
+
+#: inc/fonts.php:280
+#, fuzzy
+msgid "select ordered list font size"
+msgstr "изберете размер на шрифта на поръчания списък"
+
+#: inc/fonts.php:358
+#, fuzzy
+msgid "select ordered list font weight"
+msgstr "изберете тегло на шрифта в поръчания списък"
+
+#: inc/fonts.php:215
+#, fuzzy
+msgid "select paragraphs font size"
+msgstr "изберете размера на шрифта на параграфите"
+
+#: inc/fonts.php:293
+#, fuzzy
+msgid "select paragraphs font weight"
+msgstr "изберете тегло на шрифта за параграфи"
+
+#: inc/layout.php:83
+#, fuzzy
+msgid "select rounded style"
+msgstr "изберете заоблен стил"
+
+#: inc/fonts.php:254
+#, fuzzy
+msgid "select table font size"
+msgstr "изберете размер на шрифта на таблицата"
+
+#: inc/fonts.php:332
+#, fuzzy
+msgid "select table font weight"
+msgstr "изберете тегло на шрифта на таблицата"
+
+#: inc/colors.php:92
+#, fuzzy
+msgid "select theme kind"
+msgstr "изберете вид тема"
+
+#: inc/fonts.php:267
+#, fuzzy
+msgid "select unordered list font size"
+msgstr "избор на размер на шрифта на неординерния списък"
+
+#: inc/fonts.php:345
+#, fuzzy
+msgid "select unordered list font weight"
+msgstr "изберете неподреден списък тежест на шрифта"
+
+#: inc/patterns/image.php:106
+#, fuzzy
+msgid "sepia image"
+msgstr "сепия изображение"
+
+#: inc/images.php:181
+#, fuzzy
+msgid "sepia images"
+msgstr "изображения на сепия"
+
+#: classes/class-w3csspress-constants.php:153
+#, fuzzy
+msgid "serif"
+msgstr "serif"
+
+#: inc/content.php:80
+#, fuzzy
+msgid "set footer content."
+msgstr "задаване на съдържанието на колонтитула."
+
+#: functions.php:338
+#, fuzzy
+msgid "sidebar on the left."
+msgstr "страничната лента вляво."
+
+#: functions.php:347
+#, fuzzy
+msgid "sidebar on the right."
+msgstr "страничната лента вдясно."
+
+#: inc/block-patterns.php:37
+#, fuzzy
+msgid "sidebars"
+msgstr "странични ленти"
+
+#: inc/content.php:20
+#, fuzzy
+msgid "skip to the content"
+msgstr "преминаване към съдържанието"
+
+#: classes/class-w3csspress-constants.php:117
+#, fuzzy
+msgid "small"
+msgstr "малък"
+
+#: search.php:65
+#, fuzzy
+msgid "Sorry, nothing matched your search. Please try again."
+msgstr ""
+"Съжаляваме, но нищо не отговаря на търсенето ви. Моля, опитайте отново."
+
+#: inc/speed.php:27
+#, fuzzy
+msgid "speed options"
+msgstr "опции за скорост"
+
+#: classes/class-w3csspress-constants.php:77
+#, fuzzy
+msgid "teal"
+msgstr "тил"
+
+#: inc/colors.php:107
+#, fuzzy
+msgid "text theme color"
+msgstr "цвят на темата на текста"
+
+#: inc/patterns/query.php:44
+#, fuzzy
+msgid "the query did not return any results."
+msgstr "заявката не върна никакви резултати."
+
+#. thick border and direction
+#: classes/class-w3csspress-constants.php:32
+#, fuzzy, php-format
+msgid "thick border %s"
+msgstr "дебела граница %s"
+
+#: classes/class-w3csspress-constants.php:171
+#, fuzzy
+msgid "three columns"
+msgstr "три колони"
+
+#: classes/class-w3csspress-constants.php:116
+#, fuzzy
+msgid "tiny"
+msgstr "малък"
+
+#: classes/class-w3csspress-constants.php:202
+#, fuzzy
+msgid "top"
+msgstr "топ"
+
+#: classes/class-w3csspress-constants.php:170
+#, fuzzy
+msgid "two columns"
+msgstr "две колони"
+
+#. Description of the theme
+#, fuzzy
+msgid ""
+"Universal theme with classic mode and blocks mode made to integrate the "
+"W3CSS framework inside WordPress, with global custom options and all of the "
+"W3CSS framework functionalities. The theme has been developed starting from "
+"resources on the w3schools website applied to the blankslate WordPress theme,"
+" slightly modified. The theme is accessibility ready and it is highly "
+"customizable. Please add issues on GitHub or contact me if you are "
+"interested in more options."
+msgstr ""
+"Универсална тема с класически режим и режим на блокове, създадена за "
+"интегриране на рамката W3CSS в WordPress, с глобални потребителски опции и "
+"всички функционалности на рамката W3CSS. Темата е разработена, като се "
+"започне от ресурсите на уебсайта w3schools, приложени към темата blankslate "
+"на WordPress, леко модифицирани. Темата е подготвена за достъпност и е силно "
+"персонализируема. Моля, добавете въпроси в GitHub или се свържете с мен, ако "
+"се интересувате от повече възможности."
+
+#: inc/fonts.php:203
+#, fuzzy
+msgid "use Google font"
+msgstr "използване на шрифт на Google"
+
+#: inc/fonts.php:191
+#, fuzzy
+msgid "use Google font for headings"
+msgstr "използване на шрифт на Google за заглавия"
+
+#: inc/layout.php:84
+#, fuzzy
+msgid ""
+"using this option you can change some elements roundness (images have more "
+"controls)."
+msgstr ""
+"чрез тази опция можете да промените закръглеността на някои елементи "
+"(изображенията имат повече възможности за контрол)."
+
+#: inc/layout.php:71
+#, fuzzy
+msgid "using this option you can change the page layout."
+msgstr "с тази опция можете да промените оформлението на страницата."
+
+#: inc/colors.php:93
+#, fuzzy
+msgid ""
+"using this option you can change the theme between default, light and dark."
+msgstr ""
+"с тази опция можете да променяте темата между стандартна, светла и тъмна."
+
+#: inc/colors.php:80
+#, fuzzy
+msgid "using this option you can change the theme colors."
+msgstr "с тази опция можете да промените цветовете на темата."
+
+#: inc/layout.php:97
+#, fuzzy
+msgid "using this option you can enable or disable the grid layout."
+msgstr ""
+"с тази опция можете да разрешите или забраните оформлението на мрежата."
+
+#. Name of the theme
+#, fuzzy
+msgid "W3CSSPress"
+msgstr "W3CSSPress"
+
+#: classes/class-w3csspress-constants.php:56
+#, fuzzy
+msgid "w3schools"
+msgstr "w3schools"
+
+#: classes/class-w3csspress-constants.php:138
+#, fuzzy
+msgid "weight"
+msgstr "тегло"
+
+#: functions.php:365
+#, fuzzy
+msgid "widgets area on the foot of the website."
+msgstr "зона за джаджи в долната част на уебсайта."
+
+#: functions.php:356
+#, fuzzy
+msgid "widgets area on the head of the website."
+msgstr "област за джаджи в горната част на уебсайта."
+
+#: classes/class-w3csspress-constants.php:120
+#, fuzzy
+msgid "XL"
+msgstr "XL"
+
+#: classes/class-w3csspress-constants.php:121
+#, fuzzy
+msgid "XXL"
+msgstr "XXL"
+
+#: classes/class-w3csspress-constants.php:122
+#, fuzzy
+msgid "XXXL"
+msgstr "XXXL"
+
+#: footer.php:27 inc/patterns/footer.php:22
+#, fuzzy
+msgid "Y"
+msgstr "Y"
+
+#: classes/class-w3csspress-constants.php:78
+#, fuzzy
+msgid "yellow"
+msgstr "жълт"

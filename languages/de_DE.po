@@ -1,0 +1,1194 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: w3csspress\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-10-29 17:02+0000\n"
+"PO-Revision-Date: 2022-10-29 20:42+0000\n"
+"Last-Translator: \n"
+"Language-Team: German\n"
+"Language: de_DE\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.3; wp-6.0.3\n"
+"X-Domain: w3csspress"
+
+#. border and color
+#: classes/class-w3csspress-constants.php:222
+#, fuzzy, php-format
+msgid "%1$s %2$s"
+msgstr "%1$s %2$s"
+
+#. arrow
+#. arrow and text
+#: attachment.php:62 template-parts/nav/below.php:19
+#, fuzzy, php-format
+msgid "%s older"
+msgstr "%s älter"
+
+#: inc/patterns/notfound.php:22
+#, fuzzy
+msgid "404"
+msgstr "404"
+
+#: inc/block-patterns.php:23
+#, fuzzy
+msgid "404 not found"
+msgstr "404 nicht gefunden"
+
+#: inc/patterns/query.php:43
+#, fuzzy
+msgid "add text or blocks to display when the query returns no results."
+msgstr ""
+"text oder Blöcke hinzufügen, die angezeigt werden, wenn die Abfrage keine "
+"Ergebnisse liefert."
+
+#: classes/class-w3csspress-constants.php:36
+#, fuzzy
+msgid "all borders"
+msgstr "alle Grenzen"
+
+#: classes/class-w3csspress-constants.php:57
+#, fuzzy
+msgid "amber"
+msgstr "amber"
+
+#. color of the container
+#: inc/patterns/badge.php:30
+#, fuzzy, php-format
+msgid "badge %s"
+msgstr "abzeichen %s"
+
+#: inc/block-patterns.php:24
+#, fuzzy
+msgid "badges"
+msgstr "abzeichen"
+
+#: inc/patterns/navigation.php:37
+#, fuzzy
+msgid "basic navigation"
+msgstr "grundlegende Navigation"
+
+#: classes/class-w3csspress-constants.php:58
+#, fuzzy
+msgid "black"
+msgstr "schwarz"
+
+#: classes/class-w3csspress-constants.php:59
+#, fuzzy
+msgid "blue"
+msgstr "blau"
+
+#: classes/class-w3csspress-constants.php:60
+#, fuzzy
+msgid "blue grey"
+msgstr "blau grau"
+
+#. border and direction
+#: classes/class-w3csspress-constants.php:27
+#, fuzzy, php-format
+msgid "border %s"
+msgstr "grenze %s"
+
+#: inc/images.php:134
+#, fuzzy
+msgid "border images on the page."
+msgstr "randbilder auf der Seite."
+
+#: inc/patterns/image.php:58
+#, fuzzy
+msgid "bordered image"
+msgstr "umrandetes Bild"
+
+#: inc/images.php:133
+#, fuzzy
+msgid "bordered images"
+msgstr "umrandete Bilder"
+
+#: inc/block-patterns.php:25
+#, fuzzy
+msgid "borders"
+msgstr "grenzen"
+
+#: classes/class-w3csspress-constants.php:204
+#, fuzzy
+msgid "bottom"
+msgstr "unten"
+
+#: classes/class-w3csspress-constants.php:61
+#, fuzzy
+msgid "brown"
+msgstr "braun"
+
+#. color of the card
+#: inc/patterns/card.php:40
+#, fuzzy, php-format
+msgid "card %s"
+msgstr "karte %s"
+
+#: inc/patterns/image.php:70
+#, fuzzy
+msgid "card image"
+msgstr "kartenbild"
+
+#: inc/images.php:145
+#, fuzzy
+msgid "card images"
+msgstr "kartenbilder"
+
+#. color of the card
+#: inc/patterns/card.php:54
+#, fuzzy, php-format
+msgid "card-2 %s"
+msgstr "karte-2 %s"
+
+#. color of the card
+#: inc/patterns/card.php:68
+#, fuzzy, php-format
+msgid "card-4 %s"
+msgstr "karte-4 %s"
+
+#: inc/block-patterns.php:26 inc/patterns/card.php:26
+#, fuzzy
+msgid "cards"
+msgstr "karten"
+
+#: template-parts/entry/footer.php:16
+#, fuzzy
+msgid "categories: "
+msgstr "kategorien"
+
+#. index for headings
+#: inc/colors.php:143
+#, fuzzy, php-format
+msgid "change color of h%s."
+msgstr "farbe von h%s ändern."
+
+#: inc/fonts.php:192
+#, fuzzy
+msgid "change font family of headings."
+msgstr "schriftfamilie der Überschriften ändern."
+
+#: inc/fonts.php:179 inc/fonts.php:204
+#, fuzzy
+msgid "change font family of website."
+msgstr "schriftfamilie der Website ändern."
+
+#: inc/fonts.php:229
+#, fuzzy
+msgid "change font size of div."
+msgstr "ändere die Schriftgröße des Div."
+
+#. index for headings
+#: inc/fonts.php:397
+#, fuzzy, php-format
+msgid "change font size of h%s."
+msgstr "schriftgröße von h%s ändern."
+
+#: inc/fonts.php:242
+#, fuzzy
+msgid "change font size of inputs."
+msgstr "die Schriftgröße der Eingaben ändern."
+
+#: inc/fonts.php:281
+#, fuzzy
+msgid "change font size of ordered list."
+msgstr "schriftgröße der geordneten Liste ändern."
+
+#: inc/fonts.php:216
+#, fuzzy
+msgid "change font size of paragraphs."
+msgstr "die Schriftgröße von Absätzen ändern."
+
+#: inc/fonts.php:255
+#, fuzzy
+msgid "change font size of tables."
+msgstr "die Schriftgröße von Tabellen ändern."
+
+#: inc/fonts.php:268
+#, fuzzy
+msgid "change font size of unordered list."
+msgstr "schriftgröße der ungeordneten Liste ändern."
+
+#: inc/fonts.php:307
+#, fuzzy
+msgid "change font weight of div."
+msgstr "ändere die Schriftstärke des div."
+
+#. index for headings
+#: inc/fonts.php:418
+#, fuzzy, php-format
+msgid "change font weight of h%s."
+msgstr "ändere die Schriftgröße von h%s."
+
+#: inc/fonts.php:320
+#, fuzzy
+msgid "change font weight of inputs."
+msgstr "das Schriftgewicht der Eingaben ändern."
+
+#: inc/fonts.php:359
+#, fuzzy
+msgid "change font weight of ordered list."
+msgstr "die Schriftgröße der geordneten Liste ändern."
+
+#: inc/fonts.php:294
+#, fuzzy
+msgid "change font weight of paragraphs."
+msgstr "die Schriftstärke von Absätzen ändern."
+
+#: inc/fonts.php:333
+#, fuzzy
+msgid "change font weight of tables."
+msgstr "die Schriftgröße von Tabellen ändern."
+
+#: inc/fonts.php:346
+#, fuzzy
+msgid "change font weight of unordered list."
+msgstr "schriftstärke der ungeordneten Liste ändern."
+
+#: inc/colors.php:122
+#, fuzzy
+msgid "change link color"
+msgstr "link-Farbe ändern"
+
+#: inc/colors.php:108
+#, fuzzy
+msgid "change theme text color"
+msgstr "textfarbe des Themas ändern"
+
+#: classes/class-w3csspress-constants.php:190
+#, fuzzy
+msgid "circle"
+msgstr "kreis"
+
+#: inc/images.php:121
+#, fuzzy
+msgid "circle images"
+msgstr "kreisbilder"
+
+#: inc/images.php:122
+#, fuzzy
+msgid "circle images on the page."
+msgstr "kreise Bilder auf der Seite ein."
+
+#: inc/patterns/image.php:46
+#, fuzzy
+msgid "circular image"
+msgstr "kreisförmiges Bild"
+
+#: inc/block-patterns.php:27
+#, fuzzy
+msgid "colors"
+msgstr "farben"
+
+#: comments.php:65
+#, fuzzy
+msgid "comment:"
+msgstr "kommentar:"
+
+#: template-parts/entry/footer.php:20
+#, fuzzy
+msgid "comments"
+msgstr "kommentare"
+
+#: comments.php:53
+#, fuzzy
+msgctxt "comments count"
+msgid "Trackback or Pingback"
+msgid_plural "Trackbacks and Pingbacks"
+msgstr[0] "Trackback oder Pingback"
+msgstr[1] "Trackbacks und Pingbacks"
+
+#. color of the container
+#: inc/patterns/container.php:40
+#, fuzzy, php-format
+msgid "container %s"
+msgstr "container %s"
+
+#: inc/block-patterns.php:28 inc/patterns/container.php:26
+#, fuzzy
+msgid "containers"
+msgstr "container"
+
+#: inc/content.php:58
+#, fuzzy
+msgid "content options"
+msgstr "inhaltsoptionen"
+
+#: classes/class-w3csspress-constants.php:156
+#, fuzzy
+msgid "cursive"
+msgstr "kursiv"
+
+#: inc/content.php:59
+#, fuzzy
+msgid "customize content options here."
+msgstr "passe hier die Inhaltsoptionen an."
+
+#: inc/fonts.php:32
+#, fuzzy
+msgid "customize fonts options here."
+msgstr "hier kannst du die Schriftartenoptionen anpassen."
+
+#: inc/images.php:28
+#, fuzzy
+msgid "customize images options here."
+msgstr "hier kannst du die Bildoptionen anpassen."
+
+#: inc/layout.php:32
+#, fuzzy
+msgid "customize layout options here."
+msgstr "hier kannst du die Layout-Optionen anpassen."
+
+#: inc/speed.php:28
+#, fuzzy
+msgid "customize speed options here."
+msgstr "passe die Geschwindigkeitsoptionen hier an."
+
+#: classes/class-w3csspress-constants.php:62
+#, fuzzy
+msgid "cyan"
+msgstr "cyan"
+
+#: classes/class-w3csspress-constants.php:93
+#: classes/class-w3csspress-constants.php:94
+#: classes/class-w3csspress-constants.php:95
+#: classes/class-w3csspress-constants.php:96
+#: classes/class-w3csspress-constants.php:97
+#, fuzzy
+msgid "dark"
+msgstr "dunkel"
+
+#: classes/class-w3csspress-constants.php:63
+#, fuzzy
+msgid "dark grey"
+msgstr "dunkelgrau"
+
+#: classes/class-w3csspress-constants.php:64
+#, fuzzy
+msgid "deep orange"
+msgstr "tieforange"
+
+#: classes/class-w3csspress-constants.php:65
+#, fuzzy
+msgid "deep purple"
+msgstr "dunkelviolett"
+
+#: classes/class-w3csspress-constants.php:55
+#: classes/class-w3csspress-constants.php:98
+#: classes/class-w3csspress-constants.php:115
+#: classes/class-w3csspress-constants.php:135
+#: classes/class-w3csspress-constants.php:152
+#: classes/class-w3csspress-constants.php:168
+#: classes/class-w3csspress-constants.php:184
+#, fuzzy
+msgid "default"
+msgstr "standard"
+
+#: inc/speed.php:93
+#, fuzzy
+msgid "disable jQuery"
+msgstr "jQuery deaktivieren"
+
+#: inc/speed.php:94
+#, fuzzy
+msgid "disable or enable jQuery (do only if you know what you are doing)."
+msgstr "deaktiviere oder aktiviere jQuery (nur, wenn du weißt, was du tust)."
+
+#: inc/speed.php:141
+#, fuzzy
+msgid "enable block styles"
+msgstr "blockstile aktivieren"
+
+#: inc/speed.php:142
+#, fuzzy
+msgid "enable block styles."
+msgstr "blockstile aktivieren."
+
+#: inc/speed.php:105
+#, fuzzy
+msgid "enable Dashicons"
+msgstr "dashicons aktivieren"
+
+#: inc/speed.php:106
+#, fuzzy
+msgid "enable Dashicons on the frontend."
+msgstr "dashicons auf dem Frontend aktivieren."
+
+#: inc/speed.php:153
+#, fuzzy
+msgid "enable full site editor"
+msgstr "vollständigen Site-Editor aktivieren"
+
+#: inc/speed.php:117
+#, fuzzy
+msgid "enable Gutenberg for posts"
+msgstr "gutenberg für Beiträge aktivieren"
+
+#: inc/speed.php:129
+#, fuzzy
+msgid "enable Gutenberg for widgets"
+msgstr "gutenberg für Widgets aktivieren"
+
+#: inc/speed.php:118
+#, fuzzy
+msgid "enable Gutenberg to edit posts."
+msgstr "gutenberg aktivieren, um Beiträge zu bearbeiten."
+
+#: inc/speed.php:130
+#, fuzzy
+msgid "enable Gutenberg to edit widgets."
+msgstr "gutenberg aktivieren, um Widgets zu bearbeiten."
+
+#: inc/speed.php:154
+#, fuzzy
+msgid "enable the full site editor."
+msgstr "aktiviere den vollständigen Website-Editor."
+
+#: inc/fonts.php:31
+#, fuzzy
+msgid "fonts options"
+msgstr "schriftarten-Optionen"
+
+#: functions.php:364
+#, fuzzy
+msgid "foot widgets sidebar"
+msgstr "fuß Widgets Seitenleiste"
+
+#: inc/patterns/footer.php:28
+#, fuzzy
+msgid "footer"
+msgstr "fußzeile"
+
+#: inc/content.php:79
+#, fuzzy
+msgid "footer content"
+msgstr "fußzeileninhalt"
+
+#: inc/block-patterns.php:29
+#, fuzzy
+msgid "footers"
+msgstr "fußzeilen"
+
+#: classes/class-w3csspress-constants.php:172
+#, fuzzy
+msgid "four columns"
+msgstr "vier Spalten"
+
+#. Name of the template
+#, fuzzy
+msgid "Full-Width"
+msgstr "Volle Breite"
+
+#: inc/images.php:169
+#, fuzzy
+msgid "grayscale images"
+msgstr "graustufenbilder"
+
+#: classes/class-w3csspress-constants.php:66
+#, fuzzy
+msgid "green"
+msgstr "grün"
+
+#: classes/class-w3csspress-constants.php:67
+#, fuzzy
+msgid "grey"
+msgstr "grau"
+
+#: inc/patterns/image.php:94
+#, fuzzy
+msgid "greyscale image"
+msgstr "graustufenbild"
+
+#: inc/layout.php:96
+#, fuzzy
+msgid "grid layout setting"
+msgstr "rasterlayout-Einstellung"
+
+#. index for headings
+#: inc/colors.php:138
+#, fuzzy, php-format
+msgid "h%s color"
+msgstr "h%s Farbe"
+
+#: functions.php:355
+#, fuzzy
+msgid "head widgets sidebar"
+msgstr "kopf Widgets Seitenleiste"
+
+#: inc/patterns/header.php:21
+#, fuzzy
+msgid "header"
+msgstr "kopfzeile"
+
+#: inc/images.php:193
+#, fuzzy
+msgid "header thumbnail"
+msgstr "kopfzeilen-Miniaturansicht"
+
+#: inc/block-patterns.php:30
+#, fuzzy
+msgid "headers"
+msgstr "kopfzeilen"
+
+#: inc/patterns/header.php:51
+#, fuzzy
+msgid "homepage header"
+msgstr "homepage-Kopfzeile"
+
+#: inc/block-patterns.php:31
+#, fuzzy
+msgid "hover"
+msgstr "schweben"
+
+#. hover border and color
+#: classes/class-w3csspress-constants.php:244
+#, fuzzy, php-format
+msgid "hover %1$s %2$s"
+msgstr "schwebepunkt %1$s %2$s"
+
+#. Author URI of the theme
+#, fuzzy
+msgid "https://github.com/matteomarchiori"
+msgstr "https://github.com/matteomarchiori"
+
+#. URI of the theme
+#, fuzzy
+msgid "https://github.com/matteomarchiori/w3csspress"
+msgstr "https://github.com/matteomarchiori/w3csspress"
+
+#: inc/patterns/image.php:22
+#, fuzzy
+msgid "image"
+msgstr "bild"
+
+#: inc/block-patterns.php:32
+#, fuzzy
+msgid "images"
+msgstr "bilder"
+
+#: inc/images.php:27
+#, fuzzy
+msgid "images options"
+msgstr "bilder Optionen"
+
+#: inc/images.php:146
+#, fuzzy
+msgid "images with card effect."
+msgstr "bilder mit Karteneffekt."
+
+#: inc/images.php:170
+#, fuzzy
+msgid "images with grayscale effect."
+msgstr "bilder mit Graustufeneffekt."
+
+#: inc/images.php:158
+#, fuzzy
+msgid "images with opacity effect."
+msgstr "bilder mit Deckkraft-Effekt."
+
+#: inc/images.php:182
+#, fuzzy
+msgid "images with sepia effect."
+msgstr "bilder mit Sepia-Effekt."
+
+#: classes/class-w3csspress-constants.php:68
+#, fuzzy
+msgid "indigo"
+msgstr "indigo"
+
+#: classes/class-w3csspress-constants.php:123
+#, fuzzy
+msgid "jumbo"
+msgstr "jumbo"
+
+#: classes/class-w3csspress-constants.php:69
+#, fuzzy
+msgid "khaki"
+msgstr "khaki"
+
+#: classes/class-w3csspress-constants.php:119
+#, fuzzy
+msgid "large"
+msgstr "groß"
+
+#: inc/layout.php:31
+#, fuzzy
+msgid "layout options"
+msgstr "layout-Optionen"
+
+#: classes/class-w3csspress-constants.php:205
+#, fuzzy
+msgid "left"
+msgstr "links"
+
+#: inc/patterns/sidebar.php:26
+#, fuzzy
+msgid "left sidebar"
+msgstr "linke Seitenleiste"
+
+#: classes/class-w3csspress-constants.php:99
+#: classes/class-w3csspress-constants.php:100
+#: classes/class-w3csspress-constants.php:101
+#: classes/class-w3csspress-constants.php:102
+#: classes/class-w3csspress-constants.php:103
+#, fuzzy
+msgid "light"
+msgstr "licht"
+
+#: classes/class-w3csspress-constants.php:70
+#, fuzzy
+msgid "light blue"
+msgstr "hellblau"
+
+#: classes/class-w3csspress-constants.php:71
+#, fuzzy
+msgid "light green"
+msgstr "hellgrün"
+
+#: classes/class-w3csspress-constants.php:72
+#, fuzzy
+msgid "lime"
+msgstr "kalk"
+
+#: inc/colors.php:121
+#, fuzzy
+msgid "link color"
+msgstr "link Farbe"
+
+#: functions.php:90
+#, fuzzy
+msgid "main menu"
+msgstr "hauptmenü"
+
+#. Author of the theme
+#, fuzzy
+msgid "matteomarchiori97"
+msgstr "matteomarchiori97"
+
+#: classes/class-w3csspress-constants.php:118
+#, fuzzy
+msgid "medium"
+msgstr "mittel"
+
+#: functions.php:147
+#, fuzzy
+msgid "menu"
+msgstr "menü"
+
+#: classes/class-w3csspress-constants.php:155
+#, fuzzy
+msgid "monospace"
+msgstr "monospace"
+
+#: inc/block-patterns.php:33
+#, fuzzy
+msgid "navigation"
+msgstr "navigation"
+
+#. arrow
+#. arrow and text
+#: attachment.php:75 template-parts/nav/below.php:24
+#, fuzzy, php-format
+msgid "newer %s"
+msgstr "neuere %s"
+
+#: 404.php:19
+#, fuzzy
+msgid "Not Found"
+msgstr "Nicht gefunden"
+
+#: inc/patterns/notfound.php:25
+#, fuzzy
+msgid "not found"
+msgstr "nicht gefunden"
+
+#: search.php:62
+#, fuzzy
+msgid "Nothing Found"
+msgstr "Nichts gefunden"
+
+#: 404.php:22
+#, fuzzy
+msgid "Nothing found for the requested page. Try a search instead?"
+msgstr ""
+"Für die angeforderte Seite wurde nichts gefunden. Versuch stattdessen eine "
+"Suche?"
+
+#: inc/patterns/notfound.php:29
+#, fuzzy
+msgid "nothing found for the requested page. Try a search instead?"
+msgstr ""
+"für die angeforderte Seite wurde nichts gefunden. Versuch stattdessen eine "
+"Suche?"
+
+#: classes/class-w3csspress-constants.php:169
+#, fuzzy
+msgid "one column"
+msgstr "eine Spalte"
+
+#: inc/images.php:157
+#, fuzzy
+msgid "opacity images"
+msgstr "opazitätsbilder"
+
+#: inc/patterns/image.php:82
+#, fuzzy
+msgid "opaque image"
+msgstr "undurchsichtiges Bild"
+
+#: classes/class-w3csspress-constants.php:73
+#, fuzzy
+msgid "orange"
+msgstr "orange"
+
+#: inc/patterns/panel.php:26
+#, fuzzy
+msgid "panel"
+msgstr "panel"
+
+#. color of the panel
+#: inc/patterns/panel.php:40
+#, fuzzy, php-format
+msgid "panel %s"
+msgstr "panel %s"
+
+#: inc/block-patterns.php:34
+#, fuzzy
+msgid "panels"
+msgstr "paneele"
+
+#: classes/class-w3csspress-constants.php:74
+#, fuzzy
+msgid "pink"
+msgstr "rosa"
+
+#: inc/images.php:205
+#, fuzzy
+msgid "post thumbnail"
+msgstr "post-Miniaturansicht"
+
+#: inc/images.php:194
+#, fuzzy
+msgid "posts get the thumbnail as header image if they have one."
+msgstr ""
+"beiträge erhalten das Vorschaubild als Kopfzeile, wenn sie eines haben."
+
+#: inc/images.php:206
+#, fuzzy
+msgid "posts show the thumbnail if they have."
+msgstr "beiträge zeigen das Vorschaubild, wenn sie es haben."
+
+#: functions.php:337
+#, fuzzy
+msgid "primary sidebar"
+msgstr "primäre Seitenleiste"
+
+#: classes/class-w3csspress-constants.php:75
+#, fuzzy
+msgid "purple"
+msgstr "lila"
+
+#: inc/block-patterns.php:35
+#, fuzzy
+msgid "query"
+msgstr "abfrage"
+
+#: inc/patterns/query.php:22
+#, fuzzy
+msgid "query loop"
+msgstr "abfrageschleife"
+
+#: inc/patterns/query.php:33
+#, fuzzy
+msgid "read all"
+msgstr "alles lesen"
+
+#: classes/class-w3csspress-constants.php:76
+#, fuzzy
+msgid "red"
+msgstr "rot"
+
+#: classes/class-w3csspress-constants.php:203
+#, fuzzy
+msgid "right"
+msgstr "rechts"
+
+#: inc/patterns/sidebar.php:36
+#, fuzzy
+msgid "right sidebar"
+msgstr "rechte Seitenleiste"
+
+#: inc/images.php:110
+#, fuzzy
+msgid "round images on the page."
+msgstr "runde Bilder auf der Seite."
+
+#: classes/class-w3csspress-constants.php:187
+#, fuzzy
+msgid "round large"
+msgstr "rund groß"
+
+#: classes/class-w3csspress-constants.php:186
+#, fuzzy
+msgid "round medium"
+msgstr "rund mittel"
+
+#: classes/class-w3csspress-constants.php:185
+#, fuzzy
+msgid "round small"
+msgstr "rund klein"
+
+#: classes/class-w3csspress-constants.php:188
+#, fuzzy
+msgid "round xlarge"
+msgstr "rund xlarge"
+
+#: classes/class-w3csspress-constants.php:189
+#, fuzzy
+msgid "round xxlarge"
+msgstr "rund xxlarge"
+
+#: inc/patterns/image.php:34
+#, fuzzy
+msgid "rounded image"
+msgstr "abgerundetes Bild"
+
+#: inc/images.php:109
+#, fuzzy
+msgid "rounded images"
+msgstr "runde Bilder"
+
+#: classes/class-w3csspress-constants.php:154
+#, fuzzy
+msgid "sans serif"
+msgstr "serifenlos"
+
+#: inc/block-patterns.php:36 inc/patterns/search.php:25
+#: inc/patterns/search.php:25
+#, fuzzy
+msgid "search"
+msgstr "suche"
+
+#: inc/patterns/search.php:22
+#, fuzzy
+msgid "search bar"
+msgstr "suchleiste"
+
+#. search text completed with query text
+#: search.php:38
+#, fuzzy, php-format
+msgid "search results for: %s"
+msgstr "suchergebnisse für: %s"
+
+#: functions.php:346
+#, fuzzy
+msgid "secondary sidebar"
+msgstr "sekundäre Seitenleiste"
+
+#: inc/colors.php:79
+#, fuzzy
+msgid "select color theme"
+msgstr "farbthema auswählen"
+
+#: inc/fonts.php:228
+#, fuzzy
+msgid "select div font size"
+msgstr "div-Schriftgröße auswählen"
+
+#: inc/fonts.php:306
+#, fuzzy
+msgid "select div font weight"
+msgstr "div-Schriftstärke auswählen"
+
+#: inc/fonts.php:178
+#, fuzzy
+msgid "select font family"
+msgstr "schriftfamilie auswählen"
+
+#. index for headings
+#: inc/fonts.php:392
+#, fuzzy, php-format
+msgid "select h%s font size"
+msgstr "h%s Schriftgröße auswählen"
+
+#. index for headings
+#: inc/fonts.php:413
+#, fuzzy, php-format
+msgid "select h%s font weight"
+msgstr "h%s Schriftgrad auswählen"
+
+#: inc/fonts.php:241
+#, fuzzy
+msgid "select input font size"
+msgstr "größe der Eingabeschrift auswählen"
+
+#: inc/fonts.php:319
+#, fuzzy
+msgid "select input font weight"
+msgstr "gewicht der Eingabeschrift auswählen"
+
+#: inc/layout.php:70
+#, fuzzy
+msgid "select layout"
+msgstr "layout auswählen"
+
+#: inc/fonts.php:280
+#, fuzzy
+msgid "select ordered list font size"
+msgstr "schriftgröße der bestellten Liste auswählen"
+
+#: inc/fonts.php:358
+#, fuzzy
+msgid "select ordered list font weight"
+msgstr "bestellte Liste auswählen Schriftgewicht"
+
+#: inc/fonts.php:215
+#, fuzzy
+msgid "select paragraphs font size"
+msgstr "schriftgröße der Absätze auswählen"
+
+#: inc/fonts.php:293
+#, fuzzy
+msgid "select paragraphs font weight"
+msgstr "schriftgrad der Absätze auswählen"
+
+#: inc/layout.php:83
+#, fuzzy
+msgid "select rounded style"
+msgstr "abgerundeten Stil auswählen"
+
+#: inc/fonts.php:254
+#, fuzzy
+msgid "select table font size"
+msgstr "schriftgröße der Tabelle auswählen"
+
+#: inc/fonts.php:332
+#, fuzzy
+msgid "select table font weight"
+msgstr "schriftgrad der Tabelle auswählen"
+
+#: inc/colors.php:92
+#, fuzzy
+msgid "select theme kind"
+msgstr "themenart auswählen"
+
+#: inc/fonts.php:267
+#, fuzzy
+msgid "select unordered list font size"
+msgstr "schriftgröße der ungeordneten Liste auswählen"
+
+#: inc/fonts.php:345
+#, fuzzy
+msgid "select unordered list font weight"
+msgstr "ungeordnete Liste auswählen Schriftgewicht"
+
+#: inc/patterns/image.php:106
+#, fuzzy
+msgid "sepia image"
+msgstr "sepiafarbenes Bild"
+
+#: inc/images.php:181
+#, fuzzy
+msgid "sepia images"
+msgstr "sepia-Bilder"
+
+#: classes/class-w3csspress-constants.php:153
+#, fuzzy
+msgid "serif"
+msgstr "serif"
+
+#: inc/content.php:80
+#, fuzzy
+msgid "set footer content."
+msgstr "fußzeileninhalt einstellen."
+
+#: functions.php:338
+#, fuzzy
+msgid "sidebar on the left."
+msgstr "seitenleiste auf der linken Seite."
+
+#: functions.php:347
+#, fuzzy
+msgid "sidebar on the right."
+msgstr "seitenleiste auf der rechten Seite."
+
+#: inc/block-patterns.php:37
+#, fuzzy
+msgid "sidebars"
+msgstr "sidebars"
+
+#: inc/content.php:20
+#, fuzzy
+msgid "skip to the content"
+msgstr "zum Inhalt springen"
+
+#: classes/class-w3csspress-constants.php:117
+#, fuzzy
+msgid "small"
+msgstr "klein"
+
+#: search.php:65
+#, fuzzy
+msgid "Sorry, nothing matched your search. Please try again."
+msgstr "Leider hat deine Suche nichts ergeben. Bitte versuche es erneut."
+
+#: inc/speed.php:27
+#, fuzzy
+msgid "speed options"
+msgstr "geschwindigkeitsoptionen"
+
+#: classes/class-w3csspress-constants.php:77
+#, fuzzy
+msgid "teal"
+msgstr "teal"
+
+#: inc/colors.php:107
+#, fuzzy
+msgid "text theme color"
+msgstr "textthema Farbe"
+
+#: inc/patterns/query.php:44
+#, fuzzy
+msgid "the query did not return any results."
+msgstr "die Abfrage hat keine Ergebnisse geliefert."
+
+#. thick border and direction
+#: classes/class-w3csspress-constants.php:32
+#, fuzzy, php-format
+msgid "thick border %s"
+msgstr "dicker Rand %s"
+
+#: classes/class-w3csspress-constants.php:171
+#, fuzzy
+msgid "three columns"
+msgstr "drei Spalten"
+
+#: classes/class-w3csspress-constants.php:116
+#, fuzzy
+msgid "tiny"
+msgstr "winzige"
+
+#: classes/class-w3csspress-constants.php:202
+#, fuzzy
+msgid "top"
+msgstr "top"
+
+#: classes/class-w3csspress-constants.php:170
+#, fuzzy
+msgid "two columns"
+msgstr "zwei Spalten"
+
+#. Description of the theme
+#, fuzzy
+msgid ""
+"Universal theme with classic mode and blocks mode made to integrate the "
+"W3CSS framework inside WordPress, with global custom options and all of the "
+"W3CSS framework functionalities. The theme has been developed starting from "
+"resources on the w3schools website applied to the blankslate WordPress theme,"
+" slightly modified. The theme is accessibility ready and it is highly "
+"customizable. Please add issues on GitHub or contact me if you are "
+"interested in more options."
+msgstr ""
+"Universelles Theme mit klassischem Modus und Blocks-Modus zur Integration "
+"des W3CSS-Frameworks in WordPress, mit globalen benutzerdefinierten Optionen "
+"und allen Funktionen des W3CSS-Frameworks. Das Theme wurde ausgehend von den "
+"Ressourcen auf der w3schools-Website entwickelt und leicht modifiziert auf "
+"das blankslate WordPress Theme angewendet. Das Theme ist barrierefrei und in "
+"hohem Maße anpassbar. Bitte füge Themen auf GitHub hinzu oder kontaktiere "
+"mich, wenn du an weiteren Optionen interessiert bist."
+
+#: inc/fonts.php:203
+#, fuzzy
+msgid "use Google font"
+msgstr "google-Schriftart verwenden"
+
+#: inc/fonts.php:191
+#, fuzzy
+msgid "use Google font for headings"
+msgstr "google-Schriftart für Überschriften verwenden"
+
+#: inc/layout.php:84
+#, fuzzy
+msgid ""
+"using this option you can change some elements roundness (images have more "
+"controls)."
+msgstr ""
+"mit dieser Option kannst du die Rundheit einiger Elemente ändern (Bilder "
+"haben mehr Kontrollmöglichkeiten)."
+
+#: inc/layout.php:71
+#, fuzzy
+msgid "using this option you can change the page layout."
+msgstr "mit dieser Option kannst du das Seitenlayout ändern."
+
+#: inc/colors.php:93
+#, fuzzy
+msgid ""
+"using this option you can change the theme between default, light and dark."
+msgstr ""
+"mit dieser Option kannst du das Thema zwischen Standard, Hell und Dunkel "
+"wechseln."
+
+#: inc/colors.php:80
+#, fuzzy
+msgid "using this option you can change the theme colors."
+msgstr "mit dieser Option kannst du die Farben des Themas ändern."
+
+#: inc/layout.php:97
+#, fuzzy
+msgid "using this option you can enable or disable the grid layout."
+msgstr ""
+"mit dieser Option kannst du das Rasterlayout aktivieren oder deaktivieren."
+
+#. Name of the theme
+#, fuzzy
+msgid "W3CSSPress"
+msgstr "W3CSSPress"
+
+#: classes/class-w3csspress-constants.php:56
+#, fuzzy
+msgid "w3schools"
+msgstr "w3schulen"
+
+#: classes/class-w3csspress-constants.php:138
+#, fuzzy
+msgid "weight"
+msgstr "gewicht"
+
+#: functions.php:365
+#, fuzzy
+msgid "widgets area on the foot of the website."
+msgstr "widgets-Bereich am Fuß der Website."
+
+#: functions.php:356
+#, fuzzy
+msgid "widgets area on the head of the website."
+msgstr "widgets-Bereich im Kopfbereich der Website."
+
+#: classes/class-w3csspress-constants.php:120
+#, fuzzy
+msgid "XL"
+msgstr "XL"
+
+#: classes/class-w3csspress-constants.php:121
+#, fuzzy
+msgid "XXL"
+msgstr "XXL"
+
+#: classes/class-w3csspress-constants.php:122
+#, fuzzy
+msgid "XXXL"
+msgstr "XXXL"
+
+#: footer.php:27 inc/patterns/footer.php:22
+#, fuzzy
+msgid "Y"
+msgstr "Y"
+
+#: classes/class-w3csspress-constants.php:78
+#, fuzzy
+msgid "yellow"
+msgstr "gelb"
