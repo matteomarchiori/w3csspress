@@ -45,7 +45,7 @@ function w3csspress_customize_speed( $wp_customize ) {
 	$wp_customize->add_setting(
 		'w3csspress_dashicons',
 		array(
-			'default'           => 0,
+			'default'           => 1,
 			'type'              => 'option',
 			'sanitize_callback' => 'w3csspress\sanitize_checkbox',
 		)
@@ -172,8 +172,6 @@ function w3csspress_enqueue_script_speed() {
 	}
 	if ( esc_html( get_option( 'w3csspress_dashicons' ) ) ) {
 		wp_enqueue_style( 'dashicons' );
-	} else {
-		wp_deregister_style( 'dashicons' );
 	}
 	if ( ! ( esc_html( get_option( 'w3csspress_gutenberg_styles' ) ) ) ) {
 		global $wp_styles;

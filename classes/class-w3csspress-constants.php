@@ -262,23 +262,23 @@ if ( ! class_exists( 'w3csspress\W3csspress_Constants' ) ) {
 			array_push(
 				$w3csspress_selectors,
 				array(
-					'selector' => './/input[not(@type="button" or @type="submit" or @type="reset" or @type="checkbox" or @type="radio" or contains(@class,"sidebar") or contains(@class,"wpadminbar") or ancestor::*/@id="wpadminbar" or ancestor::*[contains(@class, "sidebar")])]',
+					'selector' => './/input[not(@type="button" or @type="submit" or @type="reset" or @type="checkbox" or @type="radio" or contains(@class,"sidebar") or contains(@class,"wpadminbar") or ancestor::*/@id="wpadminbar")]',
 					'classes'  => 'w3-input',
 				),
 				array(
-					'selector' => '(.//button|.//reset)[not(contains(@class,"wpadminbar") or ancestor::*/@id="wpadminbar" or ancestor::*[contains(@class, "sidebar")])]',
+					'selector' => '(.//button|.//reset)[not(contains(@class,"wpadminbar") or ancestor::*/@id="wpadminbar")]',
 					'classes'  => 'w3-btn w3-theme-action',
 				),
 				array(
-					'selector' => './/input[@type="button" or @type="submit" or @type="reset" and not (contains(@class,"wpadminbar") or ancestor::*/@id="wpadminbar" or ancestor::*[contains(@class, "sidebar")])]',
+					'selector' => './/input[@type="button" or @type="submit" or @type="reset" and not (contains(@class,"wpadminbar") or ancestor::*/@id="wpadminbar")]',
 					'classes'  => 'w3-btn',
 				),
 				array(
-					'selector' => '(.//input|.//textarea)[not(contains(@class,"wpadminbar") or ancestor::*/@id="wpadminbar" or ancestor::*[contains(@class, "sidebar")])]',
+					'selector' => '(.//input|.//textarea)[not(contains(@class,"wpadminbar") or ancestor::*/@id="wpadminbar")]',
 					'classes'  => 'w3-theme-action',
 				),
 				array(
-					'selector' => './/input[@type="checkbox" and not (contains(@class,"wpadminbar") or ancestor::*/@id="wpadminbar" or ancestor::*[contains(@class, "sidebar")])]',
+					'selector' => './/input[@type="checkbox" and not (contains(@class,"wpadminbar") or ancestor::*/@id="wpadminbar")]',
 					'classes'  => 'w3-check',
 				),
 				array(
@@ -302,7 +302,7 @@ if ( ! class_exists( 'w3csspress\W3csspress_Constants' ) ) {
 					'classes'  => 'w3-code',
 				),
 				array(
-					'selector' => './/ul[not (contains(@class,"wpadminbar") or ancestor::*/@id="wpadminbar" or ancestor::*[contains(@class, "sidebar")])]',
+					'selector' => './/ul[not (contains(@class,"wpadminbar") or ancestor::*/@id="wpadminbar")]',
 					'classes'  => 'w3-ul',
 				),
 				array(
@@ -394,7 +394,7 @@ if ( ! class_exists( 'w3csspress\W3csspress_Constants' ) ) {
 					'classes'  => 'w3-monospace w3-leftbar w3-rightbar w3-border-theme w3-panel',
 				),
 				array(
-					'selector' => '(//article|//section|//nav|//summary|//button|//reset|//input[not (@type="checkbox" or @type="radio")]|//textarea|//ul|//ol)[not (contains(@class,"wpadminbar") or ancestor::*/@id="wpadminbar" or ancestor::*[contains(@class, "sidebar")])]',
+					'selector' => '(//article|//section|//nav|//summary|//button|//reset|//input[not (@type="checkbox" or @type="radio")]|//textarea|//ul|//ol)[not (contains(@class,"wpadminbar") or ancestor::*/@id="wpadminbar")]',
 					'classes'  => esc_html( get_option( 'w3csspress_rounded_style' ) ),
 				)
 			);
