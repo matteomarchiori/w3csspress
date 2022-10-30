@@ -481,3 +481,48 @@ function w3csspress_final_output( $output ) {
 	apply_filters( 'w3csspress_images', $dom, $head );
 	return $dom->saveHTML();
 }
+
+add_action( 'after_switch_theme', __NAMESPACE__ . '\\w3csspress_after_switch_theme' );
+/**
+ * Fires to finish the w3csspress theme activation.
+ *
+ * @since 2022.34
+ */
+function w3csspress_after_switch_theme() {
+	if ( ! get_option( 'w3csspress_dashicons' ) ) {
+		add_option( 'w3csspress_dashicons', 1 );
+	}
+	if ( ! get_option( 'w3csspress_gutenberg_posts' ) ) {
+		add_option( 'w3csspress_gutenberg_posts', 1 );
+	}
+	if ( ! get_option( 'w3csspress_gutenberg_widgets' ) ) {
+		add_option( 'w3csspress_gutenberg_widgets', 1 );
+	}
+	if ( ! get_option( 'w3csspress_gutenberg_styles' ) ) {
+		add_option( 'w3csspress_gutenberg_styles', 1 );
+	}
+	if ( ! get_option( 'w3csspress_fse' ) ) {
+		add_option( 'w3csspress_fse', 1 );
+	}
+	if ( ! get_option( 'w3csspress_color_h1' ) ) {
+		add_option( 'w3csspress_color_h1', '#3f51b5' );
+	}
+	if ( ! get_option( 'w3csspress_color_theme_kind' ) ) {
+		add_option( 'w3csspress_color_theme_kind', 'light-grey' );
+	}
+	if ( ! get_option( 'w3csspress_rounded_img' ) ) {
+		add_option( 'w3csspress_rounded_img', 1 );
+	}
+	if ( ! get_option( 'w3csspress_cards_img' ) ) {
+		add_option( 'w3csspress_cards_img', 1 );
+	}
+	if ( ! get_option( 'w3csspress_header_thumbnail' ) ) {
+		add_option( 'w3csspress_header_thumbnail', 1 );
+	}
+	if ( ! get_option( 'w3csspress_post_thumbnail' ) ) {
+		add_option( 'w3csspress_post_thumbnail', 1 );
+	}
+	if ( ! get_option( 'w3csspress_rounded_style' ) ) {
+		add_option( 'w3csspress_rounded_style', 'w3-round-xxlarge' );
+	}
+}
