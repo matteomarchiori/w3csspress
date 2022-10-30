@@ -465,7 +465,7 @@ add_filter( 'w3csspress_final_output', __NAMESPACE__ . '\\w3csspress_final_outpu
 function w3csspress_final_output( $output ) {
 	$dom                   = new \DOMDocument();
 	$libxml_previous_state = libxml_use_internal_errors( true );
-	$dom->loadHTML( \mb_convert_encoding( $output, 'HTML-ENTITIES', 'UTF-8' ), LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD );
+	$dom->loadHTML( $output, LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD );
 	libxml_use_internal_errors( $libxml_previous_state );
 	$xpath = new \DOMXpath( $dom );
 
@@ -527,5 +527,24 @@ function w3csspress_after_switch_theme() {
 	}
 	if ( ! get_option( 'w3csspress_rounded_style' ) ) {
 		add_option( 'w3csspress_rounded_style', 'w3-round-xxlarge' );
+	}
+}
+
+add_action( 'upgrader_process_complete', 'w3csspress_upgrader_process_complete', 10, 2 );
+/**
+ * Fires to finish the w3csspress update.
+ *
+ * @since 2022.35
+ *
+ * @param WP_Upgrader $upgrader WP_Upgrader instance. In other contexts this might be a Theme_Upgrader, Plugin_Upgrader, Core_Upgrade, or Language_Pack_Upgrader instance.
+ * @param array       $hook_extra Array of bulk item update data.
+ */
+function w3csspress_upgrader_process_complete( $upgrader, $hook_extra ) {
+	if ( 'update' === $hook_extra['action'] && 'theme' === $hook_extra['type'] ) {
+		foreach ( $hook_extra['themes'] as $theme ) {
+			if ( 'w3csspress' === $theme ) {
+				w3csspress_after_switch_theme();
+			}
+		}
 	}
 }
