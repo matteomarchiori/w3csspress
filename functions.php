@@ -507,8 +507,11 @@ function w3csspress_after_switch_theme() {
 	if ( ! get_option( 'w3csspress_color_h1' ) ) {
 		add_option( 'w3csspress_color_h1', '#3f51b5' );
 	}
+	if ( ! get_option( 'w3csspress_color_theme' ) ) {
+		add_option( 'w3csspress_color_theme', 'grey' );
+	}
 	if ( ! get_option( 'w3csspress_color_theme_kind' ) ) {
-		add_option( 'w3csspress_color_theme_kind', 'light-grey' );
+		add_option( 'w3csspress_color_theme_kind', 'l3' );
 	}
 	if ( ! get_option( 'w3csspress_rounded_img' ) ) {
 		add_option( 'w3csspress_rounded_img', 1 );
