@@ -530,7 +530,7 @@ function w3csspress_after_switch_theme() {
 	}
 }
 
-add_action( 'upgrader_process_complete', 'w3csspress_upgrader_process_complete', 10, 2 );
+add_action( 'upgrader_process_complete', __NAMESPACE__ . '\\w3csspress_upgrader_process_complete', 10, 2 );
 /**
  * Fires to finish the w3csspress update.
  *
