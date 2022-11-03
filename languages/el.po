@@ -3,12 +3,11 @@ msgstr ""
 "Project-Id-Version: w3csspress\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-10-31 15:45+0000\n"
-"PO-Revision-Date: 2022-10-31 16:07+0000\n"
+"PO-Revision-Date: 2022-10-31 15:51+0000\n"
 "Last-Translator: \n"
-"Language-Team: Ukrainian\n"
-"Language: uk\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10 >= 2 && "
-"n%10<=4 &&(n%100<10||n%100 >= 20)? 1 : 2);\n"
+"Language-Team: Greek\n"
+"Language: el\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -27,7 +26,7 @@ msgstr "%1$s %2$s"
 #: attachment.php:62 template-parts/nav/below.php:19
 #, fuzzy, php-format
 msgid "%s older"
-msgstr "% старше"
+msgstr "%s παλαιότερα"
 
 #: inc/patterns/notfound.php:22
 #, fuzzy
@@ -37,321 +36,321 @@ msgstr "404"
 #: inc/block-patterns.php:23
 #, fuzzy
 msgid "404 not found"
-msgstr "404 не знайдено"
+msgstr "404 δεν βρέθηκε"
 
 #: inc/patterns/query.php:43
 #, fuzzy
 msgid "add text or blocks to display when the query returns no results."
 msgstr ""
-"додавання тексту або блоків для відображення, коли запит не дає результатів."
+"να προσθέσετε κείμενο ή μπλοκ που θα εμφανίζονται όταν το ερώτημα δεν "
+"επιστρέφει αποτελέσματα."
 
 #: classes/class-w3csspress-constants.php:36
 #, fuzzy
 msgid "all borders"
-msgstr "всі кордони"
+msgstr "όλα τα σύνορα"
 
 #: classes/class-w3csspress-constants.php:57
 #, fuzzy
 msgid "amber"
-msgstr "бурштиновий"
+msgstr "κεχριμπάρι"
 
 #. color of the container
 #: inc/patterns/badge.php:30
 #, fuzzy, php-format
 msgid "badge %s"
-msgstr "значків %s"
+msgstr "σήμα %s"
 
 #: inc/block-patterns.php:24
 #, fuzzy
 msgid "badges"
-msgstr "значки"
+msgstr "σήματα"
 
 #: inc/patterns/navigation.php:37
 #, fuzzy
 msgid "basic navigation"
-msgstr "базова навігація"
+msgstr "βασική πλοήγηση"
 
 #: classes/class-w3csspress-constants.php:58
 #, fuzzy
 msgid "black"
-msgstr "чорний"
+msgstr "μαύρο"
 
 #: classes/class-w3csspress-constants.php:59
 #, fuzzy
 msgid "blue"
-msgstr "синій"
+msgstr "μπλε"
 
 #: classes/class-w3csspress-constants.php:60
 #, fuzzy
 msgid "blue grey"
-msgstr "синій сірий"
+msgstr "μπλε γκρι"
 
 #. border and direction
 #: classes/class-w3csspress-constants.php:27
 #, fuzzy, php-format
 msgid "border %s"
-msgstr "межа %s"
+msgstr "σύνορα %s"
 
 #: inc/images.php:134
 #, fuzzy
 msgid "border images on the page."
-msgstr "рамки зображень на сторінці."
+msgstr "εικόνες περιθωρίου στη σελίδα."
 
 #: inc/patterns/image.php:58
 #, fuzzy
 msgid "bordered image"
-msgstr "облямоване зображення"
+msgstr "περιθωριοποιημένη εικόνα"
 
 #: inc/images.php:133
 #, fuzzy
 msgid "bordered images"
-msgstr "облямовані зображення"
+msgstr "εικόνες με περιθώρια"
 
 #: inc/block-patterns.php:25
 #, fuzzy
 msgid "borders"
-msgstr "кордони"
+msgstr "σύνορα"
 
 #: classes/class-w3csspress-constants.php:204
 #, fuzzy
 msgid "bottom"
-msgstr "дно"
+msgstr "κάτω"
 
 #: classes/class-w3csspress-constants.php:61
 #, fuzzy
 msgid "brown"
-msgstr "коричневий"
+msgstr "καφέ"
 
 #. color of the card
 #: inc/patterns/card.php:40
 #, fuzzy, php-format
 msgid "card %s"
-msgstr "карта %s"
+msgstr "κάρτα %s"
 
 #: inc/patterns/image.php:70
 #, fuzzy
 msgid "card image"
-msgstr "зображення картки"
+msgstr "εικόνα κάρτας"
 
 #: inc/images.php:145
 #, fuzzy
 msgid "card images"
-msgstr "зображення карток"
+msgstr "εικόνες κάρτας"
 
 #. color of the card
 #: inc/patterns/card.php:54
 #, fuzzy, php-format
 msgid "card-2 %s"
-msgstr "картка-2 %s"
+msgstr "κάρτα-2 %s"
 
 #. color of the card
 #: inc/patterns/card.php:68
 #, fuzzy, php-format
 msgid "card-4 %s"
-msgstr "картка-4 %s"
+msgstr "κάρτα-4 %s"
 
 #: inc/block-patterns.php:26 inc/patterns/card.php:26
 #, fuzzy
 msgid "cards"
-msgstr "картки"
+msgstr "κάρτες"
 
 #: template-parts/entry/footer.php:16
 #, fuzzy
 msgid "categories: "
-msgstr "категорії"
+msgstr "κατηγορίες"
 
 #. index for headings
 #: inc/colors.php:143
 #, fuzzy, php-format
 msgid "change color of h%s."
-msgstr "змінюють колір h%s."
+msgstr "αλλάξτε το χρώμα του h%s."
 
 #: inc/fonts.php:192
 #, fuzzy
 msgid "change font family of headings."
-msgstr "змінити сімейство шрифтів заголовків."
+msgstr "αλλαγή οικογένειας γραμματοσειράς των επικεφαλίδων."
 
 #: inc/fonts.php:179 inc/fonts.php:204
 #, fuzzy
 msgid "change font family of website."
-msgstr "змінити сімейство шрифтів сайту."
+msgstr "αλλάξτε την οικογένεια γραμματοσειρών του ιστότοπου."
 
 #: inc/fonts.php:229
 #, fuzzy
 msgid "change font size of div."
-msgstr "змінити розмір шрифту div."
+msgstr "αλλαγή μεγέθους γραμματοσειράς του div."
 
 #. index for headings
 #: inc/fonts.php:397
 #, fuzzy, php-format
 msgid "change font size of h%s."
-msgstr "змінити розмір шрифту h%s."
+msgstr "αλλαγή μεγέθους γραμματοσειράς του h%s."
 
 #: inc/fonts.php:242
 #, fuzzy
 msgid "change font size of inputs."
-msgstr "змінити розмір шрифту вхідних даних."
+msgstr "αλλαγή μεγέθους γραμματοσειράς των εισόδων."
 
 #: inc/fonts.php:281
 #, fuzzy
 msgid "change font size of ordered list."
-msgstr "змінити розмір шрифту впорядкованого списку."
+msgstr "αλλαγή μεγέθους γραμματοσειράς της διατεταγμένης λίστας."
 
 #: inc/fonts.php:216
 #, fuzzy
 msgid "change font size of paragraphs."
-msgstr "змінити розмір шрифту абзаців."
+msgstr "να αλλάξετε το μέγεθος της γραμματοσειράς των παραγράφων."
 
 #: inc/fonts.php:255
 #, fuzzy
 msgid "change font size of tables."
-msgstr "змінити розмір шрифту таблиць."
+msgstr "αλλαγή μεγέθους γραμματοσειράς των πινάκων."
 
 #: inc/fonts.php:268
 #, fuzzy
 msgid "change font size of unordered list."
-msgstr "змінити розмір шрифту невпорядкованого списку."
+msgstr "αλλαγή μεγέθους γραμματοσειράς της μη ταξινομημένης λίστας."
 
 #: inc/fonts.php:307
 #, fuzzy
 msgid "change font weight of div."
-msgstr "змінити вагу шрифту div."
+msgstr "αλλάξτε το βάρος γραμματοσειράς του div."
 
 #. index for headings
 #: inc/fonts.php:418
 #, fuzzy, php-format
 msgid "change font weight of h%s."
-msgstr "змінити вагу шрифту h%s."
+msgstr "αλλάξτε το βάρος της γραμματοσειράς h%s."
 
 #: inc/fonts.php:320
 #, fuzzy
 msgid "change font weight of inputs."
-msgstr "змінити вагу шрифту вхідних даних."
+msgstr "αλλαγή βάρους γραμματοσειράς των εισροών."
 
 #: inc/fonts.php:359
 #, fuzzy
 msgid "change font weight of ordered list."
-msgstr "зміна ваги шрифту впорядкованого списку."
+msgstr "αλλαγή του βάρους γραμματοσειράς της διατεταγμένης λίστας."
 
 #: inc/fonts.php:294
 #, fuzzy
 msgid "change font weight of paragraphs."
-msgstr "змінити кегль шрифту абзаців."
+msgstr "αλλάξτε το βάρος της γραμματοσειράς των παραγράφων."
 
 #: inc/fonts.php:333
 #, fuzzy
 msgid "change font weight of tables."
-msgstr "зміну ваги шрифту таблиць."
+msgstr "αλλαγή βάρους γραμματοσειράς των πινάκων."
 
 #: inc/fonts.php:346
 #, fuzzy
 msgid "change font weight of unordered list."
-msgstr "змінити вагу шрифту невпорядкованого списку."
+msgstr "αλλαγή του βάρους γραμματοσειράς της μη ταξινομημένης λίστας."
 
 #: inc/colors.php:122
 #, fuzzy
 msgid "change link color"
-msgstr "змінити колір посилання"
+msgstr "αλλαγή χρώματος συνδέσμου"
 
 #: inc/colors.php:108
 #, fuzzy
 msgid "change theme text color"
-msgstr "змінити колір тексту теми"
+msgstr "αλλαγή χρώματος κειμένου θέματος"
 
 #: classes/class-w3csspress-constants.php:190
 #, fuzzy
 msgid "circle"
-msgstr "коло"
+msgstr "κύκλος"
 
 #: inc/images.php:121
 #, fuzzy
 msgid "circle images"
-msgstr "зображення кола"
+msgstr "εικόνες κύκλων"
 
 #: inc/images.php:122
 #, fuzzy
 msgid "circle images on the page."
-msgstr "обведіть зображення на сторінці."
+msgstr "κυκλικές εικόνες στη σελίδα."
 
 #: inc/patterns/image.php:46
 #, fuzzy
 msgid "circular image"
-msgstr "кругове зображення"
+msgstr "κυκλική εικόνα"
 
 #: inc/block-patterns.php:27
 #, fuzzy
 msgid "colors"
-msgstr "кольори"
+msgstr "χρώματα"
 
 #: comments.php:65
 #, fuzzy
 msgid "comment:"
-msgstr "прокоментуйте:"
+msgstr "σχόλιο:"
 
 #: template-parts/entry/footer.php:20
 #, fuzzy
 msgid "comments"
-msgstr "коментарі"
+msgstr "σχόλια"
 
 #: comments.php:53
 #, fuzzy
 msgctxt "comments count"
 msgid "Trackback or Pingback"
 msgid_plural "Trackbacks and Pingbacks"
-msgstr[0] "Зворотний зв'язок або пінгбек"
-msgstr[1] "Зворотні посилання та пінгбеки"
-msgstr[2] ""
+msgstr[0] "Trackback ή Pingback"
+msgstr[1] "Trackbacks και Pingbacks"
 
 #. color of the container
 #: inc/patterns/container.php:40
 #, fuzzy, php-format
 msgid "container %s"
-msgstr "контейнер %s"
+msgstr "δοχείο %s"
 
 #: inc/block-patterns.php:28 inc/patterns/container.php:26
 #, fuzzy
 msgid "containers"
-msgstr "контейнери"
+msgstr "εμπορευματοκιβώτια"
 
 #: inc/content.php:58
 #, fuzzy
 msgid "content options"
-msgstr "варіанти контенту"
+msgstr "επιλογές περιεχομένου"
 
 #: classes/class-w3csspress-constants.php:156
 #, fuzzy
 msgid "cursive"
-msgstr "скоропис"
+msgstr "καλλιγραφική"
 
 #: inc/content.php:59
 #, fuzzy
 msgid "customize content options here."
-msgstr "налаштувати параметри контенту тут."
+msgstr "προσαρμόστε τις επιλογές περιεχομένου εδώ."
 
 #: inc/fonts.php:32
 #, fuzzy
 msgid "customize fonts options here."
-msgstr "налаштувати параметри шрифтів можна тут."
+msgstr "προσαρμόστε τις επιλογές γραμματοσειρών εδώ."
 
 #: inc/images.php:28
 #, fuzzy
 msgid "customize images options here."
-msgstr "налаштувати параметри зображень можна тут."
+msgstr "προσαρμόστε τις επιλογές εικόνων εδώ."
 
 #: inc/layout.php:32
 #, fuzzy
 msgid "customize layout options here."
-msgstr "налаштувати параметри макета можна тут."
+msgstr "προσαρμόστε τις επιλογές διάταξης εδώ."
 
 #: inc/speed.php:28
 #, fuzzy
 msgid "customize speed options here."
-msgstr "налаштувати параметри швидкості тут."
+msgstr "προσαρμόστε τις επιλογές ταχύτητας εδώ."
 
 #: classes/class-w3csspress-constants.php:62
 #, fuzzy
 msgid "cyan"
-msgstr "блакитний"
+msgstr "κυανό"
 
 #: classes/class-w3csspress-constants.php:93
 #: classes/class-w3csspress-constants.php:94
@@ -360,22 +359,22 @@ msgstr "блакитний"
 #: classes/class-w3csspress-constants.php:97
 #, fuzzy
 msgid "dark"
-msgstr "темний"
+msgstr "dark"
 
 #: classes/class-w3csspress-constants.php:63
 #, fuzzy
 msgid "dark grey"
-msgstr "темно-сірий"
+msgstr "σκούρο γκρι"
 
 #: classes/class-w3csspress-constants.php:64
 #, fuzzy
 msgid "deep orange"
-msgstr "насичений помаранчевий"
+msgstr "βαθύ πορτοκαλί"
 
 #: classes/class-w3csspress-constants.php:65
 #, fuzzy
 msgid "deep purple"
-msgstr "глибокий фіолетовий"
+msgstr "βαθύ μωβ"
 
 #: classes/class-w3csspress-constants.php:55
 #: classes/class-w3csspress-constants.php:98
@@ -386,169 +385,171 @@ msgstr "глибокий фіолетовий"
 #: classes/class-w3csspress-constants.php:184
 #, fuzzy
 msgid "default"
-msgstr "дефолт"
+msgstr "προεπιλογή"
 
 #: inc/speed.php:93
 #, fuzzy
 msgid "disable jQuery"
-msgstr "відключити jQuery"
+msgstr "απενεργοποίηση της jQuery"
 
 #: inc/speed.php:94
 #, fuzzy
 msgid "disable or enable jQuery (do only if you know what you are doing)."
-msgstr "вимкнути або увімкнути jQuery (робити тільки якщо знаєте, що робите)."
+msgstr ""
+"απενεργοποιήστε ή ενεργοποιήστε την jQuery (κάντε το μόνο αν ξέρετε τι "
+"κάνετε)."
 
 #: inc/speed.php:141
 #, fuzzy
 msgid "enable block styles"
-msgstr "включити стилі блоків"
+msgstr "ενεργοποίηση στυλ μπλοκ"
 
 #: inc/speed.php:142
 #, fuzzy
 msgid "enable block styles."
-msgstr "включити стилі блоків."
+msgstr "ενεργοποιήστε τα στυλ μπλοκ."
 
 #: inc/speed.php:105
 #, fuzzy
 msgid "enable Dashicons"
-msgstr "ввімкнути тире"
+msgstr "ενεργοποίηση Dashicons"
 
 #: inc/speed.php:106
 #, fuzzy
 msgid "enable Dashicons on the frontend."
-msgstr "увімкнути тире у фронтенді."
+msgstr "ενεργοποιήστε τα Dashicons στο frontend."
 
 #: inc/speed.php:153
 #, fuzzy
 msgid "enable full site editor"
-msgstr "включити повний редактор сайту"
+msgstr "ενεργοποιήστε τον πλήρη επεξεργαστή ιστότοπου"
 
 #: inc/speed.php:117
 #, fuzzy
 msgid "enable Gutenberg for posts"
-msgstr "включити Гутенберга для постів"
+msgstr "ενεργοποιήστε το Gutenberg για τις αναρτήσεις"
 
 #: inc/speed.php:129
 #, fuzzy
 msgid "enable Gutenberg for widgets"
-msgstr "увімкнути Gutenberg для віджетів"
+msgstr "ενεργοποιήστε το Gutenberg για widgets"
 
 #: inc/speed.php:118
 #, fuzzy
 msgid "enable Gutenberg to edit posts."
-msgstr "дозволити Гутенбергу редагувати повідомлення."
+msgstr "ενεργοποιήστε το Gutenberg για να επεξεργαστείτε τις δημοσιεύσεις."
 
 #: inc/speed.php:130
 #, fuzzy
 msgid "enable Gutenberg to edit widgets."
-msgstr "дозволити Гутенбергу редагувати віджети."
+msgstr "ενεργοποιήστε το Gutenberg για να επεξεργαστείτε τα widgets."
 
 #: inc/speed.php:154
 #, fuzzy
 msgid "enable the full site editor."
-msgstr "увімкнути повний редактор сайту."
+msgstr "ενεργοποιήστε τον πλήρη επεξεργαστή ιστότοπου."
 
 #: inc/fonts.php:31
 #, fuzzy
 msgid "fonts options"
-msgstr "параметри шрифтів"
+msgstr "επιλογές γραμματοσειρών"
 
 #: functions.php:364
 #, fuzzy
 msgid "foot widgets sidebar"
-msgstr "бічна панель віджетів для ніг"
+msgstr "πλευρική μπάρα widgets ποδιών"
 
 #: inc/patterns/footer.php:28
 #, fuzzy
 msgid "footer"
-msgstr "нижній колонтитул"
+msgstr "υποσέλιδο"
 
 #: inc/content.php:79
 #, fuzzy
 msgid "footer content"
-msgstr "вміст нижнього колонтитула"
+msgstr "περιεχόμενο υποσέλιδου"
 
 #: inc/block-patterns.php:29
 #, fuzzy
 msgid "footers"
-msgstr "колонтитули"
+msgstr "υποσέλιδα"
 
 #: classes/class-w3csspress-constants.php:172
 #, fuzzy
 msgid "four columns"
-msgstr "чотири колонки"
+msgstr "τέσσερις στήλες"
 
 #. Name of the template
 #, fuzzy
 msgid "Full-Width"
-msgstr "Повна ширина"
+msgstr "Πλήρες πλάτος"
 
 #: inc/images.php:169
 #, fuzzy
 msgid "grayscale images"
-msgstr "зображення у відтінках сірого"
+msgstr "εικόνες κλίμακας του γκρι"
 
 #: classes/class-w3csspress-constants.php:66
 #, fuzzy
 msgid "green"
-msgstr "зелений"
+msgstr "πράσινο"
 
 #: classes/class-w3csspress-constants.php:67
 #, fuzzy
 msgid "grey"
-msgstr "сірий"
+msgstr "γκρι"
 
 #: inc/patterns/image.php:94
 #, fuzzy
 msgid "greyscale image"
-msgstr "зображення у відтінках сірого"
+msgstr "εικόνα κλίμακας του γκρι"
 
 #: inc/layout.php:96
 #, fuzzy
 msgid "grid layout setting"
-msgstr "налаштування схеми розташування сітки"
+msgstr "ρύθμιση διάταξης πλέγματος"
 
 #. index for headings
 #: inc/colors.php:138
 #, fuzzy, php-format
 msgid "h%s color"
-msgstr "h%s колір"
+msgstr "h%s χρώμα"
 
 #: functions.php:355
 #, fuzzy
 msgid "head widgets sidebar"
-msgstr "бічна панель віджетів голови"
+msgstr "head widgets sidebar"
 
 #: inc/patterns/header.php:21
 #, fuzzy
 msgid "header"
-msgstr "заголовок"
+msgstr "επικεφαλίδα"
 
 #: inc/images.php:193
 #, fuzzy
 msgid "header thumbnail"
-msgstr "мініатюра заголовка"
+msgstr "μικρογραφία κεφαλίδας"
 
 #: inc/block-patterns.php:30
 #, fuzzy
 msgid "headers"
-msgstr "заголовки"
+msgstr "επικεφαλίδες"
 
 #: inc/patterns/header.php:51
 #, fuzzy
 msgid "homepage header"
-msgstr "заголовок головної сторінки"
+msgstr "επικεφαλίδα της αρχικής σελίδας"
 
 #: inc/block-patterns.php:31
 #, fuzzy
 msgid "hover"
-msgstr "зависнути"
+msgstr "hover"
 
 #. hover border and color
 #: classes/class-w3csspress-constants.php:244
 #, fuzzy, php-format
 msgid "hover %1$s %2$s"
-msgstr "навести %1$s %2$s"
+msgstr "hover %1$s %2$s"
 
 #. Author URI of the theme
 #, fuzzy
@@ -563,72 +564,72 @@ msgstr "https://github.com/matteomarchiori/w3csspress"
 #: inc/patterns/image.php:22
 #, fuzzy
 msgid "image"
-msgstr "імідж"
+msgstr "εικόνα"
 
 #: inc/block-patterns.php:32
 #, fuzzy
 msgid "images"
-msgstr "зображення"
+msgstr "εικόνες"
 
 #: inc/images.php:27
 #, fuzzy
 msgid "images options"
-msgstr "параметри зображень"
+msgstr "επιλογές εικόνων"
 
 #: inc/images.php:146
 #, fuzzy
 msgid "images with card effect."
-msgstr "зображення з картковим ефектом."
+msgstr "εικόνες με εφέ κάρτας."
 
 #: inc/images.php:170
 #, fuzzy
 msgid "images with grayscale effect."
-msgstr "зображення з ефектом градацій сірого."
+msgstr "εικόνες με το εφέ της κλίμακας του γκρι."
 
 #: inc/images.php:158
 #, fuzzy
 msgid "images with opacity effect."
-msgstr "зображення з ефектом непрозорості."
+msgstr "εικόνες με αδιαφάνεια."
 
 #: inc/images.php:182
 #, fuzzy
 msgid "images with sepia effect."
-msgstr "зображення з ефектом сепії."
+msgstr "εικόνες με εφέ σέπια."
 
 #: classes/class-w3csspress-constants.php:68
 #, fuzzy
 msgid "indigo"
-msgstr "індиго"
+msgstr "indigo"
 
 #: classes/class-w3csspress-constants.php:123
 #, fuzzy
 msgid "jumbo"
-msgstr "великий"
+msgstr "jumbo"
 
 #: classes/class-w3csspress-constants.php:69
 #, fuzzy
 msgid "khaki"
-msgstr "хакі"
+msgstr "χακί"
 
 #: classes/class-w3csspress-constants.php:119
 #, fuzzy
 msgid "large"
-msgstr "великий"
+msgstr "μεγάλο"
 
 #: inc/layout.php:31
 #, fuzzy
 msgid "layout options"
-msgstr "варіанти планування"
+msgstr "επιλογές διάταξης"
 
 #: classes/class-w3csspress-constants.php:205
 #, fuzzy
 msgid "left"
-msgstr "лівий"
+msgstr "αριστερά"
 
 #: inc/patterns/sidebar.php:26
 #, fuzzy
 msgid "left sidebar"
-msgstr "ліва бічна панель"
+msgstr "αριστερή πλευρική μπάρα"
 
 #: classes/class-w3csspress-constants.php:99
 #: classes/class-w3csspress-constants.php:100
@@ -637,32 +638,32 @@ msgstr "ліва бічна панель"
 #: classes/class-w3csspress-constants.php:103
 #, fuzzy
 msgid "light"
-msgstr "світло"
+msgstr "φως"
 
 #: classes/class-w3csspress-constants.php:70
 #, fuzzy
 msgid "light blue"
-msgstr "світло-блакитний"
+msgstr "γαλάζιο"
 
 #: classes/class-w3csspress-constants.php:71
 #, fuzzy
 msgid "light green"
-msgstr "салатовий"
+msgstr "ανοιχτό πράσινο"
 
 #: classes/class-w3csspress-constants.php:72
 #, fuzzy
 msgid "lime"
-msgstr "вапно"
+msgstr "ασβέστης"
 
 #: inc/colors.php:121
 #, fuzzy
 msgid "link color"
-msgstr "колір посилання"
+msgstr "χρώμα συνδέσμου"
 
 #: functions.php:90
 #, fuzzy
 msgid "main menu"
-msgstr "головне меню"
+msgstr "κύριο μενού"
 
 #. Author of the theme
 #, fuzzy
@@ -672,413 +673,410 @@ msgstr "matteomarchiori97"
 #: classes/class-w3csspress-constants.php:118
 #, fuzzy
 msgid "medium"
-msgstr "середній"
+msgstr "medium"
 
 #: functions.php:147
 #, fuzzy
 msgid "menu"
-msgstr "меню"
+msgstr "μενού"
 
 #: classes/class-w3csspress-constants.php:155
 #, fuzzy
 msgid "monospace"
-msgstr "монопростір"
+msgstr "monospace"
 
 #: inc/block-patterns.php:33
 #, fuzzy
 msgid "navigation"
-msgstr "навігація"
+msgstr "πλοήγηση"
 
 #. arrow
 #. arrow and text
 #: attachment.php:75 template-parts/nav/below.php:24
 #, fuzzy, php-format
 msgid "newer %s"
-msgstr "новіші %s"
+msgstr "νεότερο %s"
 
 #: 404.php:19
 #, fuzzy
 msgid "Not Found"
-msgstr "Не знайдено"
+msgstr "Δεν βρέθηκε"
 
 #: inc/patterns/notfound.php:25
 #, fuzzy
 msgid "not found"
-msgstr "не знайдено"
+msgstr "δεν βρέθηκε"
 
 #: search.php:62
 #, fuzzy
 msgid "Nothing Found"
-msgstr "Нічого не знайдено"
+msgstr "Δεν βρέθηκε τίποτα"
 
 #: 404.php:22
 #, fuzzy
 msgid "Nothing found for the requested page. Try a search instead?"
-msgstr ""
-"Для запитуваної сторінки нічого не знайдено. Спробувати пошук замість цього?"
+msgstr "Δεν βρέθηκε τίποτα για τη ζητούμενη σελίδα. Δοκιμάστε μια αναζήτηση"
 
 #: inc/patterns/notfound.php:29
 #, fuzzy
 msgid "nothing found for the requested page. Try a search instead?"
-msgstr ""
-"нічого не знайдено для запитуваної сторінки. Спробувати пошук замість цього?"
+msgstr "δεν βρέθηκε τίποτα για τη ζητούμενη σελίδα. Δοκιμάστε μια αναζήτηση"
 
 #: classes/class-w3csspress-constants.php:169
 #, fuzzy
 msgid "one column"
-msgstr "одна колонка"
+msgstr "μία στήλη"
 
 #: inc/images.php:157
 #, fuzzy
 msgid "opacity images"
-msgstr "непрозорість зображень"
+msgstr "εικόνες αδιαφάνειας"
 
 #: inc/patterns/image.php:82
 #, fuzzy
 msgid "opaque image"
-msgstr "непрозоре зображення"
+msgstr "αδιαφανής εικόνα"
 
 #: classes/class-w3csspress-constants.php:73
 #, fuzzy
 msgid "orange"
-msgstr "апельсин"
+msgstr "πορτοκαλί"
 
 #: inc/patterns/panel.php:26
 #, fuzzy
 msgid "panel"
-msgstr "панель"
+msgstr "πάνελ"
 
 #. color of the panel
 #: inc/patterns/panel.php:40
 #, fuzzy, php-format
 msgid "panel %s"
-msgstr "панель %s"
+msgstr "πάνελ %s"
 
 #: inc/block-patterns.php:34
 #, fuzzy
 msgid "panels"
-msgstr "панелі"
+msgstr "πάνελ"
 
 #: classes/class-w3csspress-constants.php:74
 #, fuzzy
 msgid "pink"
-msgstr "рожевий"
+msgstr "ροζ"
 
 #: inc/images.php:205
 #, fuzzy
 msgid "post thumbnail"
-msgstr "мініатюра публікації"
+msgstr "μικρογραφία ανάρτησης"
 
 #: inc/images.php:194
 #, fuzzy
 msgid "posts get the thumbnail as header image if they have one."
-msgstr "дописи отримують мініатюру в якості зображення заголовка, якщо він є."
+msgstr "οι δημοσιεύσεις παίρνουν τη μικρογραφία ως εικόνα κεφαλίδας αν έχουν."
 
 #: inc/images.php:206
 #, fuzzy
 msgid "posts show the thumbnail if they have."
-msgstr "дописи показують мініатюру, якщо вона є."
+msgstr "οι αναρτήσεις εμφανίζουν τη μικρογραφία αν έχουν."
 
 #: functions.php:337
 #, fuzzy
 msgid "primary sidebar"
-msgstr "основна бічна панель"
+msgstr "πρωτεύουσα πλευρική μπάρα"
 
 #: classes/class-w3csspress-constants.php:75
 #, fuzzy
 msgid "purple"
-msgstr "фіолетовий"
+msgstr "μοβ"
 
 #: inc/block-patterns.php:35
 #, fuzzy
 msgid "query"
-msgstr "запит"
+msgstr "ερώτημα"
 
 #: inc/patterns/query.php:22
 #, fuzzy
 msgid "query loop"
-msgstr "цикл запиту"
+msgstr "βρόχος ερωτήματος"
 
 #: inc/patterns/query.php:33
 #, fuzzy
 msgid "read all"
-msgstr "читати все"
+msgstr "διαβάστε τα όλα"
 
 #: classes/class-w3csspress-constants.php:76
 #, fuzzy
 msgid "red"
-msgstr "червоний"
+msgstr "κόκκινο"
 
 #: classes/class-w3csspress-constants.php:203
 #, fuzzy
 msgid "right"
-msgstr "правильно"
+msgstr "δεξιά"
 
 #: inc/patterns/sidebar.php:36
 #, fuzzy
 msgid "right sidebar"
-msgstr "права бічна панель"
+msgstr "δεξιά πλαϊνή μπάρα"
 
 #: inc/images.php:110
 #, fuzzy
 msgid "round images on the page."
-msgstr "круглі зображення на сторінці."
+msgstr "στρογγυλές εικόνες στη σελίδα."
 
 #: classes/class-w3csspress-constants.php:187
 #, fuzzy
 msgid "round large"
-msgstr "круглий великий"
+msgstr "στρογγυλό μεγάλο"
 
 #: classes/class-w3csspress-constants.php:186
 #, fuzzy
 msgid "round medium"
-msgstr "круглий середній"
+msgstr "στρογγυλό μεσαίο"
 
 #: classes/class-w3csspress-constants.php:185
 #, fuzzy
 msgid "round small"
-msgstr "круглий малий"
+msgstr "στρογγυλό μικρό"
 
 #: classes/class-w3csspress-constants.php:188
 #, fuzzy
 msgid "round xlarge"
-msgstr "круглий великий"
+msgstr "στρογγυλό xlarge"
 
 #: classes/class-w3csspress-constants.php:189
 #, fuzzy
 msgid "round xxlarge"
-msgstr "круглий xxlarge"
+msgstr "στρογγυλό xxlarge"
 
 #: inc/patterns/image.php:34
 #, fuzzy
 msgid "rounded image"
-msgstr "закруглене зображення"
+msgstr "στρογγυλεμένη εικόνα"
 
 #: inc/images.php:109
 #, fuzzy
 msgid "rounded images"
-msgstr "округлі зображення"
+msgstr "στρογγυλεμένες εικόνες"
 
 #: classes/class-w3csspress-constants.php:154
 #, fuzzy
 msgid "sans serif"
-msgstr "без зарубок"
+msgstr "sans serif"
 
 #: inc/block-patterns.php:36 inc/patterns/search.php:25
 #: inc/patterns/search.php:25
 #, fuzzy
 msgid "search"
-msgstr "пошук"
+msgstr "αναζήτηση"
 
 #: inc/patterns/search.php:22
 #, fuzzy
 msgid "search bar"
-msgstr "рядок пошуку"
+msgstr "γραμμή αναζήτησης"
 
 #. search text completed with query text
 #: search.php:38
 #, fuzzy, php-format
 msgid "search results for: %s"
-msgstr "результати пошуку для: %s"
+msgstr "αποτελέσματα αναζήτησης για: %s"
 
 #: functions.php:346
 #, fuzzy
 msgid "secondary sidebar"
-msgstr "додаткова бічна панель"
+msgstr "δευτερεύουσα πλευρική μπάρα"
 
 #: inc/colors.php:79
 #, fuzzy
 msgid "select color theme"
-msgstr "вибрати колірну тему"
+msgstr "επιλέξτε θέμα χρώματος"
 
 #: inc/fonts.php:228
 #, fuzzy
 msgid "select div font size"
-msgstr "вибрати розмір шрифту div"
+msgstr "επιλέξτε μέγεθος γραμματοσειράς div"
 
 #: inc/fonts.php:306
 #, fuzzy
 msgid "select div font weight"
-msgstr "вибрати вагу шрифту div"
+msgstr "επιλέξτε βάρος γραμματοσειράς div"
 
 #: inc/fonts.php:178
 #, fuzzy
 msgid "select font family"
-msgstr "вибрати сімейство шрифтів"
+msgstr "επιλέξτε οικογένεια γραμματοσειράς"
 
 #. index for headings
 #: inc/fonts.php:392
 #, fuzzy, php-format
 msgid "select h%s font size"
-msgstr "вибрати розмір шрифту h%s"
+msgstr "επιλέξτε μέγεθος γραμματοσειράς h%s"
 
 #. index for headings
 #: inc/fonts.php:413
 #, fuzzy, php-format
 msgid "select h%s font weight"
-msgstr "вибрати вагу шрифту h%s"
+msgstr "select h%s βάρος γραμματοσειράς"
 
 #: inc/fonts.php:241
 #, fuzzy
 msgid "select input font size"
-msgstr "вибрати розмір шрифту введення"
+msgstr "επιλέξτε μέγεθος γραμματοσειράς εισόδου"
 
 #: inc/fonts.php:319
 #, fuzzy
 msgid "select input font weight"
-msgstr "вибрати вагу вхідного шрифту"
+msgstr "επιλέξτε βάρος γραμματοσειράς εισόδου"
 
 #: inc/layout.php:70
 #, fuzzy
 msgid "select layout"
-msgstr "вибрати макет"
+msgstr "επιλέξτε διάταξη"
 
 #: inc/fonts.php:280
 #, fuzzy
 msgid "select ordered list font size"
-msgstr "вибрати розмір шрифту замовленого списку"
+msgstr "επιλέξτε μέγεθος γραμματοσειράς διατεταγμένης λίστας"
 
 #: inc/fonts.php:358
 #, fuzzy
 msgid "select ordered list font weight"
-msgstr "вибрати товщину шрифту замовленого списку"
+msgstr "επιλέξτε βάρος γραμματοσειράς διατεταγμένης λίστας"
 
 #: inc/fonts.php:215
 #, fuzzy
 msgid "select paragraphs font size"
-msgstr "вибрати розмір шрифту абзаців"
+msgstr "επιλέξτε μέγεθος γραμματοσειράς παραγράφων"
 
 #: inc/fonts.php:293
 #, fuzzy
 msgid "select paragraphs font weight"
-msgstr "вибір товщини шрифту абзаців"
+msgstr "επιλέξτε παραγράφους βάρος γραμματοσειράς"
 
 #: inc/layout.php:83
 #, fuzzy
 msgid "select rounded style"
-msgstr "обирайте округлий стиль"
+msgstr "επιλέξτε στρογγυλεμένο στυλ"
 
 #: inc/fonts.php:254
 #, fuzzy
 msgid "select table font size"
-msgstr "вибрати розмір шрифту таблиці"
+msgstr "επιλέξτε μέγεθος γραμματοσειράς πίνακα"
 
 #: inc/fonts.php:332
 #, fuzzy
 msgid "select table font weight"
-msgstr "вибрати товщину шрифту таблиці"
+msgstr "επιλέξτε βάρος γραμματοσειράς πίνακα"
 
 #: inc/colors.php:92
 #, fuzzy
 msgid "select theme kind"
-msgstr "вибрати тип теми"
+msgstr "επιλέξτε είδος θέματος"
 
 #: inc/fonts.php:267
 #, fuzzy
 msgid "select unordered list font size"
-msgstr "вибрати розмір шрифту невпорядкованого списку"
+msgstr "επιλέξτε μέγεθος γραμματοσειράς μη ταξινομημένης λίστας"
 
 #: inc/fonts.php:345
 #, fuzzy
 msgid "select unordered list font weight"
-msgstr "вибрати невпорядкований список шрифтів"
+msgstr "select unordered list font weight"
 
 #: inc/patterns/image.php:106
 #, fuzzy
 msgid "sepia image"
-msgstr "зображення сепії"
+msgstr "εικόνα σέπια"
 
 #: inc/images.php:181
 #, fuzzy
 msgid "sepia images"
-msgstr "зображення сепії"
+msgstr "εικόνες σέπια"
 
 #: classes/class-w3csspress-constants.php:153
 #, fuzzy
 msgid "serif"
-msgstr "зарубка"
+msgstr "serif"
 
 #: inc/content.php:80
 #, fuzzy
 msgid "set footer content."
-msgstr "встановити вміст нижнього колонтитула."
+msgstr "ορίστε το περιεχόμενο του υποσέλιδου."
 
 #: functions.php:338
 #, fuzzy
 msgid "sidebar on the left."
-msgstr "бічна панель зліва."
+msgstr "πλευρική γραμμή στα αριστερά."
 
 #: functions.php:347
 #, fuzzy
 msgid "sidebar on the right."
-msgstr "бічна панель праворуч."
+msgstr "πλευρική γραμμή στα δεξιά."
 
 #: inc/block-patterns.php:37
 #, fuzzy
 msgid "sidebars"
-msgstr "бічні панелі"
+msgstr "πλευρικές γραμμές"
 
 #: inc/content.php:20
 #, fuzzy
 msgid "skip to the content"
-msgstr "перейти до змісту"
+msgstr "μετάβαση στο περιεχόμενο"
 
 #: classes/class-w3csspress-constants.php:117
 #, fuzzy
 msgid "small"
-msgstr "малий"
+msgstr "μικρό"
 
 #: search.php:65
 #, fuzzy
 msgid "Sorry, nothing matched your search. Please try again."
-msgstr ""
-"Вибачте, за вашим запитом нічого не знайдено. Будь ласка, спробуйте ще раз."
+msgstr "Λυπάμαι, τίποτα δεν ταιριάζει με την αναζήτησή σας. Προσπαθήστε ξανά."
 
 #: inc/speed.php:27
 #, fuzzy
 msgid "speed options"
-msgstr "варіанти швидкості"
+msgstr "επιλογές ταχύτητας"
 
 #: classes/class-w3csspress-constants.php:77
 #, fuzzy
 msgid "teal"
-msgstr "чирок"
+msgstr "πετρόλ"
 
 #: inc/colors.php:107
 #, fuzzy
 msgid "text theme color"
-msgstr "колір теми тексту"
+msgstr "χρώμα θέματος κειμένου"
 
 #: inc/patterns/query.php:44
 #, fuzzy
 msgid "the query did not return any results."
-msgstr "запит не дав жодних результатів."
+msgstr "το ερώτημα δεν επέστρεψε κανένα αποτέλεσμα."
 
 #. thick border and direction
 #: classes/class-w3csspress-constants.php:32
 #, fuzzy, php-format
 msgid "thick border %s"
-msgstr "товста облямівка %s"
+msgstr "παχύ περίγραμμα %s"
 
 #: classes/class-w3csspress-constants.php:171
 #, fuzzy
 msgid "three columns"
-msgstr "три колонки"
+msgstr "τρεις στήλες"
 
 #: classes/class-w3csspress-constants.php:116
 #, fuzzy
 msgid "tiny"
-msgstr "крихітний"
+msgstr "μικροσκοπικό"
 
 #: classes/class-w3csspress-constants.php:202
 #, fuzzy
 msgid "top"
-msgstr "верхній"
+msgstr "top"
 
 #: classes/class-w3csspress-constants.php:170
 #, fuzzy
 msgid "two columns"
-msgstr "дві колонки"
+msgstr "δύο στήλες"
 
 #. Description of the theme
 #, fuzzy
@@ -1091,22 +1089,24 @@ msgid ""
 "customizable. Please add issues on GitHub or contact me if you are "
 "interested in more options."
 msgstr ""
-"Універсальна тема з класичним режимом та режимом блоків, створена для "
-"інтеграції фреймворку W3CSS в WordPress, з глобальними налаштуваннями та "
-"всіма функціями фреймворку W3CSS. Тема була розроблена, починаючи з ресурсів "
-"на веб-сайті w3schools, застосованих до чистої теми WordPress, дещо зміненої."
-" Тема готова до доступності та легко налаштовується. Будь ласка, додавайте "
-"питання на GitHub або зв'яжіться зі мною, якщо вас цікавлять інші варіанти."
+"Καθολικό θέμα με κλασική λειτουργία και λειτουργία μπλοκ, φτιαγμένο για να "
+"ενσωματώσει το πλαίσιο W3CSS μέσα στο WordPress, με παγκόσμιες "
+"προσαρμοσμένες επιλογές και όλες τις λειτουργίες του πλαισίου W3CSS. Το θέμα "
+"έχει αναπτυχθεί ξεκινώντας από τους πόρους του ιστότοπου w3schools που "
+"εφαρμόζεται στο θέμα blankslate WordPress, ελαφρώς τροποποιημένο. Το θέμα "
+"είναι έτοιμο για προσβασιμότητα και είναι εξαιρετικά προσαρμόσιμο. Παρακαλώ "
+"προσθέστε θέματα στο GitHub ή επικοινωνήστε μαζί μου αν ενδιαφέρεστε για "
+"περισσότερες επιλογές."
 
 #: inc/fonts.php:203
 #, fuzzy
 msgid "use Google font"
-msgstr "використовувати шрифт Google"
+msgstr "χρήση γραμματοσειράς Google"
 
 #: inc/fonts.php:191
 #, fuzzy
 msgid "use Google font for headings"
-msgstr "використовувати шрифт Google для заголовків"
+msgstr "χρήση γραμματοσειράς Google για τίτλους"
 
 #: inc/layout.php:84
 #, fuzzy
@@ -1114,30 +1114,35 @@ msgid ""
 "using this option you can change some elements roundness (images have more "
 "controls)."
 msgstr ""
-"за допомогою цієї опції можна змінити округлість деяких елементів "
-"(зображення мають більше елементів керування)."
+"χρησιμοποιώντας αυτή την επιλογή μπορείτε να αλλάξετε τη στρογγυλότητα "
+"ορισμένων στοιχείων (οι εικόνες έχουν περισσότερους ελέγχους)."
 
 #: inc/layout.php:71
 #, fuzzy
 msgid "using this option you can change the page layout."
-msgstr "за допомогою цієї опції можна змінити макет сторінки."
+msgstr ""
+"χρησιμοποιώντας αυτή την επιλογή μπορείτε να αλλάξετε τη διάταξη της σελίδας."
 
 #: inc/colors.php:93
 #, fuzzy
 msgid ""
 "using this option you can change the theme between default, light and dark."
 msgstr ""
-"за допомогою цієї опції можна змінити тему між стандартною, світлою і темною."
+"χρησιμοποιώντας αυτή την επιλογή μπορείτε να αλλάξετε το θέμα μεταξύ "
+"προεπιλεγμένου, ανοιχτού και σκοτεινού."
 
 #: inc/colors.php:80
 #, fuzzy
 msgid "using this option you can change the theme colors."
-msgstr "за допомогою цієї опції можна змінити кольори теми."
+msgstr ""
+"χρησιμοποιώντας αυτή την επιλογή μπορείτε να αλλάξετε τα χρώματα του θέματος."
 
 #: inc/layout.php:97
 #, fuzzy
 msgid "using this option you can enable or disable the grid layout."
-msgstr "за допомогою цієї опції можна ввімкнути або вимкнути розкладку сітки."
+msgstr ""
+"χρησιμοποιώντας αυτή την επιλογή μπορείτε να ενεργοποιήσετε ή να "
+"απενεργοποιήσετε τη διάταξη πλέγματος."
 
 #. Name of the theme
 #, fuzzy
@@ -1152,17 +1157,17 @@ msgstr "w3schools"
 #: classes/class-w3csspress-constants.php:138
 #, fuzzy
 msgid "weight"
-msgstr "вага"
+msgstr "βάρος"
 
 #: functions.php:365
 #, fuzzy
 msgid "widgets area on the foot of the website."
-msgstr "область віджетів у нижній частині сайту."
+msgstr "περιοχή widgets στο κάτω μέρος του ιστότοπου."
 
 #: functions.php:356
 #, fuzzy
 msgid "widgets area on the head of the website."
-msgstr "область віджетів в шапці сайту."
+msgstr "περιοχή widgets στην κεφαλή του ιστότοπου."
 
 #: classes/class-w3csspress-constants.php:120
 #, fuzzy
@@ -1187,4 +1192,4 @@ msgstr "Y"
 #: classes/class-w3csspress-constants.php:78
 #, fuzzy
 msgid "yellow"
-msgstr "жовтий"
+msgstr "κίτρινο"

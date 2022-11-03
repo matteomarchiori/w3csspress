@@ -3,12 +3,11 @@ msgstr ""
 "Project-Id-Version: w3csspress\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-10-31 15:45+0000\n"
-"PO-Revision-Date: 2022-10-31 16:07+0000\n"
+"PO-Revision-Date: 2022-10-31 16:08+0000\n"
 "Last-Translator: \n"
-"Language-Team: Ukrainian\n"
-"Language: uk\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10 >= 2 && "
-"n%10<=4 &&(n%100<10||n%100 >= 20)? 1 : 2);\n"
+"Language-Team: Hungarian\n"
+"Language: hu_HU\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -27,7 +26,7 @@ msgstr "%1$s %2$s"
 #: attachment.php:62 template-parts/nav/below.php:19
 #, fuzzy, php-format
 msgid "%s older"
-msgstr "% старше"
+msgstr "%s régebbi"
 
 #: inc/patterns/notfound.php:22
 #, fuzzy
@@ -37,321 +36,321 @@ msgstr "404"
 #: inc/block-patterns.php:23
 #, fuzzy
 msgid "404 not found"
-msgstr "404 не знайдено"
+msgstr "404 nem található"
 
 #: inc/patterns/query.php:43
 #, fuzzy
 msgid "add text or blocks to display when the query returns no results."
 msgstr ""
-"додавання тексту або блоків для відображення, коли запит не дає результатів."
+"szöveg vagy blokkok hozzáadása a megjelenítendő szöveghez, ha a lekérdezés "
+"nem ad eredményt."
 
 #: classes/class-w3csspress-constants.php:36
 #, fuzzy
 msgid "all borders"
-msgstr "всі кордони"
+msgstr "minden határ"
 
 #: classes/class-w3csspress-constants.php:57
 #, fuzzy
 msgid "amber"
-msgstr "бурштиновий"
+msgstr "borostyán"
 
 #. color of the container
 #: inc/patterns/badge.php:30
 #, fuzzy, php-format
 msgid "badge %s"
-msgstr "значків %s"
+msgstr "jelvény %s"
 
 #: inc/block-patterns.php:24
 #, fuzzy
 msgid "badges"
-msgstr "значки"
+msgstr "jelvények"
 
 #: inc/patterns/navigation.php:37
 #, fuzzy
 msgid "basic navigation"
-msgstr "базова навігація"
+msgstr "alapvető navigáció"
 
 #: classes/class-w3csspress-constants.php:58
 #, fuzzy
 msgid "black"
-msgstr "чорний"
+msgstr "fekete"
 
 #: classes/class-w3csspress-constants.php:59
 #, fuzzy
 msgid "blue"
-msgstr "синій"
+msgstr "kék"
 
 #: classes/class-w3csspress-constants.php:60
 #, fuzzy
 msgid "blue grey"
-msgstr "синій сірий"
+msgstr "kék szürke"
 
 #. border and direction
 #: classes/class-w3csspress-constants.php:27
 #, fuzzy, php-format
 msgid "border %s"
-msgstr "межа %s"
+msgstr "határ %s"
 
 #: inc/images.php:134
 #, fuzzy
 msgid "border images on the page."
-msgstr "рамки зображень на сторінці."
+msgstr "szegélyképek az oldalon."
 
 #: inc/patterns/image.php:58
 #, fuzzy
 msgid "bordered image"
-msgstr "облямоване зображення"
+msgstr "szegélyezett kép"
 
 #: inc/images.php:133
 #, fuzzy
 msgid "bordered images"
-msgstr "облямовані зображення"
+msgstr "szegélyezett képek"
 
 #: inc/block-patterns.php:25
 #, fuzzy
 msgid "borders"
-msgstr "кордони"
+msgstr "határok"
 
 #: classes/class-w3csspress-constants.php:204
 #, fuzzy
 msgid "bottom"
-msgstr "дно"
+msgstr "alul"
 
 #: classes/class-w3csspress-constants.php:61
 #, fuzzy
 msgid "brown"
-msgstr "коричневий"
+msgstr "barna"
 
 #. color of the card
 #: inc/patterns/card.php:40
 #, fuzzy, php-format
 msgid "card %s"
-msgstr "карта %s"
+msgstr "kártya %s"
 
 #: inc/patterns/image.php:70
 #, fuzzy
 msgid "card image"
-msgstr "зображення картки"
+msgstr "kártya képe"
 
 #: inc/images.php:145
 #, fuzzy
 msgid "card images"
-msgstr "зображення карток"
+msgstr "kártya képek"
 
 #. color of the card
 #: inc/patterns/card.php:54
 #, fuzzy, php-format
 msgid "card-2 %s"
-msgstr "картка-2 %s"
+msgstr "kártya-2 %s"
 
 #. color of the card
 #: inc/patterns/card.php:68
 #, fuzzy, php-format
 msgid "card-4 %s"
-msgstr "картка-4 %s"
+msgstr "kártya-4 %s"
 
 #: inc/block-patterns.php:26 inc/patterns/card.php:26
 #, fuzzy
 msgid "cards"
-msgstr "картки"
+msgstr "kártyák"
 
 #: template-parts/entry/footer.php:16
 #, fuzzy
 msgid "categories: "
-msgstr "категорії"
+msgstr "kategóriák"
 
 #. index for headings
 #: inc/colors.php:143
 #, fuzzy, php-format
 msgid "change color of h%s."
-msgstr "змінюють колір h%s."
+msgstr "h%s színének megváltoztatása."
 
 #: inc/fonts.php:192
 #, fuzzy
 msgid "change font family of headings."
-msgstr "змінити сімейство шрифтів заголовків."
+msgstr "a címsorok betűtípusának megváltoztatása."
 
 #: inc/fonts.php:179 inc/fonts.php:204
 #, fuzzy
 msgid "change font family of website."
-msgstr "змінити сімейство шрифтів сайту."
+msgstr "a weboldal betűtípus családjának megváltoztatása."
 
 #: inc/fonts.php:229
 #, fuzzy
 msgid "change font size of div."
-msgstr "змінити розмір шрифту div."
+msgstr "div betűméretének módosítása."
 
 #. index for headings
 #: inc/fonts.php:397
 #, fuzzy, php-format
 msgid "change font size of h%s."
-msgstr "змінити розмір шрифту h%s."
+msgstr "a h%s betűméretének módosítása."
 
 #: inc/fonts.php:242
 #, fuzzy
 msgid "change font size of inputs."
-msgstr "змінити розмір шрифту вхідних даних."
+msgstr "a bemenetek betűméretének módosítása."
 
 #: inc/fonts.php:281
 #, fuzzy
 msgid "change font size of ordered list."
-msgstr "змінити розмір шрифту впорядкованого списку."
+msgstr "a rendezett lista betűméretének módosítása."
 
 #: inc/fonts.php:216
 #, fuzzy
 msgid "change font size of paragraphs."
-msgstr "змінити розмір шрифту абзаців."
+msgstr "a bekezdések betűméretének módosítása."
 
 #: inc/fonts.php:255
 #, fuzzy
 msgid "change font size of tables."
-msgstr "змінити розмір шрифту таблиць."
+msgstr "a táblázatok betűméretének módosítása."
 
 #: inc/fonts.php:268
 #, fuzzy
 msgid "change font size of unordered list."
-msgstr "змінити розмір шрифту невпорядкованого списку."
+msgstr "a rendezetlen lista betűméretének módosítása."
 
 #: inc/fonts.php:307
 #, fuzzy
 msgid "change font weight of div."
-msgstr "змінити вагу шрифту div."
+msgstr "a div betűtípus súlyának módosítása."
 
 #. index for headings
 #: inc/fonts.php:418
 #, fuzzy, php-format
 msgid "change font weight of h%s."
-msgstr "змінити вагу шрифту h%s."
+msgstr "a h%s betűtípus súlyának módosítása."
 
 #: inc/fonts.php:320
 #, fuzzy
 msgid "change font weight of inputs."
-msgstr "змінити вагу шрифту вхідних даних."
+msgstr "a bemenetek betűkészletének súlyának módosítása."
 
 #: inc/fonts.php:359
 #, fuzzy
 msgid "change font weight of ordered list."
-msgstr "зміна ваги шрифту впорядкованого списку."
+msgstr "a rendezett lista betűsúlyának módosítása."
 
 #: inc/fonts.php:294
 #, fuzzy
 msgid "change font weight of paragraphs."
-msgstr "змінити кегль шрифту абзаців."
+msgstr "a bekezdések betűsúlyának módosítása."
 
 #: inc/fonts.php:333
 #, fuzzy
 msgid "change font weight of tables."
-msgstr "зміну ваги шрифту таблиць."
+msgstr "a táblázatok betűsúlyának módosítása."
 
 #: inc/fonts.php:346
 #, fuzzy
 msgid "change font weight of unordered list."
-msgstr "змінити вагу шрифту невпорядкованого списку."
+msgstr "a rendezetlen lista betűsúlyának módosítása."
 
 #: inc/colors.php:122
 #, fuzzy
 msgid "change link color"
-msgstr "змінити колір посилання"
+msgstr "link színének megváltoztatása"
 
 #: inc/colors.php:108
 #, fuzzy
 msgid "change theme text color"
-msgstr "змінити колір тексту теми"
+msgstr "téma szöveg színének megváltoztatása"
 
 #: classes/class-w3csspress-constants.php:190
 #, fuzzy
 msgid "circle"
-msgstr "коло"
+msgstr "kör"
 
 #: inc/images.php:121
 #, fuzzy
 msgid "circle images"
-msgstr "зображення кола"
+msgstr "körképek"
 
 #: inc/images.php:122
 #, fuzzy
 msgid "circle images on the page."
-msgstr "обведіть зображення на сторінці."
+msgstr "körképek az oldalon."
 
 #: inc/patterns/image.php:46
 #, fuzzy
 msgid "circular image"
-msgstr "кругове зображення"
+msgstr "kör alakú kép"
 
 #: inc/block-patterns.php:27
 #, fuzzy
 msgid "colors"
-msgstr "кольори"
+msgstr "színek"
 
 #: comments.php:65
 #, fuzzy
 msgid "comment:"
-msgstr "прокоментуйте:"
+msgstr "megjegyzés:"
 
 #: template-parts/entry/footer.php:20
 #, fuzzy
 msgid "comments"
-msgstr "коментарі"
+msgstr "megjegyzések"
 
 #: comments.php:53
 #, fuzzy
 msgctxt "comments count"
 msgid "Trackback or Pingback"
 msgid_plural "Trackbacks and Pingbacks"
-msgstr[0] "Зворотний зв'язок або пінгбек"
-msgstr[1] "Зворотні посилання та пінгбеки"
-msgstr[2] ""
+msgstr[0] "Trackback vagy Pingback"
+msgstr[1] "Trackbacks és Pingbacks"
 
 #. color of the container
 #: inc/patterns/container.php:40
 #, fuzzy, php-format
 msgid "container %s"
-msgstr "контейнер %s"
+msgstr "konténer %s"
 
 #: inc/block-patterns.php:28 inc/patterns/container.php:26
 #, fuzzy
 msgid "containers"
-msgstr "контейнери"
+msgstr "konténerek"
 
 #: inc/content.php:58
 #, fuzzy
 msgid "content options"
-msgstr "варіанти контенту"
+msgstr "tartalmi lehetőségek"
 
 #: classes/class-w3csspress-constants.php:156
 #, fuzzy
 msgid "cursive"
-msgstr "скоропис"
+msgstr "kurzív"
 
 #: inc/content.php:59
 #, fuzzy
 msgid "customize content options here."
-msgstr "налаштувати параметри контенту тут."
+msgstr "a tartalmi beállítások testreszabása itt."
 
 #: inc/fonts.php:32
 #, fuzzy
 msgid "customize fonts options here."
-msgstr "налаштувати параметри шрифтів можна тут."
+msgstr "a betűtípusok beállításai itt testreszabhatók."
 
 #: inc/images.php:28
 #, fuzzy
 msgid "customize images options here."
-msgstr "налаштувати параметри зображень можна тут."
+msgstr "a képek testreszabási lehetőségei itt."
 
 #: inc/layout.php:32
 #, fuzzy
 msgid "customize layout options here."
-msgstr "налаштувати параметри макета можна тут."
+msgstr "az elrendezési lehetőségek testreszabása itt."
 
 #: inc/speed.php:28
 #, fuzzy
 msgid "customize speed options here."
-msgstr "налаштувати параметри швидкості тут."
+msgstr "sebesség beállítások testreszabása itt."
 
 #: classes/class-w3csspress-constants.php:62
 #, fuzzy
 msgid "cyan"
-msgstr "блакитний"
+msgstr "cián"
 
 #: classes/class-w3csspress-constants.php:93
 #: classes/class-w3csspress-constants.php:94
@@ -360,22 +359,22 @@ msgstr "блакитний"
 #: classes/class-w3csspress-constants.php:97
 #, fuzzy
 msgid "dark"
-msgstr "темний"
+msgstr "sötét"
 
 #: classes/class-w3csspress-constants.php:63
 #, fuzzy
 msgid "dark grey"
-msgstr "темно-сірий"
+msgstr "sötétszürke"
 
 #: classes/class-w3csspress-constants.php:64
 #, fuzzy
 msgid "deep orange"
-msgstr "насичений помаранчевий"
+msgstr "mély narancssárga"
 
 #: classes/class-w3csspress-constants.php:65
 #, fuzzy
 msgid "deep purple"
-msgstr "глибокий фіолетовий"
+msgstr "mélylila"
 
 #: classes/class-w3csspress-constants.php:55
 #: classes/class-w3csspress-constants.php:98
@@ -386,169 +385,171 @@ msgstr "глибокий фіолетовий"
 #: classes/class-w3csspress-constants.php:184
 #, fuzzy
 msgid "default"
-msgstr "дефолт"
+msgstr "alapértelmezett"
 
 #: inc/speed.php:93
 #, fuzzy
 msgid "disable jQuery"
-msgstr "відключити jQuery"
+msgstr "jQuery letiltása"
 
 #: inc/speed.php:94
 #, fuzzy
 msgid "disable or enable jQuery (do only if you know what you are doing)."
-msgstr "вимкнути або увімкнути jQuery (робити тільки якщо знаєте, що робите)."
+msgstr ""
+"a jQuery letiltása vagy engedélyezése (csak akkor tegye, ha tudja, mit "
+"csinál)."
 
 #: inc/speed.php:141
 #, fuzzy
 msgid "enable block styles"
-msgstr "включити стилі блоків"
+msgstr "blokkstílusok engedélyezése"
 
 #: inc/speed.php:142
 #, fuzzy
 msgid "enable block styles."
-msgstr "включити стилі блоків."
+msgstr "blokkstílusok engedélyezése."
 
 #: inc/speed.php:105
 #, fuzzy
 msgid "enable Dashicons"
-msgstr "ввімкнути тире"
+msgstr "dashicons engedélyezése"
 
 #: inc/speed.php:106
 #, fuzzy
 msgid "enable Dashicons on the frontend."
-msgstr "увімкнути тире у фронтенді."
+msgstr "engedélyezze a Dashicons megjelenítését a frontendben."
 
 #: inc/speed.php:153
 #, fuzzy
 msgid "enable full site editor"
-msgstr "включити повний редактор сайту"
+msgstr "teljes oldalszerkesztő engedélyezése"
 
 #: inc/speed.php:117
 #, fuzzy
 msgid "enable Gutenberg for posts"
-msgstr "включити Гутенберга для постів"
+msgstr "engedélyezze Gutenberg a hozzászólásokhoz"
 
 #: inc/speed.php:129
 #, fuzzy
 msgid "enable Gutenberg for widgets"
-msgstr "увімкнути Gutenberg для віджетів"
+msgstr "engedélyezze Gutenberg a widgetek számára"
 
 #: inc/speed.php:118
 #, fuzzy
 msgid "enable Gutenberg to edit posts."
-msgstr "дозволити Гутенбергу редагувати повідомлення."
+msgstr "engedélyezze Gutenberg a hozzászólások szerkesztését."
 
 #: inc/speed.php:130
 #, fuzzy
 msgid "enable Gutenberg to edit widgets."
-msgstr "дозволити Гутенбергу редагувати віджети."
+msgstr "engedélyezze a Gutenberg számára a widgetek szerkesztését."
 
 #: inc/speed.php:154
 #, fuzzy
 msgid "enable the full site editor."
-msgstr "увімкнути повний редактор сайту."
+msgstr "engedélyezze a teljes webhelyszerkesztőt."
 
 #: inc/fonts.php:31
 #, fuzzy
 msgid "fonts options"
-msgstr "параметри шрифтів"
+msgstr "betűtípusok opciók"
 
 #: functions.php:364
 #, fuzzy
 msgid "foot widgets sidebar"
-msgstr "бічна панель віджетів для ніг"
+msgstr "láb widgetek oldalsáv"
 
 #: inc/patterns/footer.php:28
 #, fuzzy
 msgid "footer"
-msgstr "нижній колонтитул"
+msgstr "lábléc"
 
 #: inc/content.php:79
 #, fuzzy
 msgid "footer content"
-msgstr "вміст нижнього колонтитула"
+msgstr "lábléc tartalma"
 
 #: inc/block-patterns.php:29
 #, fuzzy
 msgid "footers"
-msgstr "колонтитули"
+msgstr "láblécek"
 
 #: classes/class-w3csspress-constants.php:172
 #, fuzzy
 msgid "four columns"
-msgstr "чотири колонки"
+msgstr "négy oszlop"
 
 #. Name of the template
 #, fuzzy
 msgid "Full-Width"
-msgstr "Повна ширина"
+msgstr "Teljes szélességben"
 
 #: inc/images.php:169
 #, fuzzy
 msgid "grayscale images"
-msgstr "зображення у відтінках сірого"
+msgstr "szürkeárnyalatos képek"
 
 #: classes/class-w3csspress-constants.php:66
 #, fuzzy
 msgid "green"
-msgstr "зелений"
+msgstr "zöld"
 
 #: classes/class-w3csspress-constants.php:67
 #, fuzzy
 msgid "grey"
-msgstr "сірий"
+msgstr "szürke"
 
 #: inc/patterns/image.php:94
 #, fuzzy
 msgid "greyscale image"
-msgstr "зображення у відтінках сірого"
+msgstr "szürkeárnyalatos kép"
 
 #: inc/layout.php:96
 #, fuzzy
 msgid "grid layout setting"
-msgstr "налаштування схеми розташування сітки"
+msgstr "rács elrendezés beállítása"
 
 #. index for headings
 #: inc/colors.php:138
 #, fuzzy, php-format
 msgid "h%s color"
-msgstr "h%s колір"
+msgstr "h%s szín"
 
 #: functions.php:355
 #, fuzzy
 msgid "head widgets sidebar"
-msgstr "бічна панель віджетів голови"
+msgstr "head widgetek oldalsáv"
 
 #: inc/patterns/header.php:21
 #, fuzzy
 msgid "header"
-msgstr "заголовок"
+msgstr "fejléc"
 
 #: inc/images.php:193
 #, fuzzy
 msgid "header thumbnail"
-msgstr "мініатюра заголовка"
+msgstr "fejléc miniatűr"
 
 #: inc/block-patterns.php:30
 #, fuzzy
 msgid "headers"
-msgstr "заголовки"
+msgstr "fejlécek"
 
 #: inc/patterns/header.php:51
 #, fuzzy
 msgid "homepage header"
-msgstr "заголовок головної сторінки"
+msgstr "honlap fejléc"
 
 #: inc/block-patterns.php:31
 #, fuzzy
 msgid "hover"
-msgstr "зависнути"
+msgstr "lebegés"
 
 #. hover border and color
 #: classes/class-w3csspress-constants.php:244
 #, fuzzy, php-format
 msgid "hover %1$s %2$s"
-msgstr "навести %1$s %2$s"
+msgstr "hover %1$s %2$s"
 
 #. Author URI of the theme
 #, fuzzy
@@ -563,72 +564,72 @@ msgstr "https://github.com/matteomarchiori/w3csspress"
 #: inc/patterns/image.php:22
 #, fuzzy
 msgid "image"
-msgstr "імідж"
+msgstr "kép"
 
 #: inc/block-patterns.php:32
 #, fuzzy
 msgid "images"
-msgstr "зображення"
+msgstr "képek"
 
 #: inc/images.php:27
 #, fuzzy
 msgid "images options"
-msgstr "параметри зображень"
+msgstr "képek beállításai"
 
 #: inc/images.php:146
 #, fuzzy
 msgid "images with card effect."
-msgstr "зображення з картковим ефектом."
+msgstr "képek kártyahatással."
 
 #: inc/images.php:170
 #, fuzzy
 msgid "images with grayscale effect."
-msgstr "зображення з ефектом градацій сірого."
+msgstr "szürkeárnyalatos képek."
 
 #: inc/images.php:158
 #, fuzzy
 msgid "images with opacity effect."
-msgstr "зображення з ефектом непрозорості."
+msgstr "képek átlátszatlansági hatással."
 
 #: inc/images.php:182
 #, fuzzy
 msgid "images with sepia effect."
-msgstr "зображення з ефектом сепії."
+msgstr "szepia hatású képek."
 
 #: classes/class-w3csspress-constants.php:68
 #, fuzzy
 msgid "indigo"
-msgstr "індиго"
+msgstr "indigo"
 
 #: classes/class-w3csspress-constants.php:123
 #, fuzzy
 msgid "jumbo"
-msgstr "великий"
+msgstr "jumbo"
 
 #: classes/class-w3csspress-constants.php:69
 #, fuzzy
 msgid "khaki"
-msgstr "хакі"
+msgstr "khaki"
 
 #: classes/class-w3csspress-constants.php:119
 #, fuzzy
 msgid "large"
-msgstr "великий"
+msgstr "nagy"
 
 #: inc/layout.php:31
 #, fuzzy
 msgid "layout options"
-msgstr "варіанти планування"
+msgstr "elrendezési lehetőségek"
 
 #: classes/class-w3csspress-constants.php:205
 #, fuzzy
 msgid "left"
-msgstr "лівий"
+msgstr "balra"
 
 #: inc/patterns/sidebar.php:26
 #, fuzzy
 msgid "left sidebar"
-msgstr "ліва бічна панель"
+msgstr "bal oldalsáv"
 
 #: classes/class-w3csspress-constants.php:99
 #: classes/class-w3csspress-constants.php:100
@@ -637,32 +638,32 @@ msgstr "ліва бічна панель"
 #: classes/class-w3csspress-constants.php:103
 #, fuzzy
 msgid "light"
-msgstr "світло"
+msgstr "könnyű"
 
 #: classes/class-w3csspress-constants.php:70
 #, fuzzy
 msgid "light blue"
-msgstr "світло-блакитний"
+msgstr "világoskék"
 
 #: classes/class-w3csspress-constants.php:71
 #, fuzzy
 msgid "light green"
-msgstr "салатовий"
+msgstr "világoszöld"
 
 #: classes/class-w3csspress-constants.php:72
 #, fuzzy
 msgid "lime"
-msgstr "вапно"
+msgstr "lime"
 
 #: inc/colors.php:121
 #, fuzzy
 msgid "link color"
-msgstr "колір посилання"
+msgstr "link színe"
 
 #: functions.php:90
 #, fuzzy
 msgid "main menu"
-msgstr "головне меню"
+msgstr "főmenü"
 
 #. Author of the theme
 #, fuzzy
@@ -672,413 +673,411 @@ msgstr "matteomarchiori97"
 #: classes/class-w3csspress-constants.php:118
 #, fuzzy
 msgid "medium"
-msgstr "середній"
+msgstr "közepes"
 
 #: functions.php:147
 #, fuzzy
 msgid "menu"
-msgstr "меню"
+msgstr "menu"
 
 #: classes/class-w3csspress-constants.php:155
 #, fuzzy
 msgid "monospace"
-msgstr "монопростір"
+msgstr "monospace"
 
 #: inc/block-patterns.php:33
 #, fuzzy
 msgid "navigation"
-msgstr "навігація"
+msgstr "navigáció"
 
 #. arrow
 #. arrow and text
 #: attachment.php:75 template-parts/nav/below.php:24
 #, fuzzy, php-format
 msgid "newer %s"
-msgstr "новіші %s"
+msgstr "újabb %s"
 
 #: 404.php:19
 #, fuzzy
 msgid "Not Found"
-msgstr "Не знайдено"
+msgstr "Nem találták"
 
 #: inc/patterns/notfound.php:25
 #, fuzzy
 msgid "not found"
-msgstr "не знайдено"
+msgstr "nem található"
 
 #: search.php:62
 #, fuzzy
 msgid "Nothing Found"
-msgstr "Нічого не знайдено"
+msgstr "Semmit sem találtam"
 
 #: 404.php:22
 #, fuzzy
 msgid "Nothing found for the requested page. Try a search instead?"
-msgstr ""
-"Для запитуваної сторінки нічого не знайдено. Спробувати пошук замість цього?"
+msgstr "A kért oldalhoz nem találtunk semmit. Próbáljon inkább keresni?"
 
 #: inc/patterns/notfound.php:29
 #, fuzzy
 msgid "nothing found for the requested page. Try a search instead?"
-msgstr ""
-"нічого не знайдено для запитуваної сторінки. Спробувати пошук замість цього?"
+msgstr "a kért oldalhoz nem találtunk semmit. Próbáljon inkább keresést?"
 
 #: classes/class-w3csspress-constants.php:169
 #, fuzzy
 msgid "one column"
-msgstr "одна колонка"
+msgstr "egy oszlop"
 
 #: inc/images.php:157
 #, fuzzy
 msgid "opacity images"
-msgstr "непрозорість зображень"
+msgstr "átlátszatlanság képek"
 
 #: inc/patterns/image.php:82
 #, fuzzy
 msgid "opaque image"
-msgstr "непрозоре зображення"
+msgstr "átlátszatlan kép"
 
 #: classes/class-w3csspress-constants.php:73
 #, fuzzy
 msgid "orange"
-msgstr "апельсин"
+msgstr "narancs"
 
 #: inc/patterns/panel.php:26
 #, fuzzy
 msgid "panel"
-msgstr "панель"
+msgstr "panel"
 
 #. color of the panel
 #: inc/patterns/panel.php:40
 #, fuzzy, php-format
 msgid "panel %s"
-msgstr "панель %s"
+msgstr "panel %s"
 
 #: inc/block-patterns.php:34
 #, fuzzy
 msgid "panels"
-msgstr "панелі"
+msgstr "panelek"
 
 #: classes/class-w3csspress-constants.php:74
 #, fuzzy
 msgid "pink"
-msgstr "рожевий"
+msgstr "rózsaszín"
 
 #: inc/images.php:205
 #, fuzzy
 msgid "post thumbnail"
-msgstr "мініатюра публікації"
+msgstr "post miniatűr"
 
 #: inc/images.php:194
 #, fuzzy
 msgid "posts get the thumbnail as header image if they have one."
-msgstr "дописи отримують мініатюру в якості зображення заголовка, якщо він є."
+msgstr "a bejegyzések a miniatűr képet kapják meg fejlécképként, ha van ilyen."
 
 #: inc/images.php:206
 #, fuzzy
 msgid "posts show the thumbnail if they have."
-msgstr "дописи показують мініатюру, якщо вона є."
+msgstr "a hozzászólások mutatják a miniatűr képet, ha van."
 
 #: functions.php:337
 #, fuzzy
 msgid "primary sidebar"
-msgstr "основна бічна панель"
+msgstr "elsődleges oldalsáv"
 
 #: classes/class-w3csspress-constants.php:75
 #, fuzzy
 msgid "purple"
-msgstr "фіолетовий"
+msgstr "lila"
 
 #: inc/block-patterns.php:35
 #, fuzzy
 msgid "query"
-msgstr "запит"
+msgstr "lekérdezés"
 
 #: inc/patterns/query.php:22
 #, fuzzy
 msgid "query loop"
-msgstr "цикл запиту"
+msgstr "lekérdezési ciklus"
 
 #: inc/patterns/query.php:33
 #, fuzzy
 msgid "read all"
-msgstr "читати все"
+msgstr "mindent elolvasni"
 
 #: classes/class-w3csspress-constants.php:76
 #, fuzzy
 msgid "red"
-msgstr "червоний"
+msgstr "piros"
 
 #: classes/class-w3csspress-constants.php:203
 #, fuzzy
 msgid "right"
-msgstr "правильно"
+msgstr "jobbra"
 
 #: inc/patterns/sidebar.php:36
 #, fuzzy
 msgid "right sidebar"
-msgstr "права бічна панель"
+msgstr "jobb oldalsáv"
 
 #: inc/images.php:110
 #, fuzzy
 msgid "round images on the page."
-msgstr "круглі зображення на сторінці."
+msgstr "kerek képek az oldalon."
 
 #: classes/class-w3csspress-constants.php:187
 #, fuzzy
 msgid "round large"
-msgstr "круглий великий"
+msgstr "kerek nagy"
 
 #: classes/class-w3csspress-constants.php:186
 #, fuzzy
 msgid "round medium"
-msgstr "круглий середній"
+msgstr "kerek közepes"
 
 #: classes/class-w3csspress-constants.php:185
 #, fuzzy
 msgid "round small"
-msgstr "круглий малий"
+msgstr "kerek kis"
 
 #: classes/class-w3csspress-constants.php:188
 #, fuzzy
 msgid "round xlarge"
-msgstr "круглий великий"
+msgstr "kerek xlarge"
 
 #: classes/class-w3csspress-constants.php:189
 #, fuzzy
 msgid "round xxlarge"
-msgstr "круглий xxlarge"
+msgstr "kerek xxnagy"
 
 #: inc/patterns/image.php:34
 #, fuzzy
 msgid "rounded image"
-msgstr "закруглене зображення"
+msgstr "lekerekített kép"
 
 #: inc/images.php:109
 #, fuzzy
 msgid "rounded images"
-msgstr "округлі зображення"
+msgstr "lekerekített képek"
 
 #: classes/class-w3csspress-constants.php:154
 #, fuzzy
 msgid "sans serif"
-msgstr "без зарубок"
+msgstr "sans serif"
 
 #: inc/block-patterns.php:36 inc/patterns/search.php:25
 #: inc/patterns/search.php:25
 #, fuzzy
 msgid "search"
-msgstr "пошук"
+msgstr "keresés"
 
 #: inc/patterns/search.php:22
 #, fuzzy
 msgid "search bar"
-msgstr "рядок пошуку"
+msgstr "keresősáv"
 
 #. search text completed with query text
 #: search.php:38
 #, fuzzy, php-format
 msgid "search results for: %s"
-msgstr "результати пошуку для: %s"
+msgstr "keresési eredmények: %s"
 
 #: functions.php:346
 #, fuzzy
 msgid "secondary sidebar"
-msgstr "додаткова бічна панель"
+msgstr "másodlagos oldalsáv"
 
 #: inc/colors.php:79
 #, fuzzy
 msgid "select color theme"
-msgstr "вибрати колірну тему"
+msgstr "színtéma kiválasztása"
 
 #: inc/fonts.php:228
 #, fuzzy
 msgid "select div font size"
-msgstr "вибрати розмір шрифту div"
+msgstr "div betűméret kiválasztása"
 
 #: inc/fonts.php:306
 #, fuzzy
 msgid "select div font weight"
-msgstr "вибрати вагу шрифту div"
+msgstr "select div betűtípus súlya"
 
 #: inc/fonts.php:178
 #, fuzzy
 msgid "select font family"
-msgstr "вибрати сімейство шрифтів"
+msgstr "válassza ki a betűtípus családot"
 
 #. index for headings
 #: inc/fonts.php:392
 #, fuzzy, php-format
 msgid "select h%s font size"
-msgstr "вибрати розмір шрифту h%s"
+msgstr "h%s betűméret kiválasztása"
 
 #. index for headings
 #: inc/fonts.php:413
 #, fuzzy, php-format
 msgid "select h%s font weight"
-msgstr "вибрати вагу шрифту h%s"
+msgstr "select h%s betűsúly"
 
 #: inc/fonts.php:241
 #, fuzzy
 msgid "select input font size"
-msgstr "вибрати розмір шрифту введення"
+msgstr "bemeneti betűméret kiválasztása"
 
 #: inc/fonts.php:319
 #, fuzzy
 msgid "select input font weight"
-msgstr "вибрати вагу вхідного шрифту"
+msgstr "bemeneti betűtípus súlyának kiválasztása"
 
 #: inc/layout.php:70
 #, fuzzy
 msgid "select layout"
-msgstr "вибрати макет"
+msgstr "elrendezés kiválasztása"
 
 #: inc/fonts.php:280
 #, fuzzy
 msgid "select ordered list font size"
-msgstr "вибрати розмір шрифту замовленого списку"
+msgstr "rendezett lista betűméretének kiválasztása"
 
 #: inc/fonts.php:358
 #, fuzzy
 msgid "select ordered list font weight"
-msgstr "вибрати товщину шрифту замовленого списку"
+msgstr "select ordered list betűtípus súlya"
 
 #: inc/fonts.php:215
 #, fuzzy
 msgid "select paragraphs font size"
-msgstr "вибрати розмір шрифту абзаців"
+msgstr "bekezdések betűméretének kiválasztása"
 
 #: inc/fonts.php:293
 #, fuzzy
 msgid "select paragraphs font weight"
-msgstr "вибір товщини шрифту абзаців"
+msgstr "bekezdések kiválasztása betűsúly"
 
 #: inc/layout.php:83
 #, fuzzy
 msgid "select rounded style"
-msgstr "обирайте округлий стиль"
+msgstr "válassza a lekerekített stílust"
 
 #: inc/fonts.php:254
 #, fuzzy
 msgid "select table font size"
-msgstr "вибрати розмір шрифту таблиці"
+msgstr "válassza ki a táblázat betűméretét"
 
 #: inc/fonts.php:332
 #, fuzzy
 msgid "select table font weight"
-msgstr "вибрати товщину шрифту таблиці"
+msgstr "select table betűtípus súlya"
 
 #: inc/colors.php:92
 #, fuzzy
 msgid "select theme kind"
-msgstr "вибрати тип теми"
+msgstr "témafajta kiválasztása"
 
 #: inc/fonts.php:267
 #, fuzzy
 msgid "select unordered list font size"
-msgstr "вибрати розмір шрифту невпорядкованого списку"
+msgstr "rendezetlen lista betűméretének kiválasztása"
 
 #: inc/fonts.php:345
 #, fuzzy
 msgid "select unordered list font weight"
-msgstr "вибрати невпорядкований список шрифтів"
+msgstr "select rendezetlen lista betűtípus súlya"
 
 #: inc/patterns/image.php:106
 #, fuzzy
 msgid "sepia image"
-msgstr "зображення сепії"
+msgstr "szepia kép"
 
 #: inc/images.php:181
 #, fuzzy
 msgid "sepia images"
-msgstr "зображення сепії"
+msgstr "szepia képek"
 
 #: classes/class-w3csspress-constants.php:153
 #, fuzzy
 msgid "serif"
-msgstr "зарубка"
+msgstr "serif"
 
 #: inc/content.php:80
 #, fuzzy
 msgid "set footer content."
-msgstr "встановити вміст нижнього колонтитула."
+msgstr "a lábléc tartalmának beállítása."
 
 #: functions.php:338
 #, fuzzy
 msgid "sidebar on the left."
-msgstr "бічна панель зліва."
+msgstr "a bal oldali oldalsávban."
 
 #: functions.php:347
 #, fuzzy
 msgid "sidebar on the right."
-msgstr "бічна панель праворуч."
+msgstr "oldalsáv a jobb oldalon."
 
 #: inc/block-patterns.php:37
 #, fuzzy
 msgid "sidebars"
-msgstr "бічні панелі"
+msgstr "oldalsávok"
 
 #: inc/content.php:20
 #, fuzzy
 msgid "skip to the content"
-msgstr "перейти до змісту"
+msgstr "ugrás a tartalomra"
 
 #: classes/class-w3csspress-constants.php:117
 #, fuzzy
 msgid "small"
-msgstr "малий"
+msgstr "kis"
 
 #: search.php:65
 #, fuzzy
 msgid "Sorry, nothing matched your search. Please try again."
 msgstr ""
-"Вибачте, за вашим запитом нічого не знайдено. Будь ласка, спробуйте ще раз."
+"Sajnálom, de semmi sem felelt meg a keresésednek. Kérjük, próbálja újra."
 
 #: inc/speed.php:27
 #, fuzzy
 msgid "speed options"
-msgstr "варіанти швидкості"
+msgstr "sebességi opciók"
 
 #: classes/class-w3csspress-constants.php:77
 #, fuzzy
 msgid "teal"
-msgstr "чирок"
+msgstr "teal"
 
 #: inc/colors.php:107
 #, fuzzy
 msgid "text theme color"
-msgstr "колір теми тексту"
+msgstr "szöveg téma színe"
 
 #: inc/patterns/query.php:44
 #, fuzzy
 msgid "the query did not return any results."
-msgstr "запит не дав жодних результатів."
+msgstr "a lekérdezés nem adott vissza semmilyen eredményt."
 
 #. thick border and direction
 #: classes/class-w3csspress-constants.php:32
 #, fuzzy, php-format
 msgid "thick border %s"
-msgstr "товста облямівка %s"
+msgstr "vastag szegély %s"
 
 #: classes/class-w3csspress-constants.php:171
 #, fuzzy
 msgid "three columns"
-msgstr "три колонки"
+msgstr "három oszlop"
 
 #: classes/class-w3csspress-constants.php:116
 #, fuzzy
 msgid "tiny"
-msgstr "крихітний"
+msgstr "apró"
 
 #: classes/class-w3csspress-constants.php:202
 #, fuzzy
 msgid "top"
-msgstr "верхній"
+msgstr "top"
 
 #: classes/class-w3csspress-constants.php:170
 #, fuzzy
 msgid "two columns"
-msgstr "дві колонки"
+msgstr "két oszlop"
 
 #. Description of the theme
 #, fuzzy
@@ -1091,22 +1090,24 @@ msgid ""
 "customizable. Please add issues on GitHub or contact me if you are "
 "interested in more options."
 msgstr ""
-"Універсальна тема з класичним режимом та режимом блоків, створена для "
-"інтеграції фреймворку W3CSS в WordPress, з глобальними налаштуваннями та "
-"всіма функціями фреймворку W3CSS. Тема була розроблена, починаючи з ресурсів "
-"на веб-сайті w3schools, застосованих до чистої теми WordPress, дещо зміненої."
-" Тема готова до доступності та легко налаштовується. Будь ласка, додавайте "
-"питання на GitHub або зв'яжіться зі мною, якщо вас цікавлять інші варіанти."
+"Univerzális téma klasszikus móddal és blokkok móddal, amely a W3CSS "
+"keretrendszer WordPressbe történő integrálására készült, globális egyéni "
+"beállításokkal és a W3CSS keretrendszer összes funkciójával. A témát a "
+"w3schools weboldalon található forrásokból kiindulva fejlesztették ki, a "
+"blankslate WordPress témára alkalmazva, kissé módosítva. A téma "
+"akadálymentesíthető és nagymértékben testreszabható. Kérjük, adjon hozzá "
+"kérdéseket a GitHubon, vagy lépjen kapcsolatba velem, ha további lehetőségek "
+"érdeklik."
 
 #: inc/fonts.php:203
 #, fuzzy
 msgid "use Google font"
-msgstr "використовувати шрифт Google"
+msgstr "google betűtípus használata"
 
 #: inc/fonts.php:191
 #, fuzzy
 msgid "use Google font for headings"
-msgstr "використовувати шрифт Google для заголовків"
+msgstr "google betűtípus használata a címsorokhoz"
 
 #: inc/layout.php:84
 #, fuzzy
@@ -1114,30 +1115,32 @@ msgid ""
 "using this option you can change some elements roundness (images have more "
 "controls)."
 msgstr ""
-"за допомогою цієї опції можна змінити округлість деяких елементів "
-"(зображення мають більше елементів керування)."
+"ezzel az opcióval megváltoztathatod néhány elem kerekítését (a képeken több "
+"vezérlőelem van)."
 
 #: inc/layout.php:71
 #, fuzzy
 msgid "using this option you can change the page layout."
-msgstr "за допомогою цієї опції можна змінити макет сторінки."
+msgstr "ezzel az opcióval megváltoztathatja az oldal elrendezését."
 
 #: inc/colors.php:93
 #, fuzzy
 msgid ""
 "using this option you can change the theme between default, light and dark."
 msgstr ""
-"за допомогою цієї опції можна змінити тему між стандартною, світлою і темною."
+"ezzel az opcióval megváltoztathatja a témát az alapértelmezett, a világos és "
+"a sötét között."
 
 #: inc/colors.php:80
 #, fuzzy
 msgid "using this option you can change the theme colors."
-msgstr "за допомогою цієї опції можна змінити кольори теми."
+msgstr "ezzel az opcióval megváltoztathatja a téma színeit."
 
 #: inc/layout.php:97
 #, fuzzy
 msgid "using this option you can enable or disable the grid layout."
-msgstr "за допомогою цієї опції можна ввімкнути або вимкнути розкладку сітки."
+msgstr ""
+"ezzel a beállítással engedélyezheti vagy letilthatja a rácsos elrendezést."
 
 #. Name of the theme
 #, fuzzy
@@ -1152,17 +1155,17 @@ msgstr "w3schools"
 #: classes/class-w3csspress-constants.php:138
 #, fuzzy
 msgid "weight"
-msgstr "вага"
+msgstr "súly"
 
 #: functions.php:365
 #, fuzzy
 msgid "widgets area on the foot of the website."
-msgstr "область віджетів у нижній частині сайту."
+msgstr "widgetek területe a weboldal láblécében."
 
 #: functions.php:356
 #, fuzzy
 msgid "widgets area on the head of the website."
-msgstr "область віджетів в шапці сайту."
+msgstr "widgetek terület a weboldal fejlécén."
 
 #: classes/class-w3csspress-constants.php:120
 #, fuzzy
@@ -1187,4 +1190,4 @@ msgstr "Y"
 #: classes/class-w3csspress-constants.php:78
 #, fuzzy
 msgid "yellow"
-msgstr "жовтий"
+msgstr "sárga"

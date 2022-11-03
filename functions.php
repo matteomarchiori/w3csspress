@@ -454,7 +454,7 @@ function w3csspress_add_classes( $elements, $classes ) {
 	}
 }
 
-add_filter( 'w3csspress_final_output', __NAMESPACE__ . '\\w3csspress_final_output' );
+add_filter( 'w3csspress_final_output', __NAMESPACE__ . '\\w3csspress_final_output', 10, 1 );
 /**
  * Function to output the final result.
  *
@@ -463,23 +463,29 @@ add_filter( 'w3csspress_final_output', __NAMESPACE__ . '\\w3csspress_final_outpu
  * @param string $output String with the output.
  */
 function w3csspress_final_output( $output ) {
-	$dom                   = new \DOMDocument();
-	$libxml_previous_state = libxml_use_internal_errors( true );
-	$dom->loadHTML( $output, LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD );
-	libxml_use_internal_errors( $libxml_previous_state );
-	$xpath = new \DOMXpath( $dom );
+	if ( '' !== $output ) {
+		$dom                   = new \DOMDocument();
+		$libxml_previous_state = libxml_use_internal_errors( true );
+		if ( function_exists( 'mb_convert_encoding' ) ) {
+			$dom->loadHTML( mb_convert_encoding( $output, 'HTML-ENTITIES', 'UTF-8' ), LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD );
+		} else {
+			$dom->loadHTML( '<?xml encoding="utf-8" ?>' . $output );
+		}
+		libxml_use_internal_errors( $libxml_previous_state );
+		$xpath = new \DOMXpath( $dom );
 
-	$w3csspress_selectors = W3csspress_Constants::w3csspress_additional_selectors();
-	foreach ( $w3csspress_selectors as $w3csspress_selector ) {
-		$w3csspress_elements = $xpath->query( $w3csspress_selector['selector'] );
-		$w3csspress_classes  = $w3csspress_selector['classes'];
-		apply_filters( 'w3csspress_add_classes', $w3csspress_elements, $w3csspress_classes );
+		$w3csspress_selectors = W3csspress_Constants::w3csspress_additional_selectors();
+		foreach ( $w3csspress_selectors as $w3csspress_selector ) {
+			$w3csspress_elements = $xpath->query( $w3csspress_selector['selector'] );
+			$w3csspress_classes  = $w3csspress_selector['classes'];
+			apply_filters( 'w3csspress_add_classes', $w3csspress_elements, $w3csspress_classes );
+		}
+		$head = $xpath->query( '//head' )->item( 0 );
+		apply_filters( 'w3csspress_colors', $dom, $head );
+		apply_filters( 'w3csspress_fonts', $dom, $head );
+		apply_filters( 'w3csspress_images', $dom, $head );
+		return $dom->saveHTML();
 	}
-	$head = $xpath->query( '//head[1]' )[0];
-	apply_filters( 'w3csspress_colors', $dom, $head );
-	apply_filters( 'w3csspress_fonts', $dom, $head );
-	apply_filters( 'w3csspress_images', $dom, $head );
-	return $dom->saveHTML();
 }
 
 add_action( 'after_switch_theme', __NAMESPACE__ . '\\w3csspress_after_switch_theme' );
