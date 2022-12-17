@@ -409,23 +409,20 @@ add_action( 'wp', __NAMESPACE__ . '\\w3csspress_ob_start' );
  */
 function w3csspress_ob_start() {
 	if ( ! ( is_admin() || is_feed() ) ) {
-		ob_start();
-		add_action( 'shutdown', __NAMESPACE__ . '\\w3csspress_ob_clean', 0 );
+		ob_start( __NAMESPACE__ . '\\w3csspress_final_output' );
 	}
 }
 
+add_action( 'shutdown', __NAMESPACE__ . '\\w3csspress_ob_end_flush' );
 /**
- * Get current content of buffer
+ * Turn off output buffering
  *
- * @since 2022.32
+ * @since 2022.40
  */
-function w3csspress_ob_clean() {
-	$final  = '';
-	$levels = ob_get_level();
-	for ( $i = 0; $i < $levels; $i++ ) {
-		$final .= ob_get_clean();
+function w3csspress_ob_end_flush() {
+	if ( ob_get_length() > 0 ) {
+		ob_end_flush();
 	}
-	echo apply_filters( 'w3csspress_final_output', $final );
 }
 
 add_filter( 'w3csspress_add_classes', __NAMESPACE__ . '\\w3csspress_add_classes', 10, 2 );
@@ -463,7 +460,7 @@ add_filter( 'w3csspress_final_output', __NAMESPACE__ . '\\w3csspress_final_outpu
  * @param string $output String with the output.
  */
 function w3csspress_final_output( $output ) {
-	if ( '' !== $output ) {
+	if ( false !== strpos( $output, '</html>' ) ) {
 		$dom                   = new \DOMDocument();
 		$libxml_previous_state = libxml_use_internal_errors( true );
 		if ( function_exists( 'mb_convert_encoding' ) ) {
