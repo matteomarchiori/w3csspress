@@ -394,7 +394,7 @@ if ( ! class_exists( 'w3csspress\W3csspress_Constants' ) ) {
 					'classes'  => 'w3-monospace w3-leftbar w3-rightbar w3-border-theme w3-panel',
 				),
 				array(
-					'selector' => '(//article|//section|//nav|//summary|//button|//reset|//input[not (@type="checkbox" or @type="radio")]|//textarea|//ul|//ol)[not (contains(@class,"wpadminbar") or ancestor::*/@id="wpadminbar")]',
+					'selector' => '(//article|//section|//nav|//summary|//button|//reset|//input[not (@type="checkbox" or @type="radio")]|//textarea)[not (contains(@class,"wpadminbar") or ancestor::*/@id="wpadminbar")]',
 					'classes'  => esc_html( get_option( 'w3csspress_rounded_style' ) ),
 				)
 			);

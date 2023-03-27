@@ -349,6 +349,9 @@ table tr td {
     bottom: 3vmax;
     right: 3vmax;
     display: none;
+    z-index: 1;
+    text-decoration: none;
+    font-size:2em;
 }
 
 .alignfull {

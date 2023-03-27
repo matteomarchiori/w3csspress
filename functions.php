@@ -154,6 +154,9 @@ function w3csspress_wp_footer() {               ?>
 					if(siteTitle==null){
 						siteTitle = document.getElementsByClassName("wp-block-site-title")[0];
 					}
+					if(siteTitle==null){
+						siteTitle = document.getElementById("branding");
+					}
 					siteTitle.parentNode.insertBefore(buttonMenu, siteTitle.nextSibling);
 					var menuItems = document.getElementsByClassName("menu-item");
 					var lastMenuItem = menuItems[menuItems.length - 1];

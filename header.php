@@ -24,7 +24,7 @@ get_template_part( 'classes/class-w3csspress-walker-nav-menu' );
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body id="body" <?php body_class(); ?>>
 	<?php
 	if ( function_exists( 'wp_body_open' ) ) {
 		wp_body_open();
@@ -39,6 +39,7 @@ get_template_part( 'classes/class-w3csspress-walker-nav-menu' );
 						the_custom_logo();
 					}
 				}
+				else{
 				?>
 				<div id="site-title" itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
 					<?php
@@ -51,6 +52,7 @@ get_template_part( 'classes/class-w3csspress-walker-nav-menu' );
 					}
 					?>
 				</div>
+				<?php }?>
 				<div id="site-description" 
 				<?php
 				if ( ! is_single() ) {

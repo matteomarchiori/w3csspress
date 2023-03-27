@@ -1,4 +1,12 @@
-window.addEventListener('load', function() {
+if (document.readyState !== 'loading') {
+    loaded();
+} else {
+    document.addEventListener('DOMContentLoaded', function () {
+        loaded();
+    });
+}
+
+function loaded() {
     function removeCl(node, cl) {
         if ((' ' + node.className + ' ').indexOf(cl) !== -1) {
             splitted = node.className.split(cl);
@@ -166,7 +174,8 @@ window.addEventListener('load', function() {
         if (document.documentElement.scrollTop > 100) gototop.style.display = "block";
         else gototop.style.display = "none";
     });
-    gototop.addEventListener('click', function() {
+    gototop.addEventListener('click', function(event) {
+        event.preventDefault();
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
-}, false);
+}
