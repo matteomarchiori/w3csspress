@@ -28,7 +28,7 @@ function w3csspress_register_block_pattern_footer() {
 			'title'      => ucfirst( __( 'footer', 'w3csspress' ) ),
 			'categories' => array( 'footer' ),
 			'blockTypes' => array( 'core/template-part' ),
-			'content'    => '<!-- wp:paragraph {"align":"center"} --><p class="has-text-align-center">' . $w3csspress_content_footer . '</p><!-- /wp:paragraph --><!-- wp:html --><a id="gototop" href="#"><span class="screen-reader-text">'. esc_html( ucfirst( __( 'go to top', 'w3csspress' ) ) ).'</span>&#9650;</a><!-- /wp:html -->',
+			'content'    => '<!-- wp:paragraph {"align":"center"} --><p class="has-text-align-center">' . $w3csspress_content_footer . '</p><!-- /wp:paragraph --><!-- wp:html --><a id="gototop" href="#"><span class="screen-reader-text">' . esc_html( ucfirst( __( 'go to top', 'w3csspress' ) ) ) . '</span>&#9650;</a><!-- /wp:html -->',
 		)
 	);
 }

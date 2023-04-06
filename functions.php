@@ -411,7 +411,7 @@ add_action( 'wp', __NAMESPACE__ . '\\w3csspress_ob_start' );
  * @since 2022.32
  */
 function w3csspress_ob_start() {
-	if ( ! ( is_admin() || is_feed() ) ) {
+	if ( ! is_feed() ) {
 		ob_start( __NAMESPACE__ . '\\w3csspress_final_output' );
 	}
 }
@@ -454,7 +454,7 @@ function w3csspress_add_classes( $elements, $classes ) {
 	}
 }
 
-add_filter( 'w3csspress_final_output', __NAMESPACE__ . '\\w3csspress_final_output', 10, 1 );
+
 /**
  * Function to output the final result.
  *
@@ -486,6 +486,7 @@ function w3csspress_final_output( $output ) {
 		apply_filters( 'w3csspress_images', $dom, $head );
 		return $dom->saveHTML();
 	}
+	return $output;
 }
 
 add_action( 'after_switch_theme', __NAMESPACE__ . '\\w3csspress_after_switch_theme' );

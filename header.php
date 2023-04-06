@@ -38,9 +38,8 @@ get_template_part( 'classes/class-w3csspress-walker-nav-menu' );
 					if ( function_exists( 'the_custom_logo' ) ) {
 						the_custom_logo();
 					}
-				}
-				else{
-				?>
+				} else {
+					?>
 				<div id="site-title" itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
 					<?php
 					if ( is_front_page() || is_home() || is_front_page() && is_home() ) {
@@ -52,7 +51,7 @@ get_template_part( 'classes/class-w3csspress-walker-nav-menu' );
 					}
 					?>
 				</div>
-				<?php }?>
+				<?php } ?>
 				<div id="site-description" 
 				<?php
 				if ( ! is_single() ) {
