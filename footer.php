@@ -27,7 +27,7 @@ namespace w3csspress;
 		&copy; <?php echo esc_html( date_i18n( __( 'Y', 'w3csspress' ) ) ); ?> <?php echo esc_html( get_bloginfo( 'name' ) ); ?>
 	</span>
 	<?php } ?>
-	<a id="gototop" href="#"><span class="screen-reader-text"><?php esc_html( ucfirst( __( 'go to top', 'w3csspress' ) ) )?></span>&#9650;</a>
+	<a id="gototop" href="#"><span class="screen-reader-text"><?php esc_html( ucfirst( __( 'go to top', 'w3csspress' ) ) ); ?></span>&#9650;</a>
 </footer>
 </div>
 <?php wp_footer(); ?>

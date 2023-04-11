@@ -24,7 +24,7 @@ get_header(); ?>
 				<header class="header">
 					<h1 class="p-name entry-title" itemprop="name"><?php the_title(); ?></h1>
 					<?php edit_post_link(); ?>
-					<?php get_template_part( 'template-parts/entry/meta' ); ?>
+					<?php get_template_part( 'parts/entry/meta' ); ?>
 				</header>
 				<div class="e-content entry-content" itemprop="mainContentOfPage">
 					<div class="entry-attachment">

@@ -44,14 +44,14 @@ post_class( $w3csspress_layout . ' hentry h-entry' );
 		<?php edit_post_link(); ?>
 		<?php
 		if ( ! is_search() ) {
-			get_template_part( 'template-parts/entry/meta' );
+			get_template_part( 'parts/entry/meta' );
 		}
 		?>
 	</header>
-	<?php get_template_part( 'template-parts/entry/' . ( is_front_page() || is_home() || is_front_page() && is_home() || is_archive() || is_search() ? 'summary' : 'content' ) ); ?>
+	<?php get_template_part( 'parts/entry/' . ( is_front_page() || is_home() || is_front_page() && is_home() || is_archive() || is_search() ? 'summary' : 'content' ) ); ?>
 	<?php
 	if ( is_singular() ) {
-		get_template_part( 'template-parts/entry/footer' );
+		get_template_part( 'parts/entry/footer' );
 	}
 	?>
 </article>

@@ -24,7 +24,7 @@ msgstr "%1$s %2$s"
 
 #. arrow
 #. arrow and text
-#: attachment.php:62 template-parts/nav/below.php:19
+#: attachment.php:62 parts/nav/below.php:19
 #, fuzzy, php-format
 msgid "%s older"
 msgstr "%s mai vechi"
@@ -156,7 +156,7 @@ msgstr "card-4 %s"
 msgid "cards"
 msgstr "carduri"
 
-#: template-parts/entry/footer.php:16
+#: parts/entry/footer.php:16
 #, fuzzy
 msgid "categories: "
 msgstr "categorii"
@@ -289,7 +289,7 @@ msgstr "culori"
 msgid "comment:"
 msgstr "comentariu:"
 
-#: template-parts/entry/footer.php:20
+#: parts/entry/footer.php:20
 #, fuzzy
 msgid "comments"
 msgstr "comentarii"
@@ -694,7 +694,7 @@ msgstr "navigare"
 
 #. arrow
 #. arrow and text
-#: attachment.php:75 template-parts/nav/below.php:24
+#: attachment.php:75 parts/nav/below.php:24
 #, fuzzy, php-format
 msgid "newer %s"
 msgstr "mai nou %s"

@@ -53,7 +53,7 @@ get_header(); ?>
 				}
 				the_post();
 				?>
-				<?php get_template_part( 'template-parts/entry/entry' ); ?>
+				<?php get_template_part( 'parts/entry/entry' ); ?>
 				<?php
 			endwhile;
 			?>
@@ -61,6 +61,6 @@ get_header(); ?>
 		<?php
 	endif;
 	?>
-	<?php get_template_part( 'template-parts/nav/below' ); ?>
+	<?php get_template_part( 'parts/nav/below' ); ?>
 </main>
 <?php get_footer(); ?>

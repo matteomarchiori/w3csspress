@@ -24,7 +24,7 @@ msgstr ""
 
 #. arrow
 #. arrow and text
-#: attachment.php:62 template-parts/nav/below.php:19
+#: attachment.php:62 parts/nav/below.php:19
 #, php-format
 msgid "%s older"
 msgstr ""
@@ -135,7 +135,7 @@ msgstr ""
 msgid "cards"
 msgstr ""
 
-#: template-parts/entry/footer.php:16
+#: parts/entry/footer.php:16
 msgid "categories: "
 msgstr ""
 
@@ -245,7 +245,7 @@ msgstr ""
 msgid "comment:"
 msgstr ""
 
-#: template-parts/entry/footer.php:20
+#: parts/entry/footer.php:20
 msgid "comments"
 msgstr ""
 
@@ -574,7 +574,7 @@ msgstr ""
 
 #. arrow
 #. arrow and text
-#: attachment.php:75 template-parts/nav/below.php:24
+#: attachment.php:75 parts/nav/below.php:24
 #, php-format
 msgid "newer %s"
 msgstr ""

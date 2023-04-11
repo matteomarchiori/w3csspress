@@ -24,7 +24,7 @@ msgstr "%1$s %2$s"
 
 #. arrow
 #. arrow and text
-#: attachment.php:62 template-parts/nav/below.php:19
+#: attachment.php:62 parts/nav/below.php:19
 #, fuzzy, php-format
 msgid "%s older"
 msgstr "%s staršie"
@@ -156,7 +156,7 @@ msgstr "karta-4 %s"
 msgid "cards"
 msgstr "karty"
 
-#: template-parts/entry/footer.php:16
+#: parts/entry/footer.php:16
 #, fuzzy
 msgid "categories: "
 msgstr "kategórie"
@@ -289,7 +289,7 @@ msgstr "farby"
 msgid "comment:"
 msgstr "komentár:"
 
-#: template-parts/entry/footer.php:20
+#: parts/entry/footer.php:20
 #, fuzzy
 msgid "comments"
 msgstr "komentáre"
@@ -693,7 +693,7 @@ msgstr "navigácia"
 
 #. arrow
 #. arrow and text
-#: attachment.php:75 template-parts/nav/below.php:24
+#: attachment.php:75 parts/nav/below.php:24
 #, fuzzy, php-format
 msgid "newer %s"
 msgstr "novšie %s"
