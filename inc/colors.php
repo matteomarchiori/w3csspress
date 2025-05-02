@@ -170,12 +170,12 @@ function w3csspress_colors( $dom, $head ) {
 		}
 	}
 	if ( '' !== esc_html( get_option( 'w3csspress_color_theme_text_custom' ) ) ) {
-		$style = $dom->createElement( 'style', 'body:not(#wpadminbar, #wpadminbar *, .sidebar){color:' . esc_html( get_option( 'w3csspress_color_theme_text_custom' ) ) . ' !important}' );
+		$style = $dom->createElement( 'style', 'body:not(.wp-admin, #wpadminbar, #wpadminbar *, .sidebar){color:' . esc_html( get_option( 'w3csspress_color_theme_text_custom' ) ) . ' !important}' );
 		$style->setAttribute( 'type', 'text/css' );
 		$head->appendChild( $style );
 	}
 	if ( '' !== esc_html( get_option( 'w3csspress_color_link' ) ) ) {
-		$style = $dom->createElement( 'style', 'a:not(#wpadminbar, #wpadminbar *, .sidebar){color:' . esc_html( get_option( 'w3csspress_color_link' ) ) . ' !important}' );
+		$style = $dom->createElement( 'style', 'body:not(.wp-admin) a:not(#wpadminbar, #wpadminbar *, .sidebar){color:' . esc_html( get_option( 'w3csspress_color_link' ) ) . ' !important}' );
 		$style->setAttribute( 'type', 'text/css' );
 		$head->appendChild( $style );
 	}

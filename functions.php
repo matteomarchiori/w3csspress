@@ -20,6 +20,10 @@ get_template_part( 'inc/images' );
 get_template_part( 'inc/layout' );
 get_template_part( 'inc/speed' );
 if ( function_exists( 'register_block_pattern' ) ) {
+	add_theme_support( 'core-block-patterns' );
+	add_theme_support( 'custom-line-height' );
+	add_theme_support( 'custom-units' );
+	add_theme_support( 'wp-block-styles' );
 	get_template_part( 'inc/block-patterns' );
 }
 
@@ -83,7 +87,6 @@ function w3csspress_after_setup_theme() {
 			'chat',
 		)
 	);
-	add_theme_support( 'wp-block-styles' );
 	add_theme_support( 'align-wide' );
 	register_nav_menus(
 		array(
